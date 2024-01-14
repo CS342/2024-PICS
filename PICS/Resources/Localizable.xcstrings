@@ -63,6 +63,9 @@
         }
       }
     },
+    "Collecting your HealthKit data is essential for PICS to improve your recovery." : {
+
+    },
     "COMPLETED_TASK_LABEL %@" : {
       "localizations" : {
         "en" : {
@@ -145,6 +148,7 @@
       }
     },
     "HEALTHKIT_PERMISSIONS_DESCRIPTION" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -155,6 +159,7 @@
       }
     },
     "HEALTHKIT_PERMISSIONS_SUBTITLE" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -166,6 +171,7 @@
     },
     "HEALTHKIT_PERMISSIONS_TITLE" : {
       "comment" : "MARK: HealthKit",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -318,6 +324,7 @@
       }
     },
     "NOTIFICATION_PERMISSIONS_BUTTON" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -328,6 +335,7 @@
       }
     },
     "NOTIFICATION_PERMISSIONS_DESCRIPTION" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -338,6 +346,7 @@
       }
     },
     "NOTIFICATION_PERMISSIONS_SUBTITLE" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -349,6 +358,7 @@
     },
     "NOTIFICATION_PERMISSIONS_TITLE" : {
       "comment" : "MARK: Notifications",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -357,6 +367,12 @@
           }
         }
       }
+    },
+    "PICS HealthKit Access" : {
+
+    },
+    "PICS would like to share your heart rate, oxygen saturation, and step count data with your in-hospital medical team." : {
+
     },
     "PROJECT_LICENSE_DESCRIPTION" : {
       "localizations" : {

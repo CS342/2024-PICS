@@ -49,10 +49,6 @@ struct OnboardingFlow: View {
             if HKHealthStore.isHealthDataAvailable() && !healthKitAuthorization {
                 HealthKitPermissions()
             }
-            
-            if !localNotificationAuthorization {
-                NotificationPermissions()
-            }
         }
             .task {
                 localNotificationAuthorization = await scheduler.localNotificationAuthorization
