@@ -23,15 +23,15 @@ struct HealthKitPermissions: View {
             contentView: {
                 VStack {
                     OnboardingTitleView(
-                        title: "PICS HealthKit Access",
-                        subtitle: "Collecting your HealthKit data is essential for PICS to improve your recovery."
+                        title: "HEALTHKIT_PERMISSIONS_TITLE",
+                        subtitle: "HEALTHKIT_PERMISSIONS_SUBTITLE"
                     )
                     Spacer()
                     Image(systemName: "heart.text.square.fill")
                         .font(.system(size: 150))
                         .foregroundColor(.accentColor)
                         .accessibilityHidden(true)
-                    Text("PICS would like to share your heart rate, oxygen saturation, and step count data with your in-hospital medical team.")
+                    Text("HEALTHKIT_PERMISSIONS_DESCRIPTION")
                         .multilineTextAlignment(.center)
                         .padding(.vertical, 16)
                     Spacer()

@@ -63,9 +63,6 @@
         }
       }
     },
-    "Collecting your HealthKit data is essential for PICS to improve your recovery." : {
-
-    },
     "COMPLETED_TASK_LABEL %@" : {
       "localizations" : {
         "en" : {
@@ -148,35 +145,32 @@
       }
     },
     "HEALTHKIT_PERMISSIONS_DESCRIPTION" : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "This onboarding step allows you to customize the onboarding flow to explain how the application uses the HealhtKit data and allows a user to cusomize the selection."
+            "value" : "PICS would like to share your heart rate, oxygen saturation, and step count data with your in-hospital medical team."
           }
         }
       }
     },
     "HEALTHKIT_PERMISSIONS_SUBTITLE" : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Spezi can access data from HealthKit using the HealthKitDataSource module."
+            "value" : "Collecting your HealthKit data is essential for PICS to improve your recovery."
           }
         }
       }
     },
     "HEALTHKIT_PERMISSIONS_TITLE" : {
       "comment" : "MARK: HealthKit",
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "HealthKit Access"
+            "value" : "PICS HealthKit Access"
           }
         }
       }
@@ -367,12 +361,6 @@
           }
         }
       }
-    },
-    "PICS HealthKit Access" : {
-
-    },
-    "PICS would like to share your heart rate, oxygen saturation, and step count data with your in-hospital medical team." : {
-
     },
     "PROJECT_LICENSE_DESCRIPTION" : {
       "localizations" : {
