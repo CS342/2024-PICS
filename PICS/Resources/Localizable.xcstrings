@@ -434,7 +434,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Please fill out the Social Support Questionnaire every day."
+            "value" : "Please fill out the Patient-Reported Outcome Measures Assessment (PROM) questionnaire every day."
           }
         }
       }
@@ -444,7 +444,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Social Support Questionnaire"
+            "value" : "Patient-Reported Outcome Measures Assessment (PROM) Questionnaire"
           }
         }
       }
