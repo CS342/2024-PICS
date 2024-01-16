@@ -52,6 +52,9 @@
         }
       }
     },
+    "Alexander Bartschke is a trained Medical Information Manager with extensive expertise [...] (https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing)" : {
+
+    },
     "CLOSE" : {
       "comment" : "MARK: General",
       "localizations" : {
@@ -133,6 +136,9 @@
           }
         }
       }
+    },
+    "Dr. Eduardo Salgado is an anaesthesiologist and researcher. He graduated from [...] (https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing)" : {
+
     },
     "HEALTHKIT_PERMISSIONS_BUTTON" : {
       "localizations" : {
@@ -286,7 +292,11 @@
         }
       }
     },
+    "Julian Saß is a registered nurse, health economist and medical informatics specialist [...] (https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing)" : {
+
+    },
     "LELAND_STANFORD_BIO" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

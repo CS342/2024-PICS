@@ -16,35 +16,66 @@ struct Contacts: View {
     let contacts = [
         Contact(
             name: PersonNameComponents(
-                givenName: "Leland",
-                familyName: "Stanford"
+                givenName: "Eduardo",
+                familyName: "Salgado"
             ),
-            image: Image(systemName: "figure.wave.circle"), // swiftlint:disable:this accessibility_label_for_image
-            title: "University Founder",
-            description: String(localized: "LELAND_STANFORD_BIO"),
-            organization: "Stanford University",
+            image: Image("dr. eduardo salgado"), // swiftlint:disable:this accessibility_label_for_image
+            title: "Co-Principal Investigator",
+            description: String(localized: "Dr. Eduardo Salgado is an anaesthesiologist and researcher. He graduated from the Faculty of [...] (https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing)"),
+            organization: "Charité: Universitätsmedizin Berlin",
             address: {
                 let address = CNMutablePostalAddress()
-                address.country = "USA"
-                address.state = "CA"
-                address.postalCode = "94305"
-                address.city = "Stanford"
-                address.street = "450 Serra Mall"
+                address.country = "Germany"
+                address.postalCode = "13353"
+                address.city = "Berlin"
+                address.street = "Augustenburger Pl. 1"
                 return address
             }(),
             contactOptions: [
-                .call("+1 (650) 723-2300"),
-                .text("+1 (650) 723-2300"),
-                .email(addresses: ["contact@stanford.edu"]),
-                ContactOption(
-                    image: Image(systemName: "safari.fill"), // swiftlint:disable:this accessibility_label_for_image
-                    title: "Website",
-                    action: {
-                        if let url = URL(string: "https://stanford.edu") {
-                            UIApplication.shared.open(url)
-                        }
-                    }
-                )
+                .call("+49 (0) 30 450 631167"),
+                .email(addresses: ["eduardo.salgado@charite.de"])
+            ]
+        ),
+        Contact(
+            name: PersonNameComponents(
+                givenName: "Alexander",
+                familyName: "Bartschke"
+            ),
+            image: Image("Alexander-Bartschke"), // swiftlint:disable:this accessibility_label_for_image
+            title: "Co-Principal Investigator",
+            description: String(localized: "Alexander Bartschke is a trained Medical Information Manager with extensive expertise [...] (https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing)"),
+            organization: "Charité: Universitätsmedizin Berlin",
+            address: {
+                let address = CNMutablePostalAddress()
+                address.country = "Germany"
+                address.postalCode = "13353"
+                address.city = "Berlin"
+                address.street = "Augustenburger Pl. 1"
+                return address
+            }(),
+            contactOptions: [
+                .email(addresses: ["alexander.bartschke@bih-charite.de"])
+            ]
+        ),
+        Contact(
+            name: PersonNameComponents(
+                givenName: "Julian",
+                familyName: "Saß"
+            ),
+            image: Image("csm_Sass_Julian_d336741018"), // swiftlint:disable:this accessibility_label_for_image
+            title: "Co-Principal Investigator",
+            description: String(localized: "Julian Saß is a registered nurse, health economist and medical informatics specialist in [...] (https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing)"),
+            organization: "Charité: Universitätsmedizin Berlin",
+            address: {
+                let address = CNMutablePostalAddress()
+                address.country = "Germany"
+                address.postalCode = "13353"
+                address.city = "Berlin"
+                address.street = "Augustenburger Pl. 1"
+                return address
+            }(),
+            contactOptions: [
+                .email(addresses: ["julian.sass@bih-charite.de"])
             ]
         )
     ]
