@@ -38,7 +38,8 @@ extension PICSScheduler {
                 end: .numberOfEvents(365)
             ),
             notifications: true,
-            context: PICSTaskContext.questionnaire(Bundle.main.questionnaire(withName: "SocialSupportQuestionnaire"))
+            // context: PICSTaskContext.questionnaire(Bundle.main.questionnaire(withName: "SocialSupportQuestionnaire"))
+            context: PICSTaskContext.questionnaire(Bundle.main.questionnaire(withName: "PROM-Questionnaire"))
         )
     }
 
