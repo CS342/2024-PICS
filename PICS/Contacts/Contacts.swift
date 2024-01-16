@@ -19,7 +19,7 @@ struct Contacts: View {
                 givenName: "Eduardo",
                 familyName: "Salgado"
             ),
-            image: Image("dr. eduardo salgado"), // swiftlint:disable:this accessibility_label_for_image
+            image: Image(systemName: "figure.wave.circle"), // swiftlint:disable:this accessibility_label_for_image
             title: "Co-Principal Investigator",
             description: String(localized: "Dr. Eduardo Salgado is an anaesthesiologist and researcher. He graduated from the Faculty of [...] (https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing)"),
             organization: "Charité: Universitätsmedizin Berlin",
@@ -41,7 +41,7 @@ struct Contacts: View {
                 givenName: "Alexander",
                 familyName: "Bartschke"
             ),
-            image: Image("Alexander-Bartschke"), // swiftlint:disable:this accessibility_label_for_image
+            image: Image(systemName: "figure.wave.circle"), // swiftlint:disable:this accessibility_label_for_image
             title: "Co-Principal Investigator",
             description: String(localized: "Alexander Bartschke is a trained Medical Information Manager with extensive expertise [...] (https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing)"),
             organization: "Charité: Universitätsmedizin Berlin",
@@ -62,7 +62,7 @@ struct Contacts: View {
                 givenName: "Julian",
                 familyName: "Saß"
             ),
-            image: Image("Julian-Sass"), // swiftlint:disable:this accessibility_label_for_image
+            image: Image(systemName: "figure.wave.circle"), // swiftlint:disable:this accessibility_label_for_image
             title: "Co-Principal Investigator",
             description: String(localized: "Julian Saß is a registered nurse, health economist and medical informatics specialist in [...] (https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing)"),
             organization: "Charité: Universitätsmedizin Berlin",
