@@ -62,7 +62,7 @@ struct Contacts: View {
                 givenName: "Julian",
                 familyName: "Saß"
             ),
-            image: Image("csm_Sass_Julian_d336741018"), // swiftlint:disable:this accessibility_label_for_image
+            image: Image("Julian-Sass"), // swiftlint:disable:this accessibility_label_for_image
             title: "Co-Principal Investigator",
             description: String(localized: "Julian Saß is a registered nurse, health economist and medical informatics specialist in [...] (https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing)"),
             organization: "Charité: Universitätsmedizin Berlin",
