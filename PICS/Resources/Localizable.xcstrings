@@ -180,7 +180,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The onboarding module allows you to build an onboarding flow like this one."
+            "value" : "Introduce yourself once (ID, name, gender identity, date of birth)"
           }
         }
       }
@@ -190,7 +190,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Onboarding"
+            "value" : "Sigh in"
           }
         }
       }
@@ -200,7 +200,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The application uses HL7 FHIR to provide a common standard to encode data gathered by the application."
+            "value" : "Fill short questionnaire about your mood and well-being everyday"
           }
         }
       }
@@ -210,7 +210,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "HL7 FHIR"
+            "value" : "Fill the quastinary "
           }
         }
       }
@@ -220,7 +220,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The contact module allows you to display contact information in your application."
+            "value" : "PICS will track your activities, like step count "
           }
         }
       }
@@ -230,7 +230,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Contact"
+            "value" : "Exercise"
           }
         }
       }
@@ -240,7 +240,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The HealthKit data source module allows you to fetch data from HealthKit and e.g. transform it to FHIR resources."
+            "value" : "Every 10 mins PICS will collect your heart-rate, oxygen saturation and other parameters of your body"
           }
         }
       }
@@ -250,7 +250,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "HealthKit Data Source"
+            "value" : "Wear Apple Watch"
           }
         }
       }
@@ -270,7 +270,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Here are a few Spezi modules that are interesting to know about ..."
+            "value" : "just follow simple steps:"
           }
         }
       }
@@ -281,7 +281,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Interesting Modules"
+            "value" : "How PICS works"
           }
         }
       }
@@ -454,7 +454,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The Spezi Framework builds the foundation of this application."
+            "value" : "Displays the results and trends of the filled questionnaires to the patients as visual feedback to increase adherence."
           }
         }
       }
@@ -464,7 +464,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The Spezi Framework"
+            "value" : "Represents"
           }
         }
       }
@@ -474,7 +474,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Spezi uses the Swift Package Manager to import it as a dependency."
+            "value" : "To collect vitals data that can be used as objective data to complement the results of PROMs"
           }
         }
       }
@@ -484,7 +484,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Swift Package Manager"
+            "value" : "Collects"
           }
         }
       }
@@ -494,7 +494,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Spezi offers several modules including HealthKit integration, questionnaires, and more ..."
+            "value" : "The ability to share the data with established in-hospital documentation systems or to display the data in a dashboard"
           }
         }
       }
@@ -504,7 +504,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Spezi Modules"
+            "value" : "Shares"
           }
         }
       }
@@ -524,7 +524,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "This application demonstrates several Spezi features & modules."
+            "value" : "This application helps to:"
           }
         }
       }
@@ -535,7 +535,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Spezi\nPICS"
+            "value" : "Post Intensive Care Syndrome App"
           }
         }
       }
