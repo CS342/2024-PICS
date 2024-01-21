@@ -429,7 +429,30 @@
         }
       }
     },
+    "TASK_PROM_QUESTIONNAIRE_DESCRIPTION" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please fill out the Patient-Reported Outcome Measures Assessment (PROM) questionnaire every 2 weeks."
+          }
+        }
+      }
+    },
+    "TASK_PROM_QUESTIONNAIRE_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Patient-Reported Outcome Measures Assessment (PROM) Questionnaire"
+          }
+        }
+      }
+    },
     "TASK_SOCIAL_SUPPORT_QUESTIONNAIRE_DESCRIPTION" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -440,6 +463,7 @@
       }
     },
     "TASK_SOCIAL_SUPPORT_QUESTIONNAIRE_TITLE" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

@@ -30,8 +30,8 @@ extension PICSScheduler {
         }
 
         return Task(
-            title: String(localized: "TASK_SOCIAL_SUPPORT_QUESTIONNAIRE_TITLE"),
-            description: String(localized: "TASK_SOCIAL_SUPPORT_QUESTIONNAIRE_DESCRIPTION"),
+            title: String(localized: "TASK_PROM_QUESTIONNAIRE_TITLE"),
+            description: String(localized: "TASK_PROM_QUESTIONNAIRE_DESCRIPTION"),
             schedule: Schedule(
                 start: Calendar.current.startOfDay(for: Date()),
                 repetition: .matching(dateComponents),
