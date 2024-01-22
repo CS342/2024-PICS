@@ -75,9 +75,19 @@ class PICSDelegate: SpeziAppDelegate {
     
     private var healthKit: HealthKit {
         HealthKit {
+            // PICS needs to collect Heart Rate every 10 minutes, Oxygen Saturation every
+            // 10 minutes, and Step Count daily.
             CollectSample(
                 HKQuantityType(.stepCount),
                 deliverySetting: .anchorQuery(.afterAuthorizationAndApplicationWillLaunch)
+            )
+            CollectSample(
+                HKQuantityType(.heartRate),
+                deliverySetting: .background(.afterAuthorizationAndApplicationWillLaunch)
+            )
+            CollectSample(
+                HKQuantityType(.oxygenSaturation),
+                deliverySetting: .background(.afterAuthorizationAndApplicationWillLaunch)
             )
         }
     }
