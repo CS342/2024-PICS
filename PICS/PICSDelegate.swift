@@ -24,11 +24,11 @@ class PICSDelegate: SpeziAppDelegate {
             if !FeatureFlags.disableFirebase {
                 AccountConfiguration(configuration: [
                     .requires(\.userId),
+                    .requires(\.email),
                     .requires(\.name),
-
                     // additional values stored using the `FirestoreAccountStorage` within our Standard implementation
                     .collects(\.genderIdentity),
-                    .collects(\.dateOfBirth)
+                    .requires(\.dateOfBirth)
                 ])
 
                 if FeatureFlags.useFirebaseEmulator {

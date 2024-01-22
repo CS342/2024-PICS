@@ -36,7 +36,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The PICS demonstrates the usage of the Firebase Account Module."
+            "value" : "The PICS app lets you complete surveys remotely for your doctors to review your progress after being discharged from the hospital."
           }
         }
       }
