@@ -21,7 +21,7 @@ struct Contacts: View {
             ),
             image: Image(systemName: "cross.case.circle"), // swiftlint:disable:this accessibility_label_for_image
             title: "Co-Principal Investigator",
-            description: String(localized: "Dr. Eduardo Salgado is an anaesthesiologist and researcher. He graduated from the Faculty of [...] (https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing)"),
+            description: String(localized: "EDUARDO_SALGADO_BIO"),
             organization: "Charité: Universitätsmedizin Berlin",
             address: {
                 let address = CNMutablePostalAddress()
@@ -33,7 +33,12 @@ struct Contacts: View {
             }(),
             contactOptions: [
                 .call("+49 (0) 30 450 631167"),
-                .email(addresses: ["eduardo.salgado@charite.de"])
+                .email(addresses: ["eduardo.salgado@charite.de"]),
+                .init(
+                    image: Image(systemName: "safari.fill"), // swiftlint:disable:this accessibility_label_for_image
+                    title: "More Info",
+                    action: { if let url = URL(string: "https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing") { } }
+                     )
             ]
         ),
         Contact(
@@ -43,7 +48,7 @@ struct Contacts: View {
             ),
             image: Image(systemName: "cross.case.circle"), // swiftlint:disable:this accessibility_label_for_image
             title: "Co-Principal Investigator",
-            description: String(localized: "Alexander Bartschke is a trained Medical Information Manager with extensive expertise [...] (https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing)"),
+            description: String(localized: "ALEXANDER_BARTSCHKE_BIO"),
             organization: "Charité: Universitätsmedizin Berlin",
             address: {
                 let address = CNMutablePostalAddress()
@@ -54,7 +59,12 @@ struct Contacts: View {
                 return address
             }(),
             contactOptions: [
-                .email(addresses: ["alexander.bartschke@bih-charite.de"])
+                .email(addresses: ["alexander.bartschke@bih-charite.de"]),
+                .init(
+                    image: Image(systemName: "safari.fill"), // swiftlint:disable:this accessibility_label_for_image
+                    title: "More Info",
+                    action: { if let url = URL(string: "https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing") { } }
+                     )
             ]
         ),
         Contact(
@@ -64,7 +74,7 @@ struct Contacts: View {
             ),
             image: Image(systemName: "cross.case.circle"), // swiftlint:disable:this accessibility_label_for_image
             title: "Co-Principal Investigator",
-            description: String(localized: "Julian Saß is a registered nurse, health economist and medical informatics specialist in [...] (https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing)"),
+            description: String(localized: "JULIAN_SASS_BIO"),
             organization: "Charité: Universitätsmedizin Berlin",
             address: {
                 let address = CNMutablePostalAddress()
@@ -75,7 +85,12 @@ struct Contacts: View {
                 return address
             }(),
             contactOptions: [
-                .email(addresses: ["julian.sass@bih-charite.de"])
+                .email(addresses: ["julian.sass@bih-charite.de"]),
+                .init(
+                    image: Image(systemName: "safari.fill"), // swiftlint:disable:this accessibility_label_for_image
+                    title: "More Info",
+                    action: { if let url = URL(string: "https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing") { } }
+                     )
             ]
         )
     ]

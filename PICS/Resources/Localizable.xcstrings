@@ -55,6 +55,17 @@
     "Alexander Bartschke is a trained Medical Information Manager with extensive expertise [...] (https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing)" : {
 
     },
+    "ALEXANDER_BARTSCHKE_BIO" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alexander Bartschke is a trained Medical Information Manager with extensive expertise in interoperability, digital medicine, Patient-Reported Outcome Measures (PROMs), and clinical research. His participation in [...]"
+          }
+        }
+      }
+    },
     "CLOSE" : {
       "comment" : "MARK: General",
       "localizations" : {
@@ -139,6 +150,17 @@
     },
     "Dr. Eduardo Salgado is an anaesthesiologist and researcher. He graduated from [...] (https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing)" : {
 
+    },
+    "EDUARDO_SALGADO_BIO" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dr. Eduardo Salgado is an anaesthesiologist and researcher. He graduated from the Faculty of Medicine of the Universidad de Chile in Santiago and obtained his doctoral degree at the University of Heidelberg. [...]"
+          }
+        }
+      }
     },
     "HEALTHKIT_PERMISSIONS_BUTTON" : {
       "localizations" : {
@@ -294,6 +316,17 @@
     },
     "Julian Saß is a registered nurse, health economist and medical informatics specialist [...] (https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing)" : {
 
+    },
+    "JULIAN_SASS_BIO" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Julian Saß is a registered nurse, health economist and medical informatics specialist with several years of professional experience in research and healthcare. He is active in the field of standardization at at HL7 Germany [...]"
+          }
+        }
+      }
     },
     "LELAND_STANFORD_BIO" : {
       "extractionState" : "stale",
