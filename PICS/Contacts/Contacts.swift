@@ -37,8 +37,12 @@ struct Contacts: View {
                 .init(
                     image: Image(systemName: "safari.fill"), // swiftlint:disable:this accessibility_label_for_image
                     title: "More Info",
-                    action: { if let url = URL(string: "https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing") { } }
-                     )
+                    action: {
+                        if let url = URL(string: "https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing") {
+                            UIApplication.shared.open(url)
+                        }
+                    }
+                )
             ]
         ),
         Contact(
@@ -63,8 +67,12 @@ struct Contacts: View {
                 .init(
                     image: Image(systemName: "safari.fill"), // swiftlint:disable:this accessibility_label_for_image
                     title: "More Info",
-                    action: { if let url = URL(string: "https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing") { } }
-                     )
+                    action: {
+                        if let url = URL(string: "https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing") {
+                            UIApplication.shared.open(url)
+                        }
+                    }
+                )
             ]
         ),
         Contact(
@@ -89,8 +97,12 @@ struct Contacts: View {
                 .init(
                     image: Image(systemName: "safari.fill"), // swiftlint:disable:this accessibility_label_for_image
                     title: "More Info",
-                    action: { if let url = URL(string: "https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing") { } }
-                     )
+                    action: {
+                        if let url = URL(string: "https://drive.google.com/file/d/1del5rft_UEpQqsHVIFflX5NKM3VwpXQq/view?usp=sharing") {
+                            UIApplication.shared.open(url)
+                        }
+                    }
+                )
             ]
         )
     ]
