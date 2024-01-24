@@ -34,7 +34,7 @@ struct Contacts: View {
             contactOptions: [
                 .call("+49 (0) 30 450 631167"),
                 .email(addresses: ["eduardo.salgado@charite.de"]),
-                .init(
+                ContactOption(
                     image: Image(systemName: "safari.fill"), // swiftlint:disable:this accessibility_label_for_image
                     title: "More Info",
                     action: {
@@ -64,7 +64,7 @@ struct Contacts: View {
             }(),
             contactOptions: [
                 .email(addresses: ["alexander.bartschke@bih-charite.de"]),
-                .init(
+                ContactOption(
                     image: Image(systemName: "safari.fill"), // swiftlint:disable:this accessibility_label_for_image
                     title: "More Info",
                     action: {
@@ -94,7 +94,7 @@ struct Contacts: View {
             }(),
             contactOptions: [
                 .email(addresses: ["julian.sass@bih-charite.de"]),
-                .init(
+                ContactOption(
                     image: Image(systemName: "safari.fill"), // swiftlint:disable:this accessibility_label_for_image
                     title: "More Info",
                     action: {
