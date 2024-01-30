@@ -464,7 +464,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Represents"
+            "value" : "Representing"
           }
         }
       }
@@ -484,7 +484,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Collects"
+            "value" : "Collecting"
           }
         }
       }
@@ -504,7 +504,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Shares"
+            "value" : "Sharing"
           }
         }
       }
@@ -524,7 +524,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "This application helps to:"
+            "value" : "Provides you medical care at home by:"
           }
         }
       }
