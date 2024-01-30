@@ -210,7 +210,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fill the quastinary "
+            "value" : "Fill the questionnaire"
           }
         }
       }
@@ -220,7 +220,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "PICS will track your activities, like step count "
+            "value" : "PICS will track your activities, like step count"
           }
         }
       }
