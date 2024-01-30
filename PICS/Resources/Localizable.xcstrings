@@ -36,7 +36,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The PICS demonstrates the usage of the Firebase Account Module."
+            "value" : "Welcome to PICS! Set up your account to start tracking your information."
           }
         }
       }
@@ -48,6 +48,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Your Account"
+          }
+        }
+      }
+    },
+    "ALEXANDER_BARTSCHKE_BIO" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alexander Bartschke is a trained Medical Information Manager with extensive expertise in interoperability, digital medicine, Patient-Reported Outcome Measures (PROMs), and clinical research. His participation in [...]"
           }
         }
       }
@@ -134,6 +145,17 @@
         }
       }
     },
+    "EDUARDO_SALGADO_BIO" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dr. Eduardo Salgado is an anaesthesiologist and researcher. He graduated from the Faculty of Medicine of the Universidad de Chile in Santiago and obtained his doctoral degree at the University of Heidelberg. [...]"
+          }
+        }
+      }
+    },
     "HEALTHKIT_PERMISSIONS_BUTTON" : {
       "localizations" : {
         "en" : {
@@ -149,7 +171,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "This onboarding step allows you to customize the onboarding flow to explain how the application uses the HealhtKit data and allows a user to cusomize the selection."
+            "value" : "PICS would like to share your heart rate, oxygen saturation, and step count data with your in-hospital medical team."
           }
         }
       }
@@ -159,7 +181,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Spezi can access data from HealthKit using the HealthKitDataSource module."
+            "value" : "Collecting your HealthKit data is essential for PICS to improve your recovery."
           }
         }
       }
@@ -170,7 +192,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "HealthKit Access"
+            "value" : "PICS HealthKit Access"
           }
         }
       }
@@ -286,7 +308,19 @@
         }
       }
     },
+    "JULIAN_SASS_BIO" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Julian Saß is a registered nurse, health economist and medical informatics specialist with several years of professional experience in research and healthcare. He is active in the field of standardization at at HL7 Germany [...]"
+          }
+        }
+      }
+    },
     "LELAND_STANFORD_BIO" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -313,47 +347,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mock Web Service"
-          }
-        }
-      }
-    },
-    "NOTIFICATION_PERMISSIONS_BUTTON" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Allow Notifications"
-          }
-        }
-      }
-    },
-    "NOTIFICATION_PERMISSIONS_DESCRIPTION" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The Spezi Scheduler module enables to send out local notifications when a new event of a task is scheduled."
-          }
-        }
-      }
-    },
-    "NOTIFICATION_PERMISSIONS_SUBTITLE" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Spezi Scheduler Notifications."
-          }
-        }
-      }
-    },
-    "NOTIFICATION_PERMISSIONS_TITLE" : {
-      "comment" : "MARK: Notifications",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Notifications"
           }
         }
       }
@@ -429,22 +422,46 @@
         }
       }
     },
-    "TASK_SOCIAL_SUPPORT_QUESTIONNAIRE_DESCRIPTION" : {
+    "TASK_PROM_QUESTIONNAIRE_DESCRIPTION" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Please fill out the Social Support Questionnaire every day."
+            "value" : "Please fill out the Patient-Reported Outcome Measures Assessment (PROM) questionnaire every 2 weeks."
+          }
+        }
+      }
+    },
+    "TASK_PROM_QUESTIONNAIRE_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Patient-Reported Outcome Measures Assessment (PROM) Questionnaire"
+          }
+        }
+      }
+    },
+    "TASK_SOCIAL_SUPPORT_QUESTIONNAIRE_DESCRIPTION" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please fill out the Patient-Reported Outcome Measures Assessment (PROM) questionnaire every day."
           }
         }
       }
     },
     "TASK_SOCIAL_SUPPORT_QUESTIONNAIRE_TITLE" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Social Support Questionnaire"
+            "value" : "Patient-Reported Outcome Measures Assessment (PROM) Questionnaire"
           }
         }
       }
