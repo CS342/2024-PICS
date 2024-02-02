@@ -26,6 +26,13 @@ actor PICSStandard: Standard, EnvironmentAccessible, HealthKitConstraint, Onboar
     enum PICSStandardError: Error {
         case userNotAuthenticatedYet
     }
+    
+    // For HealthKit data stored as document in the firebase.
+    struct HKFirebaseDoc: Codable {
+      var startDate: Date
+      var endDate: Date
+      var value: Double
+    }
 
     private static var userCollection: CollectionReference {
         Firestore.firestore().collection("users")
@@ -76,8 +83,41 @@ actor PICSStandard: Standard, EnvironmentAccessible, HealthKitConstraint, Onboar
             return
         }
         
+        await parseAndAddHkData(sample: sample)
+    }
+    
+    func parseAndAddHkData(sample: HKSample) async {
+        // Currently, we only want to query step counts, heartrate, and oxygen staturation,
+        // which are all collected through type HKQuantitySample.
+        guard let sampleData: HKQuantitySample = sample as? HKQuantitySample else {
+            logger.warning("Unexpected HK sample type found: \(sample.sampleType). Saved the original data.")
+            await saveRawHKSample(sample: sample)
+            return
+        }
+        let startDate = sampleData.startDate
+        let endDate = sampleData.endDate
+        var value = -1.0 // The value to be replaced in below.
+        var collectionName = "HealthKit"
+        
+        switch sampleData.quantityType {
+        case HKQuantityType(.stepCount):
+            value = sampleData.quantity.doubleValue(for: HKUnit.count())
+            collectionName += "StepCount"
+        case HKQuantityType(.oxygenSaturation):
+            value = sampleData.quantity.doubleValue(for: HKUnit.percent()) * 100
+            collectionName += "OxygenSaturation"
+        case HKQuantityType(.heartRate):
+            value = sampleData.quantity.doubleValue(for: HKUnit(from: "count/min"))
+            collectionName += "HeartRate"
+        default:
+            logger.warning("Unexpected HK quantity sample type found: \(sampleData.quantityType). Saved the original data")
+            await saveRawHKSample(sample: sample)
+            return
+        }
+        
+        let data = HKFirebaseDoc(startDate: startDate, endDate: endDate, value: value)
         do {
-            try await healthKitDocument(id: sample.id).setData(from: sample.resource)
+            try await healthKitDocument(id: sample.id, collectionName: collectionName).setData(from: data)
         } catch {
             logger.error("Could not store HealthKit sample: \(error)")
         }
@@ -116,10 +156,18 @@ actor PICSStandard: Standard, EnvironmentAccessible, HealthKitConstraint, Onboar
     }
     
     
-    private func healthKitDocument(id uuid: UUID) async throws -> DocumentReference {
+    private func healthKitDocument(id uuid: UUID, collectionName: String = "HealthKit") async throws -> DocumentReference {
         try await userDocumentReference
-            .collection("HealthKit") // Add all HealthKit sources in a /HealthKit collection.
+            .collection(collectionName) // Add all HealthKit sources in a /HealthKit collection.
             .document(uuid.uuidString) // Set the document identifier to the UUID of the document.
+    }
+    
+    private func saveRawHKSample(sample: HKSample) async {
+        do {
+            try await healthKitDocument(id: sample.id).setData(from: sample.resource)
+        } catch {
+            logger.error("Could not store HealthKit sample: \(error)")
+        }
     }
 
     func deletedAccount() async throws {
