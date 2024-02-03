@@ -197,6 +197,28 @@
         }
       }
     },
+    "HKVIZ_NAVIGATION_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Health Dashboard"
+          }
+        }
+      }
+    },
+    "HKVIZ_TAB_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Health"
+          }
+        }
+      }
+    },
     "INTERESTING_MODULES_AREA1_DESCRIPTION" : {
       "localizations" : {
         "en" : {
