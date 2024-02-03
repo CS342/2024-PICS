@@ -1,8 +1,9 @@
 //
-//  HKVisualization.swift
-//  PICS
+// This source file is part of the PICS to show patients' health data.
 //
-//  Created by Yuren Sun on 2024/2/2.
+// SPDX-FileCopyrightText: 2024 Stanford University
+//
+// SPDX-License-Identifier: MIT
 //
 
 
@@ -17,7 +18,6 @@ struct HKData: Identifiable {
 }
 
 struct HKVisualization: View {
-    let healthStore = HKHealthStore()
     @State var stepData: [HKData] = []
     @State var heartRateData: [HKData] = []
     @State var oxygenSaturationData: [HKData] = []
@@ -83,13 +83,13 @@ struct HKVisualization: View {
         // Read step counts perday seperately with statistics query.
         self.readStepCountStats(startDate: startDate, endDate: endDate, predicate: predicate)
         // Read the heart rate and oxygen saturation data.
-        readFromSampleQuery(
+        self.readFromSampleQuery(
             startDate: startDate,
             endDate: endDate,
             predicate: predicate,
             quantityTypeIDF: HKQuantityTypeIdentifier.heartRate
         )
-        readFromSampleQuery(
+        self.readFromSampleQuery(
             startDate: startDate,
             endDate: endDate,
             predicate: predicate,
@@ -103,6 +103,7 @@ struct HKVisualization: View {
         predicate: NSPredicate,
         quantityTypeIDF: HKQuantityTypeIdentifier
     ) {
+        let healthStore = HKHealthStore()
         // Run a HKSampleQuery to fetch the health kit data.
         guard let quantityType = HKObjectType.quantityType(forIdentifier: quantityTypeIDF) else {
             fatalError("*** Unable to create a step count type ***")
@@ -113,9 +114,9 @@ struct HKVisualization: View {
         let query = HKSampleQuery(
             sampleType: quantityType,
             predicate: predicate,
-            limit: 2000,
+            limit: 1000,
             sortDescriptors: sortDescriptors
-        ) { _, results, error -> Void in
+        ) { _, results, error in
             guard error == nil else {
                 print(print("Error retrieving health kit data: \(String(describing: error))"))
                 return
@@ -148,6 +149,7 @@ struct HKVisualization: View {
     }
     
     func readStepCountStats(startDate: Date, endDate: Date, predicate: NSPredicate) {
+        let healthStore = HKHealthStore()
         // Read the step counts per day for the past three months.
         guard let quantityType = HKObjectType.quantityType(forIdentifier: .stepCount) else {
             fatalError("*** Unable to create a step count type ***")

@@ -1,9 +1,11 @@
 //
-//  HKVisualizationItem.swift
-//  PICS
+// This source file is part of the PICS to show patients' health data.
 //
-//  Created by Yuren Sun on 2024/2/2.
+// SPDX-FileCopyrightText: 2024 Stanford University
 //
+// SPDX-License-Identifier: MIT
+//
+
 
 import Charts
 import Foundation
