@@ -8,6 +8,7 @@
 
 
 import Charts
+import Foundation
 import HealthKit
 import SwiftUI
 
@@ -21,7 +22,7 @@ struct HKVisualization: View {
     @State var stepData: [HKData] = []
     @State var heartRateData: [HKData] = []
     @State var oxygenSaturationData: [HKData] = []
-    
+
     var visualizationList: some View {
         self.readAllHKData()
         return List {
@@ -30,7 +31,7 @@ struct HKVisualization: View {
                     data: self.stepData,
                     xName: "Time",
                     yName: "Step Count",
-                    title: "Step Data"
+                    title: String(localized: "HKVIZ_PLOT_STEP_TITLE")
                 )
             }
             Section {
@@ -38,7 +39,7 @@ struct HKVisualization: View {
                     data: self.heartRateData,
                     xName: "Time",
                     yName: "Heart Rate Per Minute",
-                    title: "Heart Rate"
+                    title: String(localized: "HKVIZ_PLOT_HEART_TITLE")
                 )
             }
             Section {
@@ -46,7 +47,7 @@ struct HKVisualization: View {
                     data: self.oxygenSaturationData,
                     xName: "Time",
                     yName: "Oxygen Saturation (precent)",
-                    title: "Oxygen Saturation"
+                    title: String(localized: "HKVIZ_PLOT_OXYGEN_TITLE")
                 )
             }
         }
@@ -65,6 +66,10 @@ struct HKVisualization: View {
                         AccountButton(isPresented: $presentingAccount)
                     }
                 }
+                .onAppear {
+                    // Ensure that the data are up-to-date when the view is activated.
+                    self.readAllHKData(ensureUpdate: true)
+                }
         }
     }
     
@@ -72,7 +77,7 @@ struct HKVisualization: View {
         self._presentingAccount = presentingAccount
     }
     
-    func readAllHKData() {
+    func readAllHKData(ensureUpdate: Bool = false) {
         // Generate the dates and predicates for all HealthKit queries.
         let endDate = Date()
         guard let startDate = Calendar.current.date(byAdding: .day, value: -14, to: endDate) else {
@@ -81,20 +86,26 @@ struct HKVisualization: View {
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: [])
         
         // Read step counts perday seperately with statistics query.
-        self.readStepCountStats(startDate: startDate, endDate: endDate, predicate: predicate)
+        if self.stepData.isEmpty || ensureUpdate {
+            self.readStepCountStats(startDate: startDate, endDate: endDate, predicate: predicate)
+        }
         // Read the heart rate and oxygen saturation data.
-        self.readFromSampleQuery(
-            startDate: startDate,
-            endDate: endDate,
-            predicate: predicate,
-            quantityTypeIDF: HKQuantityTypeIdentifier.heartRate
-        )
-        self.readFromSampleQuery(
-            startDate: startDate,
-            endDate: endDate,
-            predicate: predicate,
-            quantityTypeIDF: HKQuantityTypeIdentifier.oxygenSaturation
-        )
+        if self.heartRateData.isEmpty || ensureUpdate {
+            self.readFromSampleQuery(
+                startDate: startDate,
+                endDate: endDate,
+                predicate: predicate,
+                quantityTypeIDF: HKQuantityTypeIdentifier.heartRate
+            )
+        }
+        if self.oxygenSaturationData.isEmpty || ensureUpdate {
+            self.readFromSampleQuery(
+                startDate: startDate,
+                endDate: endDate,
+                predicate: predicate,
+                quantityTypeIDF: HKQuantityTypeIdentifier.oxygenSaturation
+            )
+        }
     }
     
     func readFromSampleQuery(
@@ -114,7 +125,7 @@ struct HKVisualization: View {
         let query = HKSampleQuery(
             sampleType: quantityType,
             predicate: predicate,
-            limit: 1000,
+            limit: 2000,
             sortDescriptors: sortDescriptors
         ) { _, results, error in
             guard error == nil else {
