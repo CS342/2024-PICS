@@ -156,6 +156,28 @@
         }
       }
     },
+    "EQ5D5L_DESCRIPTION" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please fill out the EQ-5D-5L questionnaire every 2 weeks."
+          }
+        }
+      }
+    },
+    "EQ5D5L_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "EQ-5D-5L: Patient Physical Health Questionnaire"
+          }
+        }
+      }
+    },
     "HEALTHKIT_PERMISSIONS_BUTTON" : {
       "localizations" : {
         "en" : {
@@ -368,7 +390,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "PHQ-4: Patient Health Questionnaire for Anxiety and Depression"
+            "value" : "PHQ-4: Patient Psychological Health Questionnaire"
           }
         }
       }
