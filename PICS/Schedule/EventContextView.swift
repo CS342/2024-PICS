@@ -29,7 +29,11 @@ struct EventContextView: View {
                 titleAndDateStack
             }
             Divider()
-            descriptionText
+            if !eventContext.event.complete {
+                descriptionText
+            } else {
+                completedText
+            }
             if !eventContext.event.complete {
                 actionTypeText
             }
@@ -68,6 +72,11 @@ struct EventContextView: View {
     
     private var descriptionText: some View {
         Text(eventContext.task.description)
+            .font(.callout)
+    }
+    
+    private var completedText: some View {
+        Text("This task has been completed!")
             .font(.callout)
     }
     

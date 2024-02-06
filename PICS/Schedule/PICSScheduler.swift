@@ -64,12 +64,64 @@ extension PICSScheduler {
                 end: .numberOfEvents(365)
             ),
             notifications: true,
-            context: PICSTaskContext.questionnaire(Bundle.main.questionnaire(withName: "PHQ-4"))
+            context: PICSTaskContext.questionnaire(Bundle.main.questionnaire(withName: "EQ5D5L"))
         )
     }
+    
+    static var MiniNutritionlTask: SpeziScheduler.Task<PICSTaskContext> {
+        let dateComponents: DateComponents
+        if FeatureFlags.testSchedule {
+            // Adds a task at the current time for UI testing if the `--testSchedule` feature flag is set
+            dateComponents = DateComponents(
+                hour: Calendar.current.component(.hour, from: .now),
+                minute: Calendar.current.component(.minute, from: .now)
+            )
+        } else {
+            // For the normal app usage, we schedule the task for every day at 9:00 AM
+            dateComponents = DateComponents(hour: 10, minute: 0)
+        }
+
+        return Task(
+            title: String(localized: "MiniNutritional_TITLE"),
+            description: String(localized: "MiniNutritional_DESCRIPTION"),
+            schedule: Schedule(
+                start: Calendar.current.startOfDay(for: Date()),
+                repetition: .matching(dateComponents),
+                end: .numberOfEvents(365)
+            ),
+            notifications: true,
+            context: PICSTaskContext.questionnaire(Bundle.main.questionnaire(withName: "Self-MNA"))
+        )
+    }
+    
+//    static var MiniNutritionlTask: SpeziScheduler.Task<PICSTaskContext> {
+//        let dateComponents: DateComponents
+//        if FeatureFlags.testSchedule {
+//            // Adds a task at the current time for UI testing if the `--testSchedule` feature flag is set
+//            dateComponents = DateComponents(
+//                hour: Calendar.current.component(.hour, from: .now),
+//                minute: Calendar.current.component(.minute, from: .now)
+//            )
+//        } else {
+//            // For the normal app usage, we schedule the task for every day at 9:00 AM
+//            dateComponents = DateComponents(hour: 10, minute: 0)
+//        }
+//
+//        return Task(
+//            title: String(localized: "MiniNutritional_TITLE"),
+//            description: String(localized: "MiniNutritional_DESCRIPTION"),
+//            schedule: Schedule(
+//                start: Calendar.current.startOfDay(for: Date()),
+//                repetition: .matching(dateComponents),
+//                end: .numberOfEvents(365)
+//            ),
+//            notifications: true,
+//            context: PICSTaskContext.questionnaire(Bundle.main.questionnaire(withName: "PHQ-4"))
+//        )
+//    }
 
     /// Creates a default instance of the ``PICSScheduler`` by scheduling the tasks listed below.
     convenience init() {
-        self.init(tasks: [Self.PHQ4Task, Self.EQ5D5LTask])
+        self.init(tasks: [Self.PHQ4Task, Self.EQ5D5LTask, Self.MiniNutritionlTask])
     }
 }

@@ -362,6 +362,28 @@
         }
       }
     },
+    "MiniNutritional_DESCRIPTION" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please fill out the Mini Nutritional  Assessment every 2 weeks."
+          }
+        }
+      }
+    },
+    "MiniNutritional_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Self-MNA: Mini Nutritional Assessment"
+          }
+        }
+      }
+    },
     "MOCK_WEB_SERVICE_TAB_TITLE" : {
       "comment" : "MARK: - Mock Upload Data Storage Provider",
       "localizations" : {
@@ -509,6 +531,9 @@
           }
         }
       }
+    },
+    "This task has been completed!" : {
+
     },
     "WELCOME_AREA1_DESCRIPTION" : {
       "localizations" : {
