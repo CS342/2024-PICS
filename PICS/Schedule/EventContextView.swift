@@ -65,7 +65,7 @@ struct EventContextView: View {
 
 #if DEBUG
 #Preview(traits: .sizeThatFitsLayout) {
-    let task = PICSScheduler.socialSupportTask
+    let task = PICSScheduler.PHQ4Task
     
     return EventContextView(
         eventContext: EventContext(

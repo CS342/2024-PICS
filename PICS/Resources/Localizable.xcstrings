@@ -351,6 +351,28 @@
         }
       }
     },
+    "PHQ-4_DESCRIPTION" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please fill out the PHQ-4 questionnaire every 2 weeks."
+          }
+        }
+      }
+    },
+    "PHQ-4_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PHQ-4: Patient Health Questionnaire for Anxiety and Depression"
+          }
+        }
+      }
+    },
     "PROJECT_LICENSE_DESCRIPTION" : {
       "localizations" : {
         "en" : {
