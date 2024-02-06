@@ -66,6 +66,11 @@
 		653A255528338800005D4D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 653A255428338800005D4D48 /* Assets.xcassets */; };
 		653A256228338800005D4D48 /* PICSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A256128338800005D4D48 /* PICSTests.swift */; };
 		741110F22B5767DF00DFC79E /* PROM-Questionnaire.json in Resources */ = {isa = PBXBuildFile; fileRef = 741110F12B5767DE00DFC79E /* PROM-Questionnaire.json */; };
+		8644E6712B6C7243001218D0 /* AppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E6702B6C7243001218D0 /* AppointmentView.swift */; };
+		8644E67B2B6C75B1001218D0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E67A2B6C75B1001218D0 /* MapView.swift */; };
+		8644E6842B72046B001218D0 /* GettingThere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E6832B72046B001218D0 /* GettingThere.swift */; };
+		8644E6872B7204A7001218D0 /* AppointmentBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E6862B7204A7001218D0 /* AppointmentBlock.swift */; };
+		8644E69B2B722708001218D0 /* Appointments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E69A2B722708001218D0 /* Appointments.swift */; };
 		9733CFC62A8066DE001B7ABC /* SpeziOnboarding in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE5DC8029EDD91D004B9AB4 /* SpeziOnboarding */; };
 		9739A0C62AD7B5730084BEA5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9739A0C52AD7B5730084BEA5 /* FirebaseStorage */; };
 		97D73D6A2AD860AD00B47FA0 /* SpeziFirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 97D73D692AD860AD00B47FA0 /* SpeziFirebaseStorage */; };
@@ -137,6 +142,11 @@
 		653A256728338800005D4D48 /* PICSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PICSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		653A258928339462005D4D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		741110F12B5767DE00DFC79E /* PROM-Questionnaire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "PROM-Questionnaire.json"; sourceTree = "<group>"; };
+		8644E6702B6C7243001218D0 /* AppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentView.swift; sourceTree = "<group>"; };
+		8644E67A2B6C75B1001218D0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		8644E6832B72046B001218D0 /* GettingThere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingThere.swift; sourceTree = "<group>"; };
+		8644E6862B7204A7001218D0 /* AppointmentBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentBlock.swift; sourceTree = "<group>"; };
+		8644E69A2B722708001218D0 /* Appointments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointments.swift; sourceTree = "<group>"; };
 		A9720E422ABB68CC00872D23 /* AccountSetupHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSetupHeader.swift; sourceTree = "<group>"; };
 		A9DFE8A82ABE551400428242 /* AccountButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountButton.swift; sourceTree = "<group>"; };
 		A9FE7ACF2AA39BAB0077B045 /* AccountSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSheet.swift; sourceTree = "<group>"; };
@@ -318,6 +328,7 @@
 				2FF53D8C2A8729D600042B76 /* PICSStandard.swift */,
 				2F4E23822989D51F0013F3D9 /* PICSTestingSetup.swift */,
 				2FC975A72978F11A00BA99FE /* Home.swift */,
+				8644E6752B6C7274001218D0 /* Appointment */,
 				A9720E412ABB68B300872D23 /* Account */,
 				2FE5DC2829EDD398004B9AB4 /* Onboarding */,
 				2FE5DC3B29EDD7D0004B9AB4 /* Schedule */,
@@ -353,6 +364,18 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8644E6752B6C7274001218D0 /* Appointment */ = {
+			isa = PBXGroup;
+			children = (
+				8644E6702B6C7243001218D0 /* AppointmentView.swift */,
+				8644E69A2B722708001218D0 /* Appointments.swift */,
+				8644E6862B7204A7001218D0 /* AppointmentBlock.swift */,
+				8644E6832B72046B001218D0 /* GettingThere.swift */,
+				8644E67A2B6C75B1001218D0 /* MapView.swift */,
+			);
+			path = Appointment;
 			sourceTree = "<group>";
 		};
 		A9720E412ABB68B300872D23 /* Account */ = {
@@ -576,6 +599,7 @@
 				2FE5DC3829EDD7CA004B9AB4 /* InterestingModules.swift in Sources */,
 				2FE5DC3529EDD7CA004B9AB4 /* Consent.swift in Sources */,
 				2FE5DC4529EDD7F2004B9AB4 /* Binding+Negate.swift in Sources */,
+				8644E67B2B6C75B1001218D0 /* MapView.swift in Sources */,
 				2FC975A82978F11A00BA99FE /* Home.swift in Sources */,
 				2FE5DC4E29EDD7FA004B9AB4 /* ScheduleView.swift in Sources */,
 				A9DFE8A92ABE551400428242 /* AccountButton.swift in Sources */,
@@ -583,9 +607,12 @@
 				2F1AC9DF2B4E840E00C24973 /* PICS.docc in Sources */,
 				2FF53D8D2A8729D600042B76 /* PICSStandard.swift in Sources */,
 				2FE5DC4729EDD7F2004B9AB4 /* CodableArray+RawRepresentable.swift in Sources */,
+				8644E6712B6C7243001218D0 /* AppointmentView.swift in Sources */,
 				A9720E432ABB68CC00872D23 /* AccountSetupHeader.swift in Sources */,
 				2FE5DC4029EDD7EE004B9AB4 /* FeatureFlags.swift in Sources */,
 				2FE5DC4629EDD7F2004B9AB4 /* Bundle+Image.swift in Sources */,
+				8644E69B2B722708001218D0 /* Appointments.swift in Sources */,
+				8644E6842B72046B001218D0 /* GettingThere.swift in Sources */,
 				2FE5DC4F29EDD7FA004B9AB4 /* EventContext.swift in Sources */,
 				2FE5DC5029EDD7FA004B9AB4 /* EventContextView.swift in Sources */,
 				2F4E23832989D51F0013F3D9 /* PICSTestingSetup.swift in Sources */,
@@ -599,6 +626,7 @@
 				A9FE7AD02AA39BAB0077B045 /* AccountSheet.swift in Sources */,
 				653A2551283387FE005D4D48 /* PICS.swift in Sources */,
 				2FE5DC3629EDD7CA004B9AB4 /* HealthKitPermissions.swift in Sources */,
+				8644E6872B7204A7001218D0 /* AppointmentBlock.swift in Sources */,
 				5661552E2AB854C000209B80 /* PackageHelper.swift in Sources */,
 				27FA29902A388E9B009CAC45 /* ModalView.swift in Sources */,
 				2FE5DC2629EDD38A004B9AB4 /* Contacts.swift in Sources */,
