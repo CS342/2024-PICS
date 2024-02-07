@@ -174,19 +174,3 @@ struct EventContextView_Previews: PreviewProvider {
 // }
 //
 //
-// #if DEBUG
-// #Preview(traits: .sizeThatFitsLayout) {
-//    let task = PICSScheduler.PHQ4Task
-//    
-//    return EventContextView(
-//        eventContext: EventContext(
-//            // We use a force unwrap in the preview as we can not recover from an error here
-//            // and the code will never end up in a production environment.
-//            // swiftlint:disable:next force_unwrapping
-//            event: task.events(from: .now.addingTimeInterval(-60 * 60 * 24)).first!,
-//            task: task
-//        )
-//    )
-//        .padding()
-// }
-// #endif
