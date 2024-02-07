@@ -6,13 +6,6 @@
 // SPDX-License-Identifier: MIT
 //
 
-//
-//  AppointmentView.swift
-//  PICS
-//
-//  Created by Akanshya Bhat on 2/1/24.
-//
-
 import SwiftUI
 
 struct AppointmentView: View {

@@ -6,13 +6,6 @@
 // SPDX-License-Identifier: MIT
 //
 
-//
-//  AppointmentBlock.swift
-//  PICS
-//
-//  Created by Akanshya Bhat on 2/5/24.
-//
-
 import Foundation
 import SwiftUI
 

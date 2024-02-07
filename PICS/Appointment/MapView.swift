@@ -6,13 +6,6 @@
 // SPDX-License-Identifier: MIT
 //
 
-//
-//  MapView.swift
-//  PICS
-//
-//  Created by Akanshya Bhat on 2/1/24.
-//
-
 import Contacts
 import MapKit
 import SwiftUI
