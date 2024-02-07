@@ -1,6 +1,12 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%lld cm" : {
+
+    },
+    "%lld kg" : {
+
+    },
     "ACCOUNT_NEXT" : {
       "localizations" : {
         "en" : {
@@ -196,6 +202,12 @@
           }
         }
       }
+    },
+    "Height" : {
+
+    },
+    "HEIGHT" : {
+
     },
     "HKVIZ_NAVIGATION_TITLE" : {
       "extractionState" : "manual",
@@ -517,6 +529,20 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Patient-Reported Outcome Measures Assessment (PROM) Questionnaire"
+          }
+        }
+      }
+    },
+    "Weight" : {
+
+    },
+    "WEIGHT" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weight"
           }
         }
       }
