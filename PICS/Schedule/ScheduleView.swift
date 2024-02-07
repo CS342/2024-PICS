@@ -64,7 +64,6 @@ struct ScheduleView: View {
         self._presentingAccount = presentingAccount
     }
     
-    
     private func destination(withContext eventContext: EventContext) -> some View {
         @ViewBuilder var destination: some View {
             switch eventContext.task.context {

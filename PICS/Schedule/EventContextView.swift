@@ -96,27 +96,27 @@ struct EventContextView: View {
         return dateFormatter.string(from: eventDate)
     }
 }
+//
+// #if DEBUG
+// struct EventContextView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let task = PICSScheduler.PHQ4Task
+//        
+//        EventContextView(
+//            eventContext: EventContext(
+//                // We use a force unwrap in the preview as we can not recover from an error here
+//                // and the code will never end up in a production environment.
+//                // swiftlint:disable:next force_unwrapping
+//                event: task.events(from: .now.addingTimeInterval(-60 * 60 * 24)).first!,
+//                task: task
+//            )
+//        )
+//        .padding()
+//    }
+// }
+// #endif
 
-#if DEBUG
-struct EventContextView_Previews: PreviewProvider {
-    static var previews: some View {
-        let task = PICSScheduler.PHQ4Task
-        
-        EventContextView(
-            eventContext: EventContext(
-                // We use a force unwrap in the preview as we can not recover from an error here
-                // and the code will never end up in a production environment.
-                // swiftlint:disable:next force_unwrapping
-                event: task.events(from: .now.addingTimeInterval(-60 * 60 * 24)).first!,
-                task: task
-            )
-        )
-        .padding()
-    }
-}
-#endif
-
-//struct EventContextView: View {
+// struct EventContextView: View {
 //    let eventContext: EventContext
 //    
 //    
@@ -171,11 +171,11 @@ struct EventContextView_Previews: PreviewProvider {
 //        dateFormatter.timeStyle = .short
 //        return dateFormatter.string(from: eventDate)
 //    }
-//}
+// }
 //
 //
-//#if DEBUG
-//#Preview(traits: .sizeThatFitsLayout) {
+// #if DEBUG
+// #Preview(traits: .sizeThatFitsLayout) {
 //    let task = PICSScheduler.PHQ4Task
 //    
 //    return EventContextView(
@@ -188,5 +188,5 @@ struct EventContextView_Previews: PreviewProvider {
 //        )
 //    )
 //        .padding()
-//}
-//#endif
+// }
+// #endif

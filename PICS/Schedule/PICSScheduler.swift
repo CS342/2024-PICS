@@ -68,7 +68,7 @@ extension PICSScheduler {
         )
     }
     
-    static var MiniNutritionlTask: SpeziScheduler.Task<PICSTaskContext> {
+    static var MiniNutritionalTask: SpeziScheduler.Task<PICSTaskContext> {
         let dateComponents: DateComponents
         if FeatureFlags.testSchedule {
             // Adds a task at the current time for UI testing if the `--testSchedule` feature flag is set
@@ -122,6 +122,6 @@ extension PICSScheduler {
 
     /// Creates a default instance of the ``PICSScheduler`` by scheduling the tasks listed below.
     convenience init() {
-        self.init(tasks: [Self.PHQ4Task, Self.EQ5D5LTask, Self.MiniNutritionlTask])
+        self.init(tasks: [Self.PHQ4Task, Self.EQ5D5LTask, Self.MiniNutritionalTask])
     }
 }
