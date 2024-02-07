@@ -1,29 +1,26 @@
 //
-//  WeightKey.swift
-//  PICS
+// This source file is part of the PICS based on the Stanford Spezi Template Application project
 //
-//  Created by Catherine Zhang on 2/1/24.
+// SPDX-FileCopyrightText: 2023 Stanford University
 //
-
+// SPDX-License-Identifier: MIT
+//
 import SpeziAccount
-import SpeziViews
 import SpeziFoundation
 import SpeziValidation
+import SpeziViews
 import SwiftUI
 
-/// The email address of a user.
+/// The weight of a user.
 public struct WeightKey: AccountKey {
-    
     public typealias Value = Int
-
-    public static let name: LocalizedStringResource = "Weight"
-
+    public static let name = LocalizedStringResource("WEIGHT")
     public static let category: AccountKeyCategory = .personalDetails
-
 }
 
 
 extension AccountKeys {
+    /// this is the weightKey of the user
     public var weight: WeightKey.Type {
         WeightKey.self
     }
@@ -31,6 +28,7 @@ extension AccountKeys {
 
 
 extension AccountValues {
+    /// this is the weight value to be stored 
     public var weight: Int? {
         storage[WeightKey.self]
     }
@@ -61,11 +59,15 @@ extension WeightKey {
         public typealias Key = WeightKey
         @Binding private var weight: Int
         public var body: some View {
-            TextField("Weight", value:$weight, formatter: NumberFormatter())
+            HStack {
+                    Text(WeightKey.name)
+                    Spacer()
+                    TextField("Weight", value: $weight, formatter: NumberFormatter())
+                         .frame(width: 120) // set frame width to enable more spaces.
+            }
         }
         public init(_ value: Binding<Int>) {
             self._weight = value
         }
     }
 }
-

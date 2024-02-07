@@ -184,8 +184,16 @@
     "Height" : {
 
     },
-    "HELLO" : {
-
+    "HEIGHT" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Height"
+          }
+        }
+      }
     },
     "INTERESTING_MODULES_AREA1_DESCRIPTION" : {
       "localizations" : {
@@ -446,6 +454,17 @@
     },
     "Weight" : {
 
+    },
+    "WEIGHT" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weight"
+          }
+        }
+      }
     },
     "WELCOME_AREA1_DESCRIPTION" : {
       "localizations" : {

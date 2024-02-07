@@ -30,7 +30,6 @@ struct AccountSheet: View {
                         } label: {
                             Text("LICENSE_INFO_TITLE")
                         }
-                        
                     }
                         .onDisappear {
                             overviewIsEditing = false

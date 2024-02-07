@@ -1,28 +1,26 @@
 //
-//  HeightKey.swift
-//  PICS
+// This source file is part of the PICS based on the Stanford Spezi Template Application project
 //
-//  Created by Catherine Zhang on 1/30/24.
+// SPDX-FileCopyrightText: 2023 Stanford University
+//
+// SPDX-License-Identifier: MIT
 //
 import SpeziAccount
-import SpeziViews
 import SpeziFoundation
 import SpeziValidation
+import SpeziViews
 import SwiftUI
 
-/// The email address of a user.
+/// The height of a user.
 public struct HeightKey: AccountKey {
-    
     public typealias Value = Int
-
-    public static let name: LocalizedStringResource = "Height"
-
+    public static let name = LocalizedStringResource("HEIGHT")
     public static let category: AccountKeyCategory = .personalDetails
-
 }
 
 
 extension AccountKeys {
+    /// this is the HeightKey of the user
     public var height: HeightKey.Type {
         HeightKey.self
     }
@@ -30,6 +28,7 @@ extension AccountKeys {
 
 
 extension AccountValues {
+    /// this is the value of the height to store
     public var height: Int? {
         storage[HeightKey.self]
     }
@@ -60,7 +59,12 @@ extension HeightKey {
         public typealias Key = HeightKey
         @Binding private var height: Int
         public var body: some View {
-            TextField("Height", value:$height, formatter: NumberFormatter())
+            HStack {
+                    Text(HeightKey.name)
+                    Spacer()
+                    TextField("Height", value: $height, formatter: NumberFormatter())
+                         .frame(width: 120) // set frame width to enable more spaces.
+            }
         }
         public init(_ value: Binding<Int>) {
             self._height = value
