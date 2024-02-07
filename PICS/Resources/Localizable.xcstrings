@@ -1,6 +1,12 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%lld cm" : {
+
+    },
+    "%lld kg" : {
+
+    },
     "ACCOUNT_NEXT" : {
       "localizations" : {
         "en" : {
@@ -174,6 +180,12 @@
           }
         }
       }
+    },
+    "Height" : {
+
+    },
+    "HELLO" : {
+
     },
     "INTERESTING_MODULES_AREA1_DESCRIPTION" : {
       "localizations" : {
@@ -431,6 +443,9 @@
           }
         }
       }
+    },
+    "Weight" : {
+
     },
     "WELCOME_AREA1_DESCRIPTION" : {
       "localizations" : {
