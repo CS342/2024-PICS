@@ -1,6 +1,12 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%lld cm" : {
+
+    },
+    "%lld kg" : {
+
+    },
     "ACCOUNT_NEXT" : {
       "localizations" : {
         "en" : {
@@ -193,6 +199,20 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "PICS HealthKit Access"
+          }
+        }
+      }
+    },
+    "Height" : {
+
+    },
+    "HEIGHT" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Height"
           }
         }
       }
@@ -462,6 +482,20 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Patient-Reported Outcome Measures Assessment (PROM) Questionnaire"
+          }
+        }
+      }
+    },
+    "Weight" : {
+
+    },
+    "WEIGHT" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weight"
           }
         }
       }

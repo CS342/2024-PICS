@@ -25,11 +25,11 @@ class PICSDelegate: SpeziAppDelegate {
                 AccountConfiguration(configuration: [
                     .requires(\.userId),
                     .requires(\.name),
-
                     // additional values stored using the `FirestoreAccountStorage` within our Standard implementation
-                    
                     .requires(\.dateOfBirth),
-                    .collects(\.genderIdentity)
+                    .collects(\.genderIdentity),
+                    .collects(\.height),
+                    .collects(\.weight)
                 ])
 
                 if FeatureFlags.useFirebaseEmulator {
