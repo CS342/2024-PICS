@@ -68,9 +68,13 @@
 		653A255528338800005D4D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 653A255428338800005D4D48 /* Assets.xcassets */; };
 		653A256228338800005D4D48 /* PICSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A256128338800005D4D48 /* PICSTests.swift */; };
 		741110F22B5767DF00DFC79E /* PROM-Questionnaire.json in Resources */ = {isa = PBXBuildFile; fileRef = 741110F12B5767DE00DFC79E /* PROM-Questionnaire.json */; };
-		74C593952B720781002D0274 /* EQ5D5L.json in Resources */ = {isa = PBXBuildFile; fileRef = 74C593942B720781002D0274 /* EQ5D5L.json */; };
-		74C593972B720B5E002D0274 /* Self-MNA.json in Resources */ = {isa = PBXBuildFile; fileRef = 74C593962B720B5E002D0274 /* Self-MNA.json */; };
-		74C5939A2B720F1B002D0274 /* PHQ-4.json in Resources */ = {isa = PBXBuildFile; fileRef = 74C593992B720F1B002D0274 /* PHQ-4.json */; };
+		748117172B74BC3E00801A9A /* EQ5D5L.json in Resources */ = {isa = PBXBuildFile; fileRef = 748117152B74BC3E00801A9A /* EQ5D5L.json */; };
+		748117182B74BC3E00801A9A /* EQ5D5L.json.license in Resources */ = {isa = PBXBuildFile; fileRef = 748117162B74BC3E00801A9A /* EQ5D5L.json.license */; };
+		7481171A2B74BC5B00801A9A /* Self-MNA.json in Resources */ = {isa = PBXBuildFile; fileRef = 748117192B74BC5B00801A9A /* Self-MNA.json */; };
+		7481171C2B74BC6D00801A9A /* PHQ-4.json in Resources */ = {isa = PBXBuildFile; fileRef = 7481171B2B74BC6D00801A9A /* PHQ-4.json */; };
+		74C593952B720781002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		74C593972B720B5E002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		74C5939A2B720F1B002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		8644E6712B6C7243001218D0 /* AppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E6702B6C7243001218D0 /* AppointmentView.swift */; };
 		8644E67B2B6C75B1001218D0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E67A2B6C75B1001218D0 /* MapView.swift */; };
 		8644E6842B72046B001218D0 /* GettingThere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E6832B72046B001218D0 /* GettingThere.swift */; };
@@ -152,6 +156,10 @@
 		653A256728338800005D4D48 /* PICSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PICSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		653A258928339462005D4D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		741110F12B5767DE00DFC79E /* PROM-Questionnaire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "PROM-Questionnaire.json"; sourceTree = "<group>"; };
+		748117152B74BC3E00801A9A /* EQ5D5L.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EQ5D5L.json; sourceTree = "<group>"; };
+		748117162B74BC3E00801A9A /* EQ5D5L.json.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EQ5D5L.json.license; sourceTree = "<group>"; };
+		748117192B74BC5B00801A9A /* Self-MNA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Self-MNA.json"; sourceTree = "<group>"; };
+		7481171B2B74BC6D00801A9A /* PHQ-4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "PHQ-4.json"; sourceTree = "<group>"; };
 		8644E6702B6C7243001218D0 /* AppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentView.swift; sourceTree = "<group>"; };
 		8644E67A2B6C75B1001218D0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		8644E6832B72046B001218D0 /* GettingThere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingThere.swift; sourceTree = "<group>"; };
@@ -267,9 +275,10 @@
 		2FE5DC2D29EDD792004B9AB4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				74C593992B720F1B002D0274 /* PHQ-4.json */,
-				74C593962B720B5E002D0274 /* Self-MNA.json */,
-				74C593942B720781002D0274 /* EQ5D5L.json */,
+				7481171B2B74BC6D00801A9A /* PHQ-4.json */,
+				748117192B74BC5B00801A9A /* Self-MNA.json */,
+				748117152B74BC3E00801A9A /* EQ5D5L.json */,
+				748117162B74BC3E00801A9A /* EQ5D5L.json.license */,
 				741110F12B5767DE00DFC79E /* PROM-Questionnaire.json */,
 				653A255428338800005D4D48 /* Assets.xcassets */,
 				2FA0BFEC2ACC977500E0EF83 /* Localizable.xcstrings */,
@@ -404,7 +413,7 @@
 				8644E67A2B6C75B1001218D0 /* MapView.swift */,
 			);
 			path = Appointment;
-      sourceTree = "<group>";
+			sourceTree = "<group>";
 		};
 		A480C7BE2B6D5A0B00B29A07 /* HealthVisulization */ = {
 			isa = PBXGroup;
@@ -578,15 +587,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7481171A2B74BC5B00801A9A /* Self-MNA.json in Resources */,
 				2FC3439229EE634B002D773C /* ConsentDocument.md in Resources */,
 				653A255528338800005D4D48 /* Assets.xcassets in Resources */,
-				74C5939A2B720F1B002D0274 /* PHQ-4.json in Resources */,
+				74C5939A2B720F1B002D0274 /* (null) in Resources */,
+				748117172B74BC3E00801A9A /* EQ5D5L.json in Resources */,
 				2FC3439029EE6346002D773C /* SocialSupportQuestionnaire.json in Resources */,
-				74C593952B720781002D0274 /* EQ5D5L.json in Resources */,
+				748117182B74BC3E00801A9A /* EQ5D5L.json.license in Resources */,
+				74C593952B720781002D0274 /* (null) in Resources */,
 				2FA0BFED2ACC977500E0EF83 /* Localizable.xcstrings in Resources */,
 				741110F22B5767DF00DFC79E /* PROM-Questionnaire.json in Resources */,
-				74C593972B720B5E002D0274 /* Self-MNA.json in Resources */,
+				74C593972B720B5E002D0274 /* (null) in Resources */,
 				2F6025CB29BBE70F0045459E /* GoogleService-Info.plist in Resources */,
+				7481171C2B74BC6D00801A9A /* PHQ-4.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

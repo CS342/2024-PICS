@@ -1,10 +1,14 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "%lld cm" : {
 
     },
     "%lld kg" : {
+
     },
     "ACCOUNT_NEXT" : {
       "localizations" : {
@@ -68,9 +72,6 @@
         }
       }
     },
-    "Appointments" : {
-
-    },
     "APPOINTMENTS_NAVIGATION_TITLE" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -92,9 +93,6 @@
           }
         }
       }
-    },
-    "Augustenburger Platz 1" : {
-
     },
     "CLOSE" : {
       "comment" : "MARK: General",
@@ -178,9 +176,6 @@
         }
       }
     },
-    "Edit Details" : {
-
-    },
     "EDUARDO_SALGADO_BIO" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -213,9 +208,6 @@
           }
         }
       }
-    },
-    "Getting Here" : {
-
     },
     "GETTING_HERE_HEADING" : {
       "extractionState" : "manual",
@@ -268,6 +260,9 @@
           }
         }
       }
+    },
+    "Height" : {
+
     },
     "HEIGHT" : {
       "localizations" : {
@@ -477,6 +472,17 @@
         }
       }
     },
+    "LOCATION_NAME" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PICS - Ambulanz:   Charité Virchow Clinic"
+          }
+        }
+      }
+    },
     "MiniNutritional_DESCRIPTION" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -499,17 +505,6 @@
         }
       }
     },
-    "LOCATION_NAME" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "PICS - Ambulanz:   Charité Virchow Clinic"
-          }
-        }
-      }
-    },
     "MOCK_WEB_SERVICE_TAB_TITLE" : {
       "comment" : "MARK: - Mock Upload Data Storage Provider",
       "localizations" : {
@@ -520,9 +515,6 @@
           }
         }
       }
-    },
-    "PICS - Ambulanz:   Charité Virchow Clinic" : {
-
     },
     "PHQ-4_DESCRIPTION" : {
       "extractionState" : "manual",
@@ -565,9 +557,6 @@
           }
         }
       }
-    },
-    "Required Items" : {
-
     },
     "REQUIRED_ITEMS_HEADING" : {
       "extractionState" : "manual",
