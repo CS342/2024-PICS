@@ -207,7 +207,14 @@
 
     },
     "HEIGHT" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Height"
+          }
+        }
+      }
     },
     "HKVIZ_NAVIGATION_TITLE" : {
       "extractionState" : "manual",
