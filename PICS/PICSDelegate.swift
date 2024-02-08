@@ -25,11 +25,11 @@ class PICSDelegate: SpeziAppDelegate {
                 AccountConfiguration(configuration: [
                     .requires(\.userId),
                     .requires(\.name),
-
                     // additional values stored using the `FirestoreAccountStorage` within our Standard implementation
-                    
                     .requires(\.dateOfBirth),
-                    .collects(\.genderIdentity)
+                    .collects(\.genderIdentity),
+                    .collects(\.height),
+                    .collects(\.weight)
                 ])
 
                 if FeatureFlags.useFirebaseEmulator {
@@ -72,7 +72,24 @@ class PICSDelegate: SpeziAppDelegate {
             settings: settings
         )
     }
+
+    // Currently, we collect data for the past three months as the patients
+    // have in-hospital appointments every three months. In the future, we
+    // might change this to collecting data since three months before the first
+    // or the closest incoming appointment if we collect the appointment dates.
+    private var monthTraceBack = -3
     
+    private var predicateThreeMonth: NSPredicate {
+        let calendar = Calendar(identifier: .gregorian)
+        let today = calendar.startOfDay(for: Date())
+        guard let endDate = calendar.date(byAdding: .day, value: 1, to: today) else {
+            fatalError("*** Unable to calculate the end time ***")
+        }
+        guard let startDate = calendar.date(byAdding: .month, value: monthTraceBack, to: endDate) else {
+            fatalError("*** Unable to calculate the start time ***")
+        }
+        return HKQuery.predicateForSamples(withStart: startDate, end: endDate)
+    }
     
     private var healthKit: HealthKit {
         HealthKit {
@@ -80,15 +97,18 @@ class PICSDelegate: SpeziAppDelegate {
             // 10 minutes, and Step Count daily.
             CollectSample(
                 HKQuantityType(.stepCount),
-                deliverySetting: .anchorQuery(.afterAuthorizationAndApplicationWillLaunch)
+                predicate: predicateThreeMonth,
+                deliverySetting: .background(.afterAuthorizationAndApplicationWillLaunch, saveAnchor: false)
             )
             CollectSample(
                 HKQuantityType(.heartRate),
-                deliverySetting: .background(.afterAuthorizationAndApplicationWillLaunch)
+                predicate: predicateThreeMonth,
+                deliverySetting: .background(.afterAuthorizationAndApplicationWillLaunch, saveAnchor: false)
             )
             CollectSample(
                 HKQuantityType(.oxygenSaturation),
-                deliverySetting: .background(.afterAuthorizationAndApplicationWillLaunch)
+                predicate: predicateThreeMonth,
+                deliverySetting: .background(.afterAuthorizationAndApplicationWillLaunch, saveAnchor: false)
             )
         }
     }

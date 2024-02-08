@@ -1,11 +1,10 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "" : {
+    "%lld cm" : {
 
     },
-    "13353 Berlin" : {
-
+    "%lld kg" : {
     },
     "ACCOUNT_NEXT" : {
       "localizations" : {
@@ -248,8 +247,16 @@
         }
       }
     },
-    "ID" : {
-
+    "HEIGHT" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Height"
+          }
+        }
+      }
     },
     "INTERESTING_MODULES_AREA1_DESCRIPTION" : {
       "localizations" : {
@@ -577,6 +584,20 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Patient-Reported Outcome Measures Assessment (PROM) Questionnaire"
+          }
+        }
+      }
+    },
+    "Weight" : {
+
+    },
+    "WEIGHT" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weight"
           }
         }
       }
