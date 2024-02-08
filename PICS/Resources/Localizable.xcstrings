@@ -5,7 +5,6 @@
 
     },
     "%lld kg" : {
-
     },
     "ACCOUNT_NEXT" : {
       "localizations" : {
@@ -68,6 +67,34 @@
           }
         }
       }
+    },
+    "Appointments" : {
+
+    },
+    "APPOINTMENTS_NAVIGATION_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appointments"
+          }
+        }
+      }
+    },
+    "APPOINTMENTS_TAB_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appointments"
+          }
+        }
+      }
+    },
+    "Augustenburger Platz 1" : {
+
     },
     "CLOSE" : {
       "comment" : "MARK: General",
@@ -151,6 +178,9 @@
         }
       }
     },
+    "Edit Details" : {
+
+    },
     "EDUARDO_SALGADO_BIO" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -158,6 +188,20 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dr. Eduardo Salgado is an anaesthesiologist and researcher. He graduated from the Faculty of Medicine of the Universidad de Chile in Santiago and obtained his doctoral degree at the University of Heidelberg. [...]"
+          }
+        }
+      }
+    },
+    "Getting Here" : {
+
+    },
+    "GETTING_HERE_HEADING" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Getting Here"
           }
         }
       }
@@ -202,9 +246,6 @@
           }
         }
       }
-    },
-    "Height" : {
-
     },
     "HEIGHT" : {
       "localizations" : {
@@ -414,6 +455,17 @@
         }
       }
     },
+    "LOCATION_NAME" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PICS - Ambulanz:   Charité Virchow Clinic"
+          }
+        }
+      }
+    },
     "MOCK_WEB_SERVICE_TAB_TITLE" : {
       "comment" : "MARK: - Mock Upload Data Storage Provider",
       "localizations" : {
@@ -424,6 +476,9 @@
           }
         }
       }
+    },
+    "PICS - Ambulanz:   Charité Virchow Clinic" : {
+
     },
     "PROJECT_LICENSE_DESCRIPTION" : {
       "localizations" : {
@@ -445,6 +500,42 @@
         }
       }
     },
+    "Required Items" : {
+
+    },
+    "REQUIRED_ITEMS_HEADING" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Required Items"
+          }
+        }
+      }
+    },
+    "REQUIRED_ITEMS_ID" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "- ID"
+          }
+        }
+      }
+    },
+    "RESCHEDULE_BUTTON_LABEL" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Details"
+          }
+        }
+      }
+    },
     "SCHEDULE_LIST_TITLE" : {
       "localizations" : {
         "en" : {
@@ -462,6 +553,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Schedule"
+          }
+        }
+      }
+    },
+    "STREET_ADDRESS" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Augustenburger Platz 1"
           }
         }
       }
@@ -641,6 +743,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Post Intensive Care Syndrome App"
+          }
+        }
+      }
+    },
+    "ZIP_CITY" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "13353 Berlin"
           }
         }
       }
