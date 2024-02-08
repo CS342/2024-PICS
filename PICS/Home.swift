@@ -16,6 +16,7 @@ struct HomeView: View {
         case schedule
         case contact
         case mockUpload
+        case health
     }
     
     static var accountEnabled: Bool {
@@ -33,6 +34,11 @@ struct HomeView: View {
                 .tag(Tabs.schedule)
                 .tabItem {
                     Label("SCHEDULE_TAB_TITLE", systemImage: "list.clipboard")
+                }
+            HKVisualization(presentingAccount: $presentingAccount)
+                .tag(Tabs.health)
+                .tabItem {
+                    Label("HKVIZ_TAB_TITLE", systemImage: "heart")
                 }
             Contacts(presentingAccount: $presentingAccount)
                 .tag(Tabs.contact)
