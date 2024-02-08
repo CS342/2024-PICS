@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		226C16F02B69DF3500FBA97D /* HeightKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226C16EF2B69DF3500FBA97D /* HeightKey.swift */; };
+		226C16F22B6C820C00FBA97D /* WeightKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226C16F12B6C820B00FBA97D /* WeightKey.swift */; };
 		27FA29902A388E9B009CAC45 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA298F2A388E9B009CAC45 /* ModalView.swift */; };
 		2F1AC9DF2B4E840E00C24973 /* PICS.docc in Sources */ = {isa = PBXBuildFile; fileRef = 2F1AC9DE2B4E840E00C24973 /* PICS.docc */; };
 		2F3D4ABC2A4E7C290068FB2F /* SpeziScheduler in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3D4ABB2A4E7C290068FB2F /* SpeziScheduler */; };
@@ -69,9 +71,17 @@
 		74C593952B720781002D0274 /* EQ5D5L.json in Resources */ = {isa = PBXBuildFile; fileRef = 74C593942B720781002D0274 /* EQ5D5L.json */; };
 		74C593972B720B5E002D0274 /* Self-MNA.json in Resources */ = {isa = PBXBuildFile; fileRef = 74C593962B720B5E002D0274 /* Self-MNA.json */; };
 		74C5939A2B720F1B002D0274 /* PHQ-4.json in Resources */ = {isa = PBXBuildFile; fileRef = 74C593992B720F1B002D0274 /* PHQ-4.json */; };
+		8644E6712B6C7243001218D0 /* AppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E6702B6C7243001218D0 /* AppointmentView.swift */; };
+		8644E67B2B6C75B1001218D0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E67A2B6C75B1001218D0 /* MapView.swift */; };
+		8644E6842B72046B001218D0 /* GettingThere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E6832B72046B001218D0 /* GettingThere.swift */; };
+		8644E6872B7204A7001218D0 /* AppointmentBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E6862B7204A7001218D0 /* AppointmentBlock.swift */; };
+		8644E69B2B722708001218D0 /* Appointments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E69A2B722708001218D0 /* Appointments.swift */; };
 		9733CFC62A8066DE001B7ABC /* SpeziOnboarding in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE5DC8029EDD91D004B9AB4 /* SpeziOnboarding */; };
 		9739A0C62AD7B5730084BEA5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9739A0C52AD7B5730084BEA5 /* FirebaseStorage */; };
 		97D73D6A2AD860AD00B47FA0 /* SpeziFirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 97D73D692AD860AD00B47FA0 /* SpeziFirebaseStorage */; };
+		A403A52E2B705A8C003CFA5C /* HealthVisualizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403A52D2B705A8C003CFA5C /* HealthVisualizationTests.swift */; };
+		A480C7C02B6D5A3700B29A07 /* HKVisualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A480C7BF2B6D5A3700B29A07 /* HKVisualization.swift */; };
+		A480C7C42B6D721A00B29A07 /* HKVisualizationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A480C7C32B6D721A00B29A07 /* HKVisualizationItem.swift */; };
 		A9720E432ABB68CC00872D23 /* AccountSetupHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9720E422ABB68CC00872D23 /* AccountSetupHeader.swift */; };
 		A9D83F962B083794000D0C78 /* SpeziFirebaseAccountStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A9D83F952B083794000D0C78 /* SpeziFirebaseAccountStorage */; };
 		A9DFE8A92ABE551400428242 /* AccountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DFE8A82ABE551400428242 /* AccountButton.swift */; };
@@ -96,6 +106,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		226C16EF2B69DF3500FBA97D /* HeightKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightKey.swift; sourceTree = "<group>"; };
+		226C16F12B6C820B00FBA97D /* WeightKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightKey.swift; sourceTree = "<group>"; };
 		27FA298F2A388E9B009CAC45 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		2F1AC9DE2B4E840E00C24973 /* PICS.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PICS.docc; sourceTree = "<group>"; };
 		2F4E237D2989A2FE0013F3D9 /* LaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTests.swift; sourceTree = "<group>"; };
@@ -140,9 +152,6 @@
 		653A256728338800005D4D48 /* PICSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PICSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		653A258928339462005D4D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		741110F12B5767DE00DFC79E /* PROM-Questionnaire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "PROM-Questionnaire.json"; sourceTree = "<group>"; };
-		74C593942B720781002D0274 /* EQ5D5L.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EQ5D5L.json; sourceTree = "<group>"; };
-		74C593962B720B5E002D0274 /* Self-MNA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Self-MNA.json"; sourceTree = "<group>"; };
-		74C593992B720F1B002D0274 /* PHQ-4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "PHQ-4.json"; sourceTree = "<group>"; };
 		A9720E422ABB68CC00872D23 /* AccountSetupHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSetupHeader.swift; sourceTree = "<group>"; };
 		A9DFE8A82ABE551400428242 /* AccountButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountButton.swift; sourceTree = "<group>"; };
 		A9FE7ACF2AA39BAB0077B045 /* AccountSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSheet.swift; sourceTree = "<group>"; };
@@ -198,6 +207,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		226C16EC2B69DEC600FBA97D /* Patient Information */ = {
+			isa = PBXGroup;
+			children = (
+				226C16EF2B69DF3500FBA97D /* HeightKey.swift */,
+				226C16F12B6C820B00FBA97D /* WeightKey.swift */,
+			);
+			path = "Patient Information";
+			sourceTree = "<group>";
+		};
 		2F4FC8D529EE69BE00BFFE26 /* MockUpload */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,16 +340,19 @@
 		653A254F283387FE005D4D48 /* PICS */ = {
 			isa = PBXGroup;
 			children = (
+				226C16EC2B69DEC600FBA97D /* Patient Information */,
 				653A2550283387FE005D4D48 /* PICS.swift */,
 				2F5E32BC297E05EA003432F8 /* PICSDelegate.swift */,
 				2FF53D8C2A8729D600042B76 /* PICSStandard.swift */,
 				2F4E23822989D51F0013F3D9 /* PICSTestingSetup.swift */,
 				2FC975A72978F11A00BA99FE /* Home.swift */,
+				8644E6752B6C7274001218D0 /* Appointment */,
 				A9720E412ABB68B300872D23 /* Account */,
 				2FE5DC2829EDD398004B9AB4 /* Onboarding */,
 				2FE5DC3B29EDD7D0004B9AB4 /* Schedule */,
 				2FE5DC2729EDD38D004B9AB4 /* Contacts */,
 				56F6F29E2AB441640022FE5A /* Contributions */,
+				A480C7BE2B6D5A0B00B29A07 /* HealthVisulization */,
 				2F4FC8D529EE69BE00BFFE26 /* MockUpload */,
 				2FE5DC3C29EDD7DA004B9AB4 /* SharedContext */,
 				2FE5DC3D29EDD7E4004B9AB4 /* Helper */,
@@ -353,6 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				2F4E237D2989A2FE0013F3D9 /* LaunchTests.swift */,
+				A403A52D2B705A8C003CFA5C /* HealthVisualizationTests.swift */,
 			);
 			path = PICSUITests;
 			sourceTree = "<group>";
@@ -362,6 +384,27 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8644E6752B6C7274001218D0 /* Appointment */ = {
+			isa = PBXGroup;
+			children = (
+				8644E6702B6C7243001218D0 /* AppointmentView.swift */,
+				8644E69A2B722708001218D0 /* Appointments.swift */,
+				8644E6862B7204A7001218D0 /* AppointmentBlock.swift */,
+				8644E6832B72046B001218D0 /* GettingThere.swift */,
+				8644E67A2B6C75B1001218D0 /* MapView.swift */,
+			);
+			path = Appointment;
+      sourceTree = "<group>";
+		};
+		A480C7BE2B6D5A0B00B29A07 /* HealthVisulization */ = {
+			isa = PBXGroup;
+			children = (
+				A480C7BF2B6D5A3700B29A07 /* HKVisualization.swift */,
+				A480C7C32B6D721A00B29A07 /* HKVisualizationItem.swift */,
+			);
+			path = HealthVisulization;
 			sourceTree = "<group>";
 		};
 		A9720E412ABB68B300872D23 /* Account */ = {
@@ -588,29 +631,38 @@
 				2FE5DC3829EDD7CA004B9AB4 /* InterestingModules.swift in Sources */,
 				2FE5DC3529EDD7CA004B9AB4 /* Consent.swift in Sources */,
 				2FE5DC4529EDD7F2004B9AB4 /* Binding+Negate.swift in Sources */,
+				8644E67B2B6C75B1001218D0 /* MapView.swift in Sources */,
 				2FC975A82978F11A00BA99FE /* Home.swift in Sources */,
 				2FE5DC4E29EDD7FA004B9AB4 /* ScheduleView.swift in Sources */,
 				A9DFE8A92ABE551400428242 /* AccountButton.swift in Sources */,
 				2FE5DC3729EDD7CA004B9AB4 /* OnboardingFlow.swift in Sources */,
 				2F1AC9DF2B4E840E00C24973 /* PICS.docc in Sources */,
+				226C16F22B6C820C00FBA97D /* WeightKey.swift in Sources */,
 				2FF53D8D2A8729D600042B76 /* PICSStandard.swift in Sources */,
 				2FE5DC4729EDD7F2004B9AB4 /* CodableArray+RawRepresentable.swift in Sources */,
+				8644E6712B6C7243001218D0 /* AppointmentView.swift in Sources */,
 				A9720E432ABB68CC00872D23 /* AccountSetupHeader.swift in Sources */,
 				2FE5DC4029EDD7EE004B9AB4 /* FeatureFlags.swift in Sources */,
 				2FE5DC4629EDD7F2004B9AB4 /* Bundle+Image.swift in Sources */,
+				8644E69B2B722708001218D0 /* Appointments.swift in Sources */,
+				8644E6842B72046B001218D0 /* GettingThere.swift in Sources */,
 				2FE5DC4F29EDD7FA004B9AB4 /* EventContext.swift in Sources */,
+				226C16F02B69DF3500FBA97D /* HeightKey.swift in Sources */,
 				2FE5DC5029EDD7FA004B9AB4 /* EventContextView.swift in Sources */,
 				2F4E23832989D51F0013F3D9 /* PICSTestingSetup.swift in Sources */,
 				2FE5DC5329EDD7FA004B9AB4 /* Bundle+Questionnaire.swift in Sources */,
 				2FE5DC5129EDD7FA004B9AB4 /* PICSTaskContext.swift in Sources */,
+				A480C7C42B6D721A00B29A07 /* HKVisualizationItem.swift in Sources */,
 				56F6F2A02AB441930022FE5A /* ContributionsList.swift in Sources */,
 				566155292AB8447C00209B80 /* Package+LicenseType.swift in Sources */,
 				5680DD392AB8983D004E6D4A /* PackageCell.swift in Sources */,
+				A480C7C02B6D5A3700B29A07 /* HKVisualization.swift in Sources */,
 				2F5E32BD297E05EA003432F8 /* PICSDelegate.swift in Sources */,
 				2FE5DC5229EDD7FA004B9AB4 /* PICSScheduler.swift in Sources */,
 				A9FE7AD02AA39BAB0077B045 /* AccountSheet.swift in Sources */,
 				653A2551283387FE005D4D48 /* PICS.swift in Sources */,
 				2FE5DC3629EDD7CA004B9AB4 /* HealthKitPermissions.swift in Sources */,
+				8644E6872B7204A7001218D0 /* AppointmentBlock.swift in Sources */,
 				5661552E2AB854C000209B80 /* PackageHelper.swift in Sources */,
 				27FA29902A388E9B009CAC45 /* ModalView.swift in Sources */,
 				2FE5DC2629EDD38A004B9AB4 /* Contacts.swift in Sources */,
@@ -629,6 +681,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A403A52E2B705A8C003CFA5C /* HealthVisualizationTests.swift in Sources */,
 				2F4E237E2989A2FE0013F3D9 /* LaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
