@@ -90,6 +90,8 @@
 		A9D83F962B083794000D0C78 /* SpeziFirebaseAccountStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A9D83F952B083794000D0C78 /* SpeziFirebaseAccountStorage */; };
 		A9DFE8A92ABE551400428242 /* AccountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DFE8A82ABE551400428242 /* AccountButton.swift */; };
 		A9FE7AD02AA39BAB0077B045 /* AccountSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE7ACF2AA39BAB0077B045 /* AccountSheet.swift */; };
+		C54A85472B69D7C300C45653 /* Mini-cog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A85462B69D7C300C45653 /* Mini-cog.swift */; };
+		C54A854D2B73196C00C45653 /* ImageSource in Frameworks */ = {isa = PBXBuildFile; productRef = C54A854C2B73196C00C45653 /* ImageSource */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +173,7 @@
 		A9720E422ABB68CC00872D23 /* AccountSetupHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSetupHeader.swift; sourceTree = "<group>"; };
 		A9DFE8A82ABE551400428242 /* AccountButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountButton.swift; sourceTree = "<group>"; };
 		A9FE7ACF2AA39BAB0077B045 /* AccountSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSheet.swift; sourceTree = "<group>"; };
+		C54A85462B69D7C300C45653 /* Mini-cog.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = "Mini-cog.swift"; sourceTree = "<group>"; tabWidth = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +188,7 @@
 				2FE5DC6729EDD894004B9AB4 /* SpeziContact in Frameworks */,
 				2FE5DC8429EDD934004B9AB4 /* SpeziQuestionnaire in Frameworks */,
 				2FB099B32A875DF100B20952 /* FirebaseFirestoreSwift in Frameworks */,
+				C54A854D2B73196C00C45653 /* ImageSource in Frameworks */,
 				5661551D2AB8384200209B80 /* SwiftPackageList in Frameworks */,
 				2FB099B12A875DF100B20952 /* FirebaseFirestore in Frameworks */,
 				A9D83F962B083794000D0C78 /* SpeziFirebaseAccountStorage in Frameworks */,
@@ -358,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				226C16EC2B69DEC600FBA97D /* Patient Information */,
+				C54A85462B69D7C300C45653 /* Mini-cog.swift */,
 				653A2550283387FE005D4D48 /* PICS.swift */,
 				2F5E32BC297E05EA003432F8 /* PICSDelegate.swift */,
 				2FF53D8C2A8729D600042B76 /* PICSStandard.swift */,
@@ -476,6 +481,7 @@
 				9739A0C52AD7B5730084BEA5 /* FirebaseStorage */,
 				97D73D692AD860AD00B47FA0 /* SpeziFirebaseStorage */,
 				A9D83F952B083794000D0C78 /* SpeziFirebaseAccountStorage */,
+				C54A854C2B73196C00C45653 /* ImageSource */,
 			);
 			productName = PICS;
 			productReference = 653A254D283387FE005D4D48 /* PICS.app */;
@@ -570,6 +576,7 @@
 				2FE750CA2A87240100723EAE /* XCRemoteSwiftPackageReference "SpeziMockWebService" */,
 				2FB099B42A875E2B00B20952 /* XCRemoteSwiftPackageReference "HealthKitOnFHIR" */,
 				5661551B2AB8384200209B80 /* XCRemoteSwiftPackageReference "swift-package-list" */,
+				C54A854B2B73196C00C45653 /* XCRemoteSwiftPackageReference "ImageSource" */,
 			);
 			productRefGroup = 653A254E283387FE005D4D48 /* Products */;
 			projectDirPath = "";
@@ -647,6 +654,7 @@
 			files = (
 				2FE5DC4129EDD7EE004B9AB4 /* StorageKeys.swift in Sources */,
 				2FE5DCB129EE6107004B9AB4 /* AccountOnboarding.swift in Sources */,
+				C54A85472B69D7C300C45653 /* Mini-cog.swift in Sources */,
 				2F4FC8D729EE69D300BFFE26 /* MockUpload.swift in Sources */,
 				2FE5DC3A29EDD7CA004B9AB4 /* Welcome.swift in Sources */,
 				2FE5DC3829EDD7CA004B9AB4 /* InterestingModules.swift in Sources */,
@@ -1342,6 +1350,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		C54A854B2B73196C00C45653 /* XCRemoteSwiftPackageReference "ImageSource" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/StanfordBDHG/ImageSource.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1473,6 +1489,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2FE5DC7329EDD8E6004B9AB4 /* XCRemoteSwiftPackageReference "SpeziFirebase" */;
 			productName = SpeziFirebaseAccountStorage;
+		};
+		C54A854C2B73196C00C45653 /* ImageSource */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C54A854B2B73196C00C45653 /* XCRemoteSwiftPackageReference "ImageSource" */;
+			productName = ImageSource;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

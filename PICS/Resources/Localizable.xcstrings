@@ -94,6 +94,9 @@
         }
       }
     },
+    "Button" : {
+
+    },
     "CLOSE" : {
       "comment" : "MARK: General",
       "localizations" : {
@@ -713,6 +716,9 @@
           }
         }
       }
+    },
+    "This is a miniCog page" : {
+
     },
     "WELCOME_AREA1_DESCRIPTION" : {
       "localizations" : {

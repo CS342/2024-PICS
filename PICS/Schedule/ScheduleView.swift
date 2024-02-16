@@ -54,6 +54,7 @@ struct ScheduleView: View {
                     if AccountButton.shouldDisplay {
                         AccountButton(isPresented: $presentingAccount)
                     }
+                    // TODO: button that pops up the mini cog sheet
                 }
                 .navigationTitle("SCHEDULE_LIST_TITLE")
         }
