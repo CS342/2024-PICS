@@ -75,6 +75,7 @@
 		74C593952B720781002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		74C593972B720B5E002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		74C5939A2B720F1B002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		86400D192B7C4B6D009FEC10 /* ApptInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86400D182B7C4B6D009FEC10 /* ApptInfo.swift */; };
 		8644E6712B6C7243001218D0 /* AppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E6702B6C7243001218D0 /* AppointmentView.swift */; };
 		8644E67B2B6C75B1001218D0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E67A2B6C75B1001218D0 /* MapView.swift */; };
 		8644E6842B72046B001218D0 /* GettingThere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E6832B72046B001218D0 /* GettingThere.swift */; };
@@ -160,6 +161,7 @@
 		748117162B74BC3E00801A9A /* EQ5D5L.json.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EQ5D5L.json.license; sourceTree = "<group>"; };
 		748117192B74BC5B00801A9A /* Self-MNA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Self-MNA.json"; sourceTree = "<group>"; };
 		7481171B2B74BC6D00801A9A /* PHQ-4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "PHQ-4.json"; sourceTree = "<group>"; };
+		86400D182B7C4B6D009FEC10 /* ApptInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptInfo.swift; sourceTree = "<group>"; };
 		8644E6702B6C7243001218D0 /* AppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentView.swift; sourceTree = "<group>"; };
 		8644E67A2B6C75B1001218D0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		8644E6832B72046B001218D0 /* GettingThere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingThere.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			children = (
 				2FE5DC3129EDD7CA004B9AB4 /* OnboardingFlow.swift */,
 				2FE5DC3429EDD7CA004B9AB4 /* Welcome.swift */,
+				86400D182B7C4B6D009FEC10 /* ApptInfo.swift */,
 				2FE5DC3229EDD7CA004B9AB4 /* InterestingModules.swift */,
 				2FE5DCAC29EE6107004B9AB4 /* AccountOnboarding.swift */,
 				2FE5DC2F29EDD7CA004B9AB4 /* Consent.swift */,
@@ -647,6 +650,7 @@
 			files = (
 				2FE5DC4129EDD7EE004B9AB4 /* StorageKeys.swift in Sources */,
 				2FE5DCB129EE6107004B9AB4 /* AccountOnboarding.swift in Sources */,
+				86400D192B7C4B6D009FEC10 /* ApptInfo.swift in Sources */,
 				2F4FC8D729EE69D300BFFE26 /* MockUpload.swift in Sources */,
 				2FE5DC3A29EDD7CA004B9AB4 /* Welcome.swift in Sources */,
 				2FE5DC3829EDD7CA004B9AB4 /* InterestingModules.swift in Sources */,

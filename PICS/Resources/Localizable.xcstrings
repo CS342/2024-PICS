@@ -94,6 +94,50 @@
         }
       }
     },
+    "APPTQ_1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "First Follow-Up Appointment:"
+          }
+        }
+      }
+    },
+    "APPTQ_2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Second Follow-Up Appointment:"
+          }
+        }
+      }
+    },
+    "APPTQ_SUBTITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter information on your follow-up appointments:"
+          }
+        }
+      }
+    },
+    "APPTQ_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appointment Information"
+          }
+        }
+      }
+    },
     "CLOSE" : {
       "comment" : "MARK: General",
       "localizations" : {
