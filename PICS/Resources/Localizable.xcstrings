@@ -94,6 +94,17 @@
         }
       }
     },
+    "APPTQ_0" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Discharge Date:"
+          }
+        }
+      }
+    },
     "APPTQ_1" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -122,7 +133,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Please enter information on your follow-up appointments:"
+            "value" : "Please enter information on your discharge date and follow-up appointments:"
           }
         }
       }

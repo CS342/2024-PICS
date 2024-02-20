@@ -22,13 +22,16 @@ struct ApptInfo: View {
     @Environment(OnboardingNavigationPath.self) private var onboardingNavigationPath
     
     // Define keys for AppStorage
+    private let appt0Key = "appt0"
     private let appt1Key = "appt1"
     private let appt2Key = "appt2"
 
     // Use @AppStorage to store the selected dates
+    @AppStorage("appt0") private var appt0Data: Data?
     @AppStorage("appt1") private var appt1Data: Data?
     @AppStorage("appt2") private var appt2Data: Data?
 
+    @State private var appt0 = Date()
     @State private var appt1 = Date()
     @State private var appt2 = Date()
 
@@ -39,6 +42,10 @@ struct ApptInfo: View {
             },
             contentView: {
                 VStack {
+                    Text(String(localized: "APPTQ_0"))
+                                           .font(.headline)
+                    DateTimePickerView(selectedDateTime: $appt0)
+                        .padding(.bottom, 32)
                     Text(String(localized: "APPTQ_1"))
                                            .font(.headline)
                     DateTimePickerView(selectedDateTime: $appt1)
