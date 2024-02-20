@@ -36,36 +36,21 @@ struct HKVisualizationItem: View {
                 .font(.caption)
                 .listRowSeparator(.hidden)
         }
-        // swiftlint:disable closure_body_length
         Chart {
-            if !self.scatterData.isEmpty {
-                ForEach(scatterData) { dataPoint in
-                    PointMark(
-                        x: .value(self.xName, dataPoint.date, unit: .day),
-                        y: .value(self.yName, dataPoint.sumValue)
-                    )
-                    .foregroundStyle(.opacity(0.2))
-                }
+            ForEach(scatterData) { dataPoint in
+                PointMark(
+                    x: .value(self.xName, dataPoint.date, unit: .day),
+                    y: .value(self.yName, dataPoint.sumValue)
+                )
+                .foregroundStyle(((self.threshold > 0 && dataPoint.sumValue > self.threshold) ? Color.blue : Color.accentColor).opacity(0.2))
             }
             ForEach(data) { dataPoint in
-                switch self.chartType {
-//                case "maxMin":
-//                    BarMark(
-//                        x: .value(self.xName, dataPoint.date, unit: .day),
-//                        yStart: .value(self.yName, dataPoint.minValue),
-//                        yEnd: .value(self.yName, dataPoint.maxValue),
-//                        width: .fixed(10)
-//                    )
-//                    .clipShape(Capsule())
-//                    .foregroundStyle((self.threshold > 0 && dataPoint.minValue > self.threshold) ? Color.blue : Color.accentColor)
-                default:
-                    BarMark(
-                        x: .value(self.xName, dataPoint.date, unit: .day),
-                        y: .value(self.yName, dataPoint.sumValue),
-                        width: .fixed(10)
-                    )
-                    .foregroundStyle(dataPoint.sumValue > self.threshold ? Color.blue : Color.accentColor)
-                }
+                BarMark(
+                    x: .value(self.xName, dataPoint.date, unit: .day),
+                    y: .value(self.yName, dataPoint.sumValue),
+                    width: .fixed(10)
+                )
+                .foregroundStyle(dataPoint.sumValue > self.threshold ? Color.blue : Color.accentColor)
                 if self.plotAvg {
                     LineMark(
                         x: .value(self.xName, dataPoint.date, unit: .day),

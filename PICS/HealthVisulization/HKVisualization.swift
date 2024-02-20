@@ -93,7 +93,11 @@ struct HKVisualization: View {
     
     func readAllHKData(ensureUpdate: Bool = false) {
         // Generate the dates and predicates for all HealthKit queries.
-        let endDate = Date()
+        let startOfToday: Date = Calendar.current.startOfDay(for: Date())
+        guard let endDate = Calendar.current.date(byAdding: DateComponents(hour: 23, minute: 59, second: 59), to: startOfToday) else {
+            fatalError("*** Unable to create an end date ***")
+        }
+        // Collect data for the previous two weeks.
         guard let startDate = Calendar.current.date(byAdding: .day, value: -14, to: endDate) else {
             fatalError("*** Unable to create a start date ***")
         }
@@ -239,10 +243,7 @@ struct HKVisualization: View {
         var allData: [HKData] = []
         // Enumerate over all the statistics objects between the start and end dates.
         results.enumerateStatistics(from: startDate, to: endDate) { statistics, _ in
-            // The actual statistics collected is for date + 1.
-            guard let date = Calendar.current.date(byAdding: .day, value: 1, to:   statistics.startDate) else {
-                fatalError("*** Unable to add a day to a date ***")
-            }
+            let date = statistics.endDate
             var curSum = 0.0
             var curMax = 0.0
             var curAvg = 0.0
