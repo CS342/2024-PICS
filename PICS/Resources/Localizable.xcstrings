@@ -516,6 +516,17 @@
         }
       }
     },
+    "ONBOARDING_QUESTIONNAIRE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Static information on basic profile info"
+          }
+        }
+      }
+    },
     "PHQ-4_DESCRIPTION" : {
       "extractionState" : "manual",
       "localizations" : {

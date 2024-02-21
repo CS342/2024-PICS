@@ -38,7 +38,7 @@ struct OnboardingFlow: View {
             if !FeatureFlags.disableFirebase {
                 AccountOnboarding()
             }
-            
+            OnboardingQuestionnaire()
             #if !(targetEnvironment(simulator) && (arch(i386) || arch(x86_64)))
                 Consent()
             #endif
@@ -46,6 +46,7 @@ struct OnboardingFlow: View {
             if HKHealthStore.isHealthDataAvailable() && !healthKitAuthorization {
                 HealthKitPermissions()
             }
+            
         }
             .interactiveDismissDisabled(!completedOnboardingFlow)
     }
