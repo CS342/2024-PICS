@@ -46,7 +46,6 @@ struct OnboardingFlow: View {
             if HKHealthStore.isHealthDataAvailable() && !healthKitAuthorization {
                 HealthKitPermissions()
             }
-            
         }
             .interactiveDismissDisabled(!completedOnboardingFlow)
     }

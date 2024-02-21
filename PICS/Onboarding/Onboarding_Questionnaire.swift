@@ -1,14 +1,13 @@
 //
-//  Onboarding_Questionnaire.swift
-//  PICS
+// This source file is part of the PICS based on the Stanford Spezi Template Application project
 //
-//  Created by Catherine Zhang on 2/13/24.
+// SPDX-FileCopyrightText: 2023 Stanford University
 //
-
-import SwiftUI
-import SpeziQuestionnaire
+// SPDX-License-Identifier: MIT
+//
 import SpeziOnboarding
-
+import SpeziQuestionnaire
+import SwiftUI
 struct OnboardingQuestionnaire: View {
     @Environment(OnboardingNavigationPath.self) private var onboardingNavigationPath
     var body: some View {
