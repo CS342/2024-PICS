@@ -152,7 +152,7 @@ struct HKVisualization: View {
          let healthStore = HKHealthStore()
          // Run a HKSampleQuery to fetch the health kit data.
          guard let quantityType = HKObjectType.quantityType(forIdentifier: quantityTypeIDF) else {
-             fatalError("*** Unable to create a step count type ***")
+             fatalError("*** Unable to create a quantity type ***")
          }
          let sortDescriptors = [
              NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
@@ -203,7 +203,7 @@ struct HKVisualization: View {
         let healthStore = HKHealthStore()
         // Read the step counts per day for the past three months.
         guard let quantityType = HKObjectType.quantityType(forIdentifier: quantityTypeIDF) else {
-            fatalError("*** Unable to create a step count type ***")
+            fatalError("*** Unable to create a quantity type ***")
         }
         let query = if quantityTypeIDF == HKQuantityTypeIdentifier.stepCount {
             HKStatisticsCollectionQuery(
@@ -282,7 +282,7 @@ struct HKVisualization: View {
         case .stepCount:
             return quantity.doubleValue(for: .count())
         case .oxygenSaturation:
-            return quantity.doubleValue(for: HKUnit.percent()) * 100
+            return quantity.doubleValue(for: .percent()) * 100
         case .heartRate:
             return quantity.doubleValue(for: HKUnit(from: "count/min"))
         default:
