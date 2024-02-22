@@ -56,7 +56,7 @@ struct ApptInfo: View {
                 }
             },
             actionView: {
-                OnboardingActionsView("WELCOME_BUTTON") {
+                OnboardingActionsView("INTERESTING_MODULES_BUTTON") {
                     appt1Data = try? JSONEncoder().encode(appt1)
                     appt2Data = try? JSONEncoder().encode(appt2)
                     

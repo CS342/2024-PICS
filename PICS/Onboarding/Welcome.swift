@@ -16,7 +16,7 @@ struct Welcome: View {
     
     var body: some View {
         OnboardingView(
-            title: "APPTQ_TITLE",
+            title: "WELCOME_TITLE",
             subtitle: "WELCOME_SUBTITLE",
             areas: [
                 OnboardingInformationView.Content(
