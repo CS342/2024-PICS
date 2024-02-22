@@ -46,6 +46,7 @@ struct OnboardingFlow: View {
             if HKHealthStore.isHealthDataAvailable() && !healthKitAuthorization {
                 HealthKitPermissions()
             }
+            ApptInfo()
         }
             .interactiveDismissDisabled(!completedOnboardingFlow)
     }
@@ -62,7 +63,6 @@ struct OnboardingFlow: View {
             AccountConfiguration {
                 MockUserIdPasswordAccountService()
             }
-
             PICSScheduler()
         }
 }
