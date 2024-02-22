@@ -94,6 +94,61 @@
         }
       }
     },
+    "APPTQ_0" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Discharge Date:"
+          }
+        }
+      }
+    },
+    "APPTQ_1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "First Follow-Up Appointment:"
+          }
+        }
+      }
+    },
+    "APPTQ_2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Second Follow-Up Appointment:"
+          }
+        }
+      }
+    },
+    "APPTQ_SUBTITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter information on your discharge date and follow-up appointments:"
+          }
+        }
+      }
+    },
+    "APPTQ_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appointment Information"
+          }
+        }
+      }
+    },
     "CLOSE" : {
       "comment" : "MARK: General",
       "localizations" : {
@@ -296,6 +351,17 @@
         }
       }
     },
+    "HKVIZ_PLOT_OXYGEN_RECOMD" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Having your oxygen saturation over 94% is a good health indicator."
+          }
+        }
+      }
+    },
     "HKVIZ_PLOT_OXYGEN_TITLE" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -303,6 +369,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Oxygen Saturation (%)"
+          }
+        }
+      }
+    },
+    "HKVIZ_PLOT_STEP_RECOMD" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We recommend to walk more than 5000 steps each day."
           }
         }
       }
@@ -709,6 +786,9 @@
       }
     },
     "This task has been completed!" : {
+
+    },
+    "Threshold" : {
 
     },
     "Weight" : {
