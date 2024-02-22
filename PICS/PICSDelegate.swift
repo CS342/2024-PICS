@@ -98,17 +98,17 @@ class PICSDelegate: SpeziAppDelegate {
             CollectSample(
                 HKQuantityType(.stepCount),
                 predicate: predicateThreeMonth,
-                deliverySetting: .background(.afterAuthorizationAndApplicationWillLaunch, saveAnchor: false)
+                deliverySetting: .background(.afterAuthorizationAndApplicationWillLaunch)
             )
             CollectSample(
                 HKQuantityType(.heartRate),
                 predicate: predicateThreeMonth,
-                deliverySetting: .background(.afterAuthorizationAndApplicationWillLaunch, saveAnchor: false)
+                deliverySetting: .background(.afterAuthorizationAndApplicationWillLaunch)
             )
             CollectSample(
                 HKQuantityType(.oxygenSaturation),
                 predicate: predicateThreeMonth,
-                deliverySetting: .background(.afterAuthorizationAndApplicationWillLaunch, saveAnchor: false)
+                deliverySetting: .background(.afterAuthorizationAndApplicationWillLaunch)
             )
         }
     }

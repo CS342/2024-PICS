@@ -351,6 +351,17 @@
         }
       }
     },
+    "HKVIZ_PLOT_OXYGEN_RECOMD" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Having your oxygen saturation over 94% is a good health indicator."
+          }
+        }
+      }
+    },
     "HKVIZ_PLOT_OXYGEN_TITLE" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -358,6 +369,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Oxygen Saturation (%)"
+          }
+        }
+      }
+    },
+    "HKVIZ_PLOT_STEP_RECOMD" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We recommend to walk more than 5000 steps each day."
           }
         }
       }
@@ -753,6 +775,9 @@
       }
     },
     "This task has been completed!" : {
+
+    },
+    "Threshold" : {
 
     },
     "Weight" : {
