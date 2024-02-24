@@ -13,7 +13,7 @@ import SwiftUI
 struct TrailMakingTaskView: View {
     var body: some View {
         ZStack {
-            Color(red: 242/255, green: 242/255, blue: 247/255)
+            Color(red: 242 / 255, green: 242 / 255, blue: 247 / 255)
                 .edgesIgnoringSafeArea(.all)
             ORKOrderedTaskView(
                 tasks: createTrailMakingTask(),
