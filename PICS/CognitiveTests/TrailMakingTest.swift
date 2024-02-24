@@ -21,7 +21,7 @@ struct TrailMakingTaskView: View {
                 shouldConfirmCancel: true,
                 result: handleTaskResult
             )
-            .navigationBarTitle("Trail Making Task")
+            .navigationBarTitle("TRAIL_MAKING_TEST_TITLE")
         }
     }
     

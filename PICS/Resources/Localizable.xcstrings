@@ -800,6 +800,17 @@
     "Trail Making Task" : {
 
     },
+    "TRAIL_MAKING_TEST_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trail Making Task"
+          }
+        }
+      }
+    },
     "Weight" : {
 
     },
