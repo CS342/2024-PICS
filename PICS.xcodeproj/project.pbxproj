@@ -83,7 +83,6 @@
 		8644E6842B72046B001218D0 /* GettingThere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E6832B72046B001218D0 /* GettingThere.swift */; };
 		8644E6872B7204A7001218D0 /* AppointmentBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E6862B7204A7001218D0 /* AppointmentBlock.swift */; };
 		8644E69B2B722708001218D0 /* Appointments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E69A2B722708001218D0 /* Appointments.swift */; };
-		8649093D2B8AA0D600054C9A /* CogTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8649093C2B8AA0D600054C9A /* CogTest.swift */; };
 		864909422B8AA1C300054C9A /* TrailMakingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864909412B8AA1C300054C9A /* TrailMakingTest.swift */; };
 		9733CFC62A8066DE001B7ABC /* SpeziOnboarding in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE5DC8029EDD91D004B9AB4 /* SpeziOnboarding */; };
 		9739A0C62AD7B5730084BEA5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9739A0C52AD7B5730084BEA5 /* FirebaseStorage */; };
@@ -173,7 +172,6 @@
 		8644E6832B72046B001218D0 /* GettingThere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingThere.swift; sourceTree = "<group>"; };
 		8644E6862B7204A7001218D0 /* AppointmentBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentBlock.swift; sourceTree = "<group>"; };
 		8644E69A2B722708001218D0 /* Appointments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointments.swift; sourceTree = "<group>"; };
-		8649093C2B8AA0D600054C9A /* CogTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CogTest.swift; sourceTree = "<group>"; };
 		864909412B8AA1C300054C9A /* TrailMakingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailMakingTest.swift; sourceTree = "<group>"; };
 		A403A52D2B705A8C003CFA5C /* HealthVisualizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthVisualizationTests.swift; sourceTree = "<group>"; };
 		A480C7BF2B6D5A3700B29A07 /* HKVisualization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKVisualization.swift; sourceTree = "<group>"; };
@@ -432,7 +430,6 @@
 		8649093F2B8AA0DD00054C9A /* CognitiveTests */ = {
 			isa = PBXGroup;
 			children = (
-				8649093C2B8AA0D600054C9A /* CogTest.swift */,
 				864909412B8AA1C300054C9A /* TrailMakingTest.swift */,
 			);
 			path = CognitiveTests;
@@ -695,7 +692,6 @@
 				8644E6842B72046B001218D0 /* GettingThere.swift in Sources */,
 				2FE5DC4F29EDD7FA004B9AB4 /* EventContext.swift in Sources */,
 				226C16F02B69DF3500FBA97D /* HeightKey.swift in Sources */,
-				8649093D2B8AA0D600054C9A /* CogTest.swift in Sources */,
 				864909422B8AA1C300054C9A /* TrailMakingTest.swift in Sources */,
 				2FE5DC5029EDD7FA004B9AB4 /* EventContextView.swift in Sources */,
 				2F4E23832989D51F0013F3D9 /* PICSTestingSetup.swift in Sources */,
