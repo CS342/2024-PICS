@@ -160,6 +160,9 @@
         }
       }
     },
+    "COGTEST_NAVIGATION_TITLE" : {
+
+    },
     "COMPLETED_TASK_LABEL %@" : {
       "localizations" : {
         "en" : {
@@ -230,6 +233,9 @@
           }
         }
       }
+    },
+    "Date and Time:" : {
+
     },
     "EDUARDO_SALGADO_BIO" : {
       "extractionState" : "manual",
@@ -789,6 +795,9 @@
 
     },
     "Threshold" : {
+
+    },
+    "Trail Making Task" : {
 
     },
     "Weight" : {
