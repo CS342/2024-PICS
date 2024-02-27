@@ -4,6 +4,9 @@
     "" : {
 
     },
+    "%@" : {
+
+    },
     "%lld cm" : {
 
     },
@@ -231,6 +234,9 @@
         }
       }
     },
+    "Date and Time:" : {
+
+    },
     "EDUARDO_SALGADO_BIO" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -329,6 +335,39 @@
         }
       }
     },
+    "HKVIZ_AVERAGE_STRING" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daily Average: "
+          }
+        }
+      }
+    },
+    "HKVIZ_MAX_STRING" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maximum: "
+          }
+        }
+      }
+    },
+    "HKVIZ_MIN_STRING" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minimum: "
+          }
+        }
+      }
+    },
     "HKVIZ_NAVIGATION_TITLE" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -391,6 +430,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Step Count"
+          }
+        }
+      }
+    },
+    "HKVIZ_SUMMARY" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your summary for "
           }
         }
       }
