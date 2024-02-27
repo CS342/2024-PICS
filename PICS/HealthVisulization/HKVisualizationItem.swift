@@ -84,7 +84,7 @@ struct HKVisualizationItem: View {
                         x: .value(self.xName, dataPoint.date, unit: .day),
                         y: .value(self.yName, dataPoint.avgValue)
                     )
-                    .foregroundStyle(.purple)
+                    .foregroundStyle(selectedElement != nil ? Color.gray : Color.purple)
                     .lineStyle(StrokeStyle(lineWidth: 2))
                 }
             }
