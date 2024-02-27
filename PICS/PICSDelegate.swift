@@ -73,11 +73,11 @@ class PICSDelegate: SpeziAppDelegate {
         )
     }
 
-    // Currently, we collect data for the past three months as the patients
-    // have in-hospital appointments every three months. In the future, we
-    // might change this to collecting data since three months before the first
-    // or the closest incoming appointment if we collect the appointment dates.
-    private var monthTraceBack = -3
+    // Currently, we collect data for the past month. In the future, we might
+    // change this to collecting data since three months before the first
+    // or the closest incoming appointment if we collect the appointment dates
+    // and able to access those data here.
+    private var monthTraceBack = -1
     
     private var predicateThreeMonth: NSPredicate {
         let calendar = Calendar(identifier: .gregorian)
