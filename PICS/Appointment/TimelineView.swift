@@ -119,10 +119,10 @@ struct TimelineView: View {
                     )
                 HStack(spacing: 0) {
                     Spacer()
-                    Text("Appointment 1")
+                    Text(String(localized: "APPT1_TITLE"))
                         .padding(.leading, 45)
                     Spacer()
-                    Text("Appointment 2")
+                    Text("APPT2_TITLE")
                         .padding(.trailing, 40)
                     Spacer()
                 }
