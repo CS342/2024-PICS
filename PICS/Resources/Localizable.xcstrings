@@ -103,6 +103,28 @@
         }
       }
     },
+    "APPT1_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appointment 1"
+          }
+        }
+      }
+    },
+    "APPT2_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appointment 2"
+          }
+        }
+      }
+    },
     "APPTQ_0" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -852,6 +874,17 @@
     },
     "Threshold" : {
 
+    },
+    "TIMELINE_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your Timeline"
+          }
+        }
+      }
     },
     "Trail Making Task" : {
 
