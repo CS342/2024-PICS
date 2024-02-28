@@ -163,9 +163,6 @@
         }
       }
     },
-    "COGTEST_NAVIGATION_TITLE" : {
-
-    },
     "COMPLETED_TASK_LABEL %@" : {
       "localizations" : {
         "en" : {
@@ -842,9 +839,6 @@
 
     },
     "Threshold" : {
-
-    },
-    "Trail Making Task" : {
 
     },
     "TRAIL_MAKING_TEST_TITLE" : {
