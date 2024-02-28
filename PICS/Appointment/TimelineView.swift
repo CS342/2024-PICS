@@ -29,7 +29,6 @@ struct CurrentLocation: Shape {
         let positions: [CGFloat] = [1, 2, 3, 4, 5].map { CGFloat($0) / 6 }
         
         for position in positions {
-            print(position)
             let circleRect = CGRect(
                 x: arrowWidth * position - circleRadius,
                 y: arrowHeight / 2 - circleRadius,
