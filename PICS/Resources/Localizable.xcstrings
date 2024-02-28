@@ -4,6 +4,9 @@
     "" : {
 
     },
+    "%@" : {
+
+    },
     "%lld cm" : {
 
     },
@@ -165,6 +168,9 @@
           }
         }
       }
+    },
+    "COGTEST_NAVIGATION_TITLE" : {
+
     },
     "COMPLETED_TASK_LABEL %@" : {
       "localizations" : {
@@ -341,6 +347,39 @@
         }
       }
     },
+    "HKVIZ_AVERAGE_STRING" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daily Average: "
+          }
+        }
+      }
+    },
+    "HKVIZ_MAX_STRING" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maximum: "
+          }
+        }
+      }
+    },
+    "HKVIZ_MIN_STRING" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minimum: "
+          }
+        }
+      }
+    },
     "HKVIZ_NAVIGATION_TITLE" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -403,6 +442,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Step Count"
+          }
+        }
+      }
+    },
+    "HKVIZ_SUMMARY" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your summary for "
           }
         }
       }
@@ -802,6 +852,20 @@
     },
     "Threshold" : {
 
+    },
+    "Trail Making Task" : {
+
+    },
+    "TRAIL_MAKING_TEST_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trail Making Task"
+          }
+        }
+      }
     },
     "Weight" : {
 
