@@ -35,7 +35,7 @@ extension PICSScheduler {
                 schedule: Schedule(
                     start: Calendar.current.startOfDay(for: Date()),
                     repetition: .matching(dateComponents),
-                    end: .numberOfEvents(365)
+                    end: .numberOfEvents(26)
                 ),
                 notifications: true,
                 context: PICSTaskContext.questionnaire(Bundle.main.questionnaire(withName: "PHQ-4"))
@@ -61,7 +61,7 @@ extension PICSScheduler {
             schedule: Schedule(
                 start: Calendar.current.startOfDay(for: Date()),
                 repetition: .matching(dateComponents),
-                end: .numberOfEvents(365)
+                end: .numberOfEvents(26)
             ),
             notifications: true,
             context: PICSTaskContext.questionnaire(Bundle.main.questionnaire(withName: "EQ5D5L"))
@@ -87,7 +87,7 @@ extension PICSScheduler {
             schedule: Schedule(
                 start: Calendar.current.startOfDay(for: Date()),
                 repetition: .matching(dateComponents),
-                end: .numberOfEvents(365)
+                end: .numberOfEvents(26)
             ),
             notifications: true,
             context: PICSTaskContext.questionnaire(Bundle.main.questionnaire(withName: "Self-MNA"))
