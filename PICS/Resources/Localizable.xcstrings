@@ -72,6 +72,12 @@
         }
       }
     },
+    "Appointment 1" : {
+
+    },
+    "Appointment 2" : {
+
+    },
     "APPOINTMENTS_NAVIGATION_TITLE" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -231,6 +237,9 @@
         }
       }
     },
+    "Date and Time:" : {
+
+    },
     "EDUARDO_SALGADO_BIO" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -263,6 +272,9 @@
           }
         }
       }
+    },
+    "Failed to get dates" : {
+
     },
     "GETTING_HERE_HEADING" : {
       "extractionState" : "manual",
@@ -895,6 +907,9 @@
           }
         }
       }
+    },
+    "Your Timeline" : {
+
     },
     "ZIP_CITY" : {
       "extractionState" : "manual",
