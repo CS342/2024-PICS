@@ -75,6 +75,12 @@
         }
       }
     },
+    "Appointment 1" : {
+
+    },
+    "Appointment 2" : {
+
+    },
     "APPOINTMENTS_NAVIGATION_TITLE" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -93,6 +99,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Appointments"
+          }
+        }
+      }
+    },
+    "APPT1_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appointment 1"
+          }
+        }
+      }
+    },
+    "APPT2_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appointment 2"
           }
         }
       }
@@ -272,6 +300,9 @@
           }
         }
       }
+    },
+    "Failed to get dates" : {
+
     },
     "GETTING_HERE_HEADING" : {
       "extractionState" : "manual",
@@ -844,6 +875,17 @@
     "Threshold" : {
 
     },
+    "TIMELINE_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your Timeline"
+          }
+        }
+      }
+    },
     "Trail Making Task" : {
 
     },
@@ -962,6 +1004,9 @@
           }
         }
       }
+    },
+    "Your Timeline" : {
+
     },
     "ZIP_CITY" : {
       "extractionState" : "manual",
