@@ -160,6 +160,9 @@
         }
       }
     },
+    "COGTEST_NAVIGATION_TITLE" : {
+
+    },
     "COMPLETED_TASK_LABEL %@" : {
       "localizations" : {
         "en" : {
@@ -230,6 +233,9 @@
           }
         }
       }
+    },
+    "Date and Time:" : {
+
     },
     "EDUARDO_SALGADO_BIO" : {
       "extractionState" : "manual",
@@ -790,6 +796,20 @@
     },
     "Threshold" : {
 
+    },
+    "Trail Making Task" : {
+
+    },
+    "TRAIL_MAKING_TEST_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trail Making Task"
+          }
+        }
+      }
     },
     "Weight" : {
 
