@@ -737,7 +737,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Schedule"
+            "value" : "Questionnaires"
           }
         }
       }
@@ -748,7 +748,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Schedule"
+            "value" : "Questionnaires"
           }
         }
       }
