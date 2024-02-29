@@ -23,8 +23,6 @@ class HealthVisualizationTests: XCTestCase {
     
     
     func testLoadHealthDashboard() throws {
-        // Add healthkit data to ensure the queries and plots are tested
-//        try exitAppAndOpenHealth(.steps)
 
         // Check whether the components shows as expected.
         let app = XCUIApplication()
