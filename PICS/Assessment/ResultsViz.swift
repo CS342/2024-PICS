@@ -10,7 +10,7 @@ import Charts
 import SwiftUI
 
 struct ResultsViz: View {
-    var data: [AccessmentResult] = []
+    var data: [AssessmentResult] = []
     var xName: String
     var yName: String
     var title: String
@@ -39,7 +39,7 @@ struct ResultsViz: View {
         }
     }
     
-    init(data: [AccessmentResult], xName: String, yName: String, title: String) {
+    init(data: [AssessmentResult], xName: String, yName: String, title: String) {
         self.data = data
         self.xName = xName
         self.yName = yName

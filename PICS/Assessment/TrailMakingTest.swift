@@ -12,8 +12,8 @@ import SwiftUI
 
 struct TrailMakingTaskView: View {
     // Use @AppStorage to store the selected dates
-    @AppStorage("trailMakingResults") private var tmStorageResults: [AccessmentResult] = []
-    @AppStorage("AccessmentsInProgress") private var tmInProgress = false
+    @AppStorage("trailMakingResults") private var tmStorageResults: [AssessmentResult] = []
+    @AppStorage("AssessmentsInProgress") private var tmInProgress = false
     
     var body: some View {
         ZStack {
@@ -52,7 +52,7 @@ struct TrailMakingTaskView: View {
         // Go to the trail making results and parse the result.
         for result in taskResult.results ?? [] {
             if let stepResult = result as? ORKStepResult {
-                if stepResult.identifier != "trailmaking"{
+                if stepResult.identifier != "trailmaking" {
                     continue
                 }
                 for trailMakingResult in stepResult.results ?? [] {
@@ -62,7 +62,7 @@ struct TrailMakingTaskView: View {
                         } else {
                             -1.0
                         }
-                        let parsedResult = AccessmentResult(
+                        let parsedResult = AssessmentResult(
                             testDateTime: Date(),
                             timeSpent: timeTask,
                             errorCnt: Int(curResult.numberOfErrors)

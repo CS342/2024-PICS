@@ -13,35 +13,35 @@
     "%lld kg" : {
 
     },
-    "ACCESSMENT_TM_START_BTN" : {
+    "ASSESSMENT_TM_START_BTN" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Start Trail Making Accessment"
+            "value" : "Start Trail Making Assessment"
           }
         }
       }
     },
-    "ACCESSMENTS_NAVIGATION_TITLE" : {
+    "ASSESSMENTS_NAVIGATION_TITLE" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Accessments"
+            "value" : "Assessments"
           }
         }
       }
     },
-    "ACCESSMENTS_TAB_TITLE" : {
+    "ASSESSMENTS_TAB_TITLE" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Accessments"
+            "value" : "Assessments"
           }
         }
       }

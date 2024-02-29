@@ -8,9 +8,9 @@
 
 import SwiftUI
 
-// Struct for all the Accessments. The positive errorCnt and score
+// Struct for all the Assessments. The positive errorCnt and score
 // will be plot in ResultsViz.
-struct AccessmentResult: Codable, Identifiable {
+struct AssessmentResult: Codable, Identifiable {
     var testDateTime: Date
     var timeSpent: Double
     var errorCnt: Int = -1
@@ -19,8 +19,8 @@ struct AccessmentResult: Codable, Identifiable {
     var id = UUID()
 }
 
-struct Accessments: View {
-    enum Accessments {
+struct Assessments: View {
+    enum Assessments {
         case trailMaking
     }
 
@@ -30,13 +30,13 @@ struct Accessments: View {
     @Binding private var presentingAccount: Bool
     
     // Local storages for test results for plotting, etc.
-    @AppStorage("trailMakingResults") private var tmStorageResults: [AccessmentResult] = []
+    @AppStorage("trailMakingResults") private var tmStorageResults: [AssessmentResult] = []
     // Decide whether to show test or not.
-    @AppStorage("AccessmentsInProgress") private var accessmentsIP = false
+    @AppStorage("AssessmentsInProgress") private var assessmentsIP = false
     
-    @State var currentTest = Accessments.trailMaking
+    @State var currentTest = Assessments.trailMaking
     
-    var accessmentList: some View {
+    var assessmentList: some View {
         List {
             Section {
                 VStack {
@@ -47,7 +47,7 @@ struct Accessments: View {
                         title: String(localized: "TM_VIZ_TITLE")
                     )
                     Button(action: startTrailMaking) {
-                        Text(String(localized: "ACCESSMENT_TM_START_BTN"))
+                        Text(String(localized: "ASSESSMENT_TM_START_BTN"))
                     }
                     .frame(maxWidth: .infinity)
                 }
@@ -59,14 +59,14 @@ struct Accessments: View {
     
     var body: some View {
         NavigationStack {
-            if accessmentsIP {
+            if assessmentsIP {
                 switch currentTest {
-                case Accessments.trailMaking:
+                case Assessments.trailMaking:
                     TrailMakingTaskView()
                 }
             } else {
-                accessmentList
-                    .navigationTitle(String(localized: "ACCESSMENTS_NAVIGATION_TITLE"))
+                assessmentList
+                    .navigationTitle(String(localized: "ASSESSMENTS_NAVIGATION_TITLE"))
                     .toolbar {
                         if AccountButton.shouldDisplay {
                             AccountButton(isPresented: $presentingAccount)
@@ -82,13 +82,13 @@ struct Accessments: View {
     }
     
     func startTrailMaking() {
-        currentTest = Accessments.trailMaking
-        accessmentsIP = true
+        currentTest = Assessments.trailMaking
+        assessmentsIP = true
     }
 }
 
 #if DEBUG
-#Preview("AccessmentView") {
-    Accessments(presentingAccount: .constant(false))
+#Preview("AssessmentView") {
+    Assessments(presentingAccount: .constant(false))
 }
 #endif
