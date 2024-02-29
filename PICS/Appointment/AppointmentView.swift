@@ -20,6 +20,11 @@ struct AppointmentView: View {
             VStack(alignment: .leading) {
                 AppointmentBlock(date: formattedDate(appt1), time: formattedTime(appt1))
                 AppointmentBlock(date: formattedDate(appt2), time: formattedTime(appt2))
+                    .padding(.bottom)
+                Text(String(localized: "TIMELINE_TITLE"))
+                    .foregroundColor(.black)
+                    .italic()
+                TimelineView(appt1: appt1, appt2: appt2)
             }
             .padding()
             
