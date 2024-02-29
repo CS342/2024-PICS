@@ -4,6 +4,9 @@
     "" : {
 
     },
+    "%@" : {
+
+    },
     "%lld cm" : {
 
     },
@@ -72,6 +75,12 @@
         }
       }
     },
+    "Appointment 1" : {
+
+    },
+    "Appointment 2" : {
+
+    },
     "APPOINTMENTS_NAVIGATION_TITLE" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -90,6 +99,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Appointments"
+          }
+        }
+      }
+    },
+    "APPT1_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appointment 1"
+          }
+        }
+      }
+    },
+    "APPT2_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appointment 2"
           }
         }
       }
@@ -159,6 +190,9 @@
           }
         }
       }
+    },
+    "COGTEST_NAVIGATION_TITLE" : {
+
     },
     "COMPLETED_TASK_LABEL %@" : {
       "localizations" : {
@@ -267,6 +301,9 @@
         }
       }
     },
+    "Failed to get dates" : {
+
+    },
     "GETTING_HERE_HEADING" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -328,6 +365,39 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Height"
+          }
+        }
+      }
+    },
+    "HKVIZ_AVERAGE_STRING" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daily Average: "
+          }
+        }
+      }
+    },
+    "HKVIZ_MAX_STRING" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maximum: "
+          }
+        }
+      }
+    },
+    "HKVIZ_MIN_STRING" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minimum: "
           }
         }
       }
@@ -394,6 +464,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Step Count"
+          }
+        }
+      }
+    },
+    "HKVIZ_SUMMARY" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your summary for "
           }
         }
       }
@@ -862,6 +943,31 @@
     "Threshold" : {
 
     },
+    "TIMELINE_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your Timeline"
+          }
+        }
+      }
+    },
+    "Trail Making Task" : {
+
+    },
+    "TRAIL_MAKING_TEST_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trail Making Task"
+          }
+        }
+      }
+    },
     "Weight" : {
 
     },
@@ -966,6 +1072,9 @@
           }
         }
       }
+    },
+    "Your Timeline" : {
+
     },
     "ZIP_CITY" : {
       "extractionState" : "manual",
