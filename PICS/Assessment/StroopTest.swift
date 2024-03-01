@@ -17,6 +17,7 @@ struct StroopTestView: View {
         ZStack {
             Color(red: 242 / 255, green: 242 / 255, blue: 247 / 255)
                 .edgesIgnoringSafeArea(.all)
+            // Displays the ResearchKit ordered task view for the Stroop Test
             ORKOrderedTaskView(
                 tasks: createStroopTask(),
                 tintColor: .accentColor,
@@ -27,7 +28,9 @@ struct StroopTestView: View {
         }
     }
 
+    // Creates the Stroop task to be presented to the user
     private func createStroopTask() -> ORKOrderedTask {
+        // Initializes a Stroop task with the following specified parameters
         let task = ORKOrderedTask.stroopTask(
             withIdentifier: "StroopTask",
             intendedUseDescription: "Tests selective attention capacity and processing speed",
@@ -37,6 +40,7 @@ struct StroopTestView: View {
         return task
     }
 
+    // Handles the result of the Stroop task after completion
     private func handleTaskResult(result: TaskResult) async {
         assessmentsIP = false // End the assessment
         guard case let .completed(taskResult) = result else {
@@ -50,11 +54,13 @@ struct StroopTestView: View {
                stepResult.identifier == "stroopTestIdentifier" {
                 for stroopResult in stepResult.results ?? [] {
                     if let curResult = stroopResult as? ORKStroopResult {
+                        // Calculates the total time taken to complete the test
                         let totalTime = curResult.endTime - curResult.startTime
                         let parsedResult = AssessmentResult(
                             testDateTime: Date(),
                             timeSpent: totalTime
                         )
+                        // Adds the result to the array of Stroop test results
                         stroopTestResults += [parsedResult]
                     }
                 }
