@@ -28,11 +28,9 @@ struct StroopTestView: View {
     }
 
     private func createStroopTask() -> ORKOrderedTask {
-        // Assuming ResearchKit has a predefined Stroop test similar to the trail making test.
-        // Replace with the correct function call or task creation logic for the Stroop test.
         let task = ORKOrderedTask.stroopTask(
             withIdentifier: "StroopTask",
-            intendedUseDescription: "Tests selective attention capacity and processing speed", 
+            intendedUseDescription: "Tests selective attention capacity and processing speed",
             numberOfAttempts: 5,
             options: []
         )
@@ -47,18 +45,15 @@ struct StroopTestView: View {
         }
 
         // Extract and process the Stroop test results
-        // This will depend on the specific structure of the Stroop test results in ResearchKit
         for result in taskResult.results ?? [] {
             if let stepResult = result as? ORKStepResult,
-               stepResult.identifier == "stroopTestIdentifier" { // Adjust identifier based on your Stroop test setup
+               stepResult.identifier == "stroopTestIdentifier" {
                 for stroopResult in stepResult.results ?? [] {
-                    if let curResult = stroopResult as? ORKStroopResult { // Assuming a result type specific to Stroop
-                        // let timeTask = curResult.taps.last?.timestamp ?? -1.0
+                    if let curResult = stroopResult as? ORKStroopResult {
                         let totalTime = curResult.endTime - curResult.startTime
                         let parsedResult = AssessmentResult(
                             testDateTime: Date(),
                             timeSpent: totalTime
-                            // errorCnt: Int(curResult.numberOfErrors) // Adjust based on how errors are recorded
                         )
                         stroopTestResults += [parsedResult]
                     }
