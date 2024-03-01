@@ -185,8 +185,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/StanfordSpezi/SpeziFoundation.git",
       "state" : {
-        "revision" : "0346857e2f1d6fd4b1d950d271be6c82df97107f",
-        "version" : "1.0.2"
+        "revision" : "662f25d6010a94faf4fd996e184617fcb2bf13d4",
+        "version" : "1.0.3"
       }
     },
     {
@@ -248,8 +248,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/StanfordSpezi/SpeziViews.git",
       "state" : {
-        "revision" : "d49f716e4a4d634604bb0dcd6d53df679b6c1358",
-        "version" : "1.3.0"
+        "revision" : "4d2a724d97c8f19ac7de7aa2c046b1cb3ef7b279",
+        "version" : "1.3.1"
       }
     },
     {
