@@ -7,6 +7,9 @@
     "%@" : {
 
     },
+    "%@: Not Completed" : {
+
+    },
     "%lld cm" : {
 
     },
@@ -924,6 +927,9 @@
       }
     },
     "This task has been completed!" : {
+
+    },
+    "This test measures your %@." : {
 
     },
     "Threshold" : {
