@@ -23,7 +23,6 @@ class HealthVisualizationTests: XCTestCase {
     
     
     func testLoadHealthDashboard() throws {
-
         // Check whether the components shows as expected.
         let app = XCUIApplication()
         // Go to the Health dashboard.
