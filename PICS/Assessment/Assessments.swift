@@ -22,6 +22,7 @@ struct AssessmentResult: Codable, Identifiable {
 struct Assessments: View {
     enum Assessments {
         case trailMaking
+        case stroopTest
     }
 
     @Environment(PICSStandard.self) private var standard
@@ -31,6 +32,7 @@ struct Assessments: View {
     
     // Local storages for test results for plotting, etc.
     @AppStorage("trailMakingResults") private var tmStorageResults: [AssessmentResult] = []
+    @AppStorage("stroopTestResults") private var stroopTestResults: [AssessmentResult] = []
     // Decide whether to show test or not.
     @AppStorage("AssessmentsInProgress") private var assessmentsIP = false
     
@@ -52,6 +54,23 @@ struct Assessments: View {
                     .frame(maxWidth: .infinity)
                 }
             }
+            Section {
+                VStack {
+                    // Existing TrailMaking Results Visualization
+
+                    // Add Stroop Test results visualization here
+                    ResultsViz(
+                        data: stroopTestResults,
+                        xName: "Time",
+                        yName: "Results",
+                        title: String(localized: "STROOP_VIZ_TITLE")
+                    )
+                    Button(action: startStroopTest) {
+                        Text(String(localized: "ASSESSMENT_STROOP_START_BTN"))
+                    }
+                    .frame(maxWidth: .infinity)
+                }
+            }
             // Add Stroop test and cognitive test here.
         }
     }
@@ -59,10 +78,17 @@ struct Assessments: View {
     
     var body: some View {
         NavigationStack {
+//            if assessmentsIP {
+//                switch currentTest {
+//                case Assessments.trailMaking:
+//                    TrailMakingTaskView()
+//                }
             if assessmentsIP {
                 switch currentTest {
-                case Assessments.trailMaking:
+                case .trailMaking:
                     TrailMakingTaskView()
+                case .stroopTest:
+                    StroopTestView() // You'll need to create this view
                 }
             } else {
                 assessmentList
@@ -83,6 +109,11 @@ struct Assessments: View {
     
     func startTrailMaking() {
         currentTest = Assessments.trailMaking
+        assessmentsIP = true
+    }
+    
+    func startStroopTest() {
+        currentTest = Assessments.stroopTest
         assessmentsIP = true
     }
 }

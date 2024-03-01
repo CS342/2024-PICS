@@ -13,39 +13,6 @@
     "%lld kg" : {
 
     },
-    "ASSESSMENT_TM_START_BTN" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Start Trail Making Assessment"
-          }
-        }
-      }
-    },
-    "ASSESSMENTS_NAVIGATION_TITLE" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Assessments"
-          }
-        }
-      }
-    },
-    "ASSESSMENTS_TAB_TITLE" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Assessments"
-          }
-        }
-      }
-    },
     "ACCOUNT_NEXT" : {
       "localizations" : {
         "en" : {
@@ -203,6 +170,42 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Appointment Information"
+          }
+        }
+      }
+    },
+    "ASSESSMENT_STROOP_START_BTN" : {
+
+    },
+    "ASSESSMENT_TM_START_BTN" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start Trail Making Assessment"
+          }
+        }
+      }
+    },
+    "ASSESSMENTS_NAVIGATION_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Assessments"
+          }
+        }
+      }
+    },
+    "ASSESSMENTS_TAB_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Assessments"
           }
         }
       }
@@ -818,6 +821,12 @@
           }
         }
       }
+    },
+    "STROOP_TEST_TITLE" : {
+
+    },
+    "STROOP_VIZ_TITLE" : {
+
     },
     "TASK_CONTEXT_ACTION_QUESTIONNAIRE" : {
       "localizations" : {
