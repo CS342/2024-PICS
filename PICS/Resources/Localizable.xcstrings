@@ -333,7 +333,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Please fill out the EQ-5D-5L questionnaire every 2 weeks."
+            "value" : "Tell us about your Activity and Physical Health every 2 weeks..."
           }
         }
       }
@@ -698,7 +698,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Please fill out the Mini Nutritional  Assessment every 2 weeks."
+            "value" : "Tell us about your Nutritional Habits every 2 weeks..."
           }
         }
       }
@@ -742,7 +742,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Please fill out the PHQ-4 questionnaire every 2 weeks."
+            "value" : "Tell us about your Mental and Emotional Health every 2 weeks..."
           }
         }
       }
