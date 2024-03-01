@@ -97,6 +97,28 @@
         }
       }
     },
+    "APPT1_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appointment 1"
+          }
+        }
+      }
+    },
+    "APPT2_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appointment 2"
+          }
+        }
+      }
+    },
     "APPTQ_0" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -269,6 +291,9 @@
           }
         }
       }
+    },
+    "Failed to get dates" : {
+
     },
     "GETTING_HERE_HEADING" : {
       "extractionState" : "manual",
@@ -840,6 +865,17 @@
     },
     "Threshold" : {
 
+    },
+    "TIMELINE_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your Timeline"
+          }
+        }
+      }
     },
     "TRAIL_MAKING_TEST_TITLE" : {
       "extractionState" : "manual",
