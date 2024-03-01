@@ -175,7 +175,14 @@
       }
     },
     "ASSESSMENT_STROOP_START_BTN" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start Stroop Test"
+          }
+        }
+      }
     },
     "ASSESSMENT_TM_START_BTN" : {
       "extractionState" : "manual",
