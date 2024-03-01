@@ -823,10 +823,24 @@
       }
     },
     "STROOP_TEST_TITLE" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stroop Test"
+          }
+        }
+      }
     },
     "STROOP_VIZ_TITLE" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stroop Test Results"
+          }
+        }
+      }
     },
     "TASK_CONTEXT_ACTION_QUESTIONNAIRE" : {
       "localizations" : {
@@ -925,7 +939,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Trail Making Task Results"
+            "value" : "Trail Making Test Results"
           }
         }
       }
@@ -936,7 +950,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Trail Making Task"
+            "value" : "Trail Making Test"
           }
         }
       }
