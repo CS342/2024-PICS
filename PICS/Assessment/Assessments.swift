@@ -147,6 +147,23 @@ struct Assessments: View {
         }
     }
     
+    // Initializes the view with a binding to control whether the account UI is being presented.
+    init(presentingAccount: Binding<Bool>) {
+        self._presentingAccount = presentingAccount
+    }
+    
+    // Function to set up and start the Trail Making assessment.
+    func startTrailMaking() {
+        currentTest = Assessments.trailMaking
+        assessmentsIP = true
+    }
+    
+    // Function to set up and start the Stroop Test.
+    func startStroopTest() {
+        currentTest = Assessments.stroopTest
+        assessmentsIP = true
+    }
+    
     // A view for displaying a message indicating that a specific assessment has not been completed.
     private func notCompletedView(testName: String) -> some View {
         VStack(alignment: .leading) {
@@ -171,23 +188,6 @@ struct Assessments: View {
                 .font(.subheadline)
                 .padding(.bottom, 5)
         }
-    }
-    
-    // Initializes the view with a binding to control whether the account UI is being presented.
-    init(presentingAccount: Binding<Bool>) {
-        self._presentingAccount = presentingAccount
-    }
-    
-    // Function to set up and start the Trail Making assessment.
-    func startTrailMaking() {
-        currentTest = Assessments.trailMaking
-        assessmentsIP = true
-    }
-    
-    // Function to set up and start the Stroop Test.
-    func startStroopTest() {
-        currentTest = Assessments.stroopTest
-        assessmentsIP = true
     }
 }
 
