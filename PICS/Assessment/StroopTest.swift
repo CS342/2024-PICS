@@ -1,8 +1,9 @@
 //
-//  SwiftUIView.swift
-//  PICS
+// This source file is part of the PICS based on the Stanford Spezi Template Application project
 //
-//  Created by Karan Soin on 2/29/24.
+// SPDX-FileCopyrightText: 2024 Stanford University
+//
+// SPDX-License-Identifier: MIT
 //
 
 import ResearchKit
