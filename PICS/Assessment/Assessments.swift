@@ -52,7 +52,7 @@ struct Assessments: View {
                     case .trailMaking:
                         TrailMakingTaskView()
                     case .stroopTest:
-                        StroopTestView() // You'll need to create this view
+                        StroopTestView()
                     }
                 } else {
                     assessmentList
@@ -66,93 +66,101 @@ struct Assessments: View {
             }
         }
         
-        // ... other methods ...
-        
-        // Refactored Trail Making Test Section View
-        private var trailMakingTestSection: some View {
-            Section {
-                VStack {
-                    trailMakingTestResultsView
-                    Divider()
+    private var trailMakingTestSection: some View {
+        Section {
+            VStack {
+                trailMakingTestResultsView
+                Divider()
+                .padding(.bottom, 5)
+                if tmStorageResults.isEmpty {
                     Button(action: startTrailMaking) {
                         Text(String(localized: "ASSESSMENT_TM_START_BTN"))
                     }
                     .frame(maxWidth: .infinity)
-                }
-            }
-        }
-        
-        // Refactored Stroop Test Section View
-        private var stroopTestSection: some View {
-            Section {
-                VStack {
-                    stroopTestResultsView
-                    Divider()
-                    Button(action: startStroopTest) {
-                        Text(String(localized: "ASSESSMENT_STROOP_START_BTN"))
+                } else {
+                    Button(action: startTrailMaking) {
+                        Text(String(localized: "ASSESSMENT_RESULTS_BTN"))
                     }
                     .frame(maxWidth: .infinity)
                 }
             }
         }
+    }
         
-        // Reusable subviews for result or not completed message
-        private var trailMakingTestResultsView: some View {
-            Group {
-                if tmStorageResults.isEmpty {
-                    notCompletedView(testName: "Trail Making Test")
-                } else {
-                    ResultsViz(
-                        data: tmStorageResults,
-                        xName: "Time",
-                        yName: "Results",
-                        title: String(localized: "TM_VIZ_TITLE")
-                    )
-                }
-            }
-        }
-        
-        private var stroopTestResultsView: some View {
-            Group {
-                if stroopTestResults.isEmpty {
-                    notCompletedView(testName: "Stroop Test")
-                } else {
-                    ResultsViz(
-                        data: stroopTestResults,
-                        xName: "Time",
-                        yName: "Results",
-                        title: String(localized: "STROOP_VIZ_TITLE")
-                    )
-                }
-            }
-        }
-        
-        // Subview for the not completed message
-        private func notCompletedView(testName: String) -> some View {
-            VStack(alignment: .leading) {
-                HStack {
-                    Text("\(testName): Not Completed")
-                        .font(.title3.bold())
-//                        .font(.title)
-//                        .bold()
-                        .foregroundColor(.primary)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.5)
-                    Image(systemName: "exclamationmark.circle.fill")
-                        .foregroundColor(.yellow)
-                        .font(.system(size: 25))
-                        .accessibilityHidden(true)
-                }
-                .padding(.bottom, 5)
-                .multilineTextAlignment(.center) // Center-align this Text
-                Text("This test measures your \(testName == "Trail Making Test" ? "visual attention and task switching" : "cognitive flexibility and processing speed").")
-                    .foregroundColor(.secondary)
-                    .multilineTextAlignment(.center) // Center-align this Text
-                    .frame(maxWidth: .infinity) // Ensure the Text view expands to the width of its container
-                    .font(.subheadline)
+    private var stroopTestSection: some View {
+        Section {
+            VStack {
+                stroopTestResultsView
+                Divider()
                     .padding(.bottom, 5)
+                if stroopTestResults.isEmpty {
+                    Button(action: startStroopTest) {
+                        Text(String(localized: "ASSESSMENT_STROOP_START_BTN"))
+                    }
+                    .frame(maxWidth: .infinity)
+                } else {
+                    Button(action: startStroopTest) {
+                        Text(String(localized: "ASSESSMENT_RESULTS_BTN"))
+                    }
+                    .frame(maxWidth: .infinity)
+                }
             }
         }
+    }
+        
+    private var trailMakingTestResultsView: some View {
+        Group {
+            if tmStorageResults.isEmpty {
+                notCompletedView(testName: "Trail Making")
+            } else {
+                ResultsViz(
+                    data: tmStorageResults,
+                    xName: "Time",
+                    yName: "Results",
+                    title: String(localized: "TM_VIZ_TITLE")
+                )
+            }
+        }
+    }
+    
+    private var stroopTestResultsView: some View {
+        Group {
+            if stroopTestResults.isEmpty {
+                notCompletedView(testName: "Stroop Test")
+            } else {
+                ResultsViz(
+                    data: stroopTestResults,
+                    xName: "Time",
+                    yName: "Results",
+                    title: String(localized: "STROOP_VIZ_TITLE")
+                )
+            }
+        }
+    }
+    
+    private func notCompletedView(testName: String) -> some View {
+        VStack(alignment: .leading) {
+            HStack {
+                Image(systemName: "exclamationmark.circle.fill")
+                    .foregroundColor(.red)
+                    .font(.system(size: 25))
+                    .accessibilityHidden(true)
+                Text("\(testName): Not Completed")
+                    .font(.title3.bold())
+                    .foregroundColor(.primary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
+            }
+            .padding(.bottom, 5)
+            .multilineTextAlignment(.center)
+            Text("This test measures your \(testName == "Trail Making Test" ? "visual attention and task switching" : "cognitive flexibility and processing speed").")
+                .foregroundColor(.secondary)
+                .multilineTextAlignment(.center)
+                .frame(maxWidth: .infinity)
+                .font(.subheadline)
+                .padding(.bottom, 5)
+        }
+    }
     
 //    var assessmentList: some View {
 //        List {

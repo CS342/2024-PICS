@@ -177,12 +177,23 @@
         }
       }
     },
+    "ASSESSMENT_RESULTS_BTN" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retake Assessment"
+          }
+        }
+      }
+    },
     "ASSESSMENT_STROOP_START_BTN" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Start Stroop Test"
+            "value" : "Start Assessment"
           }
         }
       }
@@ -193,7 +204,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Start Trail Making Assessment"
+            "value" : "Start Assessment"
           }
         }
       }
