@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22201EE82B9259B800E38F47 /* EQ5D5L.json in Resources */ = {isa = PBXBuildFile; fileRef = 22201EE52B9259B800E38F47 /* EQ5D5L.json */; };
+		22201EE92B9259B800E38F47 /* PHQ-4.json in Resources */ = {isa = PBXBuildFile; fileRef = 22201EE62B9259B800E38F47 /* PHQ-4.json */; };
+		22201EEA2B9259B800E38F47 /* Self-MNA.json in Resources */ = {isa = PBXBuildFile; fileRef = 22201EE72B9259B800E38F47 /* Self-MNA.json */; };
 		22306A2A2B7C4E8E000A8EC1 /* OnboardingQuestionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22306A292B7C4E8E000A8EC1 /* OnboardingQuestionnaire.swift */; };
 		22306A3E2B8F0097000A8EC1 /* OnboardingSurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22306A3D2B8F0097000A8EC1 /* OnboardingSurveyView.swift */; };
 		22306A412B8F20C4000A8EC1 /* AccountQuestionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22306A402B8F20C4000A8EC1 /* AccountQuestionnaire.swift */; };
 		22306A462B8FB173000A8EC1 /* OnboardingQuestionnaireDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22306A452B8FB173000A8EC1 /* OnboardingQuestionnaireDashboard.swift */; };
 		22365B782B902C9100C4528E /* Onboarding-Questionnaire.json in Resources */ = {isa = PBXBuildFile; fileRef = 22365B772B902C9100C4528E /* Onboarding-Questionnaire.json */; };
-		22365B7F2B92542100C4528E /* Self-MNA.json in Resources */ = {isa = PBXBuildFile; fileRef = 22365B7E2B92542000C4528E /* Self-MNA.json */; };
-		22365B812B92542A00C4528E /* PHQ-4.json in Resources */ = {isa = PBXBuildFile; fileRef = 22365B802B92542A00C4528E /* PHQ-4.json */; };
-		22365B832B92544200C4528E /* EQ5D5L.json in Resources */ = {isa = PBXBuildFile; fileRef = 22365B822B92544200C4528E /* EQ5D5L.json */; };
 		226C16F02B69DF3500FBA97D /* HeightKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226C16EF2B69DF3500FBA97D /* HeightKey.swift */; };
 		226C16F22B6C820C00FBA97D /* WeightKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226C16F12B6C820B00FBA97D /* WeightKey.swift */; };
 		27FA29902A388E9B009CAC45 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA298F2A388E9B009CAC45 /* ModalView.swift */; };
@@ -76,12 +76,6 @@
 		653A255528338800005D4D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 653A255428338800005D4D48 /* Assets.xcassets */; };
 		653A256228338800005D4D48 /* PICSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A256128338800005D4D48 /* PICSTests.swift */; };
 		741110F22B5767DF00DFC79E /* PROM-Questionnaire.json in Resources */ = {isa = PBXBuildFile; fileRef = 741110F12B5767DE00DFC79E /* PROM-Questionnaire.json */; };
-		74AE057F2B8FFF5200AB5287 /* EQ5D5L.json in Resources */ = {isa = PBXBuildFile; fileRef = 74AE057E2B8FFF5200AB5287 /* EQ5D5L.json */; };
-		74AE05812B90068100AB5287 /* PHQ-4.json in Resources */ = {isa = PBXBuildFile; fileRef = 74AE05802B90068100AB5287 /* PHQ-4.json */; };
-		74AE05842B90099900AB5287 /* Self-MNA.json in Resources */ = {isa = PBXBuildFile; fileRef = 74AE05832B90099900AB5287 /* Self-MNA.json */; };
-		74C593952B720781002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
-		74C593972B720B5E002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
-		74C5939A2B720F1B002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		86400D192B7C4B6D009FEC10 /* ApptInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86400D182B7C4B6D009FEC10 /* ApptInfo.swift */; };
 		8644E6712B6C7243001218D0 /* AppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E6702B6C7243001218D0 /* AppointmentView.swift */; };
 		8644E67B2B6C75B1001218D0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E67A2B6C75B1001218D0 /* MapView.swift */; };
@@ -122,14 +116,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22201EE52B9259B800E38F47 /* EQ5D5L.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EQ5D5L.json; sourceTree = "<group>"; };
+		22201EE62B9259B800E38F47 /* PHQ-4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "PHQ-4.json"; sourceTree = "<group>"; };
+		22201EE72B9259B800E38F47 /* Self-MNA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Self-MNA.json"; sourceTree = "<group>"; };
 		22306A292B7C4E8E000A8EC1 /* OnboardingQuestionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingQuestionnaire.swift; sourceTree = "<group>"; };
 		22306A3D2B8F0097000A8EC1 /* OnboardingSurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSurveyView.swift; sourceTree = "<group>"; };
 		22306A402B8F20C4000A8EC1 /* AccountQuestionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountQuestionnaire.swift; sourceTree = "<group>"; };
 		22306A452B8FB173000A8EC1 /* OnboardingQuestionnaireDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingQuestionnaireDashboard.swift; sourceTree = "<group>"; };
 		22365B772B902C9100C4528E /* Onboarding-Questionnaire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Onboarding-Questionnaire.json"; sourceTree = "<group>"; };
-		22365B7E2B92542000C4528E /* Self-MNA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Self-MNA.json"; sourceTree = "<group>"; };
-		22365B802B92542A00C4528E /* PHQ-4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "PHQ-4.json"; sourceTree = "<group>"; };
-		22365B822B92544200C4528E /* EQ5D5L.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EQ5D5L.json; sourceTree = "<group>"; };
 		226C16EF2B69DF3500FBA97D /* HeightKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightKey.swift; sourceTree = "<group>"; };
 		226C16F12B6C820B00FBA97D /* WeightKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightKey.swift; sourceTree = "<group>"; };
 		27FA298F2A388E9B009CAC45 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
@@ -176,9 +170,6 @@
 		653A256728338800005D4D48 /* PICSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PICSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		653A258928339462005D4D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		741110F12B5767DE00DFC79E /* PROM-Questionnaire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "PROM-Questionnaire.json"; sourceTree = "<group>"; };
-		74AE057E2B8FFF5200AB5287 /* EQ5D5L.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EQ5D5L.json; sourceTree = "<group>"; };
-		74AE05802B90068100AB5287 /* PHQ-4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "PHQ-4.json"; sourceTree = "<group>"; };
-		74AE05832B90099900AB5287 /* Self-MNA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Self-MNA.json"; sourceTree = "<group>"; };
 		86400D182B7C4B6D009FEC10 /* ApptInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptInfo.swift; sourceTree = "<group>"; };
 		8644E6702B6C7243001218D0 /* AppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentView.swift; sourceTree = "<group>"; };
 		8644E67A2B6C75B1001218D0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -247,16 +238,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		22365B7C2B92535900C4528E /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				74AE057E2B8FFF5200AB5287 /* EQ5D5L.json */,
-				74AE05802B90068100AB5287 /* PHQ-4.json */,
-				74AE05832B90099900AB5287 /* Self-MNA.json */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		226C16EC2B69DEC600FBA97D /* Patient Information */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,9 +293,9 @@
 		2FE5DC2D29EDD792004B9AB4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				22365B822B92544200C4528E /* EQ5D5L.json */,
-				22365B802B92542A00C4528E /* PHQ-4.json */,
-				22365B7E2B92542000C4528E /* Self-MNA.json */,
+				22201EE52B9259B800E38F47 /* EQ5D5L.json */,
+				22201EE62B9259B800E38F47 /* PHQ-4.json */,
+				22201EE72B9259B800E38F47 /* Self-MNA.json */,
 				22365B772B902C9100C4528E /* Onboarding-Questionnaire.json */,
 				741110F12B5767DE00DFC79E /* PROM-Questionnaire.json */,
 				653A255428338800005D4D48 /* Assets.xcassets */,
@@ -380,7 +361,6 @@
 				653A256A28338800005D4D48 /* PICSUITests */,
 				653A254E283387FE005D4D48 /* Products */,
 				653A258B283395A7005D4D48 /* Frameworks */,
-				22365B7C2B92535900C4528E /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -639,22 +619,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22201EEA2B9259B800E38F47 /* Self-MNA.json in Resources */,
 				2FC3439229EE634B002D773C /* ConsentDocument.md in Resources */,
 				653A255528338800005D4D48 /* Assets.xcassets in Resources */,
-				74C5939A2B720F1B002D0274 /* (null) in Resources */,
-				22365B832B92544200C4528E /* EQ5D5L.json in Resources */,
+				22201EE92B9259B800E38F47 /* PHQ-4.json in Resources */,
 				2FC3439029EE6346002D773C /* SocialSupportQuestionnaire.json in Resources */,
-				74AE057F2B8FFF5200AB5287 /* EQ5D5L.json in Resources */,
-				74C593952B720781002D0274 /* (null) in Resources */,
+				22201EE82B9259B800E38F47 /* EQ5D5L.json in Resources */,
 				22365B782B902C9100C4528E /* Onboarding-Questionnaire.json in Resources */,
 				2FA0BFED2ACC977500E0EF83 /* Localizable.xcstrings in Resources */,
 				741110F22B5767DF00DFC79E /* PROM-Questionnaire.json in Resources */,
-				74C593972B720B5E002D0274 /* (null) in Resources */,
-				74AE05812B90068100AB5287 /* PHQ-4.json in Resources */,
-				74AE05842B90099900AB5287 /* Self-MNA.json in Resources */,
-				22365B7F2B92542100C4528E /* Self-MNA.json in Resources */,
 				2F6025CB29BBE70F0045459E /* GoogleService-Info.plist in Resources */,
-				22365B812B92542A00C4528E /* PHQ-4.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
