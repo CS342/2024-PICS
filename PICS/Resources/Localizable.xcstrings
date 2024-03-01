@@ -13,6 +13,39 @@
     "%lld kg" : {
 
     },
+    "ASSESSMENT_TM_START_BTN" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start Trail Making Assessment"
+          }
+        }
+      }
+    },
+    "ASSESSMENTS_NAVIGATION_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Assessments"
+          }
+        }
+      }
+    },
+    "ASSESSMENTS_TAB_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Assessments"
+          }
+        }
+      }
+    },
     "ACCOUNT_NEXT" : {
       "localizations" : {
         "en" : {
@@ -759,7 +792,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Schedule"
+            "value" : "Questionnaire"
           }
         }
       }
@@ -770,7 +803,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Schedule"
+            "value" : "Questionnaires"
           }
         }
       }
@@ -873,6 +906,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Your Timeline"
+          }
+        }
+      }
+    },
+    "TM_VIZ_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trail Making Task Results"
           }
         }
       }
