@@ -181,7 +181,7 @@ struct Assessments: View {
             }
             .padding(.bottom, 5)
             .multilineTextAlignment(.center)
-            Text("This test measures your \(testName == "Trail Making Test" ? "visual attention and task switching" : "cognitive flexibility and processing speed").")
+            Text("This test measures your \(testName == "Trail Making" ? "visual attention and task switching" : "cognitive flexibility and processing speed").")
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
                 .frame(maxWidth: .infinity)
