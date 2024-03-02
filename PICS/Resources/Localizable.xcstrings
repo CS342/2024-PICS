@@ -7,6 +7,9 @@
     "%@" : {
 
     },
+    "%@: Not Completed" : {
+
+    },
     "%lld cm" : {
 
     },
@@ -174,13 +177,34 @@
         }
       }
     },
+    "ASSESSMENT_RESULTS_BTN" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retake Assessment"
+          }
+        }
+      }
+    },
+    "ASSESSMENT_STROOP_START_BTN" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start Assessment"
+          }
+        }
+      }
+    },
     "ASSESSMENT_TM_START_BTN" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Start Trail Making Assessment"
+            "value" : "Start Assessment"
           }
         }
       }
@@ -309,7 +333,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Please fill out the EQ-5D-5L questionnaire every 2 weeks."
+            "value" : "Tell us about your Activity and Physical Health every 2 weeks..."
           }
         }
       }
@@ -636,9 +660,6 @@
         }
       }
     },
-    "Key" : {
-      "extractionState" : "manual"
-    },
     "LELAND_STANFORD_BIO" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -677,7 +698,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Please fill out the Mini Nutritional  Assessment every 2 weeks."
+            "value" : "Tell us about your Nutritional Habits every 2 weeks..."
           }
         }
       }
@@ -704,66 +725,13 @@
         }
       }
     },
-    "Now" : {
-
-    },
-    "Onboarding Questionnaire" : {
-
-    },
-    "Onboarding Task" : {
-
-    },
-    "ONBOARDING_CAPTION" : {
+    "ONBOARDING_QUESTIONNAIRE" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Please complete the Onboarding questionnaire before your first appointment."
-          }
-        }
-      }
-    },
-    "ONBOARDING_DESCRIPTION" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Please fill out the Onboarding Questionnaire to collect some basic information before your first appointment."
-          }
-        }
-      }
-    },
-    "ONBOARDING_INSTRUCTION" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "You may skip this step during the onboarding and fill it out before your first appointment."
-          }
-        }
-      }
-    },
-    "ONBOARDING_SUBTITLE" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Please fill out this onboarding survey to collect your basic information."
-          }
-        }
-      }
-    },
-    "ONBOARDING_TITLE" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Onboarding Questionnaire"
+            "value" : "Static information on basic profile info"
           }
         }
       }
@@ -774,7 +742,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Please fill out the PHQ-4 questionnaire every 2 weeks."
+            "value" : "Tell us about your Mental and Emotional Health every 2 weeks..."
           }
         }
       }
@@ -864,12 +832,6 @@
         }
       }
     },
-    "Skip" : {
-
-    },
-    "Start Questionnaire" : {
-
-    },
     "STREET_ADDRESS" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -881,8 +843,25 @@
         }
       }
     },
-    "Take Questionnaire" : {
-
+    "STROOP_TEST_TITLE" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stroop Test"
+          }
+        }
+      }
+    },
+    "STROOP_VIZ_TITLE" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stroop Test Results"
+          }
+        }
+      }
     },
     "TASK_CONTEXT_ACTION_QUESTIONNAIRE" : {
       "localizations" : {
@@ -961,6 +940,9 @@
     "This task has been completed!" : {
 
     },
+    "This test measures your %@." : {
+
+    },
     "Threshold" : {
 
     },
@@ -981,7 +963,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Trail Making Task Results"
+            "value" : "Trail Making Test Results"
           }
         }
       }
@@ -992,7 +974,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Trail Making Task"
+            "value" : "Trail Making Test"
           }
         }
       }
