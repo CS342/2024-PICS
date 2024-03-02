@@ -7,6 +7,9 @@
     "%@" : {
 
     },
+    "%@: Not Completed" : {
+
+    },
     "%lld cm" : {
 
     },
@@ -97,6 +100,28 @@
         }
       }
     },
+    "APPT1_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appointment 1"
+          }
+        }
+      }
+    },
+    "APPT2_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appointment 2"
+          }
+        }
+      }
+    },
     "APPTQ_0" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -152,6 +177,60 @@
         }
       }
     },
+    "ASSESSMENT_RESULTS_BTN" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retake Assessment"
+          }
+        }
+      }
+    },
+    "ASSESSMENT_STROOP_START_BTN" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start Assessment"
+          }
+        }
+      }
+    },
+    "ASSESSMENT_TM_START_BTN" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start Assessment"
+          }
+        }
+      }
+    },
+    "ASSESSMENTS_NAVIGATION_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Assessments"
+          }
+        }
+      }
+    },
+    "ASSESSMENTS_TAB_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Assessments"
+          }
+        }
+      }
+    },
     "CLOSE" : {
       "comment" : "MARK: General",
       "localizations" : {
@@ -162,9 +241,6 @@
           }
         }
       }
-    },
-    "COGTEST_NAVIGATION_TITLE" : {
-
     },
     "COMPLETED_TASK_LABEL %@" : {
       "localizations" : {
@@ -257,7 +333,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Please fill out the EQ-5D-5L questionnaire every 2 weeks."
+            "value" : "Tell us about your Activity and Physical Health every 2 weeks..."
           }
         }
       }
@@ -272,6 +348,9 @@
           }
         }
       }
+    },
+    "Failed to get dates" : {
+
     },
     "GETTING_HERE_HEADING" : {
       "extractionState" : "manual",
@@ -619,7 +698,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Please fill out the Mini Nutritional  Assessment every 2 weeks."
+            "value" : "Tell us about your Nutritional Habits every 2 weeks..."
           }
         }
       }
@@ -663,7 +742,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Please fill out the PHQ-4 questionnaire every 2 weeks."
+            "value" : "Tell us about your Mental and Emotional Health every 2 weeks..."
           }
         }
       }
@@ -737,7 +816,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Schedule"
+            "value" : "Questionnaire"
           }
         }
       }
@@ -748,7 +827,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Schedule"
+            "value" : "Questionnaires"
           }
         }
       }
@@ -760,6 +839,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Augustenburger Platz 1"
+          }
+        }
+      }
+    },
+    "STROOP_TEST_TITLE" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stroop Test"
+          }
+        }
+      }
+    },
+    "STROOP_VIZ_TITLE" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stroop Test Results"
           }
         }
       }
@@ -841,11 +940,33 @@
     "This task has been completed!" : {
 
     },
+    "This test measures your %@." : {
+
+    },
     "Threshold" : {
 
     },
-    "Trail Making Task" : {
-
+    "TIMELINE_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your Timeline"
+          }
+        }
+      }
+    },
+    "TM_VIZ_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trail Making Test Results"
+          }
+        }
+      }
     },
     "TRAIL_MAKING_TEST_TITLE" : {
       "extractionState" : "manual",
@@ -853,7 +974,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Trail Making Task"
+            "value" : "Trail Making Test"
           }
         }
       }

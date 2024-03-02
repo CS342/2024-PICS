@@ -31,6 +31,7 @@ struct EventContextView: View {
             Divider()
             if !eventContext.event.complete {
                 descriptionText
+                    .multilineTextAlignment(.center)
             } else {
                 completedText
             }
