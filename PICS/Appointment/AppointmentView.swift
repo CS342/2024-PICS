@@ -20,7 +20,7 @@ struct AppointmentView: View {
                 Text(String(localized: "TIMELINE_TITLE"))
                     .foregroundColor(.black)
                     .italic()
-                TimelineView(appt1: appt1, appt2: appt2)
+                TimelineView()
             }
             .padding()
             
