@@ -19,6 +19,8 @@ struct OnboardingFlow: View {
     @Environment(PICSScheduler.self) private var scheduler
 
     @AppStorage(StorageKeys.onboardingFlowComplete) private var completedOnboardingFlow = false
+    
+    @State private var localNotificationAuthorization = false
         
     private var healthKitAuthorization: Bool {
         // As HealthKit not available in preview simulator
@@ -46,6 +48,11 @@ struct OnboardingFlow: View {
             if HKHealthStore.isHealthDataAvailable() && !healthKitAuthorization {
                 HealthKitPermissions()
             }
+            
+            if !localNotificationAuthorization {
+                NotificationPermissions()
+            }
+            
             ApptInfo()
         }
             .interactiveDismissDisabled(!completedOnboardingFlow)

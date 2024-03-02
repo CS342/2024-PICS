@@ -15,6 +15,7 @@ import SwiftUI
 struct PICS: App {
     @UIApplicationDelegateAdaptor(PICSDelegate.self) var appDelegate
     @AppStorage(StorageKeys.onboardingFlowComplete) var completedOnboardingFlow = false
+    @State var apptInfo = AppointmentInformation()
 
     
     var body: some Scene {
@@ -31,6 +32,7 @@ struct PICS: App {
                 }
                 .testingSetup()
                 .spezi(appDelegate)
+                .environment(apptInfo)
         }
     }
 }

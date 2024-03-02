@@ -9,22 +9,18 @@
 import SwiftUI
 
 struct AppointmentView: View {
-    @AppStorage("appt1") private var appt1Data: Data?
-    @AppStorage("appt2") private var appt2Data: Data?
-
-    @State private var appt1 = Date()
-    @State private var appt2 = Date()
+    @Environment(AppointmentInformation.self) private var appointmentInfo
     
     var body: some View {
         VStack(alignment: .leading) {
             VStack(alignment: .leading) {
-                AppointmentBlock(date: formattedDate(appt1), time: formattedTime(appt1))
-                AppointmentBlock(date: formattedDate(appt2), time: formattedTime(appt2))
+                AppointmentBlock(date: formattedDate(appointmentInfo.appt1), time: formattedTime(appointmentInfo.appt1))
+                AppointmentBlock(date: formattedDate(appointmentInfo.appt2), time: formattedTime(appointmentInfo.appt2))
                     .padding(.bottom)
                 Text(String(localized: "TIMELINE_TITLE"))
                     .foregroundColor(.black)
                     .italic()
-                TimelineView(appt1: appt1, appt2: appt2)
+                TimelineView()
             }
             .padding()
             
@@ -35,33 +31,22 @@ struct AppointmentView: View {
             Spacer()
         }
         .background(Color(UIColor.systemGray6))
-        .onAppear {
-                    initializeAppointments()
-        }
     }
-    private func initializeAppointments() {
-           let decoder = JSONDecoder()
-           if let appt1Data = appt1Data, let decodedAppt1 = try? decoder.decode(Date.self, from: appt1Data) {
-               appt1 = decodedAppt1
-           }
-           if let appt2Data = appt2Data, let decodedAppt2 = try? decoder.decode(Date.self, from: appt2Data) {
-               appt2 = decodedAppt2
-           }
-       }
 
-       private func formattedDate(_ date: Date) -> String {
-           let formatter = DateFormatter()
-           formatter.dateFormat = "MMMM dd, yyyy"
-           return formatter.string(from: date)
-       }
+        private func formattedDate(_ date: Date) -> String {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MMMM dd, yyyy"
+            return formatter.string(from: date)
+        }
 
-       private func formattedTime(_ date: Date) -> String {
-           let formatter = DateFormatter()
-           formatter.dateFormat = "h:mm a"
-           return formatter.string(from: date)
-       }
+        private func formattedTime(_ date: Date) -> String {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "h:mm a"
+            return formatter.string(from: date)
+        }
 }
 
 #Preview {
     AppointmentView()
+        .environment(AppointmentInformation())
 }

@@ -86,6 +86,8 @@
 		8644E69B2B722708001218D0 /* Appointments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E69A2B722708001218D0 /* Appointments.swift */; };
 		864909422B8AA1C300054C9A /* TrailMakingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864909412B8AA1C300054C9A /* TrailMakingTest.swift */; };
 		8649094A2B8AB65600054C9A /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864909492B8AB65600054C9A /* TimelineView.swift */; };
+		86EB7FF72B8FB7A000D52EE2 /* NotificationPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7FF62B8FB7A000D52EE2 /* NotificationPermissions.swift */; };
+		86F62AF62B916B670075F23C /* AppointmentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F62AF52B916B670075F23C /* AppointmentInformation.swift */; };
 		9733CFC62A8066DE001B7ABC /* SpeziOnboarding in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE5DC8029EDD91D004B9AB4 /* SpeziOnboarding */; };
 		9739A0C62AD7B5730084BEA5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9739A0C52AD7B5730084BEA5 /* FirebaseStorage */; };
 		97D73D6A2AD860AD00B47FA0 /* SpeziFirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 97D73D692AD860AD00B47FA0 /* SpeziFirebaseStorage */; };
@@ -179,6 +181,8 @@
 		8644E69A2B722708001218D0 /* Appointments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointments.swift; sourceTree = "<group>"; };
 		864909412B8AA1C300054C9A /* TrailMakingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailMakingTest.swift; sourceTree = "<group>"; };
 		864909492B8AB65600054C9A /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		86EB7FF62B8FB7A000D52EE2 /* NotificationPermissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPermissions.swift; sourceTree = "<group>"; };
+		86F62AF52B916B670075F23C /* AppointmentInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentInformation.swift; sourceTree = "<group>"; };
 		A403A52D2B705A8C003CFA5C /* HealthVisualizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthVisualizationTests.swift; sourceTree = "<group>"; };
 		A45993282B90544300A98C95 /* Assessments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assessments.swift; sourceTree = "<group>"; };
 		A459932B2B906C3B00A98C95 /* ResultsViz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViz.swift; sourceTree = "<group>"; };
@@ -279,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				2FE5DC3129EDD7CA004B9AB4 /* OnboardingFlow.swift */,
+				86EB7FF62B8FB7A000D52EE2 /* NotificationPermissions.swift */,
 				2FE5DC3429EDD7CA004B9AB4 /* Welcome.swift */,
 				86400D182B7C4B6D009FEC10 /* ApptInfo.swift */,
 				2FE5DC3229EDD7CA004B9AB4 /* InterestingModules.swift */,
@@ -428,6 +433,7 @@
 			children = (
 				8644E6702B6C7243001218D0 /* AppointmentView.swift */,
 				8644E69A2B722708001218D0 /* Appointments.swift */,
+				86F62AF52B916B670075F23C /* AppointmentInformation.swift */,
 				8644E6862B7204A7001218D0 /* AppointmentBlock.swift */,
 				8644E6832B72046B001218D0 /* GettingThere.swift */,
 				8644E67A2B6C75B1001218D0 /* MapView.swift */,
@@ -693,6 +699,7 @@
 				A9DFE8A92ABE551400428242 /* AccountButton.swift in Sources */,
 				2FE5DC3729EDD7CA004B9AB4 /* OnboardingFlow.swift in Sources */,
 				2F1AC9DF2B4E840E00C24973 /* PICS.docc in Sources */,
+				86EB7FF72B8FB7A000D52EE2 /* NotificationPermissions.swift in Sources */,
 				226C16F22B6C820C00FBA97D /* WeightKey.swift in Sources */,
 				A45993292B90544300A98C95 /* Assessments.swift in Sources */,
 				2FF53D8D2A8729D600042B76 /* PICSStandard.swift in Sources */,
@@ -723,6 +730,7 @@
 				653A2551283387FE005D4D48 /* PICS.swift in Sources */,
 				2FE5DC3629EDD7CA004B9AB4 /* HealthKitPermissions.swift in Sources */,
 				8644E6872B7204A7001218D0 /* AppointmentBlock.swift in Sources */,
+				86F62AF62B916B670075F23C /* AppointmentInformation.swift in Sources */,
 				5661552E2AB854C000209B80 /* PackageHelper.swift in Sources */,
 				27FA29902A388E9B009CAC45 /* ModalView.swift in Sources */,
 				8649094A2B8AB65600054C9A /* TimelineView.swift in Sources */,
