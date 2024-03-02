@@ -28,6 +28,7 @@ struct HomeView: View {
 
     @AppStorage(StorageKeys.homeTabSelection) private var selectedTab = Tabs.appointments
     @State private var presentingAccount = false
+    @Environment(AppointmentInformation.self) private var appointmentInfo
 
     
     var body: some View {
@@ -93,6 +94,7 @@ struct HomeView: View {
 #Preview {
     CommandLine.arguments.append("--disableFirebase") // make sure the MockWebService is displayed
     return HomeView()
+        .environment(AppointmentInformation())
         .previewWith(standard: PICSStandard()) {
             PICSScheduler()
             MockWebService()

@@ -778,6 +778,83 @@
         }
       }
     },
+    "REQUIRED_ITEMS_1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Health Insurance Card"
+          }
+        }
+      }
+    },
+    "REQUIRED_ITEMS_2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Referral from your Family Doctor to the University Outpatient Clinic for\nAnesthesia/Intensive Care Medicine"
+          }
+        }
+      }
+    },
+    "REQUIRED_ITEMS_3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Current Laboratory Tests"
+          }
+        }
+      }
+    },
+    "REQUIRED_ITEMS_4" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Current Medication Schedule"
+          }
+        }
+      }
+    },
+    "REQUIRED_ITEMS_5" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Current Examination Findings (e.g. X-rays, ultrasound, ECG, echocardiography,\nlung function)"
+          }
+        }
+      }
+    },
+    "REQUIRED_ITEMS_6" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doctor's Letter from the Rehabilitation Facility"
+          }
+        }
+      }
+    },
+    "REQUIRED_ITEMS_7" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(if available) Doctor's Letters/Reports from Other Specialties and Therapies (e.g.\ncardiology, pulmonology, neurology, physiotherapy/occupational therapy)"
+          }
+        }
+      }
+    },
     "REQUIRED_ITEMS_HEADING" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -785,17 +862,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Required Items"
-          }
-        }
-      }
-    },
-    "REQUIRED_ITEMS_ID" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "- ID"
           }
         }
       }

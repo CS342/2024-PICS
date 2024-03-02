@@ -33,17 +33,17 @@ struct AppointmentView: View {
         .background(Color(UIColor.systemGray6))
     }
 
-       private func formattedDate(_ date: Date) -> String {
-           let formatter = DateFormatter()
-           formatter.dateFormat = "MMMM dd, yyyy"
-           return formatter.string(from: date)
-       }
+        private func formattedDate(_ date: Date) -> String {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MMMM dd, yyyy"
+            return formatter.string(from: date)
+        }
 
-       private func formattedTime(_ date: Date) -> String {
-           let formatter = DateFormatter()
-           formatter.dateFormat = "h:mm a"
-           return formatter.string(from: date)
-       }
+        private func formattedTime(_ date: Date) -> String {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "h:mm a"
+            return formatter.string(from: date)
+        }
 }
 
 #Preview {

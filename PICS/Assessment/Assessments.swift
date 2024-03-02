@@ -29,6 +29,7 @@ struct Assessments: View {
     // Environment objects for app-wide settings and scheduling.
     @Environment(PICSStandard.self) private var standard
     @Environment(PICSScheduler.self) private var scheduler
+    @Environment(AppointmentInformation.self) private var appointmentInfo
     
     // Binding to control the display of account-related UI.
     @Binding private var presentingAccount: Bool
@@ -194,5 +195,6 @@ struct Assessments: View {
 #if DEBUG
 #Preview("AssessmentView") {
     Assessments(presentingAccount: .constant(false))
+        .environment(AppointmentInformation())
 }
 #endif

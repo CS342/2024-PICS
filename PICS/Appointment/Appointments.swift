@@ -16,13 +16,15 @@ struct Appointments: View {
     
     var body: some View {
         NavigationStack {
-            AppointmentView()
-                .navigationTitle(String(localized: "APPOINTMENTS_NAVIGATION_TITLE"))
-                .toolbar {
-                    if AccountButton.shouldDisplay {
-                        AccountButton(isPresented: $presentingAccount)
+            ScrollView {
+                AppointmentView()
+                    .navigationTitle(String(localized: "APPOINTMENTS_NAVIGATION_TITLE"))
+                    .toolbar {
+                        if AccountButton.shouldDisplay {
+                            AccountButton(isPresented: $presentingAccount)
+                        }
                     }
-                }
+            }
         }
     }
     
