@@ -20,16 +20,7 @@ struct DateTimePickerView: View {
 
 struct ApptInfo: View {
     @Environment(OnboardingNavigationPath.self) private var onboardingNavigationPath
-    
-    // Define keys for AppStorage
-    private let appt0Key = "appt0"
-    private let appt1Key = "appt1"
-    private let appt2Key = "appt2"
-
-    // Use @AppStorage to store the selected dates
-    @AppStorage("appt0") private var appt0Data: Data?
-    @AppStorage("appt1") private var appt1Data: Data?
-    @AppStorage("appt2") private var appt2Data: Data?
+    @Environment(AppointmentInformation.self) private var appointmentInfo
 
     @State private var appt0 = Date()
     @State private var appt1 = Date()
@@ -57,8 +48,7 @@ struct ApptInfo: View {
             },
             actionView: {
                 OnboardingActionsView("INTERESTING_MODULES_BUTTON") {
-                    appt1Data = try? JSONEncoder().encode(appt1)
-                    appt2Data = try? JSONEncoder().encode(appt2)
+                    appointmentInfo.storeDates(appt0, appt1, appt2)
                     
                     onboardingNavigationPath.nextStep()
                 }
@@ -74,5 +64,6 @@ struct ApptInfo: View {
     OnboardingStack {
         ApptInfo()
     }
+        .environment(AppointmentInformation())
 }
 #endif

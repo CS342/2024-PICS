@@ -12,6 +12,7 @@ import SwiftUI
 
 /// Displays the contacts for the PICS.
 struct Appointments: View {
+    @Environment(AppointmentInformation.self) private var appointmentInfo
     @Binding var presentingAccount: Bool
     
     var body: some View {
@@ -36,5 +37,6 @@ struct Appointments: View {
 #if DEBUG
 #Preview {
     Appointments(presentingAccount: .constant(false))
+        .environment(AppointmentInformation())
 }
 #endif
