@@ -660,9 +660,6 @@
         }
       }
     },
-    "Key" : {
-      "extractionState" : "manual"
-    },
     "LELAND_STANFORD_BIO" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -728,66 +725,13 @@
         }
       }
     },
-    "Now" : {
-
-    },
-    "Onboarding Questionnaire" : {
-
-    },
-    "Onboarding Task" : {
-
-    },
-    "ONBOARDING_CAPTION" : {
+    "ONBOARDING_QUESTIONNAIRE" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Please complete the Onboarding questionnaire before your first appointment."
-          }
-        }
-      }
-    },
-    "ONBOARDING_DESCRIPTION" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Please fill out the Onboarding Questionnaire to collect some basic information before your first appointment."
-          }
-        }
-      }
-    },
-    "ONBOARDING_INSTRUCTION" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "You may skip this step during the onboarding and fill it out before your first appointment."
-          }
-        }
-      }
-    },
-    "ONBOARDING_SUBTITLE" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Please fill out this onboarding survey to collect your basic information."
-          }
-        }
-      }
-    },
-    "ONBOARDING_TITLE" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Onboarding Questionnaire"
+            "value" : "Static information on basic profile info"
           }
         }
       }
@@ -888,12 +832,6 @@
         }
       }
     },
-    "Skip" : {
-
-    },
-    "Start Questionnaire" : {
-
-    },
     "STREET_ADDRESS" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -924,8 +862,6 @@
           }
         }
       }
-    "Take Questionnaire" : {
-
     },
     "TASK_CONTEXT_ACTION_QUESTIONNAIRE" : {
       "localizations" : {

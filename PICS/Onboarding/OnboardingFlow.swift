@@ -38,7 +38,7 @@ struct OnboardingFlow: View {
             if !FeatureFlags.disableFirebase {
                 AccountOnboarding()
             }
-            AccountQuestionnaire()
+            OnboardingQuestionnaire()
             #if !(targetEnvironment(simulator) && (arch(i386) || arch(x86_64)))
                 Consent()
             #endif

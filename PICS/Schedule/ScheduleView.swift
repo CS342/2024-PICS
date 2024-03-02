@@ -20,47 +20,42 @@ struct ScheduleView: View {
 
 
     @Binding private var presentingAccount: Bool
-    @AppStorage("isSurveyCompleted") var isSurveyCompleted = false
+    
     
     private var startOfDays: [Date] {
         Array(eventContextsByDate.keys)
     }
+    
+    
     var body: some View {
         NavigationStack {
-            List {
-                if !isSurveyCompleted {
-                    Section(header: Text("Onboarding Task")) {
-                        OnboardingSurveyView()
-                    }
-                }
-                ForEach(startOfDays, id: \.timeIntervalSinceNow) { startOfDay in
-                    Section(format(startOfDay: startOfDay)) {
-                        ForEach(eventContextsByDate[startOfDay] ?? [], id: \.event) { eventContext in
-                            EventContextView(eventContext: eventContext)
-                                .onTapGesture {
-                                    if !eventContext.event.complete {
-                                        presentedContext = eventContext
-                                    }
+            List(startOfDays, id: \.timeIntervalSinceNow) { startOfDay in
+                Section(format(startOfDay: startOfDay)) {
+                    ForEach(eventContextsByDate[startOfDay] ?? [], id: \.event) { eventContext in
+                        EventContextView(eventContext: eventContext)
+                            .onTapGesture {
+                                if !eventContext.event.complete {
+                                    presentedContext = eventContext
                                 }
-                        }
+                            }
                     }
                 }
             }
-            .onChange(of: scheduler) {
-                calculateEventContextsByDate()
-            }
-            .task {
-                calculateEventContextsByDate()
-            }
-            .sheet(item: $presentedContext) { presentedContext in
-                destination(withContext: presentedContext)
-            }
-            .toolbar {
-                if AccountButton.shouldDisplay {
-                    AccountButton(isPresented: $presentingAccount)
+                .onChange(of: scheduler) {
+                    calculateEventContextsByDate()
                 }
-            }
-            .navigationTitle("SCHEDULE_LIST_TITLE")
+                .task {
+                    calculateEventContextsByDate()
+                }
+                .sheet(item: $presentedContext) { presentedContext in
+                    destination(withContext: presentedContext)
+                }
+                .toolbar {
+                    if AccountButton.shouldDisplay {
+                        AccountButton(isPresented: $presentingAccount)
+                    }
+                }
+                .navigationTitle("SCHEDULE_LIST_TITLE")
         }
     }
     
