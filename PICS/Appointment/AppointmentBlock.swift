@@ -28,6 +28,8 @@ struct AppointmentBlock: View {
     
     @State private var multiSelection = Set<UUID>()
     @State private var showingSheet = false
+    
+    @Environment(AppointmentInformation.self) private var appointmentInfo
 
     var body: some View {
         Color.white
@@ -46,12 +48,6 @@ struct AppointmentBlock: View {
                                 .foregroundColor(.black)
                         }
                         Spacer()
-                        HStack {
-                            Spacer()
-                            Button(action: reschedule) {
-                                Text(String(localized: "RESCHEDULE_BUTTON_LABEL"))
-                            }
-                        }
                         HStack {
                             Spacer()
                             Button(String(localized: "REQUIRED_ITEMS_HEADING")) {
@@ -81,8 +77,5 @@ struct AppointmentBlock: View {
                     }
                 }
             )
-    }
-    
-    func reschedule() {
     }
 }

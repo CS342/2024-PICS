@@ -49,7 +49,6 @@ struct ApptInfo: View {
             actionView: {
                 OnboardingActionsView("INTERESTING_MODULES_BUTTON") {
                     appointmentInfo.storeDates(appt0, appt1, appt2)
-                    
                     onboardingNavigationPath.nextStep()
                 }
             }

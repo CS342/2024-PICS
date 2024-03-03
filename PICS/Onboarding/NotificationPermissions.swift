@@ -23,8 +23,7 @@ struct NotificationPermissions: View {
             contentView: {
                 VStack {
                     OnboardingTitleView(
-                        title: "NOTIFICATION_PERMISSIONS_TITLE",
-                        subtitle: "NOTIFICATION_PERMISSIONS_SUBTITLE"
+                        title: "NOTIFICATION_PERMISSIONS_TITLE"
                     )
                     Spacer()
                     Image(systemName: "bell.square.fill")
