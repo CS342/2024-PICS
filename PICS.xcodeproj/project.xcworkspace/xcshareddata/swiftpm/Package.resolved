@@ -50,8 +50,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleDataTransport.git",
       "state" : {
-        "revision" : "a732a4b47f59e4f725a2ea10f0c77e93a7131117",
-        "version" : "9.3.0"
+        "revision" : "a637d318ae7ae246b02d7305121275bc75ed5565",
+        "version" : "9.4.0"
       }
     },
     {
@@ -59,8 +59,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleUtilities.git",
       "state" : {
-        "revision" : "bc27fad73504f3d4af235de451f02ee22586ebd3",
-        "version" : "7.12.1"
+        "revision" : "830ffa9276e10267881f2697283c2fcd867603fd",
+        "version" : "7.13.0"
       }
     },
     {
@@ -104,8 +104,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/leveldb.git",
       "state" : {
-        "revision" : "9d108e9112aa1d65ce508facf804674546116d9c",
-        "version" : "1.22.3"
+        "revision" : "43aaef65e0c665daadf848761d560e446d350d3d",
+        "version" : "1.22.4"
       }
     },
     {
@@ -140,8 +140,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/StanfordBDHG/ResearchKitOnFHIR",
       "state" : {
-        "revision" : "300fbc0038df28f53a9b653298931f71aa6f0bb5",
-        "version" : "1.1.1"
+        "revision" : "7c2efdcb17796fc9ee686900304dbbe9dd4aaf85",
+        "version" : "1.1.2"
       }
     },
     {
@@ -183,10 +183,10 @@
     {
       "identity" : "spezifoundation",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/StanfordSpezi/SpeziFoundation.git",
+      "location" : "https://github.com/StanfordSpezi/SpeziFoundation",
       "state" : {
-        "revision" : "0346857e2f1d6fd4b1d950d271be6c82df97107f",
-        "version" : "1.0.2"
+        "revision" : "01af5b91a54f30ddd121258e81aff2ddc2a99ff9",
+        "version" : "1.0.4"
       }
     },
     {
@@ -212,8 +212,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/StanfordSpezi/SpeziOnboarding",
       "state" : {
-        "revision" : "91463ae190611bd14ef52b0657e8db3bf53c9ae8",
-        "version" : "1.1.0"
+        "revision" : "4971a82e94996ce0c3d8ecf64fdeec874a1f20d6",
+        "version" : "1.1.1"
       }
     },
     {
@@ -239,8 +239,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/StanfordSpezi/SpeziStorage.git",
       "state" : {
-        "revision" : "eaed2220375c35400aa69d1f96a8d32b7e66b1c7",
-        "version" : "1.0.0"
+        "revision" : "7d1c8ff8310e2f628f918fb535d80f368730ad6b",
+        "version" : "1.0.1"
       }
     },
     {
@@ -248,8 +248,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/StanfordSpezi/SpeziViews.git",
       "state" : {
-        "revision" : "d49f716e4a4d634604bb0dcd6d53df679b6c1358",
-        "version" : "1.3.0"
+        "revision" : "4d2a724d97c8f19ac7de7aa2c046b1cb3ef7b279",
+        "version" : "1.3.1"
       }
     },
     {
