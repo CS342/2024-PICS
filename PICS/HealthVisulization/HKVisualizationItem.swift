@@ -233,7 +233,6 @@ struct HKVisualizationItem: View {
                 }
             }
             if let index {
-                print(data[index])
                 return data[index]
             }
         }

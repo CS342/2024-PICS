@@ -26,11 +26,6 @@ struct Assessments: View {
         case stroopTest
     }
 
-    // Environment objects for app-wide settings and scheduling.
-    @Environment(PICSStandard.self) private var standard
-    @Environment(PICSScheduler.self) private var scheduler
-    @Environment(AppointmentInformation.self) private var appointmentInfo
-    
     // Binding to control the display of account-related UI.
     @Binding private var presentingAccount: Bool
     
@@ -44,74 +39,78 @@ struct Assessments: View {
     
     // Main body of the Assessments view, switching between the list of assessments and the currently active assessment.
     var assessmentList: some View {
-            List {
-                trailMakingTestSection
-                stroopTestSection
-            }
+        List {
+            trailMakingTestSection
+                .padding(10)
+            stroopTestSection
+                .padding(10)
         }
-        
-        var body: some View {
-            NavigationStack {
-                if assessmentsIP {
-                    // Displays the active assessment based on the currentTest state.
-                    switch currentTest {
-                    case .trailMaking:
-                        TrailMakingTaskView()
-                    case .stroopTest:
-                        StroopTestView()
-                    }
-                } else {
-                    assessmentList
-                        .navigationTitle(String(localized: "ASSESSMENTS_NAVIGATION_TITLE"))
-                        .toolbar {
-                            if AccountButton.shouldDisplay {
-                                AccountButton(isPresented: $presentingAccount)
-                            }
-                        }
+    }
+    
+    var body: some View {
+        NavigationStack {
+            if assessmentsIP {
+                // Displays the active assessment based on the currentTest state.
+                switch currentTest {
+                case .trailMaking:
+                    TrailMakingTaskView()
+                case .stroopTest:
+                    StroopTestView()
                 }
+            } else {
+                assessmentList
+                    .navigationTitle(String(localized: "ASSESSMENTS_NAVIGATION_TITLE"))
+                    .toolbar {
+                        if AccountButton.shouldDisplay {
+                            AccountButton(isPresented: $presentingAccount)
+                        }
+                    }
             }
         }
+    }
         
     private var trailMakingTestSection: some View {
-        Section {
+        // Button text to start the Trail Making Test or view results
+        // based on whether results are available.
+        let btnText = if tmStorageResults.isEmpty {
+            String(localized: "ASSESSMENT_TM_START_BTN")
+        } else {
+            String(localized: "ASSESSMENT_RESULTS_BTN")
+        }
+        return Section {
             VStack {
                 trailMakingTestResultsView
                 Divider()
-                .padding(.bottom, 5)
-                // Button to start the Trail Making Test or view results, based on whether results are available.
-                if tmStorageResults.isEmpty {
-                    Button(action: startTrailMaking) {
-                        Text(String(localized: "ASSESSMENT_TM_START_BTN"))
-                    }
-                    .frame(maxWidth: .infinity)
-                } else {
-                    Button(action: startTrailMaking) {
-                        Text(String(localized: "ASSESSMENT_RESULTS_BTN"))
-                    }
-                    .frame(maxWidth: .infinity)
+                    .padding(.bottom, 5)
+                Button(action: startTrailMaking) {
+                    Text(btnText)
+                        .foregroundStyle(.accent)
                 }
+                    // Use style to restrict clickable area.
+                    .buttonStyle(.plain)
             }
         }
     }
     
     private var stroopTestSection: some View {
-        Section {
+        // Button text to start the Stroop Test or view results
+        // based on whether results are available.
+        let btnText = if stroopTestResults.isEmpty {
+            String(localized: "ASSESSMENT_STROOP_START_BTN")
+        } else {
+            String(localized: "ASSESSMENT_RESULTS_BTN")
+        }
+        return Section {
             VStack {
                 stroopTestResultsView
                 Divider()
                     .padding(.bottom, 5)
-                // Button to start the Stroop Test or view results, based on whether results are available.
-                if stroopTestResults.isEmpty {
-                    Button(action: startStroopTest) {
-                        Text(String(localized: "ASSESSMENT_STROOP_START_BTN"))
-                    }
-                    .frame(maxWidth: .infinity)
-                } else {
-                    Button(action: startStroopTest) {
-                        Text(String(localized: "ASSESSMENT_RESULTS_BTN"))
-                    }
-                    .frame(maxWidth: .infinity)
+                Button(action: startStroopTest) {
+                    Text(btnText)
+                        .foregroundStyle(.accent)
                 }
+                    // Use style to restrict clickable area.
+                    .buttonStyle(.plain)
             }
         }
     }

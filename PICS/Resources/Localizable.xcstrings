@@ -198,6 +198,28 @@
         }
       }
     },
+    "ASSESSMENT_SUMMARY" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your assessment result at "
+          }
+        }
+      }
+    },
+    "ASSESSMENT_SUMMARY_LAST" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your last assessment result at "
+          }
+        }
+      }
+    },
     "ASSESSMENT_TM_START_BTN" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -205,6 +227,39 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Start Assessment"
+          }
+        }
+      }
+    },
+    "ASSESSMENT_VIZ_ERRORCNT" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error Count"
+          }
+        }
+      }
+    },
+    "ASSESSMENT_VIZ_SCORE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Score"
+          }
+        }
+      }
+    },
+    "ASSESSMENT_VIZ_TIME" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Second Spent"
           }
         }
       }
@@ -660,17 +715,6 @@
         }
       }
     },
-    "LELAND_STANFORD_BIO" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Amasa Leland Stanford (March 9, 1824 – June 21, 1893) was an American industrialist and politician. [...] He and his wife Jane were also the founders of Stanford University, which they named after their late son.\n[https://en.wikipedia.org/wiki/Leland_Stanford]"
-          }
-        }
-      }
-    },
     "LICENSE_INFO_TITLE" : {
       "localizations" : {
         "en" : {
@@ -1044,6 +1088,9 @@
           }
         }
       }
+    },
+    "Value" : {
+
     },
     "Weight" : {
 
