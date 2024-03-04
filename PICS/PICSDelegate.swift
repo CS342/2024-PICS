@@ -19,6 +19,14 @@ import SwiftUI
 
 
 class PICSDelegate: SpeziAppDelegate {
+    // The newer Swift versions does not have a default property of window,
+    // which will cause the NSInvalidArgumentException error for Stroop
+    // assessment test. Such errors should be fixed in newer version of
+    // ResearchKit but it might not be updated in the StanfordBDHG forked
+    // version that we use. Therefore, we manually add window here to walk
+    // around the error currently.
+    var window: UIWindow?
+    
     override var configuration: Configuration {
         Configuration(standard: PICSStandard()) {
             if !FeatureFlags.disableFirebase {
