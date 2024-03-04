@@ -18,7 +18,7 @@ struct StroopTestView: View {
         ZStack {
             Color(red: 242 / 255, green: 242 / 255, blue: 247 / 255)
                 .edgesIgnoringSafeArea(.all)
-            // Displays the ResearchKit ordered task view for the Stroop Test
+            // Displays the ResearchKit ordered task view for the Stroop Test.
             ORKOrderedTaskView(
                 tasks: createStroopTask(),
                 tintColor: .accentColor,
@@ -36,37 +36,44 @@ struct StroopTestView: View {
             withIdentifier: "StroopTask",
             intendedUseDescription: "Tests selective attention capacity and processing speed",
             numberOfAttempts: 5,
-            options: []
+            options: [.excludeAudio]
         )
         return task
     }
 
-    // Handles the result of the Stroop task after completion
+    // Handles the result of the Stroop task.
     private func handleTaskResult(result: TaskResult) async {
         assessmentsIP = false // End the assessment
         guard case let .completed(taskResult) = result else {
-            // Handle incomplete or canceled test
+            // Failed or canceled test. Do nothing for current.
             return
         }
-
-        // Extract and process the Stroop test results
+        // Fields to record the aggregated test results.
+        var totalTime: TimeInterval = 0
+        var errorCnt = 0
+        
+        // Extract and process the Stroop test results.
         for result in taskResult.results ?? [] {
             if let stepResult = result as? ORKStepResult,
-               stepResult.identifier == "stroopTestIdentifier" {
+               stepResult.identifier == "stroop" {
                 for stroopResult in stepResult.results ?? [] {
                     if let curResult = stroopResult as? ORKStroopResult {
-                        // Calculates the total time taken to complete the test
-                        let totalTime = curResult.endTime - curResult.startTime
-                        let parsedResult = AssessmentResult(
-                            testDateTime: Date(),
-                            timeSpent: totalTime
-                        )
-                        // Adds the result to the array of Stroop test results
-                        stroopTestResults += [parsedResult]
+                        // Calculates the total time taken to complete the test.
+                        totalTime += curResult.endTime - curResult.startTime
+                        if curResult.color != curResult.colorSelected {
+                            errorCnt += 1
+                        }
                     }
                 }
             }
         }
+        // Record the result to the app storage of Stroop test results.
+        let parsedResult = AssessmentResult(
+            testDateTime: Date(),
+            timeSpent: totalTime,
+            errorCnt: errorCnt
+        )
+        stroopTestResults += [parsedResult]
     }
 }
 
