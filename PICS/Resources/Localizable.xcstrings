@@ -259,7 +259,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Second Spent"
+            "value" : "Time Spent (seconds)"
           }
         }
       }
@@ -768,6 +768,18 @@
           }
         }
       }
+    },
+    "NOTIFICATION_PERMISSIONS_BUTTON" : {
+
+    },
+    "NOTIFICATION_PERMISSIONS_DESCRIPTION" : {
+
+    },
+    "NOTIFICATION_PERMISSIONS_SUBTITLE" : {
+
+    },
+    "NOTIFICATION_PERMISSIONS_TITLE" : {
+
     },
     "ONBOARDING_QUESTIONNAIRE" : {
       "extractionState" : "manual",
