@@ -14,6 +14,8 @@ struct TrailMakingTaskView: View {
     // Use @AppStorage to store the selected dates
     @AppStorage("trailMakingResults") private var tmStorageResults: [AssessmentResult] = []
     @AppStorage("AssessmentsInProgress") private var tmInProgress = false
+
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         ZStack {
@@ -44,8 +46,16 @@ struct TrailMakingTaskView: View {
     private func handleTaskResult(result: TaskResult) async {
         // Close the test.
         tmInProgress = false
+//        guard case let .completed(taskResult) = result else {
+//            // Failed or canceled test. Do nothing for current.
+//            return
+//        }
+        // Add this to dismiss the view
+        DispatchQueue.main.async {
+            self.presentationMode.wrappedValue.dismiss()
+        }
+        
         guard case let .completed(taskResult) = result else {
-            // Failed or canceled test. Do nothing for current.
             return
         }
         
