@@ -371,6 +371,17 @@
     "Date and Time:" : {
 
     },
+    "EDIT_APPT_HEADER" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Appointments"
+          }
+        }
+      }
+    },
     "EDUARDO_SALGADO_BIO" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -770,16 +781,44 @@
       }
     },
     "NOTIFICATION_PERMISSIONS_BUTTON" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allow Notifications"
+          }
+        }
+      }
     },
     "NOTIFICATION_PERMISSIONS_DESCRIPTION" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Spezi Scheduler module enables to send out local notifications when a new event of a task is scheduled."
+          }
+        }
+      }
     },
     "NOTIFICATION_PERMISSIONS_SUBTITLE" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permission to send notifications"
+          }
+        }
+      }
     },
     "NOTIFICATION_PERMISSIONS_TITLE" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifications"
+          }
+        }
+      }
     },
     "ONBOARDING_QUESTIONNAIRE" : {
       "extractionState" : "manual",
@@ -929,6 +968,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Edit Details"
+          }
+        }
+      }
+    },
+    "SAVE_BUTTON" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save Changes"
           }
         }
       }
