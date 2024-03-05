@@ -758,6 +758,28 @@
         }
       }
     },
+    "MEDICATION_SUBTITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please upload a photo of your medication chart. "
+          }
+        }
+      }
+    },
+    "MEDICATION_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Medication Information"
+          }
+        }
+      }
+    },
     "MiniNutritional_DESCRIPTION" : {
       "extractionState" : "manual",
       "localizations" : {
