@@ -824,6 +824,28 @@
         }
       }
     },
+    "REACTIONTIME_TEST" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reaction Time Test"
+          }
+        }
+      }
+    },
+    "REACTIONTIME_VIZ_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reaction Time Results"
+          }
+        }
+      }
+    },
     "Repository Link" : {
       "localizations" : {
         "en" : {
