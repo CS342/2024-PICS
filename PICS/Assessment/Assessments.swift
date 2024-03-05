@@ -25,7 +25,7 @@ struct Assessments: View {
         case trailMaking
         case stroopTest
     }
-
+    
     // Binding to control the display of account-related UI.
     @Binding private var presentingAccount: Bool
     
@@ -36,6 +36,8 @@ struct Assessments: View {
     @AppStorage("AssessmentsInProgress") private var assessmentsIP = false
     // Tracks which test is currently selected.
     @State var currentTest = Assessments.trailMaking
+    // New property to control the sheet presentation
+    @State private var showingTestSheet = false
     
     // Main body of the Assessments view, switching between the list of assessments and the currently active assessment.
     var assessmentList: some View {
@@ -65,6 +67,15 @@ struct Assessments: View {
                             AccountButton(isPresented: $presentingAccount)
                         }
                     }
+            }
+        }
+        .sheet(isPresented: $showingTestSheet) {
+            // Determine which assessment view to present based on the currentTest state
+            switch currentTest {
+            case .trailMaking:
+                TrailMakingTaskView()
+            case .stroopTest:
+                StroopTestView()
             }
         }
     }
@@ -156,12 +167,14 @@ struct Assessments: View {
     func startTrailMaking() {
         currentTest = Assessments.trailMaking
         assessmentsIP = true
+        showingTestSheet.toggle()
     }
     
     // Function to set up and start the Stroop Test.
     func startStroopTest() {
         currentTest = Assessments.stroopTest
         assessmentsIP = true
+        showingTestSheet.toggle()
     }
     
     // A view for displaying a message indicating that a specific assessment has not been completed.
