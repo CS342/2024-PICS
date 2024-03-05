@@ -100,6 +100,17 @@
         }
       }
     },
+    "APPT_REMINDER" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appointment Reminder"
+          }
+        }
+      }
+    },
     "APPT1_TITLE" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -780,6 +791,17 @@
         }
       }
     },
+    "NOTIF_CONTENT" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You have an upcoming appointment on "
+          }
+        }
+      }
+    },
     "NOTIFICATION_PERMISSIONS_BUTTON" : {
       "localizations" : {
         "en" : {
@@ -795,12 +817,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The Spezi Scheduler module enables to send out local notifications when a new event of a task is scheduled."
+            "value" : "The app will send you notifications to remind you about your upcoming appointments."
           }
         }
       }
     },
     "NOTIFICATION_PERMISSIONS_SUBTITLE" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -827,6 +850,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Static information on basic profile info"
+          }
+        }
+      }
+    },
+    "PERIOD" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "."
           }
         }
       }

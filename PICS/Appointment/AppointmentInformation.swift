@@ -1,7 +1,7 @@
 //
 // This source file is part of the PICS based on the Stanford Spezi Template Application project
 //
-// SPDX-FileCopyrightText: 2023 Stanford University
+// SPDX-FileCopyrightText: 2024 Stanford University
 //
 // SPDX-License-Identifier: MIT
 //
@@ -80,16 +80,23 @@ class AppointmentInformation {
         appt1Data = try? JSONEncoder().encode(date0)
         appt1Data = try? JSONEncoder().encode(date1)
         appt2Data = try? JSONEncoder().encode(date2)
-        
-        scheduleNotifications(for: appt1)
-        scheduleNotifications(for: appt2)
-    }
-
-    func scheduleNotifications(for date: Date) {
+       
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.removeAllPendingNotificationRequests()
+    
+        scheduleNotifications(for: appt1, with: notificationCenter)
+        scheduleNotifications(for: appt2, with: notificationCenter)
+    }
+
+    func scheduleNotifications(for date: Date, with notificationCenter: UNUserNotificationCenter) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        let appointmentDateString = dateFormatter.string(from: date)
+        
         let content = UNMutableNotificationContent()
-        content.title = "Event Reminder"
+        content.title = String(localized: "APPT_REMINDER")
+        content.body = String(localized: "NOTIF_CONTENT") + appointmentDateString + String(localized: "PERIOD")
        
         let monthBeforeId = scheduleNotification(for: date, with: DateComponents(month: -1), content: content, notificationCenter: notificationCenter)
         
