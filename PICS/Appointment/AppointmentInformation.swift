@@ -81,14 +81,14 @@ class AppointmentInformation {
         appt1Data = try? JSONEncoder().encode(date1)
         appt2Data = try? JSONEncoder().encode(date2)
         
-        scheduleNotifications(for: appt1)
-        scheduleNotifications(for: appt2)
-    }
-
-    func scheduleNotifications(for date: Date) {
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.removeAllPendingNotificationRequests()
-        
+    
+        scheduleNotifications(for: appt1, with: notificationCenter)
+        scheduleNotifications(for: appt2, with: notificationCenter)
+    }
+
+    func scheduleNotifications(for date: Date, with notificationCenter: UNUserNotificationCenter) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .short
