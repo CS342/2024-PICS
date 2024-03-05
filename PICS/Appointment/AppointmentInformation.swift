@@ -80,7 +80,7 @@ class AppointmentInformation {
         appt1Data = try? JSONEncoder().encode(date0)
         appt1Data = try? JSONEncoder().encode(date1)
         appt2Data = try? JSONEncoder().encode(date2)
-        
+       
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.removeAllPendingNotificationRequests()
     
