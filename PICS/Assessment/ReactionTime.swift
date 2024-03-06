@@ -11,7 +11,7 @@ import ResearchKitSwiftUI
 import SwiftUI
 
 struct ReactionTimeView: View {
-    @AppStorage("ReactionTimeResults") private var reactionTimeResults: [AssessmentResult] = []
+    @AppStorage("reactionTimeResults") private var reactionTimeResults: [AssessmentResult] = []
     @AppStorage("AssessmentsInProgress") private var assessmentsIP = false
 
     var body: some View {
