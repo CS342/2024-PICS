@@ -81,8 +81,7 @@ struct Assessments: View {
     }
         
     private var trailMakingTestSection: some View {
-        // Button text to start the Trail Making Test or view results
-        // based on whether results are available.
+        // Button text to start the Trail Making Test or view results based on whether results are available.
         let btnText = if tmStorageResults.isEmpty {
             String(localized: "ASSESSMENT_TM_START_BTN")
         } else {
@@ -104,8 +103,7 @@ struct Assessments: View {
     }
     
     private var stroopTestSection: some View {
-        // Button text to start the Stroop Test or view results
-        // based on whether results are available.
+        // Button text to start the Stroop Test or view results based on whether results are available.
         let btnText = if stroopTestResults.isEmpty {
             String(localized: "ASSESSMENT_STROOP_START_BTN")
         } else {
