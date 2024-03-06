@@ -37,43 +37,38 @@ struct ReactionTimeView: View {
             maximumStimulusInterval: 2.0,
             minimumStimulusInterval: 1.0,
             thresholdAcceleration: 0.8,
-            numberOfAttempts: 5,
+            numberOfAttempts: 1,
             timeout: 5.0,
             successSound: 0,
             timeoutSound: 0,
             failureSound: 0,
-            options: []
+            options: [.excludeConclusion]
         )
         return task
     }
     // Handles the result of the ReactionTime task.
     private func handleTaskResult(result: TaskResult) async {
+        let curTime = ProcessInfo.processInfo.systemUptime
         assessmentsIP = false // End the assessment
         guard case let .completed(taskResult) = result else {
             // Failed or canceled test. Do nothing for current.
             return
         }
-        print("HELLO")
         // Fields to record the aggregated test results.
         var totalTime: TimeInterval = 0
         // Extract and process the ReactionTime test results.
         for result in taskResult.results ?? [] {
             if let stepResult = result as? ORKStepResult,
                stepResult.identifier == "reactionTime" {
-                for stroopResult in stepResult.results ?? [] {
-                    if let curResult = stroopResult as? ORKStroopResult {
+                for reactionTimeResult in stepResult.results ?? [] {
+                    if let curResult = reactionTimeResult as? ORKReactionTimeResult {
                         // Calculates the total time taken to complete the test.
-                        totalTime += curResult.endTime - curResult.startTime
+                        totalTime += curTime - curResult.timestamp
                     }
                 }
             }
         }
-        // Record the result to the app storage of Stroop test results.
-        let parsedResult = AssessmentResult(
-            testDateTime: Date(),
-            timeSpent: totalTime
-        )
-        // stroopTestResults += [parsedResult]
+        reactionTimeResults += [AssessmentResult(testDateTime: Date(), timeSpent: totalTime)]
     }
 }
 
