@@ -9,7 +9,6 @@
 import XCTest
 
 final class AssessmentsUITests: XCTestCase {
-
     override func setUpWithError() throws {
         try super.setUpWithError()
         continueAfterFailure = false
