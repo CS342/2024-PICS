@@ -61,10 +61,17 @@ class HealthVisualizationTests: XCTestCase {
             detailCnt += curLabel.contains(expectedDetail) ? 1 : 0
             summaryCnt += curLabel.contains(sumText) ? 1 : 0
             stepDetailCnt += curLabel.contains(stepText) ? 1 : 0
-            print(staticText.label, detailCnt, summaryCnt, stepDetailCnt)
         }
         XCTAssertEqual(summaryCnt, 2)
         XCTAssertEqual(stepDetailCnt, 1)
         XCTAssertEqual(detailCnt, 2)
+        
+        // Tap again to deselect to verify no error happened.
+        frame = app.staticTexts["Step Count"].frame
+        normalized.withOffset(CGVector(dx: frame.minX + xOffset, dy: frame.minY + yOffset)).tap()
+        frame = app.staticTexts["Heart Rate"].frame
+        normalized.withOffset(CGVector(dx: frame.minX + xOffset, dy: frame.minY + yOffset)).tap()
+        frame = app.staticTexts["Oxygen Saturation (%)"].frame
+        normalized.withOffset(CGVector(dx: frame.minX + xOffset, dy: frame.minY + yOffset)).tap()
     }
 }

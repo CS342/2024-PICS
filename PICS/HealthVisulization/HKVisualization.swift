@@ -95,21 +95,24 @@ struct HKVisualization: View {
         // Load the mock data for testing purposes to the states.
         let today = Date()
         let sumStatData = [
+            HKData(date: today, sumValue: 100, avgValue: 0, minValue: 0, maxValue: 0),
             HKData(date: today, sumValue: 100, avgValue: 0, minValue: 0, maxValue: 0)
         ]
-        self.stepData = sumStatData
-        self.heartRateScatterData = sumStatData
-        self.oxygenSaturationScatterData = sumStatData
         let minMaxAvgStatData = [
             HKData(date: today, sumValue: 0, avgValue: 50, minValue: 1, maxValue: 100)
         ]
-        self.heartRateData = minMaxAvgStatData
-        self.oxygenSaturationData = minMaxAvgStatData
+        if self.stepData.isEmpty {
+            self.stepData = sumStatData
+            self.heartRateScatterData = sumStatData
+            self.oxygenSaturationScatterData = sumStatData
+            self.heartRateData = minMaxAvgStatData
+            self.oxygenSaturationData = minMaxAvgStatData
+        }
     }
     
     func readAllHKData(ensureUpdate: Bool = false) {
         if FeatureFlags.mockTestData {
-            // Create sample data for testing purposes.
+            // Use the mockData directly and no need to query HK data.
             loadMockData()
             return
         }
@@ -186,7 +189,7 @@ struct HKVisualization: View {
              sortDescriptors: sortDescriptors
          ) { _, results, error in
              guard error == nil else {
-                 print(print("Error retrieving health kit data: \(String(describing: error))"))
+                 print("Error retrieving health kit data: \(String(describing: error))")
                  return
              }
              if let results = results {
@@ -232,7 +235,7 @@ struct HKVisualization: View {
         }
         query.initialResultsHandler = { _, results, error in
             guard error == nil else {
-                print(print("Error retrieving health kit data: \(String(describing: error))"))
+                print("Error retrieving health kit data: \(String(describing: error))")
                 return
             }
             if let results = results {
@@ -312,7 +315,7 @@ func parseSampleQueryData(results: [HKSample], quantityTypeIDF: HKQuantityTypeId
     var collectedData: [HKData] = []
     for result in results {
         guard let result: HKQuantitySample = result as? HKQuantitySample else {
-            print("Unexpected heart rate sample type received.")
+            print("Unexpected HK Quantity sample received.")
             continue
         }
         var value = -1.0 // To be replaced below.
