@@ -5,7 +5,7 @@
 //
 // SPDX-License-Identifier: MIT
 //
-
+import Foundation
 import SpeziHealthKit
 import SpeziOnboarding
 import SwiftUI
@@ -13,8 +13,7 @@ import SwiftUI
 
 struct Medication: View {
     @Environment(OnboardingNavigationPath.self) private var onboardingNavigationPath
-    @AppStorage("isPhotoUploaded") var isPhotoUploaded = false
-    
+
     var body: some View {
         OnboardingView(
             contentView: {
@@ -25,11 +24,10 @@ struct Medication: View {
                     )
                     Spacer()
                     ContentView()
-                    
                 }
             }, actionView: {
                 OnboardingActionsView(
-                    "Next",
+                    "Upload Photo",
                     action: {
                         onboardingNavigationPath.nextStep()
                     }
@@ -38,7 +36,7 @@ struct Medication: View {
         )
             
             // Small fix as otherwise "Login" or "Sign up" is still shown in the nav bar
-            .navigationTitle(Text(verbatim: ""))
+            .navigationTitle("medication")
     }
 }
 
@@ -49,7 +47,6 @@ struct Medication: View {
         Medication()
     }
         .previewWith(standard: PICSStandard()) {
-        
         }
 }
 #endif

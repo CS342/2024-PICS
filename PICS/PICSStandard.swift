@@ -212,6 +212,37 @@ actor PICSStandard: Standard, EnvironmentAccessible, HealthKitConstraint, Onboar
             logger.error("Could not store consent form: \(error)")
         }
     }
+    
+    func storeImage(image: PDFDocument) async {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd_HHmmss"
+        let dateString = formatter.string(from: Date())
+        
+        guard !FeatureFlags.disableFirebase else {
+            guard let basePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+                logger.error("Could not create path for storing medication plan.")
+                return
+            }
+            
+            let filePath = basePath.appending(path: "medicationPlan_\(dateString).pdf")
+            image.write(to: filePath)
+            
+            return
+        }
+        
+        do {
+            guard let consentData = image.dataRepresentation() else {
+                logger.error("Could not store medication plan.")
+                return
+            }
+            
+            let metadata = StorageMetadata()
+            metadata.contentType = "application/pdf"
+            _ = try await userBucketReference.child("medicationPlan/\(dateString).pdf").putDataAsync(consentData, metadata: metadata)
+        } catch {
+            logger.error("Could not store medication plan: \(error)")
+        }
+    }
 
 
     func create(_ identifier: AdditionalRecordId, _ details: SignupDetails) async throws {

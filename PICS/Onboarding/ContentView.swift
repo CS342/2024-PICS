@@ -5,13 +5,15 @@
 //
 // SPDX-License-Identifier: MIT
 //
-
+import Foundation
 import ImageSource
+import PDFKit
 import SwiftUI
+
 
 struct ContentView: View {
     @State var image: UIImage?
-    @AppStorage("isPhotoUploaded") var isPhotoUploaded = false
+    @Environment(PICSStandard.self) private var standard
     
     private var swiftUIImage: Image? {
         image.flatMap {
@@ -20,23 +22,33 @@ struct ContentView: View {
     }
     
     var body: some View {
-        NavigationStack {
-            ImageSource(image: $image)
-                .clipShape(RoundedRectangle(cornerRadius: 8))
-                .padding()
-                .navigationTitle("Image Source Example")
-                .toolbar {
-                    if let swiftUIImage = swiftUIImage {
-                        ToolbarItem {
-                            ShareLink(
-                                item: swiftUIImage,
-                                subject: Text("Image Source"),
-                                message: Text("Check it out the Image Source Swift Package: https://github.com/StanfordBDHG/ImageSource"),
-                                preview: SharePreview("Image Source Example", image: swiftUIImage)
-                            )
-                        }
+        ImageSource(image: $image)
+            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .padding()
+            .toolbar {
+                if let swiftUIImage = swiftUIImage {
+                    ToolbarItem {
+                        ShareLink(
+                            item: swiftUIImage,
+                            subject: Text("Image Source"),
+                            message: Text("Check it out the Image Source Swift Package: https://github.com/StanfordBDHG/ImageSource"),
+                            preview: SharePreview("", image: swiftUIImage)
+                        )
                     }
                 }
+            }
+            .onChange(of: image) {
+                uploadImage(image: image)
+            }
+    }
+    func uploadImage(image: UIImage?) {
+        if let img = image {
+            let pdfDocument = PDFDocument()
+            let pdfPage = PDFPage(image: img)
+            pdfDocument.insert(pdfPage!, at: 0)
+            Task {
+                await standard.storeImage(image: pdfDocument)
+            }
         }
     }
 }

@@ -36,10 +36,10 @@ struct OnboardingFlow: View {
         OnboardingStack(onboardingFlowComplete: $completedOnboardingFlow) {
             Welcome()
             InterestingModules()
-            
             if !FeatureFlags.disableFirebase {
                 AccountOnboarding()
             }
+            Medication()
             OnboardingQuestionnaire()
             #if !(targetEnvironment(simulator) && (arch(i386) || arch(x86_64)))
                 Consent()
