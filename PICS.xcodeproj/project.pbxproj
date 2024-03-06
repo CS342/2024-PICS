@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22306A2A2B7C4E8E000A8EC1 /* Onboarding_Questionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22306A292B7C4E8E000A8EC1 /* Onboarding_Questionnaire.swift */; };
-		22306A2E2B8581C3000A8EC1 /* Onboarding-Questionnaire.json in Resources */ = {isa = PBXBuildFile; fileRef = 22306A2D2B8581C3000A8EC1 /* Onboarding-Questionnaire.json */; };
+		22201EE82B9259B800E38F47 /* EQ5D5L.json in Resources */ = {isa = PBXBuildFile; fileRef = 22201EE52B9259B800E38F47 /* EQ5D5L.json */; };
+		22201EE92B9259B800E38F47 /* PHQ-4.json in Resources */ = {isa = PBXBuildFile; fileRef = 22201EE62B9259B800E38F47 /* PHQ-4.json */; };
+		22201EEA2B9259B800E38F47 /* Self-MNA.json in Resources */ = {isa = PBXBuildFile; fileRef = 22201EE72B9259B800E38F47 /* Self-MNA.json */; };
+		22306A2A2B7C4E8E000A8EC1 /* OnboardingQuestionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22306A292B7C4E8E000A8EC1 /* OnboardingQuestionnaire.swift */; };
+		22306A3E2B8F0097000A8EC1 /* OnboardingSurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22306A3D2B8F0097000A8EC1 /* OnboardingSurveyView.swift */; };
+		22306A412B8F20C4000A8EC1 /* AccountQuestionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22306A402B8F20C4000A8EC1 /* AccountQuestionnaire.swift */; };
+		22306A462B8FB173000A8EC1 /* OnboardingQuestionnaireDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22306A452B8FB173000A8EC1 /* OnboardingQuestionnaireDashboard.swift */; };
+		22365B782B902C9100C4528E /* Onboarding-Questionnaire.json in Resources */ = {isa = PBXBuildFile; fileRef = 22365B772B902C9100C4528E /* Onboarding-Questionnaire.json */; };
 		226C16F02B69DF3500FBA97D /* HeightKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226C16EF2B69DF3500FBA97D /* HeightKey.swift */; };
 		226C16F22B6C820C00FBA97D /* WeightKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226C16F12B6C820B00FBA97D /* WeightKey.swift */; };
 		27FA29902A388E9B009CAC45 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA298F2A388E9B009CAC45 /* ModalView.swift */; };
@@ -120,8 +126,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		22306A292B7C4E8E000A8EC1 /* Onboarding_Questionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_Questionnaire.swift; sourceTree = "<group>"; };
-		22306A2D2B8581C3000A8EC1 /* Onboarding-Questionnaire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Onboarding-Questionnaire.json"; sourceTree = "<group>"; };
+		22201EE52B9259B800E38F47 /* EQ5D5L.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EQ5D5L.json; sourceTree = "<group>"; };
+		22201EE62B9259B800E38F47 /* PHQ-4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "PHQ-4.json"; sourceTree = "<group>"; };
+		22201EE72B9259B800E38F47 /* Self-MNA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Self-MNA.json"; sourceTree = "<group>"; };
+		22306A292B7C4E8E000A8EC1 /* OnboardingQuestionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingQuestionnaire.swift; sourceTree = "<group>"; };
+		22306A3D2B8F0097000A8EC1 /* OnboardingSurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSurveyView.swift; sourceTree = "<group>"; };
+		22306A402B8F20C4000A8EC1 /* AccountQuestionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountQuestionnaire.swift; sourceTree = "<group>"; };
+		22306A452B8FB173000A8EC1 /* OnboardingQuestionnaireDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingQuestionnaireDashboard.swift; sourceTree = "<group>"; };
+		22365B772B902C9100C4528E /* Onboarding-Questionnaire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Onboarding-Questionnaire.json"; sourceTree = "<group>"; };
 		226C16EF2B69DF3500FBA97D /* HeightKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightKey.swift; sourceTree = "<group>"; };
 		226C16F12B6C820B00FBA97D /* WeightKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightKey.swift; sourceTree = "<group>"; };
 		27FA298F2A388E9B009CAC45 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
@@ -290,7 +302,8 @@
 				2FE5DCAC29EE6107004B9AB4 /* AccountOnboarding.swift */,
 				2FE5DC2F29EDD7CA004B9AB4 /* Consent.swift */,
 				2FE5DC3029EDD7CA004B9AB4 /* HealthKitPermissions.swift */,
-				22306A292B7C4E8E000A8EC1 /* Onboarding_Questionnaire.swift */,
+				22306A292B7C4E8E000A8EC1 /* OnboardingQuestionnaire.swift */,
+				22306A402B8F20C4000A8EC1 /* AccountQuestionnaire.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -303,6 +316,10 @@
 				748117192B74BC5B00801A9A /* Self-MNA.json */,
 				748117152B74BC3E00801A9A /* EQ5D5L.json */,
 				748117162B74BC3E00801A9A /* EQ5D5L.json.license */,
+				22201EE52B9259B800E38F47 /* EQ5D5L.json */,
+				22201EE62B9259B800E38F47 /* PHQ-4.json */,
+				22201EE72B9259B800E38F47 /* Self-MNA.json */,
+				22365B772B902C9100C4528E /* Onboarding-Questionnaire.json */,
 				741110F12B5767DE00DFC79E /* PROM-Questionnaire.json */,
 				653A255428338800005D4D48 /* Assets.xcassets */,
 				2FA0BFEC2ACC977500E0EF83 /* Localizable.xcstrings */,
@@ -322,6 +339,8 @@
 				2FE5DC4C29EDD7FA004B9AB4 /* PICSScheduler.swift */,
 				2FE5DC4B29EDD7FA004B9AB4 /* PICSTaskContext.swift */,
 				27FA298F2A388E9B009CAC45 /* ModalView.swift */,
+				22306A3D2B8F0097000A8EC1 /* OnboardingSurveyView.swift */,
+				22306A452B8FB173000A8EC1 /* OnboardingQuestionnaireDashboard.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -637,6 +656,15 @@
 				2FA0BFED2ACC977500E0EF83 /* Localizable.xcstrings in Resources */,
 				741110F22B5767DF00DFC79E /* PROM-Questionnaire.json in Resources */,
 				74C593972B720B5E002D0274 /* (null) in Resources */,
+				22201EEA2B9259B800E38F47 /* Self-MNA.json in Resources */,
+				2FC3439229EE634B002D773C /* ConsentDocument.md in Resources */,
+				653A255528338800005D4D48 /* Assets.xcassets in Resources */,
+				22201EE92B9259B800E38F47 /* PHQ-4.json in Resources */,
+				2FC3439029EE6346002D773C /* SocialSupportQuestionnaire.json in Resources */,
+				22201EE82B9259B800E38F47 /* EQ5D5L.json in Resources */,
+				22365B782B902C9100C4528E /* Onboarding-Questionnaire.json in Resources */,
+				2FA0BFED2ACC977500E0EF83 /* Localizable.xcstrings in Resources */,
+				741110F22B5767DF00DFC79E /* PROM-Questionnaire.json in Resources */,
 				2F6025CB29BBE70F0045459E /* GoogleService-Info.plist in Resources */,
 				7481171C2B74BC6D00801A9A /* PHQ-4.json in Resources */,
 			);
@@ -689,7 +717,7 @@
 				86400D192B7C4B6D009FEC10 /* ApptInfo.swift in Sources */,
 				2F4FC8D729EE69D300BFFE26 /* MockUpload.swift in Sources */,
 				2FE5DC3A29EDD7CA004B9AB4 /* Welcome.swift in Sources */,
-				22306A2A2B7C4E8E000A8EC1 /* Onboarding_Questionnaire.swift in Sources */,
+				22306A2A2B7C4E8E000A8EC1 /* OnboardingQuestionnaire.swift in Sources */,
 				2FE5DC3829EDD7CA004B9AB4 /* InterestingModules.swift in Sources */,
 				2FE5DC3529EDD7CA004B9AB4 /* Consent.swift in Sources */,
 				2FE5DC4529EDD7F2004B9AB4 /* Binding+Negate.swift in Sources */,
@@ -720,6 +748,7 @@
 				A480C7C42B6D721A00B29A07 /* HKVisualizationItem.swift in Sources */,
 				56F6F2A02AB441930022FE5A /* ContributionsList.swift in Sources */,
 				566155292AB8447C00209B80 /* Package+LicenseType.swift in Sources */,
+				22306A412B8F20C4000A8EC1 /* AccountQuestionnaire.swift in Sources */,
 				5680DD392AB8983D004E6D4A /* PackageCell.swift in Sources */,
 				74AE05882B918DAF00AB5287 /* StroopTest.swift in Sources */,
 				A480C7C02B6D5A3700B29A07 /* HKVisualization.swift in Sources */,
@@ -727,8 +756,10 @@
 				A459932C2B906C3B00A98C95 /* ResultsViz.swift in Sources */,
 				2FE5DC5229EDD7FA004B9AB4 /* PICSScheduler.swift in Sources */,
 				A9FE7AD02AA39BAB0077B045 /* AccountSheet.swift in Sources */,
+				22306A462B8FB173000A8EC1 /* OnboardingQuestionnaireDashboard.swift in Sources */,
 				653A2551283387FE005D4D48 /* PICS.swift in Sources */,
 				2FE5DC3629EDD7CA004B9AB4 /* HealthKitPermissions.swift in Sources */,
+				22306A3E2B8F0097000A8EC1 /* OnboardingSurveyView.swift in Sources */,
 				8644E6872B7204A7001218D0 /* AppointmentBlock.swift in Sources */,
 				86F62AF62B916B670075F23C /* AppointmentInformation.swift in Sources */,
 				5661552E2AB854C000209B80 /* PackageHelper.swift in Sources */,
