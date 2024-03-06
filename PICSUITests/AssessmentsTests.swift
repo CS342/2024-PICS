@@ -17,10 +17,13 @@ class AssessmentsTests: XCTestCase {
     func testAssessmentNavigation() {
         let app = XCUIApplication()
         
-        // Test if the Trail Making Test button exists and can be tapped
-        let trailMakingButton = app.buttons["ASSESSMENT_TM_START_BTN"]
-        XCTAssertTrue(trailMakingButton.waitForExistence(timeout: 2))
+//        // Test if the Trail Making Test button exists and can be tapped
+//        let trailMakingButton = app.buttons["ASSESSMENT_TM_START_BTN"]
+//        XCTAssertTrue(trailMakingButton.waitForExistence(timeout: 2))
+//        trailMakingButton.tap()
+        // Now, test if the Trail Making Test button exists and can be tapped
+        let trailMakingButton = app.buttons["startTrailMakingTestButton"]
+        XCTAssertTrue(trailMakingButton.waitForExistence(timeout: 2), "Trail Making Test button should exist")
         trailMakingButton.tap()
-
     }
 }
