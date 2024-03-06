@@ -120,8 +120,6 @@ struct Assessments: View {
                 }
                 .accessibility(identifier: "startTrailMakingTestButton")
                 .buttonStyle(.plain)
-                // Using style to restrict clickable area.
-                .buttonStyle(.plain)
             }
         }
     }
