@@ -25,7 +25,7 @@ struct Assessments: View {
         case trailMaking
         case stroopTest
     }
-
+    
     // Binding to control the display of account-related UI.
     @Binding private var presentingAccount: Bool
     
@@ -36,6 +36,8 @@ struct Assessments: View {
     @AppStorage("AssessmentsInProgress") private var assessmentsIP = false
     // Tracks which test is currently selected.
     @State var currentTest = Assessments.trailMaking
+    // New property to control the sheet presentation
+    @State private var showingTestSheet = false
     
     // Main body of the Assessments view, switching between the list of assessments and the currently active assessment.
     var assessmentList: some View {
@@ -67,11 +69,19 @@ struct Assessments: View {
                     }
             }
         }
+        .sheet(isPresented: $showingTestSheet) {
+            // Determine which assessment view to present based on the currentTest state
+            switch currentTest {
+            case .trailMaking:
+                TrailMakingTaskView()
+            case .stroopTest:
+                StroopTestView()
+            }
+        }
     }
         
     private var trailMakingTestSection: some View {
-        // Button text to start the Trail Making Test or view results
-        // based on whether results are available.
+        // Button text to start the Trail Making Test or view results based on whether results are available.
         let btnText = if tmStorageResults.isEmpty {
             String(localized: "ASSESSMENT_TM_START_BTN")
         } else {
@@ -93,8 +103,7 @@ struct Assessments: View {
     }
     
     private var stroopTestSection: some View {
-        // Button text to start the Stroop Test or view results
-        // based on whether results are available.
+        // Button text to start the Stroop Test or view results based on whether results are available.
         let btnText = if stroopTestResults.isEmpty {
             String(localized: "ASSESSMENT_STROOP_START_BTN")
         } else {
@@ -109,8 +118,8 @@ struct Assessments: View {
                     Text(btnText)
                         .foregroundStyle(.accent)
                 }
-                    // Use style to restrict clickable area.
-                    .buttonStyle(.plain)
+                .accessibility(identifier: "startTrailMakingTestButton")
+                .buttonStyle(.plain)
             }
         }
     }
@@ -156,12 +165,14 @@ struct Assessments: View {
     func startTrailMaking() {
         currentTest = Assessments.trailMaking
         assessmentsIP = true
+        showingTestSheet.toggle()
     }
     
     // Function to set up and start the Stroop Test.
     func startStroopTest() {
         currentTest = Assessments.stroopTest
         assessmentsIP = true
+        showingTestSheet.toggle()
     }
     
     // A view for displaying a message indicating that a specific assessment has not been completed.
