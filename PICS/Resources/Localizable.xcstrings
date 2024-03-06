@@ -100,6 +100,17 @@
         }
       }
     },
+    "APPT_REMINDER" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appointment Reminder"
+          }
+        }
+      }
+    },
     "APPT1_TITLE" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -370,6 +381,17 @@
     },
     "Date and Time:" : {
 
+    },
+    "EDIT_APPT_HEADER" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Appointments"
+          }
+        }
+      }
     },
     "EDUARDO_SALGADO_BIO" : {
       "extractionState" : "manual",
@@ -769,17 +791,93 @@
         }
       }
     },
+    "NOTIF_CONTENT" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You have an upcoming appointment on "
+          }
+        }
+      }
+    },
     "NOTIFICATION_PERMISSIONS_BUTTON" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allow Notifications"
+          }
+        }
+      }
     },
     "NOTIFICATION_PERMISSIONS_DESCRIPTION" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The app will send you notifications to remind you about your upcoming appointments."
+          }
+        }
+      }
     },
     "NOTIFICATION_PERMISSIONS_SUBTITLE" : {
-
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permission to send notifications"
+          }
+        }
+      }
     },
     "NOTIFICATION_PERMISSIONS_TITLE" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifications"
+          }
+        }
+      }
+    },
+    "Now" : {
 
+    },
+    "Onboarding Questionnaire" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onboarding Questionnaire"
+          }
+        }
+      }
+    },
+    "Onboarding Task" : {
+
+    },
+    "ONBOARDING_CAPTION" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please complete the Onboarding questionnaire before your first appointment."
+          }
+        }
+      }
+    },
+    "ONBOARDING_INSTRUCTION" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You may skip this step during the onboarding and fill it out before your first appointment."
+          }
+        }
+      }
     },
     "ONBOARDING_QUESTIONNAIRE" : {
       "extractionState" : "manual",
@@ -788,6 +886,37 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Static information on basic profile info"
+          }
+        }
+      }
+    },
+    "ONBOARDING_SUBTITLE" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please fill out this onboarding survey to collect your basic information."
+          }
+        }
+      }
+    },
+    "ONBOARDING_TITLE" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onboarding Questionnaire"
+          }
+        }
+      }
+    },
+    "PERIOD" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "."
           }
         }
       }
@@ -955,6 +1084,17 @@
         }
       }
     },
+    "SAVE_BUTTON" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save Changes"
+          }
+        }
+      }
+    },
     "SCHEDULE_LIST_TITLE" : {
       "localizations" : {
         "en" : {
@@ -975,6 +1115,12 @@
           }
         }
       }
+    },
+    "Skip" : {
+
+    },
+    "Start Questionnaire" : {
+
     },
     "STREET_ADDRESS" : {
       "extractionState" : "manual",
@@ -1006,6 +1152,9 @@
           }
         }
       }
+    },
+    "Take Questionnaire" : {
+
     },
     "TASK_CONTEXT_ACTION_QUESTIONNAIRE" : {
       "localizations" : {

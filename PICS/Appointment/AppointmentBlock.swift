@@ -1,7 +1,7 @@
 //
 // This source file is part of the PICS based on the Stanford Spezi Template Application project
 //
-// SPDX-FileCopyrightText: 2023 Stanford University
+// SPDX-FileCopyrightText: 2024 Stanford University
 //
 // SPDX-License-Identifier: MIT
 //
@@ -28,6 +28,8 @@ struct AppointmentBlock: View {
     
     @State private var multiSelection = Set<UUID>()
     @State private var showingSheet = false
+    
+    @Environment(AppointmentInformation.self) private var appointmentInfo
 
     var body: some View {
         Color.white
@@ -48,9 +50,10 @@ struct AppointmentBlock: View {
                         Spacer()
                         HStack {
                             Spacer()
-                            Button(action: reschedule) {
-                                Text(String(localized: "RESCHEDULE_BUTTON_LABEL"))
+                            Button(String(localized: "REQUIRED_ITEMS_HEADING")) {
+                                showingSheet.toggle()
                             }
+                            .buttonStyle(.bordered)
                         }
                         HStack {
                             Spacer()
@@ -81,8 +84,5 @@ struct AppointmentBlock: View {
                     }
                 }
             )
-    }
-    
-    func reschedule() {
     }
 }

@@ -1,13 +1,14 @@
 //
 // This source file is part of the PICS based on the Stanford Spezi Template Application project
 //
-// SPDX-FileCopyrightText: 2023 Stanford University
+// SPDX-FileCopyrightText: 2024 Stanford University
 //
 // SPDX-License-Identifier: MIT
 //
 
 import Foundation
 import SwiftUI
+import UserNotifications
 
 @Observable
 class AppointmentInformation {
@@ -79,5 +80,71 @@ class AppointmentInformation {
         appt1Data = try? JSONEncoder().encode(date0)
         appt1Data = try? JSONEncoder().encode(date1)
         appt2Data = try? JSONEncoder().encode(date2)
+       
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.removeAllPendingNotificationRequests()
+    
+        scheduleNotifications(for: appt1, with: notificationCenter)
+        scheduleNotifications(for: appt2, with: notificationCenter)
+    }
+
+    func scheduleNotifications(for date: Date, with notificationCenter: UNUserNotificationCenter) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        let appointmentDateString = dateFormatter.string(from: date)
+        
+        let content = UNMutableNotificationContent()
+        content.title = String(localized: "APPT_REMINDER")
+        content.body = String(localized: "NOTIF_CONTENT") + appointmentDateString + String(localized: "PERIOD")
+       
+        let monthBeforeId = scheduleNotification(for: date, with: DateComponents(month: -1), content: content, notificationCenter: notificationCenter)
+        
+        let weekBeforeId = scheduleNotification(for: date, with: DateComponents(day: -7), content: content, notificationCenter: notificationCenter)
+        
+        let daysBeforeId = scheduleNotification(for: date, with: DateComponents(day: -3), content: content, notificationCenter: notificationCenter)
+        
+        let dayBeforeId = scheduleNotification(for: date, with: DateComponents(day: -1), content: content, notificationCenter: notificationCenter)
+        
+        let minBeforeId = scheduleNotification(for: date, with: DateComponents(minute: -30), content: content, notificationCenter: notificationCenter)
+        
+        let appointmentId = scheduleNotification(for: date, with: nil, content: content, notificationCenter: notificationCenter)
+    }
+    
+    
+    func scheduleNotification(
+        for date: Date,
+        with components: DateComponents?,
+        content: UNMutableNotificationContent,
+        notificationCenter: UNUserNotificationCenter
+    ) -> String {
+        var notificationDate = date
+        if let components = components, let scheduledDate = Calendar.current.date(byAdding: components, to: date) {
+            notificationDate = scheduledDate
+        }
+        
+        let trigger: UNNotificationTrigger
+        if let components = components {
+            trigger = UNCalendarNotificationTrigger(
+                dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: notificationDate),
+                repeats: false
+            )
+        } else {
+            let appointmentDateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)
+            trigger = UNCalendarNotificationTrigger(dateMatching: appointmentDateComponents, repeats: false)
+        }
+        
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        let identifier = request.identifier
+        
+        notificationCenter.add(request) { error in
+            if let error = error {
+                print("Error scheduling notification: \(error.localizedDescription)")
+            } else {
+                print("Notification scheduled successfully for \(notificationDate)")
+            }
+        }
+        
+        return identifier
     }
 }
