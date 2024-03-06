@@ -8,7 +8,7 @@
 
 import XCTest
 
-class AssessmentsUITests: XCTestCase {
+class AssessmentsTests: XCTestCase {
     override func setUpWithError() throws {
         continueAfterFailure = false
         XCUIApplication().launch()
