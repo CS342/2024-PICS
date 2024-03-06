@@ -843,6 +843,42 @@
         }
       }
     },
+    "Now" : {
+
+    },
+    "Onboarding Questionnaire" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onboarding Questionnaire"
+          }
+        }
+      }
+    },
+    "Onboarding Task" : {
+
+    },
+    "ONBOARDING_CAPTION" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please complete the Onboarding questionnaire before your first appointment."
+          }
+        }
+      }
+    },
+    "ONBOARDING_INSTRUCTION" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You may skip this step during the onboarding and fill it out before your first appointment."
+          }
+        }
+      }
+    },
     "ONBOARDING_QUESTIONNAIRE" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -850,6 +886,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Static information on basic profile info"
+          }
+        }
+      }
+    },
+    "ONBOARDING_SUBTITLE" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please fill out this onboarding survey to collect your basic information."
+          }
+        }
+      }
+    },
+    "ONBOARDING_TITLE" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onboarding Questionnaire"
           }
         }
       }
@@ -1038,6 +1094,12 @@
         }
       }
     },
+    "Skip" : {
+
+    },
+    "Start Questionnaire" : {
+
+    },
     "STREET_ADDRESS" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1068,6 +1130,9 @@
           }
         }
       }
+    },
+    "Take Questionnaire" : {
+
     },
     "TASK_CONTEXT_ACTION_QUESTIONNAIRE" : {
       "localizations" : {
