@@ -36,7 +36,7 @@ struct Medication: View {
         )
             
             // Small fix as otherwise "Login" or "Sign up" is still shown in the nav bar
-            .navigationTitle("medication")
+            .navigationTitle(Text(verbatim: ""))
     }
 }
 

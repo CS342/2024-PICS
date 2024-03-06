@@ -231,14 +231,14 @@ actor PICSStandard: Standard, EnvironmentAccessible, HealthKitConstraint, Onboar
         }
         
         do {
-            guard let consentData = image.dataRepresentation() else {
+            guard let medicationData = image.dataRepresentation() else {
                 logger.error("Could not store medication plan.")
                 return
             }
             
             let metadata = StorageMetadata()
             metadata.contentType = "application/pdf"
-            _ = try await userBucketReference.child("medicationPlan/\(dateString).pdf").putDataAsync(consentData, metadata: metadata)
+            _ = try await userBucketReference.child("medicationPlan/\(dateString).pdf").putDataAsync(medicationData, metadata: metadata)
         } catch {
             logger.error("Could not store medication plan: \(error)")
         }

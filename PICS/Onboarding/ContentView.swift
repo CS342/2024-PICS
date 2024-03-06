@@ -15,9 +15,10 @@ struct ContentView: View {
     @State var image: UIImage?
     @Environment(PICSStandard.self) private var standard
     
-    private var swiftUIImage: Image? {
+    private var swiftUIImage: some View {
         image.flatMap {
             Image(uiImage: $0)
+                .accessibilityLabel(Text("Medication Plan"))
         }
     }
     
@@ -25,31 +26,22 @@ struct ContentView: View {
         ImageSource(image: $image)
             .clipShape(RoundedRectangle(cornerRadius: 8))
             .padding()
-            .toolbar {
-                if let swiftUIImage = swiftUIImage {
-                    ToolbarItem {
-                        ShareLink(
-                            item: swiftUIImage,
-                            subject: Text("Image Source"),
-                            message: Text("Check it out the Image Source Swift Package: https://github.com/StanfordBDHG/ImageSource"),
-                            preview: SharePreview("", image: swiftUIImage)
-                        )
-                    }
-                }
-            }
             .onChange(of: image) {
                 uploadImage(image: image)
             }
     }
     func uploadImage(image: UIImage?) {
         if let img = image {
-            let pdfDocument = PDFDocument()
-            let pdfPage = PDFPage(image: img)
-            pdfDocument.insert(pdfPage!, at: 0)
-            Task {
-                await standard.storeImage(image: pdfDocument)
+                if let pdfPage = PDFPage(image: img) {
+                    let pdfDocument = PDFDocument()
+                    pdfDocument.insert(pdfPage, at: 0)
+                    Task {
+                        await standard.storeImage(image: pdfDocument)
+                    }
+                } else {
+                    print("Failed to create PDFPage from image")
+                }
             }
-        }
     }
 }
 

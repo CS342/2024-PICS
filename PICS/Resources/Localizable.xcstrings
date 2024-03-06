@@ -297,9 +297,6 @@
         }
       }
     },
-    "Check it out the Image Source Swift Package: https://github.com/StanfordBDHG/ImageSource" : {
-
-    },
     "CLOSE" : {
       "comment" : "MARK: General",
       "localizations" : {
@@ -618,9 +615,6 @@
         }
       }
     },
-    "Image Source" : {
-
-    },
     "INTERESTING_MODULES_AREA1_DESCRIPTION" : {
       "localizations" : {
         "en" : {
@@ -764,7 +758,7 @@
         }
       }
     },
-    "medication" : {
+    "Medication Plan" : {
 
     },
     "MEDICATION_SUBTITLE" : {
