@@ -118,8 +118,10 @@ struct Assessments: View {
                     Text(btnText)
                         .foregroundStyle(.accent)
                 }
-                    // Use style to restrict clickable area.
-                    .buttonStyle(.plain)
+                .accessibility(identifier: "startTrailMakingTestButton")
+                .buttonStyle(.plain)
+                // Using style to restrict clickable area.
+                .buttonStyle(.plain)
             }
         }
     }
