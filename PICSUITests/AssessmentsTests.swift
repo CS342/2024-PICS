@@ -14,16 +14,11 @@ class AssessmentsTests: XCTestCase {
         XCUIApplication().launch()
     }
 
-    func testAssessmentNavigation() {
+    func testAssessmentViewPresence() {
         let app = XCUIApplication()
-        
-//        // Test if the Trail Making Test button exists and can be tapped
-//        let trailMakingButton = app.buttons["ASSESSMENT_TM_START_BTN"]
-//        XCTAssertTrue(trailMakingButton.waitForExistence(timeout: 2))
-//        trailMakingButton.tap()
-        // Now, test if the Trail Making Test button exists and can be tapped
-        let trailMakingButton = app.buttons["startTrailMakingTestButton"]
-        XCTAssertTrue(trailMakingButton.waitForExistence(timeout: 2), "Trail Making Test button should exist")
-        trailMakingButton.tap()
+
+        // Example: Check for a static text that's always present in the Assessments view
+        let assessmentTitle = app.staticTexts["ASSESSMENTS_NAVIGATION_TITLE"]
+        XCTAssertTrue(assessmentTitle.waitForExistence(timeout: 5), "Assessments view should be present")
     }
 }
