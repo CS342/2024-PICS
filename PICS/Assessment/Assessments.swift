@@ -82,6 +82,8 @@ struct Assessments: View {
                 TrailMakingTaskView()
             case .stroopTest:
                 StroopTestView()
+            case .reactionTime:
+                ReactionTimeView()
             }
         }
     }
@@ -221,6 +223,7 @@ struct Assessments: View {
     func startReactionTimeTest() {
         currentTest = Assessments.reactionTime
         assessmentsIP = true
+        showingTestSheet.toggle()
     }
     
     // A view for displaying a message indicating that a specific assessment has not been completed.

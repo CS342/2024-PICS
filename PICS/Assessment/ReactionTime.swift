@@ -13,7 +13,8 @@ import SwiftUI
 struct ReactionTimeView: View {
     @AppStorage("reactionTimeResults") private var reactionTimeResults: [AssessmentResult] = []
     @AppStorage("AssessmentsInProgress") private var assessmentsIP = false
-
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         ZStack {
             Color(red: 242 / 255, green: 242 / 255, blue: 247 / 255)
@@ -50,6 +51,10 @@ struct ReactionTimeView: View {
     private func handleTaskResult(result: TaskResult) async {
         let curTime = ProcessInfo.processInfo.systemUptime
         assessmentsIP = false // End the assessment
+        // Adding this logic to dismiss the view
+        DispatchQueue.main.async {
+            self.presentationMode.wrappedValue.dismiss()
+        }
         guard case let .completed(taskResult) = result else {
             // Failed or canceled test. Do nothing for current.
             return
