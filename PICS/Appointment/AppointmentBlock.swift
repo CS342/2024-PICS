@@ -55,13 +55,6 @@ struct AppointmentBlock: View {
                             }
                             .buttonStyle(.bordered)
                         }
-                        HStack {
-                            Spacer()
-                            Button(String(localized: "REQUIRED_ITEMS_HEADING")) {
-                                showingSheet.toggle()
-                            }
-                            .buttonStyle(.bordered)
-                        }
                         Spacer()
                     }
                     .padding()
