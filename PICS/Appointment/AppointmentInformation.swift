@@ -98,17 +98,17 @@ class AppointmentInformation {
         content.title = String(localized: "APPT_REMINDER")
         content.body = String(localized: "NOTIF_CONTENT") + appointmentDateString + String(localized: "PERIOD")
        
-        let monthBeforeId = scheduleNotification(for: date, with: DateComponents(month: -1), content: content, notificationCenter: notificationCenter)
+        _ = scheduleNotification(for: date, with: DateComponents(month: -1), content: content, notificationCenter: notificationCenter)
         
-        let weekBeforeId = scheduleNotification(for: date, with: DateComponents(day: -7), content: content, notificationCenter: notificationCenter)
+        _ = scheduleNotification(for: date, with: DateComponents(day: -7), content: content, notificationCenter: notificationCenter)
         
-        let daysBeforeId = scheduleNotification(for: date, with: DateComponents(day: -3), content: content, notificationCenter: notificationCenter)
+        _ = scheduleNotification(for: date, with: DateComponents(day: -3), content: content, notificationCenter: notificationCenter)
         
-        let dayBeforeId = scheduleNotification(for: date, with: DateComponents(day: -1), content: content, notificationCenter: notificationCenter)
+        _ = scheduleNotification(for: date, with: DateComponents(day: -1), content: content, notificationCenter: notificationCenter)
         
-        let minBeforeId = scheduleNotification(for: date, with: DateComponents(minute: -30), content: content, notificationCenter: notificationCenter)
+        _ = scheduleNotification(for: date, with: DateComponents(minute: -30), content: content, notificationCenter: notificationCenter)
         
-        let appointmentId = scheduleNotification(for: date, with: nil, content: content, notificationCenter: notificationCenter)
+        _ = scheduleNotification(for: date, with: nil, content: content, notificationCenter: notificationCenter)
     }
     
     
@@ -122,9 +122,9 @@ class AppointmentInformation {
         if let components = components, let scheduledDate = Calendar.current.date(byAdding: components, to: date) {
             notificationDate = scheduledDate
         }
-        
+
         let trigger: UNNotificationTrigger
-        if let components = components {
+        if components != nil {
             trigger = UNCalendarNotificationTrigger(
                 dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: notificationDate),
                 repeats: false
