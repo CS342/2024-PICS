@@ -25,7 +25,7 @@ extension PICSScheduler {
                     minute: Calendar.current.component(.minute, from: .now).addingReportingOverflow(1).partialValue
                 )
             } else {
-                // Schedule the task for every day at 8:00 AM for normal app usage
+                // Schedule the task for every 2 weeks at 8:00 AM for normal app usage
                 dateComponents = DateComponents(hour: 8, minute: 0)
             }
 
@@ -51,7 +51,7 @@ extension PICSScheduler {
                 minute: Calendar.current.component(.minute, from: .now)
             )
         } else {
-            // For the normal app usage, we schedule the task for every day at 9:00 AM
+            // For the normal app usage, we schedule the task for every 2 weeks at 9:00 AM
             dateComponents = DateComponents(hour: 9, minute: 0)
         }
 
@@ -77,7 +77,7 @@ extension PICSScheduler {
                 minute: Calendar.current.component(.minute, from: .now)
             )
         } else {
-            // For the normal app usage, we schedule the task for every day at 10:00 AM
+            // For the normal app usage, we schedule the task for every two weeks at 10:00 AM
             dateComponents = DateComponents(hour: 10, minute: 0)
         }
 
