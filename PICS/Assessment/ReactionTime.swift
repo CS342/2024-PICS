@@ -38,7 +38,7 @@ struct ReactionTimeView: View {
             maximumStimulusInterval: 2.0,
             minimumStimulusInterval: 1.0,
             thresholdAcceleration: 0.8,
-            numberOfAttempts: 1,
+            numberOfAttempts: 2,
             timeout: 5.0,
             successSound: 0,
             timeoutSound: 0,
@@ -67,8 +67,21 @@ struct ReactionTimeView: View {
                stepResult.identifier == "reactionTime" {
                 for reactionTimeResult in stepResult.results ?? [] {
                     if let curResult = reactionTimeResult as? ORKReactionTimeResult {
-                        // Calculates the total time taken to complete the test.
-                        totalTime += curTime - curResult.timestamp
+                        // get DeviceMotion data
+                        let jsonURL = curResult.fileResult.fileURL
+                        if let jsonURL = jsonURL, let jsonData = try? Data(contentsOf: jsonURL) {
+                            do {
+                                let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any]
+                                if let items = json?["items"] as? [[String: Any]],
+                                   let lastItem = items.last,
+                                   let lastTimestamp = lastItem["timestamp"] as? TimeInterval {
+                                    let reactionTime = (curResult.timestamp - lastTimestamp) * 1000 // in milliseconds
+                                    totalTime += reactionTime
+                                }
+                            } catch {
+                                print("Error parsing JSON:", error)
+                            }
+                        }
                     }
                 }
             }
