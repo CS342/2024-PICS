@@ -158,6 +158,14 @@ struct ResultsViz: View {
         } else {
             elm.errorCnt
         }
+        let metricText = if metricNum < 0 {
+            ""
+        } else {
+            ", " +
+            self.metricType +
+            ": " +
+            String(metricNum)
+        }
         return (
             prefix +
             String(elm.testDateTime.formatted(.dateTime.year().month().day())) +
@@ -165,10 +173,7 @@ struct ResultsViz: View {
             self.timeSpentLable +
             ": " +
             String(timeSpent) +
-            ", " +
-            self.metricType +
-            ": " +
-            String(metricNum)
+            metricText
         )
     }
     
