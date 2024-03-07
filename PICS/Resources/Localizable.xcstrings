@@ -758,6 +758,31 @@
         }
       }
     },
+    "Medication Plan" : {
+
+    },
+    "MEDICATION_SUBTITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please upload a photo of your medication chart. "
+          }
+        }
+      }
+    },
+    "MEDICATION_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Medication Information"
+          }
+        }
+      }
+    },
     "MiniNutritional_DESCRIPTION" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -949,6 +974,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "This project is licensed under the MIT License."
+          }
+        }
+      }
+    },
+    "REACTIONTIME_TEST" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reaction Time Test"
+          }
+        }
+      }
+    },
+    "REACTIONTIME_VIZ_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reaction Time Results"
           }
         }
       }
@@ -1249,6 +1296,9 @@
           }
         }
       }
+    },
+    "Upload Photo" : {
+
     },
     "Value" : {
 
