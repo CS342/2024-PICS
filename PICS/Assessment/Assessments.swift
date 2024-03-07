@@ -189,7 +189,7 @@ struct Assessments: View {
     private var reactionTimeResultsView: some View {
         Group {
             if reactionTimeResults.isEmpty {
-                notCompletedView(testName: "Reaction Time Test")
+                notCompletedView(testName: "Reaction Time")
             } else {
                 ResultsViz(
                     data: reactionTimeResults,
@@ -226,6 +226,19 @@ struct Assessments: View {
         showingTestSheet.toggle()
     }
     
+    private func testDescription(for testName: String) -> String {
+        switch testName {
+        case "Trail Making":
+            return "visual attention and task switching"
+        case "Stroop Test":
+            return "cognitive flexibility and processing speed"
+        case "Reaction Time":
+            return "speed and accuracy of response"
+        default:
+            return "unknown skill"
+        }
+    }
+    
     // A view for displaying a message indicating that a specific assessment has not been completed.
     private func notCompletedView(testName: String) -> some View {
         VStack(alignment: .leading) {
@@ -243,7 +256,7 @@ struct Assessments: View {
             }
             .padding(.bottom, 5)
             .multilineTextAlignment(.center)
-            Text("This test measures your \(testName == "Trail Making" ? "visual attention and task switching" : "cognitive flexibility and processing speed").")
+            Text("This test measures your \(testDescription(for: testName)).")
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
                 .frame(maxWidth: .infinity)
