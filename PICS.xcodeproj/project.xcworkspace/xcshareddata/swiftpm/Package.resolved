@@ -91,6 +91,15 @@
       }
     },
     {
+      "identity" : "imagesource",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/StanfordBDHG/ImageSource",
+      "state" : {
+        "branch" : "main",
+        "revision" : "9f942f21a485f4d552cfcefffae2e4077c0e9635"
+      }
+    },
+    {
       "identity" : "interop-ios-for-google-sdks",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/interop-ios-for-google-sdks.git",

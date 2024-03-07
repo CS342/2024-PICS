@@ -13,6 +13,8 @@ import SwiftUI
 struct StroopTestView: View {
     @AppStorage("stroopTestResults") private var stroopTestResults: [AssessmentResult] = []
     @AppStorage("AssessmentsInProgress") private var assessmentsIP = false
+    
+    @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
         ZStack {
@@ -44,8 +46,12 @@ struct StroopTestView: View {
     // Handles the result of the Stroop task.
     private func handleTaskResult(result: TaskResult) async {
         assessmentsIP = false // End the assessment
+        // Adding this logic to dismiss the view
+        DispatchQueue.main.async {
+            self.presentationMode.wrappedValue.dismiss()
+        }
+        
         guard case let .completed(taskResult) = result else {
-            // Failed or canceled test. Do nothing for current.
             return
         }
         // Fields to record the aggregated test results.

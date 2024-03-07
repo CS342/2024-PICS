@@ -758,6 +758,31 @@
         }
       }
     },
+    "Medication Plan" : {
+
+    },
+    "MEDICATION_SUBTITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please upload a photo of your medication chart. "
+          }
+        }
+      }
+    },
+    "MEDICATION_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Medication Information"
+          }
+        }
+      }
+    },
     "MiniNutritional_DESCRIPTION" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -817,7 +842,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The app will send you notifications to remind you about your upcoming appointments."
+            "value" : "The app will send you notifications to remind you about your upcoming appointments and scheduled questionnaires."
           }
         }
       }
@@ -843,6 +868,42 @@
         }
       }
     },
+    "Now" : {
+
+    },
+    "Onboarding Questionnaire" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onboarding Questionnaire"
+          }
+        }
+      }
+    },
+    "Onboarding Task" : {
+
+    },
+    "ONBOARDING_CAPTION" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please complete the Onboarding questionnaire before your first appointment."
+          }
+        }
+      }
+    },
+    "ONBOARDING_INSTRUCTION" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You may skip this step during the onboarding and fill it out before your first appointment."
+          }
+        }
+      }
+    },
     "ONBOARDING_QUESTIONNAIRE" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -850,6 +911,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Static information on basic profile info"
+          }
+        }
+      }
+    },
+    "ONBOARDING_SUBTITLE" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please fill out this onboarding survey to collect your basic information."
+          }
+        }
+      }
+    },
+    "ONBOARDING_TITLE" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onboarding Questionnaire"
           }
         }
       }
@@ -893,6 +974,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "This project is licensed under the MIT License."
+          }
+        }
+      }
+    },
+    "REACTIONTIME_TEST" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reaction Time Test"
+          }
+        }
+      }
+    },
+    "REACTIONTIME_VIZ_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reaction Time Results"
           }
         }
       }
@@ -1038,6 +1141,12 @@
         }
       }
     },
+    "Skip" : {
+
+    },
+    "Start Questionnaire" : {
+
+    },
     "STREET_ADDRESS" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1068,6 +1177,9 @@
           }
         }
       }
+    },
+    "Take Questionnaire" : {
+
     },
     "TASK_CONTEXT_ACTION_QUESTIONNAIRE" : {
       "localizations" : {
@@ -1184,6 +1296,9 @@
           }
         }
       }
+    },
+    "Upload Photo" : {
+
     },
     "Value" : {
 
