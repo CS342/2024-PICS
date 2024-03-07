@@ -842,7 +842,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The app will send you notifications to remind you about your upcoming appointments and scheduled questionnaires."
+            "value" : "The app will send you notifications to remind you about your upcoming appointments."
           }
         }
       }
