@@ -23,6 +23,7 @@ class ContactsTests: XCTestCase {
     func testApplicationLaunch() throws {
         let app = XCUIApplication()
         XCTAssertTrue(app.buttons["Contacts"].waitForExistence(timeout: 2))
-        app.buttons["Health"].tap()
+        app.buttons["Contacts"].tap()
+        XCTAssertTrue(app.staticTexts["Email"].waitForExistence(timeout: 2))
     }
 }
