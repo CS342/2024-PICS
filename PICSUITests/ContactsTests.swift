@@ -22,8 +22,10 @@ class ContactsTests: XCTestCase {
     
     func testApplicationLaunch() throws {
         let app = XCUIApplication()
+        // checks that you can access the tab and view renders
         XCTAssertTrue(app.buttons["Contacts"].waitForExistence(timeout: 2))
         app.buttons["Contacts"].tap()
+        // checks contents of tab
         XCTAssertTrue(app.staticTexts["Email"].waitForExistence(timeout: 2))
     }
 }
