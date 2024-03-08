@@ -13,6 +13,9 @@ import SwiftUI
 
 
 struct HKVisualizationItem: View {
+    // Environment recording light or dark mode to decide color.
+    @Environment(\.colorScheme) var colorScheme
+    
     let id = UUID()
     var data: [HKData]
     var xName: String
@@ -92,7 +95,7 @@ struct HKVisualizationItem: View {
                 RuleMark(
                     y: .value("Threshold", self.threshold)
                 )
-                .foregroundStyle(.black)
+                .foregroundStyle(colorScheme == .dark ? .white : .black)
                 .lineStyle(StrokeStyle(lineWidth: 1, dash: [5]))
             }
         }
@@ -206,7 +209,7 @@ struct HKVisualizationItem: View {
         }
         .accessibilityElement(children: .combine)
         .frame(width: lollipopBoxWidth, alignment: .center)
-        .background(Color.gray.brightness(0.4))
+        .background(Color(UIColor.systemBackground))
         .cornerRadius(5)
         .offset(x: boxOffset)
     }
