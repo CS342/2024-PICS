@@ -59,8 +59,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleUtilities.git",
       "state" : {
-        "revision" : "26c898aed8bed13b8a63057ee26500abbbcb8d55",
-        "version" : "7.13.1"
+        "revision" : "830ffa9276e10267881f2697283c2fcd867603fd",
+        "version" : "7.13.0"
       }
     },
     {
@@ -140,8 +140,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/StanfordBDHG/ResearchKit",
       "state" : {
-        "revision" : "e4afb10ec636a70e06afc4a84fb98e457818439a",
-        "version" : "2.2.27"
+        "revision" : "15f06cf7c1d2d22805b7b939823536bc78ad63a6",
+        "version" : "2.2.25"
       }
     },
     {
