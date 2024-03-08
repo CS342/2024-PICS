@@ -12,7 +12,7 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @State var image: UIImage?
+    @Binding var image: UIImage?
     @Environment(PICSStandard.self) private var standard
     
     private var swiftUIImage: some View {
@@ -48,6 +48,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(image: .constant(nil))
     }
 }

@@ -38,7 +38,7 @@ struct ReactionTimeView: View {
             maximumStimulusInterval: 2.0,
             minimumStimulusInterval: 1.0,
             thresholdAcceleration: 0.8,
-            numberOfAttempts: 1,
+            numberOfAttempts: 5,
             timeout: 5.0,
             successSound: 0,
             timeoutSound: 0,
@@ -49,7 +49,6 @@ struct ReactionTimeView: View {
     }
     // Handles the result of the ReactionTime task.
     private func handleTaskResult(result: TaskResult) async {
-        let curTime = ProcessInfo.processInfo.systemUptime
         assessmentsIP = false // End the assessment
         // Adding this logic to dismiss the view
         DispatchQueue.main.async {
@@ -67,13 +66,29 @@ struct ReactionTimeView: View {
                stepResult.identifier == "reactionTime" {
                 for reactionTimeResult in stepResult.results ?? [] {
                     if let curResult = reactionTimeResult as? ORKReactionTimeResult {
-                        // Calculates the total time taken to complete the test.
-                        totalTime += curTime - curResult.timestamp
+                        #if targetEnvironment(simulator)
+                            // adding fixed size because ReactionTime does not work on simulator
+                            totalTime += 0.5
+                        #else
+                            // get DeviceMotion data to find elapsed time
+                            let jsonURL = curResult.fileResult.fileURL
+                            if let jsonURL = jsonURL, let jsonData = try? Data(contentsOf: jsonURL) {
+                                let decoder = JSONDecoder()
+                                do {
+                                    let deviceMotion = try decoder.decode(DeviceMotion.self, from: jsonData)
+                                    if let lastItem = deviceMotion.items.last {
+                                        totalTime += (lastItem.timestamp - curResult.timestamp)
+                                    }
+                                } catch {
+                                    print("Error parsing JSON:", error)
+                                }
+                            }
+                        #endif
                     }
                 }
             }
         }
-        reactionTimeResults += [AssessmentResult(testDateTime: Date(), timeSpent: totalTime)]
+        reactionTimeResults += [AssessmentResult(testDateTime: Date(), timeSpent: totalTime / 5)]
     }
 }
 
