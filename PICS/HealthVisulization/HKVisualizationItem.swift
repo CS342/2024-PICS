@@ -188,11 +188,7 @@ struct HKVisualizationItem: View {
     
     @ViewBuilder
     func getLollipop(lineX: CGFloat, lineHeight: CGFloat, geoSizeWidth: CGFloat, elm: HKData) -> some View {
-        let lollipopBoxWidth: CGFloat = if elm.sumValue > 0 {
-            100
-        } else {
-            200
-        }
+        let lollipopBoxWidth: CGFloat = 100
         let boxOffset = max(0, min(geoSizeWidth - lollipopBoxWidth, lineX - lollipopBoxWidth / 2))
         
         Rectangle()
