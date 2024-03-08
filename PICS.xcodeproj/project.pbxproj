@@ -100,6 +100,7 @@
 		A9D83F962B083794000D0C78 /* SpeziFirebaseAccountStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A9D83F952B083794000D0C78 /* SpeziFirebaseAccountStorage */; };
 		A9DFE8A92ABE551400428242 /* AccountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DFE8A82ABE551400428242 /* AccountButton.swift */; };
 		A9FE7AD02AA39BAB0077B045 /* AccountSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE7ACF2AA39BAB0077B045 /* AccountSheet.swift */; };
+		C570D6AA2B96A434002528CF /* MiniCog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C570D6A92B96A434002528CF /* MiniCog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +192,7 @@
 		A9720E422ABB68CC00872D23 /* AccountSetupHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSetupHeader.swift; sourceTree = "<group>"; };
 		A9DFE8A82ABE551400428242 /* AccountButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountButton.swift; sourceTree = "<group>"; };
 		A9FE7ACF2AA39BAB0077B045 /* AccountSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSheet.swift; sourceTree = "<group>"; };
+		C570D6A92B96A434002528CF /* MiniCog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -449,6 +451,7 @@
 				864909412B8AA1C300054C9A /* TrailMakingTest.swift */,
 				A459932B2B906C3B00A98C95 /* ResultsViz.swift */,
 				74AE05872B918DAF00AB5287 /* StroopTest.swift */,
+				C570D6A92B96A434002528CF /* MiniCog.swift */,
 			);
 			path = Assessment;
 			sourceTree = "<group>";
@@ -710,6 +713,7 @@
 				2FE5DC4629EDD7F2004B9AB4 /* Bundle+Image.swift in Sources */,
 				8644E69B2B722708001218D0 /* Appointments.swift in Sources */,
 				8644E6842B72046B001218D0 /* GettingThere.swift in Sources */,
+				C570D6AA2B96A434002528CF /* MiniCog.swift in Sources */,
 				2FE5DC4F29EDD7FA004B9AB4 /* EventContext.swift in Sources */,
 				226C16F02B69DF3500FBA97D /* HeightKey.swift in Sources */,
 				864909422B8AA1C300054C9A /* TrailMakingTest.swift in Sources */,

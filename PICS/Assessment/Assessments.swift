@@ -24,14 +24,16 @@ struct Assessments: View {
     enum Assessments {
         case trailMaking
         case stroopTest
+        case minicogTest
     }
 
     // Binding to control the display of account-related UI.
     @Binding private var presentingAccount: Bool
     
-    // Local storage of results of the Trail Making and Stroop tests for test results for layerplotting, analysis etc.
+    // Local storage of results of the Trail Making, Stroop and Mini-Cog tests for test results for layerplotting, analysis etc.
     @AppStorage("trailMakingResults") private var tmStorageResults: [AssessmentResult] = []
     @AppStorage("stroopTestResults") private var stroopTestResults: [AssessmentResult] = []
+    @AppStorage("minicogTestResults") private var minicogTestResults: [AssessmentResult] = []
     // Decide whether to show test or not.
     @AppStorage("AssessmentsInProgress") private var assessmentsIP = false
     // Tracks which test is currently selected.
@@ -43,6 +45,8 @@ struct Assessments: View {
             trailMakingTestSection
                 .padding(10)
             stroopTestSection
+                .padding(10)
+            minicogTestSection
                 .padding(10)
         }
     }
@@ -56,6 +60,8 @@ struct Assessments: View {
                     TrailMakingTaskView()
                 case .stroopTest:
                     StroopTestView()
+                case .minicogTest:
+                    MinicogTestView()
                 }
             } else {
                 assessmentList
@@ -114,6 +120,28 @@ struct Assessments: View {
             }
         }
     }
+    private var minicogTestSection: some View {
+        // Button text to start the Minicog Test or view results
+        // based on whether results are available.
+        let btnText = if minicogTestResults.isEmpty {
+            String(localized: "ASSESSMENT_MINICOG_START_BTN")
+        } else {
+            String(localized: "ASSESSMENT_RESULTS_BTN")
+        }
+        return Section {
+            VStack {
+                minicogTestResultsView
+                Divider()
+                    .padding(.bottom, 5)
+                Button(action: startMinicogTest) {
+                    Text(btnText)
+                        .foregroundStyle(.accent)
+                }
+                    // Use style to restrict clickable area.
+                    .buttonStyle(.plain)
+            }
+        }
+    }
         
     // Views for displaying results of Trail Making, or a message indicating the test has not been completed.
     private var trailMakingTestResultsView: some View {
@@ -147,6 +175,21 @@ struct Assessments: View {
         }
     }
     
+    private var minicogTestResultsView: some View {
+        Group {
+            if minicogTestResults.isEmpty {
+                notCompletedView(testName: "MiniCog Test")
+            } else {
+                ResultsViz(
+                    data: minicogTestResults,
+                    xName: "Time",
+                    yName: "Results",
+                    title: String(localized: "MINICOG_VIZ_TITLE")
+                )
+            }
+        }
+    }
+    
     // Initializes the view with a binding to control whether the account UI is being presented.
     init(presentingAccount: Binding<Bool>) {
         self._presentingAccount = presentingAccount
@@ -164,9 +207,24 @@ struct Assessments: View {
         assessmentsIP = true
     }
     
+    func startMinicogTest() {
+        currentTest = Assessments.minicogTest
+        assessmentsIP = true
+    }
+    
     // A view for displaying a message indicating that a specific assessment has not been completed.
     private func notCompletedView(testName: String) -> some View {
-        VStack(alignment: .leading) {
+        let description = switch testName {
+        case "Trail Making":
+            "visual attention and task switching"
+        case "Stroop Test":
+            "cognitive flexibility and processing speed"
+        case "MiniCog Test":
+            "identify possible cognitive impairment"
+        default:
+            "Task unexpected"
+        }
+        return VStack(alignment: .leading) {
             HStack {
                 // Displays a warning icon and a message stating the test has not been completed.
                 Image(systemName: "exclamationmark.circle.fill")
@@ -181,7 +239,7 @@ struct Assessments: View {
             }
             .padding(.bottom, 5)
             .multilineTextAlignment(.center)
-            Text("This test measures your \(testName == "Trail Making" ? "visual attention and task switching" : "cognitive flexibility and processing speed").")
+            Text(description)
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
                 .frame(maxWidth: .infinity)

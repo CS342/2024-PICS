@@ -177,6 +177,17 @@
         }
       }
     },
+    "ASSESSMENT_MINICOG_START_BTN" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start Assessment"
+          }
+        }
+      }
+    },
     "ASSESSMENT_RESULTS_BTN" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -747,6 +758,12 @@
         }
       }
     },
+    "Mini Cog test coming soon!" : {
+
+    },
+    "MINICOG_VIZ_TITLE" : {
+
+    },
     "MiniNutritional_DESCRIPTION" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -801,6 +818,7 @@
       }
     },
     "NOTIFICATION_PERMISSIONS_SUBTITLE" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1110,9 +1128,6 @@
       }
     },
     "This task has been completed!" : {
-
-    },
-    "This test measures your %@." : {
 
     },
     "Threshold" : {
