@@ -13,7 +13,7 @@ import SwiftUI
 
 struct Medication: View {
     @Environment(OnboardingNavigationPath.self) private var onboardingNavigationPath
-
+    @State var image: UIImage?
     var body: some View {
         OnboardingView(
             contentView: {
@@ -23,7 +23,7 @@ struct Medication: View {
                         subtitle: "MEDICATION_SUBTITLE"
                     )
                     Spacer()
-                    ContentView()
+                    ContentView(image: $image)
                 }
             }, actionView: {
                 OnboardingActionsView(
@@ -32,6 +32,7 @@ struct Medication: View {
                         onboardingNavigationPath.nextStep()
                     }
                 )
+                .disabled(image == nil)
             }
         )
             
