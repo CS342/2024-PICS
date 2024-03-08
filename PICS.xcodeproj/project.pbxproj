@@ -83,6 +83,7 @@
 		7481171A2B74BC5B00801A9A /* Self-MNA.json in Resources */ = {isa = PBXBuildFile; fileRef = 748117192B74BC5B00801A9A /* Self-MNA.json */; };
 		74AE05882B918DAF00AB5287 /* StroopTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AE05872B918DAF00AB5287 /* StroopTest.swift */; };
 		74AE05932B98620300AB5287 /* AssessmentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AE05922B98620300AB5287 /* AssessmentsTests.swift */; };
+		74AE05A92B9BB47F00AB5287 /* XCTSpezi in Frameworks */ = {isa = PBXBuildFile; productRef = 74AE05A82B9BB47F00AB5287 /* XCTSpezi */; };
 		74C593952B720781002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		74C593972B720B5E002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		74C5939A2B720F1B002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -226,6 +227,7 @@
 				2FE5DC6729EDD894004B9AB4 /* SpeziContact in Frameworks */,
 				2FE5DC8429EDD934004B9AB4 /* SpeziQuestionnaire in Frameworks */,
 				2FB099B32A875DF100B20952 /* FirebaseFirestoreSwift in Frameworks */,
+				74AE05A92B9BB47F00AB5287 /* XCTSpezi in Frameworks */,
 				22C75CF72B979EA7008986AF /* ImageSource in Frameworks */,
 				5661551D2AB8384200209B80 /* SwiftPackageList in Frameworks */,
 				2FB099B12A875DF100B20952 /* FirebaseFirestore in Frameworks */,
@@ -548,6 +550,7 @@
 				97D73D692AD860AD00B47FA0 /* SpeziFirebaseStorage */,
 				A9D83F952B083794000D0C78 /* SpeziFirebaseAccountStorage */,
 				22C75CF62B979EA7008986AF /* ImageSource */,
+				74AE05A82B9BB47F00AB5287 /* XCTSpezi */,
 			);
 			productName = PICS;
 			productReference = 653A254D283387FE005D4D48 /* PICS.app */;
@@ -1562,6 +1565,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5661551B2AB8384200209B80 /* XCRemoteSwiftPackageReference "swift-package-list" */;
 			productName = "plugin:SwiftPackageListJSONPlugin";
+		};
+		74AE05A82B9BB47F00AB5287 /* XCTSpezi */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F49B7742980407B00BCB272 /* XCRemoteSwiftPackageReference "Spezi" */;
+			productName = XCTSpezi;
 		};
 		9739A0C52AD7B5730084BEA5 /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
