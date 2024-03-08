@@ -23,6 +23,4 @@ enum FeatureFlags {
     #endif
     /// Adds a test task to the schedule at the current time
     static let testSchedule = CommandLine.arguments.contains("--testSchedule")
-    /// Defines whether to use the mock data for testing the application. This should only be set to true in UI tests.
-    static let mockTestData = CommandLine.arguments.contains("--mockTestData")
 }

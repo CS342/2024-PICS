@@ -91,32 +91,7 @@ struct HKVisualization: View {
         self._presentingAccount = presentingAccount
     }
     
-    func loadMockData() {
-        // Load the mock data for testing purposes to the states.
-        let today = Date()
-        let sumStatData = [
-            HKData(date: today, sumValue: 100, avgValue: 0, minValue: 0, maxValue: 0),
-            HKData(date: today, sumValue: 100, avgValue: 0, minValue: 0, maxValue: 0)
-        ]
-        let minMaxAvgStatData = [
-            HKData(date: today, sumValue: 0, avgValue: 50, minValue: 1, maxValue: 100)
-        ]
-        if self.stepData.isEmpty {
-            self.stepData = sumStatData
-            self.heartRateScatterData = sumStatData
-            self.oxygenSaturationScatterData = sumStatData
-            self.heartRateData = minMaxAvgStatData
-            self.oxygenSaturationData = minMaxAvgStatData
-        }
-    }
-    
     func readAllHKData(ensureUpdate: Bool = false) {
-        if FeatureFlags.mockTestData {
-            // Use the mockData directly and no need to query HK data.
-            loadMockData()
-            return
-        }
-        
         // Generate the dates and predicates for all HealthKit queries.
         let startOfToday: Date = Calendar.current.startOfDay(for: Date())
         guard let endDate = Calendar.current.date(byAdding: DateComponents(hour: 23, minute: 59, second: 59), to: startOfToday) else {
@@ -189,12 +164,26 @@ struct HKVisualization: View {
              sortDescriptors: sortDescriptors
          ) { _, results, error in
              guard error == nil else {
-                 print("Error retrieving health kit data: \(String(describing: error))")
+                 print(print("Error retrieving health kit data: \(String(describing: error))"))
                  return
              }
              if let results = results {
                  // Retrieve quantity value and time for each data point.
-                 let collectedData = parseSampleQueryData(results: results, quantityTypeIDF: quantityTypeIDF)
+                 var collectedData: [HKData] = []
+                 for result in results {
+                     guard let result: HKQuantitySample = result as? HKQuantitySample else {
+                         print("Unexpected heart rate sample type received.")
+                         continue
+                     }
+                     var value = -1.0 // To be replaced below.
+                     if quantityTypeIDF == HKQuantityTypeIdentifier.oxygenSaturation {
+                         value = result.quantity.doubleValue(for: HKUnit.percent()) * 100
+                     } else if quantityTypeIDF == HKQuantityTypeIdentifier.heartRate {
+                         value = result.quantity.doubleValue(for: HKUnit(from: "count/min"))
+                     }
+                     let date = result.startDate
+                     collectedData.append(HKData(date: date, sumValue: value, avgValue: -1.0, minValue: -1.0, maxValue: -1.0))
+                 }
                  if quantityTypeIDF == HKQuantityTypeIdentifier.oxygenSaturation {
                      self.oxygenSaturationScatterData = collectedData
                  } else if quantityTypeIDF == HKQuantityTypeIdentifier.heartRate {
@@ -235,7 +224,7 @@ struct HKVisualization: View {
         }
         query.initialResultsHandler = { _, results, error in
             guard error == nil else {
-                print("Error retrieving health kit data: \(String(describing: error))")
+                print(print("Error retrieving health kit data: \(String(describing: error))"))
                 return
             }
             if let results = results {
@@ -254,8 +243,25 @@ struct HKVisualization: View {
         var allData: [HKData] = []
         // Enumerate over all the statistics objects between the start and end dates.
         results.enumerateStatistics(from: startDate, to: endDate) { statistics, _ in
-            if let curHKData = parseStat(statistics: statistics, quantityTypeIDF: quantityTypeIDF) {
-                allData.append(curHKData)
+            let date = statistics.endDate
+            var curSum = 0.0
+            var curMax = 0.0
+            var curAvg = 0.0
+            var curMin = 0.0
+            if let quantity = statistics.sumQuantity() {
+                curSum = parseValue(quantity: quantity, quantityTypeIDF: quantityTypeIDF)
+            }
+            if let quantity = statistics.maximumQuantity() {
+                curMax = parseValue(quantity: quantity, quantityTypeIDF: quantityTypeIDF)
+            }
+            if let quantity = statistics.averageQuantity() {
+                curAvg = parseValue(quantity: quantity, quantityTypeIDF: quantityTypeIDF)
+            }
+            if let quantity = statistics.minimumQuantity() {
+                curMin = parseValue(quantity: quantity, quantityTypeIDF: quantityTypeIDF)
+            }
+            if curSum != 0.0 || curMin != 0.0 || curMin != 0.0 || curMax != 0.0 {
+                allData.append(HKData(date: date, sumValue: curSum, avgValue: curAvg, minValue: curMin, maxValue: curMax))
             }
         }
         
@@ -271,64 +277,21 @@ struct HKVisualization: View {
         }
     }
     
-    func parseStat(statistics: HKStatistics, quantityTypeIDF: HKQuantityTypeIdentifier) -> HKData? {
-        let date = statistics.endDate
-        var curSum = 0.0
-        var curMax = 0.0
-        var curAvg = 0.0
-        var curMin = 0.0
-        if let quantity = statistics.sumQuantity() {
-            curSum = parseValue(quantity: quantity, quantityTypeIDF: quantityTypeIDF)
+    func parseValue(quantity: HKQuantity, quantityTypeIDF: HKQuantityTypeIdentifier) -> Double {
+        switch quantityTypeIDF {
+        case .stepCount:
+            return quantity.doubleValue(for: .count())
+        case .oxygenSaturation:
+            return quantity.doubleValue(for: .percent()) * 100
+        case .heartRate:
+            return quantity.doubleValue(for: HKUnit(from: "count/min"))
+        default:
+            print("Unexpected quantity received:", quantityTypeIDF)
+            return -1.0
         }
-        if let quantity = statistics.maximumQuantity() {
-            curMax = parseValue(quantity: quantity, quantityTypeIDF: quantityTypeIDF)
-        }
-        if let quantity = statistics.averageQuantity() {
-            curAvg = parseValue(quantity: quantity, quantityTypeIDF: quantityTypeIDF)
-        }
-        if let quantity = statistics.minimumQuantity() {
-            curMin = parseValue(quantity: quantity, quantityTypeIDF: quantityTypeIDF)
-        }
-        if curSum != 0.0 || curMin != 0.0 || curMin != 0.0 || curMax != 0.0 {
-            return HKData(date: date, sumValue: curSum, avgValue: curAvg, minValue: curMin, maxValue: curMax)
-        }
-        return nil
     }
 }
 
-func parseValue(quantity: HKQuantity, quantityTypeIDF: HKQuantityTypeIdentifier) -> Double {
-    switch quantityTypeIDF {
-    case .stepCount:
-        return quantity.doubleValue(for: .count())
-    case .oxygenSaturation:
-        return quantity.doubleValue(for: .percent()) * 100
-    case .heartRate:
-        return quantity.doubleValue(for: HKUnit(from: "count/min"))
-    default:
-        print("Unexpected quantity received:", quantityTypeIDF)
-        return -1.0
-    }
-}
-
-func parseSampleQueryData(results: [HKSample], quantityTypeIDF: HKQuantityTypeIdentifier) -> [HKData] {
-    // Retrieve quantity value and time for each data point.
-    var collectedData: [HKData] = []
-    for result in results {
-        guard let result: HKQuantitySample = result as? HKQuantitySample else {
-            print("Unexpected HK Quantity sample received.")
-            continue
-        }
-        var value = -1.0 // To be replaced below.
-        if quantityTypeIDF == HKQuantityTypeIdentifier.oxygenSaturation {
-            value = result.quantity.doubleValue(for: HKUnit.percent()) * 100
-        } else if quantityTypeIDF == HKQuantityTypeIdentifier.heartRate {
-            value = result.quantity.doubleValue(for: HKUnit(from: "count/min"))
-        }
-        let date = result.startDate
-        collectedData.append(HKData(date: date, sumValue: value, avgValue: -1.0, minValue: -1.0, maxValue: -1.0))
-    }
-    return collectedData
-}
 
 #if DEBUG
 #Preview {
