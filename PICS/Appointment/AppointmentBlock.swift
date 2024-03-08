@@ -32,7 +32,7 @@ struct AppointmentBlock: View {
     @Environment(AppointmentInformation.self) private var appointmentInfo
 
     var body: some View {
-        Color.white
+        Color(UIColor.secondarySystemBackground)
             .frame(height: 130)
             .cornerRadius(15)
             .overlay(
@@ -41,11 +41,11 @@ struct AppointmentBlock: View {
                     VStack(alignment: .leading) {
                         HStack {
                             Text(date)
-                                .foregroundColor(.black)
+                                .foregroundColor(.primary)
                                 .bold()
                             Spacer()
                             Text(time)
-                                .foregroundColor(.black)
+                                .foregroundColor(.primary)
                         }
                         Spacer()
                         HStack {
