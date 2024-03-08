@@ -67,7 +67,6 @@
 		2FE5DC8C29EDD972004B9AB4 /* SpeziSecureStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE5DC8B29EDD972004B9AB4 /* SpeziSecureStorage */; };
 		2FE5DC8F29EDD980004B9AB4 /* SpeziViews in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE5DC8E29EDD980004B9AB4 /* SpeziViews */; };
 		2FE5DC9929EDD9D9004B9AB4 /* XCTestExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE5DC9829EDD9D9004B9AB4 /* XCTestExtensions */; };
-		2FE5DC9C29EDD9EF004B9AB4 /* XCTHealthKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE5DC9B29EDD9EF004B9AB4 /* XCTHealthKit */; };
 		2FE5DCB129EE6107004B9AB4 /* AccountOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE5DCAC29EE6107004B9AB4 /* AccountOnboarding.swift */; };
 		2FF53D8B2A8725DE00042B76 /* SpeziMockWebService in Frameworks */ = {isa = PBXBuildFile; productRef = 2FF53D8A2A8725DE00042B76 /* SpeziMockWebService */; };
 		2FF53D8D2A8729D600042B76 /* PICSStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF53D8C2A8729D600042B76 /* PICSStandard.swift */; };
@@ -103,6 +102,7 @@
 		9739A0C62AD7B5730084BEA5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9739A0C52AD7B5730084BEA5 /* FirebaseStorage */; };
 		97D73D6A2AD860AD00B47FA0 /* SpeziFirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 97D73D692AD860AD00B47FA0 /* SpeziFirebaseStorage */; };
 		A403A52E2B705A8C003CFA5C /* HealthVisualizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403A52D2B705A8C003CFA5C /* HealthVisualizationTests.swift */; };
+		A40559A42B98204C00221783 /* HKVizUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40559A32B98204C00221783 /* HKVizUnitTests.swift */; };
 		A45993292B90544300A98C95 /* Assessments.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45993282B90544300A98C95 /* Assessments.swift */; };
 		A459932C2B906C3B00A98C95 /* ResultsViz.swift in Sources */ = {isa = PBXBuildFile; fileRef = A459932B2B906C3B00A98C95 /* ResultsViz.swift */; };
 		A480C7C02B6D5A3700B29A07 /* HKVisualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A480C7BF2B6D5A3700B29A07 /* HKVisualization.swift */; };
@@ -205,6 +205,7 @@
 		86EB7FF62B8FB7A000D52EE2 /* NotificationPermissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPermissions.swift; sourceTree = "<group>"; };
 		86F62AF52B916B670075F23C /* AppointmentInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentInformation.swift; sourceTree = "<group>"; };
 		A403A52D2B705A8C003CFA5C /* HealthVisualizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthVisualizationTests.swift; sourceTree = "<group>"; };
+		A40559A32B98204C00221783 /* HKVizUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKVizUnitTests.swift; sourceTree = "<group>"; };
 		A45993282B90544300A98C95 /* Assessments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assessments.swift; sourceTree = "<group>"; };
 		A459932B2B906C3B00A98C95 /* ResultsViz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViz.swift; sourceTree = "<group>"; };
 		A480C7BF2B6D5A3700B29A07 /* HKVisualization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKVisualization.swift; sourceTree = "<group>"; };
@@ -258,7 +259,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FE5DC9929EDD9D9004B9AB4 /* XCTestExtensions in Frameworks */,
-				2FE5DC9C29EDD9EF004B9AB4 /* XCTHealthKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +438,7 @@
 			isa = PBXGroup;
 			children = (
 				653A256128338800005D4D48 /* PICSTests.swift */,
+				A40559A32B98204C00221783 /* HKVizUnitTests.swift */,
 			);
 			path = PICSTests;
 			sourceTree = "<group>";
@@ -566,6 +567,8 @@
 				653A255F28338800005D4D48 /* PBXTargetDependency */,
 			);
 			name = PICSTests;
+			packageProductDependencies = (
+			);
 			productName = PICSTests;
 			productReference = 653A255D28338800005D4D48 /* PICSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -586,7 +589,6 @@
 			name = PICSUITests;
 			packageProductDependencies = (
 				2FE5DC9829EDD9D9004B9AB4 /* XCTestExtensions */,
-				2FE5DC9B29EDD9EF004B9AB4 /* XCTHealthKit */,
 			);
 			productName = PICSUITests;
 			productReference = 653A256728338800005D4D48 /* PICSUITests.xctest */;
@@ -790,6 +792,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40559A42B98204C00221783 /* HKVizUnitTests.swift in Sources */,
 				653A256228338800005D4D48 /* PICSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -896,6 +899,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
@@ -1101,6 +1105,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
@@ -1148,6 +1153,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 637867499T;
@@ -1548,11 +1554,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2FE5DC9729EDD9D9004B9AB4 /* XCRemoteSwiftPackageReference "XCTestExtensions" */;
 			productName = XCTestExtensions;
-		};
-		2FE5DC9B29EDD9EF004B9AB4 /* XCTHealthKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2FE5DC9A29EDD9EF004B9AB4 /* XCRemoteSwiftPackageReference "XCTHealthKit" */;
-			productName = XCTHealthKit;
 		};
 		2FF53D8A2A8725DE00042B76 /* SpeziMockWebService */ = {
 			isa = XCSwiftPackageProductDependency;
