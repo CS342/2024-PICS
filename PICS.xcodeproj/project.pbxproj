@@ -86,6 +86,7 @@
 		7481171C2B74BC6D00801A9A /* PHQ-4.json in Resources */ = {isa = PBXBuildFile; fileRef = 7481171B2B74BC6D00801A9A /* PHQ-4.json */; };
 		74AE05882B918DAF00AB5287 /* StroopTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AE05872B918DAF00AB5287 /* StroopTest.swift */; };
 		74AE05932B98620300AB5287 /* AssessmentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AE05922B98620300AB5287 /* AssessmentsTests.swift */; };
+		74AE05992B9A9A2800AB5287 /* XCTSpezi in Frameworks */ = {isa = PBXBuildFile; productRef = 74AE05982B9A9A2800AB5287 /* XCTSpezi */; };
 		74C593952B720781002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		74C593972B720B5E002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		74C5939A2B720F1B002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -250,6 +251,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74AE05992B9A9A2800AB5287 /* XCTSpezi in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +568,9 @@
 				653A255F28338800005D4D48 /* PBXTargetDependency */,
 			);
 			name = PICSTests;
+			packageProductDependencies = (
+				74AE05982B9A9A2800AB5287 /* XCTSpezi */,
+			);
 			productName = PICSTests;
 			productReference = 653A255D28338800005D4D48 /* PICSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -1568,6 +1573,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5661551B2AB8384200209B80 /* XCRemoteSwiftPackageReference "swift-package-list" */;
 			productName = "plugin:SwiftPackageListJSONPlugin";
+		};
+		74AE05982B9A9A2800AB5287 /* XCTSpezi */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F49B7742980407B00BCB272 /* XCRemoteSwiftPackageReference "Spezi" */;
+			productName = XCTSpezi;
 		};
 		9739A0C52AD7B5730084BEA5 /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
