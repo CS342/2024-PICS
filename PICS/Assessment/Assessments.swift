@@ -34,8 +34,7 @@ struct Assessments: View {
     @AppStorage("trailMakingResults") private var tmStorageResults: [AssessmentResult] = []
     @AppStorage("stroopTestResults") private var stroopTestResults: [AssessmentResult] = []
     @AppStorage("reactionTimeResults") private var reactionTimeResults: [AssessmentResult] = []
-    // Decide whether to show test or not.
-    @AppStorage("AssessmentsInProgress") private var assessmentsIP = false
+
     // Tracks which test is currently selected.
     @State var currentTest = Assessments.trailMaking
     // New property to control the sheet presentation
@@ -55,25 +54,13 @@ struct Assessments: View {
     
     var body: some View {
         NavigationStack {
-            if assessmentsIP {
-                // Displays the active assessment based on the currentTest state.
-                switch currentTest {
-                case .trailMaking:
-                    TrailMakingTaskView()
-                case .stroopTest:
-                    StroopTestView()
-                case .reactionTime:
-                    ReactionTimeView()
-                }
-            } else {
-                assessmentList
-                    .navigationTitle(String(localized: "ASSESSMENTS_NAVIGATION_TITLE"))
-                    .toolbar {
-                        if AccountButton.shouldDisplay {
-                            AccountButton(isPresented: $presentingAccount)
-                        }
+            assessmentList
+                .navigationTitle(String(localized: "ASSESSMENTS_NAVIGATION_TITLE"))
+                .toolbar {
+                    if AccountButton.shouldDisplay {
+                        AccountButton(isPresented: $presentingAccount)
                     }
-            }
+                }
         }
         .sheet(isPresented: $showingTestSheet) {
             // Determine which assessment view to present based on the currentTest state
@@ -84,6 +71,16 @@ struct Assessments: View {
                 StroopTestView()
             case .reactionTime:
                 ReactionTimeView()
+            }
+        }
+        .onAppear {
+            if FeatureFlags.mockTestData {
+                // Set mock test data for --mockTestData feature data.
+                let resultsWithTimeError = AssessmentResult(testDateTime: Date(), timeSpent: 10, errorCnt: 5)
+                tmStorageResults = [resultsWithTimeError]
+                stroopTestResults = [resultsWithTimeError]
+                // We only record time spent for reactionTimeResults.
+                reactionTimeResults = [AssessmentResult(testDateTime: Date(), timeSpent: 10)]
             }
         }
     }
@@ -104,8 +101,9 @@ struct Assessments: View {
                     Text(btnText)
                         .foregroundStyle(.accent)
                 }
-                    // Use style to restrict clickable area.
-                    .buttonStyle(.plain)
+                .accessibility(identifier: "startTrailMakingTestButton")
+                // Use style to restrict clickable area.
+                .buttonStyle(.plain)
             }
         }
     }
@@ -126,7 +124,8 @@ struct Assessments: View {
                     Text(btnText)
                         .foregroundStyle(.accent)
                 }
-                .accessibility(identifier: "startTrailMakingTestButton")
+                .accessibility(identifier: "startStroopTestButton")
+                // Use style to restrict clickable area.
                 .buttonStyle(.plain)
             }
         }
@@ -148,8 +147,9 @@ struct Assessments: View {
                     Text(btnText)
                         .foregroundStyle(.accent)
                 }
-                    // Use style to restrict clickable area.
-                    .buttonStyle(.plain)
+                .accessibility(identifier: "startReactimeTestButton")
+                // Use style to restrict clickable area.
+                .buttonStyle(.plain)
             }
         }
     }
@@ -209,20 +209,17 @@ struct Assessments: View {
     // Function to set up and start the Trail Making assessment.
     func startTrailMaking() {
         currentTest = Assessments.trailMaking
-        assessmentsIP = true
         showingTestSheet.toggle()
     }
     
     // Function to set up and start the Stroop Test.
     func startStroopTest() {
         currentTest = Assessments.stroopTest
-        assessmentsIP = true
         showingTestSheet.toggle()
     }
     // Function to set up and start the ReactionTime Test.
     func startReactionTimeTest() {
         currentTest = Assessments.reactionTime
-        assessmentsIP = true
         showingTestSheet.toggle()
     }
     

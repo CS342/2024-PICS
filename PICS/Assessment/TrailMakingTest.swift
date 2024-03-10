@@ -13,7 +13,6 @@ import SwiftUI
 struct TrailMakingTaskView: View {
     // Use @AppStorage to store the selected dates
     @AppStorage("trailMakingResults") private var tmStorageResults: [AssessmentResult] = []
-    @AppStorage("AssessmentsInProgress") private var tmInProgress = false
 
     @Environment(\.presentationMode) var presentationMode
     
@@ -44,9 +43,7 @@ struct TrailMakingTaskView: View {
     
     // Handle task result
     private func handleTaskResult(result: TaskResult) async {
-        // Close the test.
-        tmInProgress = false
-        // Adding this logic to dismiss the view
+        // Close the test by dismissing the view
         DispatchQueue.main.async {
             self.presentationMode.wrappedValue.dismiss()
         }
