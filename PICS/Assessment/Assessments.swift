@@ -209,18 +209,18 @@ struct Assessments: View {
     // Function to set up and start the Trail Making assessment.
     func startTrailMaking() {
         currentTest = Assessments.trailMaking
-        showingTestSheet.toggle()
+        showingTestSheet = true
     }
     
     // Function to set up and start the Stroop Test.
     func startStroopTest() {
         currentTest = Assessments.stroopTest
-        showingTestSheet.toggle()
+        showingTestSheet = true
     }
     // Function to set up and start the ReactionTime Test.
     func startReactionTimeTest() {
         currentTest = Assessments.reactionTime
-        showingTestSheet.toggle()
+        showingTestSheet = true
     }
     
     // A view for displaying a message indicating that a specific assessment has not been completed.

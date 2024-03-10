@@ -17,6 +17,7 @@ struct ResultsViz: View {
     
     // Vars for plotting.
     var metricType: String
+    var metricEmpty: Bool // Whether we have result recorded for metric.
     var timeSpentLable = String(localized: "ASSESSMENT_VIZ_TIME")
     let metricColor = Color.purple
     let timeColor = Color.teal
@@ -64,10 +65,9 @@ struct ResultsViz: View {
             }
             .lineStyle(StrokeStyle(lineWidth: 2.0))
         }
-        .chartForegroundStyleScale([
-            self.metricType: self.metricColor,
-            self.timeSpentLable: self.timeColor
-        ])
+        .chartForegroundStyleScale(
+            self.metricEmpty ? [self.timeSpentLable: self.timeColor] : [self.timeSpentLable: self.timeColor, self.metricType: self.metricColor]
+        )
         .padding(10)
         .chartXAxis {
             AxisMarks(values: .automatic(desiredCount: 3))
@@ -107,8 +107,10 @@ struct ResultsViz: View {
         self.yName = yName
         self.title = title
         // We assume that we only need to plot one of error count or score.
-        let metricMax = data.map(\.errorCnt).max() ?? -1
-        self.metricType = metricMax == -1 ? String(localized: "ASSESSMENT_VIZ_SCORE") : String(localized: "ASSESSMENT_VIZ_ERRORCNT")
+        let errorCntMax = data.map(\.errorCnt).max() ?? -1
+        let scoreMax = data.map(\.score).max() ?? -1
+        self.metricType = errorCntMax == -1 ? String(localized: "ASSESSMENT_VIZ_SCORE") : String(localized: "ASSESSMENT_VIZ_ERRORCNT")
+        self.metricEmpty = (max(scoreMax, errorCntMax) == -1)
     }
 
     private func findElement(location: CGPoint, proxy: ChartProxy, geometry: GeometryProxy) -> AssessmentResult? {

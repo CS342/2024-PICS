@@ -48,10 +48,16 @@ struct TrailMakingTaskView: View {
             self.presentationMode.wrappedValue.dismiss()
         }
         
-        guard case let .completed(taskResult) = result else {
-            return
+        let parsedResult = parseTMResult(result: result)
+        if let nonEmptyResult = parsedResult{
+            tmStorageResults += [nonEmptyResult]
         }
-        
+    }
+    
+    public func parseTMResult(result: TaskResult) -> AssessmentResult? {
+        guard case let .completed(taskResult) = result else {
+            return nil
+        }
         // Go to the trail making results and parse the result.
         for result in taskResult.results ?? [] {
             if let stepResult = result as? ORKStepResult {
@@ -70,12 +76,12 @@ struct TrailMakingTaskView: View {
                             timeSpent: timeTask,
                             errorCnt: Int(curResult.numberOfErrors)
                         )
-                        // Add result to local storage.
-                        tmStorageResults += [parsedResult]
+                        return parsedResult
                     }
                 }
             }
         }
+        return nil
     }
 }
 
