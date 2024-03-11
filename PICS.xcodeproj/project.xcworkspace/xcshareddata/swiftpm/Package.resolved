@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/abseil-cpp-binary.git",
       "state" : {
-        "revision" : "bfc0b6f81adc06ce5121eb23f628473638d67c5c",
-        "version" : "1.2022062300.0"
+        "revision" : "df308b8b46607675f2b9ec8e569109008f9155ce",
+        "version" : "1.2022062300.1"
       }
     },
     {
@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/firebase-ios-sdk.git",
       "state" : {
-        "revision" : "fe09d61a539e11fdbe24f269bba10144b6145fe2",
-        "version" : "10.22.0"
+        "revision" : "be49849dcba96f2b5ee550d4eceb2c0fa27dade4",
+        "version" : "10.22.1"
       }
     },
     {
@@ -41,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleAppMeasurement.git",
       "state" : {
-        "revision" : "bf3bb24f6b60a7acedaef504e9ce97154203217a",
-        "version" : "10.22.0"
+        "revision" : "482cfa4e5880f0a29f66ecfd60c5a62af28bd1f0",
+        "version" : "10.22.1"
       }
     },
     {
@@ -68,8 +68,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/grpc-binary.git",
       "state" : {
-        "revision" : "a673bc2937fbe886dd1f99c401b01b6d977a9c98",
-        "version" : "1.49.1"
+        "revision" : "ea4cb5cc0c39c732b85386263116d2e2fdbbdc61",
+        "version" : "1.49.2"
       }
     },
     {
@@ -86,8 +86,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/StanfordBDHG/HealthKitOnFHIR.git",
       "state" : {
-        "revision" : "825e96007d83ed83f81ee49eb3ebab29d7b7ba2f",
-        "version" : "0.2.5"
+        "revision" : "00d64d38a8f0d826ee9e27b6f3ce32314a29fd3e",
+        "version" : "0.2.6"
       }
     },
     {
@@ -140,8 +140,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/StanfordBDHG/ResearchKit",
       "state" : {
-        "revision" : "e4afb10ec636a70e06afc4a84fb98e457818439a",
-        "version" : "2.2.27"
+        "revision" : "64512d0a0a5cc3e9d5b3fc5217c54f11d0dc044c",
+        "version" : "2.2.28"
       }
     },
     {
@@ -158,8 +158,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/StanfordSpezi/Spezi",
       "state" : {
-        "revision" : "0ced3efbc2af9513c07ac913ad762c773a00a6c8",
-        "version" : "1.2.1"
+        "revision" : "c43e4fa3d3938a847de2b677091a34ddaea5bc76",
+        "version" : "1.2.3"
       }
     },
     {
@@ -185,8 +185,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/StanfordSpezi/SpeziFirebase.git",
       "state" : {
-        "revision" : "ca1edf678ec59e76c9869ee3448e6e165d9c2789",
-        "version" : "1.0.0"
+        "revision" : "e05e665b7da39aa399ecd7fba393aab49b8f3034",
+        "version" : "1.0.1"
       }
     },
     {
@@ -203,8 +203,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/StanfordSpezi/SpeziHealthKit.git",
       "state" : {
-        "revision" : "b40695ffa4d1c9d58c5a0ee277640c2343fb5516",
-        "version" : "0.5.1"
+        "revision" : "35628084d3977aa897015b0b0c21cfe4d556f1aa",
+        "version" : "0.5.2"
       }
     },
     {
@@ -230,8 +230,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/StanfordSpezi/SpeziQuestionnaire.git",
       "state" : {
-        "revision" : "f25580e95bfdad02383980dcb94406cf97b08ea8",
-        "version" : "1.0.2"
+        "revision" : "f9d9b6d99bb1e00bda2974b440dca8367733d591",
+        "version" : "1.1.0"
       }
     },
     {
@@ -239,8 +239,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/StanfordSpezi/SpeziScheduler.git",
       "state" : {
-        "revision" : "ba391084109a9a16622b07e9dcefe2ab1552d2a2",
-        "version" : "0.8.1"
+        "revision" : "eed3980f20b01a788720c869010e3fe2fbfcd1fd",
+        "version" : "0.8.2"
       }
     },
     {
@@ -248,8 +248,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/StanfordSpezi/SpeziStorage.git",
       "state" : {
-        "revision" : "7d1c8ff8310e2f628f918fb535d80f368730ad6b",
-        "version" : "1.0.1"
+        "revision" : "b958df9b31f24800388a7bfc28f457ce7b82556c",
+        "version" : "1.0.2"
       }
     },
     {
