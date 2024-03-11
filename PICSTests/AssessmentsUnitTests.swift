@@ -8,14 +8,12 @@
 
 @testable import PICS
 import ResearchKit
-import ResearchKitSwiftUI
 import XCTest
 
 
 class AssessmentsUnitTests: XCTestCase {
     // Test tha the trail making test result could be parsed correctly without error.
     func testParseTMResult() throws {
-        let tmTaks = TrailMakingTaskView()
         // Create the task result object with trail making results.
         let taskResult = ORKTaskResult(taskIdentifier: "TestTMTaskResult", taskRun: UUID(), outputDirectory: nil)
         
@@ -30,7 +28,7 @@ class AssessmentsUnitTests: XCTestCase {
         let tmStepResult = ORKStepResult(stepIdentifier: "trailmaking", results: [tmResult])
         taskResult.results = [tmStepResult]
         
-        if let parsedResult = tmTaks.parseTMResult(result: TaskResult.completed(taskResult)){
+        if let parsedResult = parseTMResult(taskResult: taskResult) {
             // The correct timestamp is the one from the last tap.
             XCTAssertEqual(parsedResult.timeSpent, 30)
             XCTAssertEqual(parsedResult.errorCnt, 10)

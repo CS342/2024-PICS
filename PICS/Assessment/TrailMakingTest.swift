@@ -48,41 +48,41 @@ struct TrailMakingTaskView: View {
             self.presentationMode.wrappedValue.dismiss()
         }
         
-        let parsedResult = parseTMResult(result: result)
-        if let nonEmptyResult = parsedResult{
+        guard case let .completed(taskResult) = result else {
+            return
+        }
+        let parsedResult = parseTMResult(taskResult: taskResult)
+        if let nonEmptyResult = parsedResult {
             tmStorageResults += [nonEmptyResult]
         }
     }
-    
-    public func parseTMResult(result: TaskResult) -> AssessmentResult? {
-        guard case let .completed(taskResult) = result else {
-            return nil
-        }
-        // Go to the trail making results and parse the result.
-        for result in taskResult.results ?? [] {
-            if let stepResult = result as? ORKStepResult {
-                if stepResult.identifier != "trailmaking" {
-                    continue
-                }
-                for trailMakingResult in stepResult.results ?? [] {
-                    if let curResult = trailMakingResult as? ORKTrailmakingResult {
-                        let timeTask = if let lastItem = curResult.taps.last {
-                            lastItem.timestamp
-                        } else {
-                            -1.0
-                        }
-                        let parsedResult = AssessmentResult(
-                            testDateTime: Date(),
-                            timeSpent: timeTask,
-                            errorCnt: Int(curResult.numberOfErrors)
-                        )
-                        return parsedResult
+}
+
+func parseTMResult(taskResult: ORKTaskResult) -> AssessmentResult? {
+    // Go to the trail making results and parse the result.
+    for result in taskResult.results ?? [] {
+        if let stepResult = result as? ORKStepResult {
+            if stepResult.identifier != "trailmaking" {
+                continue
+            }
+            for trailMakingResult in stepResult.results ?? [] {
+                if let curResult = trailMakingResult as? ORKTrailmakingResult {
+                    let timeTask = if let lastItem = curResult.taps.last {
+                        lastItem.timestamp
+                    } else {
+                        -1.0
                     }
+                    let parsedResult = AssessmentResult(
+                        testDateTime: Date(),
+                        timeSpent: timeTask,
+                        errorCnt: Int(curResult.numberOfErrors)
+                    )
+                    return parsedResult
                 }
             }
         }
-        return nil
     }
+    return nil
 }
 
 #Preview {
