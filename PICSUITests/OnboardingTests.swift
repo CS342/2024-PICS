@@ -91,10 +91,12 @@ extension XCUIApplication {
 
         // Fill out account questionnaire.
         if skipQuestionnaire {
-            // TODO: verify that the questionnaire title exist
+            // TODO: verify that the questionnaire title exist. Make the codes here
+            //      into another function if they are too long or are not tidy.
             // XCTAssertTrue(staticTexts["???"].waitForExistence(timeout: 2))
             
-            // Click on skip to skip the questionnaire.
+            // TODO: Skip the questionnaire. Not run through this, could be wrong
+            //      change codes if needed.
             XCTAssertTrue(buttons["Skip"].waitForExistence(timeout: 2))
             buttons["Skip"].tap()
         } else {
@@ -123,7 +125,8 @@ extension XCUIApplication {
     }
     
     // Fill out the consent form.
-    // TODO: this function is copied from the template app
+    // TODO: this function is copied from the template app. We did not run through
+    //      this step yet. Make changes if needed.
     private func navigateOnboardingFlowConsent() throws {
         XCTAssertTrue(staticTexts["Consent"].waitForExistence(timeout: 5))
         
@@ -199,7 +202,7 @@ extension XCUIApplication {
         buttons["Upload Photo"].tap()
     }
     
-    // TODO: Go through and fill out the onboarding questionnaire here,
+    // TODO: Start, go through, and fill out the onboarding questionnaire here,
     //      and go to the next page.
     private func navigateOnboardingQuestionnaire() throws {
         // The code below print the element tree of all UI components in the screen
@@ -223,6 +226,8 @@ extension XCUIApplication {
     }
     
     // This function retrieve the healthkit access and go to the next.
+    // TODO: this function is copied from the template app. We did not run through
+    //      this step yet. Make changes if needed.
     private func navigateOnboardingFlowHealthKitAccess() throws {
         XCTAssertTrue(staticTexts["HealthKit Access"].waitForExistence(timeout: 5))
         
@@ -233,6 +238,8 @@ extension XCUIApplication {
     }
     
     // This function retrieve the notification permission and go to the next.
+    // TODO: this function is copied from the template app. We did not run through
+    //      this step yet. Make changes if needed.
     private func navigateOnboardingFlowNotification() throws {
         XCTAssertTrue(staticTexts["Notifications"].waitForExistence(timeout: 5))
         
@@ -263,26 +270,25 @@ extension XCUIApplication {
     // TODO: this function is copied from the spezi template app but we did not run to
     //     it and not sure whether it would fail or not. Make necessary changes to have it work.
     fileprivate func assertAccountInformation(email: String) throws {
+        // Check whether the information are loaded correctly.
         XCTAssertTrue(navigationBars.buttons["Your Account"].waitForExistence(timeout: 2))
         navigationBars.buttons["Your Account"].tap()
-
         XCTAssertTrue(staticTexts["Account Overview"].waitForExistence(timeout: 5.0))
         XCTAssertTrue(staticTexts["Leland Stanford"].exists)
         XCTAssertTrue(staticTexts[email].exists)
         XCTAssertTrue(staticTexts["Gender Identity, Choose not to answer"].exists)
-
         XCTAssertTrue(navigationBars.buttons["Close"].waitForExistence(timeout: 0.5))
         navigationBars.buttons["Close"].tap()
 
+        // Show the edit page to ensure no errors occur.
         XCTAssertTrue(navigationBars.buttons["Your Account"].waitForExistence(timeout: 2))
         navigationBars.buttons["Your Account"].tap()
-
         XCTAssertTrue(navigationBars.buttons["Edit"].waitForExistence(timeout: 2))
         navigationBars.buttons["Edit"].tap()
-
         usleep(500_00)
         XCTAssertFalse(navigationBars.buttons["Close"].exists)
-
+        
+        // Delete the account.
         XCTAssertTrue(buttons["Delete Account"].waitForExistence(timeout: 2))
         buttons["Delete Account"].tap()
 
@@ -298,7 +304,7 @@ extension XCUIApplication {
 
         sleep(2)
 
-        // Login
+        // Login again with non-existing account, should receive error.
         try textFields["E-Mail Address"].enter(value: email)
         try secureTextFields["Password"].enter(value: "StanfordRocks")
 
