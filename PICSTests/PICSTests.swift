@@ -22,11 +22,13 @@ class PICSTests: XCTestCase {
             scheduler
         }
         try await Task.sleep(for: .milliseconds(500))
-        XCTAssertNotEqual(scheduler.tasks.count, 0)
+        XCTAssertEqual(scheduler.tasks.count, 3)
         print("Scheduler has \(scheduler.tasks.count) tasks:")
         scheduler.tasks.forEach { task in
             print("Task title: \(task.title)")
         }
         XCTAssertTrue(scheduler.tasks.contains(where: { $0.title == "PHQ-4: Patient Psychological Health Questionnaire" }))
+        XCTAssertTrue(scheduler.tasks.contains(where: { $0.title == "EQ-5D-5L: Patient Physical Health Questionnaire" }))
+        XCTAssertTrue(scheduler.tasks.contains(where: { $0.title == "Self-MNA: Mini Nutritional Assessment" }))
     }
 }
