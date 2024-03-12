@@ -17,7 +17,7 @@ struct AppointmentView: View {
     @State private var appt2User = Date()
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .center) {
             VStack(alignment: .leading) {
                 AppointmentBlock(date: formattedDate(appointmentInfo.appt1), time: formattedTime(appointmentInfo.appt1))
                 AppointmentBlock(date: formattedDate(appointmentInfo.appt2), time: formattedTime(appointmentInfo.appt2))
@@ -30,13 +30,15 @@ struct AppointmentView: View {
                 }
                 .padding(.bottom)
                 Text(String(localized: "TIMELINE_TITLE"))
-                    .foregroundColor(.black)
+                    .foregroundColor(.primary)
                     .italic()
                 TimelineView()
             }
             .padding()
             
             Divider()
+                .overlay(Color.secondary)
+                .frame(width: 340)
             
             GettingThere()
 
@@ -77,7 +79,7 @@ struct AppointmentView: View {
                 }
             }
         }
-        .background(Color(UIColor.systemGray6))
+        .background(Color(UIColor.systemBackground))
     }
 
         private func formattedDate(_ date: Date) -> String {
