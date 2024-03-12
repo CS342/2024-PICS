@@ -12,7 +12,6 @@ import SwiftUI
 
 struct ReactionTimeView: View {
     @AppStorage("reactionTimeResults") private var reactionTimeResults: [AssessmentResult] = []
-    @AppStorage("AssessmentsInProgress") private var assessmentsIP = false
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -49,11 +48,11 @@ struct ReactionTimeView: View {
     }
     // Handles the result of the ReactionTime task.
     private func handleTaskResult(result: TaskResult) async {
-        assessmentsIP = false // End the assessment
-        // Adding this logic to dismiss the view
+        // Close the test by dismissing the view
         DispatchQueue.main.async {
             self.presentationMode.wrappedValue.dismiss()
         }
+        
         guard case let .completed(taskResult) = result else {
             // Failed or canceled test. Do nothing for current.
             return
