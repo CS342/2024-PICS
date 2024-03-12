@@ -109,8 +109,8 @@ struct TimelineView: View {
         if let date1 = calendar.date(from: components1), let date2 = calendar.date(from: components2), let now = calendar.date(from: components3) {
             VStack {
                 BidirectionalArrow()
-                    .fill(Color.black)
-                    .stroke(Color.black, lineWidth: 2)
+                    .fill(Color.primary)
+                    .stroke(Color.primary, lineWidth: 2)
                     .frame(width: 361, height: 25)
                     .overlay(
                         CurrentLocation(date1: date1, date2: date2, now: now)
@@ -120,13 +120,15 @@ struct TimelineView: View {
                     Spacer()
                     Text(String(localized: "APPT1_TITLE"))
                         .padding(.leading, 45)
+                        .foregroundColor(.primary)
                     Spacer()
                     Text("APPT2_TITLE")
                         .padding(.trailing, 40)
+                        .foregroundColor(.primary)
                     Spacer()
                 }
                 .font(.system(size: 12))
-                .foregroundColor(.black)
+                .foregroundColor(.primary)
             }
         } else {
             Text("Failed to get dates")
