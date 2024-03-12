@@ -13,7 +13,6 @@ import SwiftUI
 struct TrailMakingTaskView: View {
     // Use @AppStorage to store the selected dates
     @AppStorage("trailMakingResults") private var tmStorageResults: [AssessmentResult] = []
-    @AppStorage("AssessmentsInProgress") private var tmInProgress = false
 
     @Environment(\.presentationMode) var presentationMode
     
@@ -44,9 +43,7 @@ struct TrailMakingTaskView: View {
     
     // Handle task result
     private func handleTaskResult(result: TaskResult) async {
-        // Close the test.
-        tmInProgress = false
-        // Adding this logic to dismiss the view
+        // Close the test by dismissing the view
         DispatchQueue.main.async {
             self.presentationMode.wrappedValue.dismiss()
         }
@@ -54,32 +51,38 @@ struct TrailMakingTaskView: View {
         guard case let .completed(taskResult) = result else {
             return
         }
-        
-        // Go to the trail making results and parse the result.
-        for result in taskResult.results ?? [] {
-            if let stepResult = result as? ORKStepResult {
-                if stepResult.identifier != "trailmaking" {
-                    continue
-                }
-                for trailMakingResult in stepResult.results ?? [] {
-                    if let curResult = trailMakingResult as? ORKTrailmakingResult {
-                        let timeTask = if let lastItem = curResult.taps.last {
-                            lastItem.timestamp
-                        } else {
-                            -1.0
-                        }
-                        let parsedResult = AssessmentResult(
-                            testDateTime: Date(),
-                            timeSpent: timeTask,
-                            errorCnt: Int(curResult.numberOfErrors)
-                        )
-                        // Add result to local storage.
-                        tmStorageResults += [parsedResult]
+        let parsedResult = parseTMResult(taskResult: taskResult)
+        if let nonEmptyResult = parsedResult {
+            tmStorageResults += [nonEmptyResult]
+        }
+    }
+}
+
+func parseTMResult(taskResult: ORKTaskResult) -> AssessmentResult? {
+    // Go to the trail making results and parse the result.
+    for result in taskResult.results ?? [] {
+        if let stepResult = result as? ORKStepResult {
+            if stepResult.identifier != "trailmaking" {
+                continue
+            }
+            for trailMakingResult in stepResult.results ?? [] {
+                if let curResult = trailMakingResult as? ORKTrailmakingResult {
+                    let timeTask = if let lastItem = curResult.taps.last {
+                        lastItem.timestamp
+                    } else {
+                        -1.0
                     }
+                    let parsedResult = AssessmentResult(
+                        testDateTime: Date(),
+                        timeSpent: timeTask,
+                        errorCnt: Int(curResult.numberOfErrors)
+                    )
+                    return parsedResult
                 }
             }
         }
     }
+    return nil
 }
 
 #Preview {
