@@ -6,8 +6,8 @@
 // SPDX-License-Identifier: MIT
 //
 
-import XCTest
 @testable import PICS
+import XCTest
 
 class AppointmentInformationTests: XCTestCase {
     
