@@ -78,16 +78,10 @@ struct BidirectionalArrow: Shape {
         )
         path.addEllipse(in: circleRect2)
         
-        // Draw the right arrowhead lines
+        // Draw the right arrowhead
         path.move(to: CGPoint(x: arrowWidth - arrowHeight / 2, y: arrowHeight / 4))
         path.addLine(to: CGPoint(x: arrowWidth, y: arrowHeight / 2))
         path.addLine(to: CGPoint(x: arrowWidth - arrowHeight / 2, y: arrowHeight * 3 / 4))
-        path.closeSubpath()
-        
-        // Draw the left arrowhead lines
-        path.move(to: CGPoint(x: arrowHeight / 2, y: arrowHeight / 4))
-        path.addLine(to: CGPoint(x: 0, y: arrowHeight / 2))
-        path.addLine(to: CGPoint(x: arrowHeight / 2, y: arrowHeight * 3 / 4))
         path.closeSubpath()
         
         return path
