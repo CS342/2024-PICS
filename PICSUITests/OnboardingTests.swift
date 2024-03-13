@@ -91,12 +91,9 @@ extension XCUIApplication {
 
         // Fill out account questionnaire.
         if skipQuestionnaire {
-            // TODO: verify that the questionnaire title exist. Make the codes here
-            //      into another function if they are too long or are not tidy.
-            // XCTAssertTrue(staticTexts["???"].waitForExistence(timeout: 2))
-            
-            // TODO: Skip the questionnaire. Not run through this, could be wrong
-            //      change codes if needed.
+            XCTAssertTrue(staticTexts["Onboarding Questionnaire"].waitForExistence(timeout: 2))
+            XCTAssertTrue(buttons["Skip"].waitForExistence(timeout: 2))
+            XCTAssertTrue(buttons["Take Questionnaire"].waitForExistence(timeout: 2))
             XCTAssertTrue(buttons["Skip"].waitForExistence(timeout: 2))
             buttons["Skip"].tap()
         } else {
@@ -205,6 +202,8 @@ extension XCUIApplication {
     // TODO: Start, go through, and fill out the onboarding questionnaire here,
     //      and go to the next page.
     private func navigateOnboardingQuestionnaire() throws {
+        XCTAssertTrue(buttons["Get Started"].waitForExistence(timeout: 2))
+        buttons["Get Started"].tap()
         // The code below print the element tree of all UI components in the screen
         // It would be useful for debugging on how to find elements. Use this with
         // sleep(<seconds>) if you need to wait for something to occur. Delete this
