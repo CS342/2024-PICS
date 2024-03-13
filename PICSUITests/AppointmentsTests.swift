@@ -29,5 +29,11 @@ class AppoinmentsTests: XCTestCase {
         app.buttons["Edit Details"].tap()
         XCTAssertTrue(app.buttons["Save Changes"].waitForExistence(timeout: 2))
         app.buttons["Save Changes"].tap()
+        XCTAssertTrue(app.buttons["Required Items"].waitForExistence(timeout: 2))
+        let firstButton = try XCTUnwrap(app.buttons.matching(identifier: "Required Items").allElementsBoundByIndex.first)
+        firstButton.tap()
+        XCTAssertTrue(app.buttons["Close"].waitForExistence(timeout: 2))
+        app.navigationBars["Required Items"]/*@START_MENU_TOKEN@*/.buttons["Close"]/*[[".otherElements[\"Close\"].buttons[\"Close\"]",".buttons[\"Close\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
     }
 }
