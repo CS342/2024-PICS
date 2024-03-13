@@ -28,7 +28,7 @@ class OnboardingTests: XCTestCase {
         let app = XCUIApplication()
         let email = "pics@onboarding.stanford.edu"
         
-        try app.navigateOnboardingFlow(email: email, skipQuestionnaire: true)
+        try app.navigateOnboardingFlow(email: email)
         
         app.assertOnboardingComplete()
         try app.assertAccountInformation(email: email)
