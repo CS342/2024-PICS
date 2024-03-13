@@ -15,7 +15,7 @@ class ScheduleViewTests: XCTestCase {
         
         let app = XCUIApplication()
         
-        app.launchArguments = ["--skipOnboarding", "--mockTestData", "--disableFirebase"]
+        app.launchArguments = ["--skipOnboarding", "--mockTestData", "--disableFirebase", "--testSchedule"]
         app.launch()
     }
     
@@ -35,7 +35,6 @@ class ScheduleViewTests: XCTestCase {
 //        let surveyViewExists = app.otherElements["Onboarding Task"].waitForExistence(timeout: 2)
 //        XCTAssertTrue(surveyViewExists, "OnboardingSurveyView should be present if the survey hasn't been completed.")
 //    }
-    
     func testScheduleListLoading() {
         let app = navigateToScheduleView()
         // Check for the existence of schedule list items
@@ -83,8 +82,25 @@ class ScheduleViewTests: XCTestCase {
         eventButton.tap()
         
         // Verify that the ModalView is presented
-        let modalViewText = app.staticTexts["Start Questionnaire"] // Use an identifiable element within ModalView
+        let titleText = app.staticTexts["Onboarding Survey"] // Use an identifiable element within ModalView
+        XCTAssertTrue(titleText.waitForExistence(timeout: 2), "ModalView should be presented upon tapping the event.")
+        let modalViewText = app.staticTexts["Get Started"] // Use an identifiable element within ModalView
         XCTAssertTrue(modalViewText.waitForExistence(timeout: 2), "ModalView should be presented upon tapping the event.")
+//        let descriptionText = app.staticTexts["In order to better assess your current physical and psychological well-being, we need to collect some basic information in different areas."] // Use an identifiable element within ModalView
+//        XCTAssertTrue(descriptionText.waitForExistence(timeout: 2), "ModalView should be presented upon tapping the event.")
     }
+//    
+//    func testTaskSchedulingWithTestScheduleDisabled() async throws {
+//        // Ensure the `testSchedule` feature flag is disabled
+//        let scheduler = PICSScheduler()
+//        
+//        // Define what the expected normal scheduling logic should be
+//        let expectedPHQ4Schedule = DateComponents(hour: 8, minute: 0)
+//        let expectedEQ5D5LSchedule = DateComponents(hour: 8, minute: 5)
+//        let expectedMiniNutritionalSchedule = DateComponents(hour: 8, minute: 10)
+//
+//        let phq4Task = try XCTUnwrap(scheduler.tasks.first { $0.title == "PHQ-4_TITLE" }, "PHQ-4 task should be present")
+//        XCTAssertEqual(phq4Task.schedule.repetition, .matching(expectedPHQ4Schedule), "PHQ-4 task should be scheduled for every 2 weeks at 8:00 AM")
+//    }
     
 }
