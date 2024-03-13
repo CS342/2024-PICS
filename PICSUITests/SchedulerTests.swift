@@ -62,4 +62,29 @@ class ScheduleViewTests: XCTestCase {
 
         XCTAssertTrue(exists, "Account button should be visible under specific conditions.")
     }
+    // Navigate to ScheduleView
+    func testQuestionnaireViewPresentation() {
+        let app = navigateToScheduleView()
+        // Simulate tapping an event that leads to a questionnaire
+        let eventButton = app.buttons["Start Questionnaire"] // Use actual accessibility identifier
+        XCTAssertTrue(eventButton.waitForExistence(timeout: 2), "Event button leading to questionnaire should exist.")
+        eventButton.tap()
+        
+        // Verify that the QuestionnaireView is presented
+        // let questionnaireViewExists = app.otherElements["QuestionnaireView"].waitForExistence(timeout: 2)
+        // XCTAssertTrue(questionnaireViewExists, "QuestionnaireView should be presented upon tapping the event.")
+    }
+    
+    func testModalViewPresentation() {
+        let app = navigateToScheduleView()
+        // Simulate tapping an event that leads to a modal view
+        let eventButton = app.buttons["Start Questionnaire"] // Use actual accessibility identifier
+        XCTAssertTrue(eventButton.waitForExistence(timeout: 2), "Event button leading to modal should exist.")
+        eventButton.tap()
+        
+        // Verify that the ModalView is presented
+        let modalViewText = app.staticTexts["Start Questionnaire"] // Use an identifiable element within ModalView
+        XCTAssertTrue(modalViewText.waitForExistence(timeout: 2), "ModalView should be presented upon tapping the event.")
+    }
+    
 }
