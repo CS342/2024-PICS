@@ -33,7 +33,6 @@ class AppoinmentsTests: XCTestCase {
         let firstButton = try XCTUnwrap(app.buttons.matching(identifier: "Required Items").allElementsBoundByIndex.first)
         firstButton.tap()
         XCTAssertTrue(app.buttons["Close"].waitForExistence(timeout: 2))
-        app.navigationBars["Required Items"]/*@START_MENU_TOKEN@*/.buttons["Close"]/*[[".otherElements[\"Close\"].buttons[\"Close\"]",".buttons[\"Close\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        
+        app.navigationBars["Required Items"].buttons["Close"].tap()
     }
 }
