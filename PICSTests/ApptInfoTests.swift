@@ -10,7 +10,6 @@
 import XCTest
 
 class AppointmentInformationTests: XCTestCase {
-    
     // Test storing and retrieving dates
     func testStoreAndRetrieveDates() {
         let appointmentInformation = AppointmentInformation()
@@ -19,8 +18,15 @@ class AppointmentInformationTests: XCTestCase {
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
             
         let testDate = Date()
-        let threeMonthsAhead = calendar.date(byAdding: .month, value: 3, to: testDate)!
-        let sixMonthsAhead = calendar.date(byAdding: .month, value: 6, to: testDate)!
+        guard let threeMonthsAhead = calendar.date(byAdding: .month, value: 3, to: testDate) else {
+            print("Error: Failed to calculate date three months ahead")
+            return
+        }
+
+        guard let sixMonthsAhead = calendar.date(byAdding: .month, value: 6, to: testDate) else {
+            print("Error: Failed to calculate date six months ahead")
+            return
+        }
         appointmentInformation.storeDates(testDate, threeMonthsAhead, sixMonthsAhead)
         
         let retrievedDate0 = appointmentInformation.appt0
@@ -39,6 +45,4 @@ class AppointmentInformationTests: XCTestCase {
         XCTAssertEqual(retrievedDate1String, threeMonthsAheadString)
         XCTAssertEqual(retrievedDate2String, sixMonthsAheadString)
     }
-    
-    
 }
