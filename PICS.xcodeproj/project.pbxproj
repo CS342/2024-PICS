@@ -101,6 +101,8 @@
 		9739A0C62AD7B5730084BEA5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9739A0C52AD7B5730084BEA5 /* FirebaseStorage */; };
 		97D73D6A2AD860AD00B47FA0 /* SpeziFirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 97D73D692AD860AD00B47FA0 /* SpeziFirebaseStorage */; };
 		A403A52E2B705A8C003CFA5C /* HealthVisualizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403A52D2B705A8C003CFA5C /* HealthVisualizationTests.swift */; };
+		A40419FA2B9F95EC0038D791 /* OnboardingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40419F92B9F95EC0038D791 /* OnboardingTests.swift */; };
+		A40419FD2B9F997C0038D791 /* XCTHealthKit in Frameworks */ = {isa = PBXBuildFile; productRef = A40419FC2B9F997C0038D791 /* XCTHealthKit */; };
 		A40559A42B98204C00221783 /* HKVizUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40559A32B98204C00221783 /* HKVizUnitTests.swift */; };
 		A45546C22B9E56A1006DB4B4 /* AssessmentsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45546C12B9E56A1006DB4B4 /* AssessmentsUnitTests.swift */; };
 		A45993292B90544300A98C95 /* Assessments.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45993282B90544300A98C95 /* Assessments.swift */; };
@@ -206,6 +208,7 @@
 		86EB7FF62B8FB7A000D52EE2 /* NotificationPermissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPermissions.swift; sourceTree = "<group>"; };
 		86F62AF52B916B670075F23C /* AppointmentInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentInformation.swift; sourceTree = "<group>"; };
 		A403A52D2B705A8C003CFA5C /* HealthVisualizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthVisualizationTests.swift; sourceTree = "<group>"; };
+		A40419F92B9F95EC0038D791 /* OnboardingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTests.swift; sourceTree = "<group>"; };
 		A40559A32B98204C00221783 /* HKVizUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKVizUnitTests.swift; sourceTree = "<group>"; };
 		A45546C12B9E56A1006DB4B4 /* AssessmentsUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentsUnitTests.swift; sourceTree = "<group>"; };
 		A45993282B90544300A98C95 /* Assessments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assessments.swift; sourceTree = "<group>"; };
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FE5DC9929EDD9D9004B9AB4 /* XCTestExtensions in Frameworks */,
+				A40419FD2B9F997C0038D791 /* XCTHealthKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +457,7 @@
 				2F4E237D2989A2FE0013F3D9 /* LaunchTests.swift */,
 				A403A52D2B705A8C003CFA5C /* HealthVisualizationTests.swift */,
 				74AE05922B98620300AB5287 /* AssessmentsTests.swift */,
+				A40419F92B9F95EC0038D791 /* OnboardingTests.swift */,
 			);
 			path = PICSUITests;
 			sourceTree = "<group>";
@@ -595,6 +600,7 @@
 			name = PICSUITests;
 			packageProductDependencies = (
 				2FE5DC9829EDD9D9004B9AB4 /* XCTestExtensions */,
+				A40419FC2B9F997C0038D791 /* XCTHealthKit */,
 			);
 			productName = PICSUITests;
 			productReference = 653A256728338800005D4D48 /* PICSUITests.xctest */;
@@ -802,6 +808,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A403A52E2B705A8C003CFA5C /* HealthVisualizationTests.swift in Sources */,
+				A40419FA2B9F95EC0038D791 /* OnboardingTests.swift in Sources */,
 				74AE05932B98620300AB5287 /* AssessmentsTests.swift in Sources */,
 				2F4E237E2989A2FE0013F3D9 /* LaunchTests.swift in Sources */,
 			);
@@ -1584,6 +1591,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2FE5DC7329EDD8E6004B9AB4 /* XCRemoteSwiftPackageReference "SpeziFirebase" */;
 			productName = SpeziFirebaseStorage;
+		};
+		A40419FC2B9F997C0038D791 /* XCTHealthKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FE5DC9A29EDD9EF004B9AB4 /* XCRemoteSwiftPackageReference "XCTHealthKit" */;
+			productName = XCTHealthKit;
 		};
 		A9D83F952B083794000D0C78 /* SpeziFirebaseAccountStorage */ = {
 			isa = XCSwiftPackageProductDependency;
