@@ -87,6 +87,7 @@
 		74C593952B720781002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		74C593972B720B5E002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		74C5939A2B720F1B002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		8607505A2BA1278200CABE92 /* ApptInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860750592BA1278200CABE92 /* ApptInfoTests.swift */; };
 		862AB7F62B9AA6460048D158 /* ContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862AB7F52B9AA6460048D158 /* ContactsTests.swift */; };
 		86400D192B7C4B6D009FEC10 /* ApptInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86400D182B7C4B6D009FEC10 /* ApptInfo.swift */; };
 		8644E6712B6C7243001218D0 /* AppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E6702B6C7243001218D0 /* AppointmentView.swift */; };
@@ -197,6 +198,7 @@
 		7481171B2B74BC6D00801A9A /* PHQ-4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "PHQ-4.json"; sourceTree = "<group>"; };
 		74AE05872B918DAF00AB5287 /* StroopTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StroopTest.swift; sourceTree = "<group>"; };
 		74AE05922B98620300AB5287 /* AssessmentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentsTests.swift; sourceTree = "<group>"; };
+		860750592BA1278200CABE92 /* ApptInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptInfoTests.swift; sourceTree = "<group>"; };
 		862AB7F52B9AA6460048D158 /* ContactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTests.swift; sourceTree = "<group>"; };
 		86400D182B7C4B6D009FEC10 /* ApptInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptInfo.swift; sourceTree = "<group>"; };
 		8644E6702B6C7243001218D0 /* AppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentView.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 				653A256128338800005D4D48 /* PICSTests.swift */,
 				A40559A32B98204C00221783 /* HKVizUnitTests.swift */,
 				A45546C12B9E56A1006DB4B4 /* AssessmentsUnitTests.swift */,
+				860750592BA1278200CABE92 /* ApptInfoTests.swift */,
 			);
 			path = PICSTests;
 			sourceTree = "<group>";
@@ -799,6 +802,7 @@
 			files = (
 				A40559A42B98204C00221783 /* HKVizUnitTests.swift in Sources */,
 				A45546C22B9E56A1006DB4B4 /* AssessmentsUnitTests.swift in Sources */,
+				8607505A2BA1278200CABE92 /* ApptInfoTests.swift in Sources */,
 				653A256228338800005D4D48 /* PICSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

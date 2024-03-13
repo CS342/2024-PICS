@@ -25,7 +25,9 @@ class AppoinmentsTests: XCTestCase {
         // checks that you can access the tab and view renders
         XCTAssertTrue(app.buttons["Appointments"].waitForExistence(timeout: 2))
         app.buttons["Appointments"].tap()
-        // checks contents of tab
-        XCTAssertTrue(app.staticTexts["Getting Here"].waitForExistence(timeout: 2))
+        XCTAssertTrue(app.buttons["Edit Details"].waitForExistence(timeout: 2))
+        app.buttons["Edit Details"].tap()
+        XCTAssertTrue(app.buttons["Save Changes"].waitForExistence(timeout: 2))
+        app.buttons["Save Changes"].tap()
     }
 }
