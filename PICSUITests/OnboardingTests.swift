@@ -28,7 +28,7 @@ class OnboardingTests: XCTestCase {
         let app = XCUIApplication()
         let email = "pics@onboarding.stanford.edu"
         
-        try app.navigateOnboardingFlow(email: email)
+        try app.navigateOnboardingFlow(email: email, skipQuestionnaire: true)
         
         app.assertOnboardingComplete()
         try app.assertAccountInformation(email: email)
@@ -313,6 +313,16 @@ extension XCUIApplication {
         XCTAssertTrue(staticTexts["Leland Stanford"].exists)
         XCTAssertTrue(staticTexts[email].exists)
         XCTAssertTrue(staticTexts["Gender Identity, Choose not to answer"].exists)
+        // Check for licencing.
+        XCTAssertTrue(buttons["License Information"].waitForExistence(timeout: 2))
+        buttons["License Information"].tap()
+        // Test if the sheet opens by checking if the info of the licence is present
+        XCTAssertTrue(staticTexts["This project is licensed under the MIT License."].waitForExistence(timeout: 2))
+        print(debugDescription)
+        XCTAssertTrue(buttons["Repository Link"].waitForExistence(timeout: 0.5))
+        XCTAssertTrue(buttons["Account Overview"].waitForExistence(timeout: 0.5))
+        buttons["Account Overview"].tap()
+        
         XCTAssertTrue(navigationBars.buttons["Close"].waitForExistence(timeout: 0.5))
         navigationBars.buttons["Close"].tap()
 
