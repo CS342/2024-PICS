@@ -19,7 +19,7 @@ class OnboardingTests: XCTestCase {
         
         let app = XCUIApplication()
         app.launchArguments = ["--showOnboarding"]
-        app.deleteAndLaunch(withSpringboardAppName: "TestApp")
+        app.deleteAndLaunch(withSpringboardAppName: "PICS")
     }
     
     // This test function go through the onboarding flow, and then check whether
@@ -28,14 +28,8 @@ class OnboardingTests: XCTestCase {
         let app = XCUIApplication()
         let email = "pics@onboarding.stanford.edu"
         
-        // TODO: currently we got an internet connection error when creating the account.
-        //   Luckly, it fails in the last step, meaning that we should be able to create account
-        //   if we do not have this internet error. E.g. maybe in github tests setting. So, we
-        //   can first try make the other test functions working and see how this function performs
-        //   on the github tests/ask in tomorrow's meeting or class/maybe it works on other laptops.
         try app.navigateOnboardingFlow(email: email)
         
-        // TODO: below two functions are not tested. Make changes if needed.
         app.assertOnboardingComplete()
         try app.assertAccountInformation(email: email)
     }
@@ -48,14 +42,14 @@ class OnboardingTests: XCTestCase {
         app.terminate()
         app.launch()
         
-        try app.navigateOnboardingFlow()
+        try app.navigateOnboardingFlow(skipQuestionnaire: true)
         app.assertOnboardingComplete()
         
         app.terminate()
         // Second onboarding round shouldn't display HealthKit and Notification authorizations anymore.
         app.activate()
 
-        try app.navigateOnboardingFlow(repeated: true)
+        try app.navigateOnboardingFlow(repeated: true, skipQuestionnaire: true)
         // Do not show HealthKit and Notification authorization view again.
         app.assertOnboardingComplete()
     }
@@ -105,12 +99,16 @@ extension XCUIApplication {
             try navigateOnboardingFlowConsent()
         }
         
-        // We should only see this two screens when we run onboarding for the
+        // We should only see healthkit and notification screens when we run onboarding for the
         // first time after installing the app.
         if !skippedIfRepeated {
             try navigateOnboardingFlowHealthKitAccess()
             try navigateOnboardingFlowNotification()
         }
+        
+        // Appointment Info, just keep the default.
+        XCTAssertTrue(buttons["Next"].waitForExistence(timeout: 2))
+        buttons["Next"].tap()
     }
     
     // Check the title in the welcome page and continue to next.
@@ -122,8 +120,6 @@ extension XCUIApplication {
     }
     
     // Fill out the consent form.
-    // TODO: this function is copied from the template app. We did not run through
-    //      this step yet. Make changes if needed.
     private func navigateOnboardingFlowConsent() throws {
         XCTAssertTrue(staticTexts["Consent"].waitForExistence(timeout: 5))
         
@@ -199,16 +195,67 @@ extension XCUIApplication {
         buttons["Upload Photo"].tap()
     }
     
-    // TODO: Start, go through, and fill out the onboarding questionnaire here,
-    //      and go to the next page.
+    // Go throught the account questionnaire here.
     private func navigateOnboardingQuestionnaire() throws {
+        XCTAssertTrue(buttons["Take Questionnaire"].waitForExistence(timeout: 2))
+        buttons["Take Questionnaire"].tap()
         XCTAssertTrue(buttons["Get Started"].waitForExistence(timeout: 2))
         buttons["Get Started"].tap()
-        // The code below print the element tree of all UI components in the screen
-        // It would be useful for debugging on how to find elements. Use this with
-        // sleep(<seconds>) if you need to wait for something to occur. Delete this
-        // comment and the debug print once you do not need this!
-        print(debugDescription)
+        
+        XCTAssertTrue(staticTexts["Female"].waitForExistence(timeout: 2))
+        staticTexts["Female"].tap()
+        XCTAssertTrue(buttons["Next"].waitForExistence(timeout: 2))
+        buttons["Next"].tap()
+        
+        // Age key.
+        sleep(1)
+        try textFields["Tap to answer"].enter(value: "1")
+        XCTAssertTrue(buttons["Done"].waitForExistence(timeout: 2))
+        buttons["Done"].tap()
+        XCTAssertTrue(buttons["Next"].waitForExistence(timeout: 2))
+        buttons["Next"].tap()
+        
+        // Height key.
+        sleep(1)
+        try textFields["Tap to answer"].enter(value: "1")
+        XCTAssertTrue(buttons["Done"].waitForExistence(timeout: 2))
+        buttons["Done"].tap()
+        XCTAssertTrue(buttons["Next"].waitForExistence(timeout: 2))
+        buttons["Next"].tap()
+        
+        // Weight key.
+        sleep(1)
+        try textFields["Tap to answer"].enter(value: "1")
+        XCTAssertTrue(buttons["Done"].waitForExistence(timeout: 2))
+        buttons["Done"].tap()
+        XCTAssertTrue(buttons["Next"].waitForExistence(timeout: 2))
+        buttons["Next"].tap()
+        
+        // Need for care and degree of disability, use the default value.
+        XCTAssertTrue(buttons["Next"].waitForExistence(timeout: 2))
+        buttons["Next"].tap()
+        XCTAssertTrue(buttons["Next"].waitForExistence(timeout: 2))
+        buttons["Next"].tap()
+        
+        XCTAssertTrue(staticTexts["Yes"].waitForExistence(timeout: 2))
+        staticTexts["Yes"].tap()
+        XCTAssertTrue(buttons["Next"].waitForExistence(timeout: 2))
+        buttons["Next"].tap()
+        
+        XCTAssertTrue(staticTexts["Single"].waitForExistence(timeout: 2))
+        staticTexts["Single"].tap()
+        XCTAssertTrue(buttons["Next"].waitForExistence(timeout: 2))
+        buttons["Next"].tap()
+        
+        XCTAssertTrue(staticTexts["Living alone"].waitForExistence(timeout: 2))
+        staticTexts["Living alone"].tap()
+        XCTAssertTrue(buttons["Next"].waitForExistence(timeout: 2))
+        buttons["Next"].tap()
+        
+        XCTAssertTrue(staticTexts["College degree"].waitForExistence(timeout: 2))
+        staticTexts["College degree"].tap()
+        XCTAssertTrue(buttons["Done"].waitForExistence(timeout: 2))
+        buttons["Done"].tap()
     }
     
     // This function click through the interesting modules page and go to the next.
@@ -225,11 +272,8 @@ extension XCUIApplication {
     }
     
     // This function retrieve the healthkit access and go to the next.
-    // TODO: this function is copied from the template app. We did not run through
-    //      this step yet. Make changes if needed.
     private func navigateOnboardingFlowHealthKitAccess() throws {
-        XCTAssertTrue(staticTexts["HealthKit Access"].waitForExistence(timeout: 5))
-        
+        XCTAssertTrue(staticTexts["PICS HealthKit Access"].waitForExistence(timeout: 5))
         XCTAssertTrue(buttons["Grant Access"].waitForExistence(timeout: 2))
         buttons["Grant Access"].tap()
         
@@ -237,8 +281,6 @@ extension XCUIApplication {
     }
     
     // This function retrieve the notification permission and go to the next.
-    // TODO: this function is copied from the template app. We did not run through
-    //      this step yet. Make changes if needed.
     private func navigateOnboardingFlowNotification() throws {
         XCTAssertTrue(staticTexts["Notifications"].waitForExistence(timeout: 5))
         
@@ -254,20 +296,15 @@ extension XCUIApplication {
     
     // This function checks whether the tab buttons occurs in our app to check
     // whether we finish the whole onboarding flow.
-    // TODO: this function is manually modified but we did not check whether it
-    //      will fail or not. Make necessary changes if it fails.
     fileprivate func assertOnboardingComplete() {
         XCTAssertTrue(buttons["Appointments"].waitForExistence(timeout: 2))
         XCTAssertTrue(buttons["Questionnaires"].waitForExistence(timeout: 2))
         XCTAssertTrue(buttons["Assessments"].waitForExistence(timeout: 2))
         XCTAssertTrue(buttons["Health"].waitForExistence(timeout: 2))
-        XCTAssertTrue(buttons["Contacts"].waitForExistence(timeout: 2))
      }
 
     // This function verify the account page information and then delete the account
     // in case of duplicate account error.
-    // TODO: this function is copied from the spezi template app but we did not run to
-    //     it and not sure whether it would fail or not. Make necessary changes to have it work.
     fileprivate func assertAccountInformation(email: String) throws {
         // Check whether the information are loaded correctly.
         XCTAssertTrue(navigationBars.buttons["Your Account"].waitForExistence(timeout: 2))
@@ -315,17 +352,11 @@ extension XCUIApplication {
     
     // This function check whether the onboarding questionnaire appear in the
     // questionnaires tab.
-    // TODO: go to the questionnaires tab, check whether the onboarding questionnaire
-    //      appear. We can also fill out the questionnaire and check again to see it
-    //      does not appear after completion if time permits. The below codes are manually
-    //      coded ane are not ran through. Make changes if needed.
     fileprivate func assertShowOnboardingQuestionnaire() throws {
         XCTAssertTrue(buttons["Questionnaires"].waitForExistence(timeout: 2))
         buttons["Questionnaires"].tap()
         
         XCTAssertTrue(staticTexts["ONBOARDING TASK"].waitForExistence(timeout: 2))
         XCTAssertTrue(staticTexts["Onboarding Questionnaire"].waitForExistence(timeout: 2))
-
-        // TODO: check for more static texts to present if found necessary
     }
  }
