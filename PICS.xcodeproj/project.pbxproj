@@ -78,12 +78,13 @@
 		653A255528338800005D4D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 653A255428338800005D4D48 /* Assets.xcassets */; };
 		653A256228338800005D4D48 /* PICSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A256128338800005D4D48 /* PICSTests.swift */; };
 		741110F22B5767DF00DFC79E /* PROM-Questionnaire.json in Resources */ = {isa = PBXBuildFile; fileRef = 741110F12B5767DE00DFC79E /* PROM-Questionnaire.json */; };
-		748117172B74BC3E00801A9A /* EQ5D5L.json in Resources */ = {isa = PBXBuildFile; fileRef = 748117152B74BC3E00801A9A /* EQ5D5L.json */; };
 		748117182B74BC3E00801A9A /* EQ5D5L.json.license in Resources */ = {isa = PBXBuildFile; fileRef = 748117162B74BC3E00801A9A /* EQ5D5L.json.license */; };
 		7481171A2B74BC5B00801A9A /* Self-MNA.json in Resources */ = {isa = PBXBuildFile; fileRef = 748117192B74BC5B00801A9A /* Self-MNA.json */; };
 		74AE05882B918DAF00AB5287 /* StroopTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AE05872B918DAF00AB5287 /* StroopTest.swift */; };
 		74AE05932B98620300AB5287 /* AssessmentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AE05922B98620300AB5287 /* AssessmentsTests.swift */; };
 		74AE05A92B9BB47F00AB5287 /* XCTSpezi in Frameworks */ = {isa = PBXBuildFile; productRef = 74AE05A82B9BB47F00AB5287 /* XCTSpezi */; };
+		74AE05AD2BA1241D00AB5287 /* SchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AE05AC2BA1241D00AB5287 /* SchedulerTests.swift */; };
+		74AE05B22BA2A44F00AB5287 /* EQ5D5L.json in Resources */ = {isa = PBXBuildFile; fileRef = 74AE05B12BA2A44F00AB5287 /* EQ5D5L.json */; };
 		74C593952B720781002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		74C593972B720B5E002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		74C5939A2B720F1B002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -136,7 +137,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		22201EE52B9259B800E38F47 /* EQ5D5L.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EQ5D5L.json; sourceTree = "<group>"; };
 		22201EE62B9259B800E38F47 /* PHQ-4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "PHQ-4.json"; sourceTree = "<group>"; };
 		22201EE72B9259B800E38F47 /* Self-MNA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Self-MNA.json"; sourceTree = "<group>"; };
 		22306A292B7C4E8E000A8EC1 /* OnboardingQuestionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingQuestionnaire.swift; sourceTree = "<group>"; };
@@ -194,12 +194,13 @@
 		653A256728338800005D4D48 /* PICSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PICSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		653A258928339462005D4D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		741110F12B5767DE00DFC79E /* PROM-Questionnaire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "PROM-Questionnaire.json"; sourceTree = "<group>"; };
-		748117152B74BC3E00801A9A /* EQ5D5L.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EQ5D5L.json; sourceTree = "<group>"; };
 		748117162B74BC3E00801A9A /* EQ5D5L.json.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EQ5D5L.json.license; sourceTree = "<group>"; };
 		748117192B74BC5B00801A9A /* Self-MNA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Self-MNA.json"; sourceTree = "<group>"; };
 		7481171B2B74BC6D00801A9A /* PHQ-4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "PHQ-4.json"; sourceTree = "<group>"; };
 		74AE05872B918DAF00AB5287 /* StroopTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StroopTest.swift; sourceTree = "<group>"; };
 		74AE05922B98620300AB5287 /* AssessmentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentsTests.swift; sourceTree = "<group>"; };
+		74AE05AC2BA1241D00AB5287 /* SchedulerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerTests.swift; sourceTree = "<group>"; };
+		74AE05B12BA2A44F00AB5287 /* EQ5D5L.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EQ5D5L.json; sourceTree = "<group>"; };
 		860750592BA1278200CABE92 /* ApptInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptInfoTests.swift; sourceTree = "<group>"; };
 		862AB7F52B9AA6460048D158 /* ContactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTests.swift; sourceTree = "<group>"; };
 		86400D182B7C4B6D009FEC10 /* ApptInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptInfo.swift; sourceTree = "<group>"; };
@@ -336,11 +337,10 @@
 		2FE5DC2D29EDD792004B9AB4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				74AE05B12BA2A44F00AB5287 /* EQ5D5L.json */,
 				7481171B2B74BC6D00801A9A /* PHQ-4.json */,
 				748117192B74BC5B00801A9A /* Self-MNA.json */,
-				748117152B74BC3E00801A9A /* EQ5D5L.json */,
 				748117162B74BC3E00801A9A /* EQ5D5L.json.license */,
-				22201EE52B9259B800E38F47 /* EQ5D5L.json */,
 				22201EE62B9259B800E38F47 /* PHQ-4.json */,
 				22201EE72B9259B800E38F47 /* Self-MNA.json */,
 				22365B772B902C9100C4528E /* Onboarding-Questionnaire.json */,
@@ -464,6 +464,7 @@
 				2F4E237D2989A2FE0013F3D9 /* LaunchTests.swift */,
 				A403A52D2B705A8C003CFA5C /* HealthVisualizationTests.swift */,
 				74AE05922B98620300AB5287 /* AssessmentsTests.swift */,
+				74AE05AC2BA1241D00AB5287 /* SchedulerTests.swift */,
 				862AB7F52B9AA6460048D158 /* ContactsTests.swift */,
 				86EF04BD2B9B1661005596D8 /* AppointmentsTests.swift */,
 				A40419F92B9F95EC0038D791 /* OnboardingTests.swift */,
@@ -686,8 +687,8 @@
 				2FC3439229EE634B002D773C /* ConsentDocument.md in Resources */,
 				653A255528338800005D4D48 /* Assets.xcassets in Resources */,
 				74C5939A2B720F1B002D0274 /* (null) in Resources */,
-				748117172B74BC3E00801A9A /* EQ5D5L.json in Resources */,
 				2FC3439029EE6346002D773C /* SocialSupportQuestionnaire.json in Resources */,
+				74AE05B22BA2A44F00AB5287 /* EQ5D5L.json in Resources */,
 				748117182B74BC3E00801A9A /* EQ5D5L.json.license in Resources */,
 				74C593952B720781002D0274 /* (null) in Resources */,
 				2FA0BFED2ACC977500E0EF83 /* Localizable.xcstrings in Resources */,
@@ -819,6 +820,7 @@
 			files = (
 				862AB7F62B9AA6460048D158 /* ContactsTests.swift in Sources */,
 				A403A52E2B705A8C003CFA5C /* HealthVisualizationTests.swift in Sources */,
+				74AE05AD2BA1241D00AB5287 /* SchedulerTests.swift in Sources */,
 				A40419FA2B9F95EC0038D791 /* OnboardingTests.swift in Sources */,
 				74AE05932B98620300AB5287 /* AssessmentsTests.swift in Sources */,
 				2F4E237E2989A2FE0013F3D9 /* LaunchTests.swift in Sources */,
