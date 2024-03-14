@@ -185,7 +185,7 @@ struct HKVisualization: View {
          let query = HKSampleQuery(
              sampleType: quantityType,
              predicate: predicate,
-             limit: 2000,
+             limit: Int(HKObjectQueryNoLimit),
              sortDescriptors: sortDescriptors
          ) { _, results, error in
              guard error == nil else {
