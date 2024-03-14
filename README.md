@@ -21,13 +21,12 @@ The CS342 2024 PICS application is using the [Spezi](https://github.com/Stanford
 > Do you want to try out the CS342 2024 PICS application? You can download it to your iOS device using [TestFlight](https://testflight.apple.com/join/oHPpBoKG)!
 
 ## Overview
-The CS342 2024 PICS application allows patients recovering from intensive care therapy to better track their recovery and inform their doctors on their health. Patients fill out necessary hospital questionnaire through the application prior to their hospital visit and track their health vitals based on their Apple health data. 
+The CS342 2024 PICS application allows patients recovering from intensive care therapy to better track their recovery and inform their doctors on their health. Patients fill out necessary hospital questionnaire through the application prior to their hospital visit and track their health vitals based on their Apple health data, as well as plan and prepare for their appointments. 
 
 ## CS342 2024 PICS Features
 Our application first allows users to create an account to help keep track of their information which includes taking an onboarding questionnaire to collect their basic information, uploading a photo of their medication plan, and entering their appointment information during the onboarding process. Once users have created an account, there are five main features. 
 
-1. Appointments: Users can view their appointment time and the required documents to bring for each of their appointments. Users can also edit the appointment times in this view, and corresponding notifications will be sent 1 day earlier, 30 minutes earlier, and at the time of the appointment to remind users of their upcoming appointments. There is also a map in the bottom of the view to visualize the location of the appointments to help users navigate.
-
+1. Appointments: Users can view their appointment time and the required documents to bring for each of their appointments in the form of interactive checklists. Users can also edit the appointment times in this view, and corresponding notifications will be sent 1 month, 1 week, 3 days, 1 day, and 30 minutes earlier, as well as at the time of the appointment to remind users of their upcoming appointments. There is also a map with the address in the bottom of the view to visualize the location of the appointments to help users navigate.
 
 2. Questionnaires: Users can take the questionnaires required for each appointment directly through their phone. The questionnaires help users schedule when to take each questionnaire and show a check mark if the questionnaires are completed. Besides, if the users choose to skip the onboarding questionnaire during the onboarding process, the questionnaire will also show up in this tab.
 
@@ -51,9 +50,10 @@ Our application first allows users to create an account to help keep track of th
 ## Contributing
 
 Akanshya Bhat
-- Appointments page (must-have): designed homepage, sending notifications, show appointment details, map location (can-have), timeline, required documents, edit appointment information
-- Assessment page: starting code for assessments (trail-making task)
-- Testing: For the Appointment and Contact page
+- Appointments page: Homepage design, send notifications, show appointment details, map location (can-have), timeline, required documents, edit appointment information
+- Assessment page: Starting code for assessments (trail-making task)
+- Contacts page: Set up the screen with information of the PIs
+- Testing: For the Appointments and Contacts pages
 
 Catherine Zhang:
 - Onboarding Questionnaire: Create onboarding questionnaire that is optional during onboarding but must be completed on the dashboard before first appointment
@@ -69,7 +69,7 @@ Karan Soin
 Yuren Sun:
 - Health Vitals Page: Health dashboard page set up and refinement. HealthKit samples collection and health data visualization for step count, heart rate, and oxygen saturation
 - Assessment Page: Basic UI and logic set-up of the page, assessment result parsing for Trail-making and Stroop, and visualization of results
-- Testing: For the Onboarding Flow, HealthKit visualizations, and Assessment page
+- Testing: For the Onboarding Flow, HealthKit visualizations, and Assessment pages
 
 
 ## License
