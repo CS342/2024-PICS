@@ -26,13 +26,13 @@ The CS342 2024 PICS application allows patients recovering from intensive care t
 ## CS342 2024 PICS Features
 Our application first allows users to create an account to help keep track of their information which includes taking an onboarding questionnaire to collect their basic information, uploading a photo of their medication plan, and entering their appointment information during the onboarding process. Once users have created an account, there are five main features. 
 
-1. Appointments: Users can view their appointment time and the required documents to bring for each of their appointments in the form of interactive checklists. Users can also edit the appointment times in this view, and corresponding notifications will be sent 1 month, 1 week, 3 days, 1 day, and 30 minutes earlier, as well as at the time of the appointment to remind users of their upcoming appointments. There is also a map with the address in the bottom of the view to visualize the location of the appointments to help users navigate.
+1. Appointments: Users can view their appointment time and the required documents to bring for each of their appointments in the form of interactive checklists. Users can also edit the appointment times in this view, and corresponding notifications will be sent 1 month, 1 week, 3 days, 1 day, and 30 minutes earlier, as well as at the time of the appointment to remind users of their upcoming appointments. There is also a map with the address at the bottom of the view to visualize the location of the appointments to help users navigate.
 
-2. Questionnaires: Users can take the 3 main questionnaires required for each appointment directly through this app on their phone, when they navigate to the Questionnaires tab. This page helps user attempt the questionnaires in a structured manner at specific 5-minute intervals every two weeks. The UI of each task changes according to completion state: the questionnaire task shows an incomplete yellow exclamation symbol and supporting text suggestion if the questionnaires are incomplete, and a green check mark and appropriate text if the questionnaires are completed. Besides this, if the users choose to skip the onboarding questionnaire during the onboarding process, this onbarding questionnaire will also show up in this tab. Once each questionnaire is started, one question appears per screen, and selecting an option and pressing the bottom button allows you to navigate to the next question.
+2. Questionnaires: Users can take the 3 main questionnaires required for each appointment directly through this app on their phone, when they navigate to the Questionnaires tab. This page helps users attempt the questionnaires in a structured manner at specific 5-minute intervals every two weeks. The UI of each task changes according to the completion state: the questionnaire task shows an incomplete yellow exclamation symbol and supporting text suggestion if the questionnaires are incomplete, and a green check mark and appropriate text if the questionnaires are completed. Besides this, if the users choose to skip the onboarding questionnaire during the onboarding process, this onboarding questionnaire will also show up in this tab. Once each questionnaire is started, one question appears per screen, and selecting an option and pressing the bottom button allows you to navigate to the next question.
 
 3. Assessments: Users can take assessments to measure their cognitive abilities. Our application includes the trail-making test, Stroop test, and reaction time test to measure different aspects of the user's cognitive skills. Results will be displayed as a chart and users can click on a dot to see more details about the selected result. Otherwise, our app will show the user's last test result for each test.
 
-4. Health Vitals: Users can view their health vitals (step counts, oxygen saturation, and heart rate) in the previous two weeks. Related details will be shown when users click on a specific bar or dot in the chart for users to learn more about their health condition. Besides, thresholds are set and shown as horizontal lines for step counts and 
+4. Health Vitals: Users can view their health vitals (step counts, oxygen saturation, and heart rate) in the previous two weeks. Related details will be shown when users click on a specific bar or dot in the chart for users to learn more about their health condition. Besides, thresholds are set and shown as horizontal lines for step counts and oxygen saturation to facilitate users' understanding of their health vitals.
 
 5. Contacts: This page shows the contact information for the medical team and address information. The PICS app will direct users to the Apple Map for easier direction and navigation when users click on the address.
 
@@ -53,13 +53,13 @@ Akanshya Bhat
 - Appointments page: Homepage design, send notifications, show appointment details, map location (can-have), timeline, required documents, edit appointment information
 - Assessment page: Starting code for assessments (trail-making task)
 - Contacts page: Set up the screen with information of the PIs
-- Testing: For the Appointments and Contacts pages
+- Testing: Unit and UI tests for the Appointments and Contacts pages
 
 Catherine Zhang:
 - Onboarding Questionnaire: Create onboarding questionnaire that is optional during onboarding but must be completed on the dashboard before first appointment
 - Medication Information: Create page on the onboarding flow that allows users to upload a photo of the medication sheet received at the hospital
 - ReactionTime Assessment: Added the ReactionTime assessment to the assessment page using ResearchKit
-- Testing: For the Onboarding Flow
+- Testing: UI tests for the Onboarding Flow
 
 Karan Soin
 - Questionnaires Page: UI set up and refinement for the questionnaires page. Questionnaires Scheduler to schedule the questionnaires at appropriate times, intervals, and allowing patients to retake tests if any errors occurred.
@@ -69,7 +69,7 @@ Karan Soin
 Yuren Sun:
 - Health Vitals Page: Health dashboard page set up and refinement. HealthKit samples collection and health data visualization for step count, heart rate, and oxygen saturation
 - Assessment Page: Basic UI and logic set-up of the page, assessment result parsing for Trail-making and Stroop, and visualization of results
-- Testing: For the Onboarding Flow, HealthKit visualizations, and Assessment pages
+- Testing: Unit and UI tests for the Onboarding Flow, HealthKit Vitals page, and Assessment pages
 
 
 ## License
