@@ -34,7 +34,7 @@ class PICSDelegate: SpeziAppDelegate {
                     .requires(\.userId),
                     .requires(\.name),
                     // additional values stored using the `FirestoreAccountStorage` within our Standard implementation
-                    .requires(\.dateOfBirth),
+                    .collects(\.dateOfBirth),
                     .collects(\.genderIdentity),
                     .collects(\.height),
                     .collects(\.weight)
