@@ -62,9 +62,9 @@ Catherine Zhang:
 - Testing: For the Onboarding Flow
 
 Karan Soin
-- Questionnaires Page: UI set up and refinement for the questionnaires page. Questionnaires Scheduler to schedule the questionnaires at appropriate times, intervals, and allowing patients to retake tests if any errors occurred. Also sets questionnaires to ensure they are recurring every 2 weeks
-- Assessment Tasks: Added the Stroop Test, UI Revamp for the page and all three Assessment Tests, and Refinement of code and overall UI
-- Testing: Both UI and Unit tests for code coverage of the the Questionnaires and Scheduler for tasks.
+- Questionnaires Page: UI set up and refinement for the questionnaires page. Questionnaires Scheduler to schedule the questionnaires at appropriate times, intervals, and allowing patients to retake tests if any errors occurred.
+- Assessment Tasks: Added the Stroop Test, UI Revamp for the page and all three Assessment Tests, and refinement of code, comments and overall UI
+- Testing: Both UI and Unit tests for code coverage of the the Questionnaires and Scheduler for tasks, setup initial Assessments testing 
 
 Yuren Sun:
 - Health Vitals Page: Health dashboard page set up and refinement. HealthKit samples collection and health data visualization for step count, heart rate, and oxygen saturation
