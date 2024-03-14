@@ -51,13 +51,31 @@ Our application first allows users to create an account to help keep track of th
 > Do you want to learn more about the Stanford Spezi Template Application and how to use, extend, and modify this application? Check out the [Stanford Spezi Template Application documentation](https://stanfordspezi.github.io/SpeziTemplateApplication)
 
 ## Setup
-1. Setup [instructions](https://spezi.health/SpeziTemplateApplication/documentation/templateapplication/setup/) for Spezi Application
+1. See setup [instructions](https://spezi.health/SpeziTemplateApplication/documentation/templateapplication/setup/) for Spezi Application
+
 ## Contributing
+
+Akanshya Bhat
+- Appointments page (must-have): designed homepage, sending notifications, show appointment details, map location (can-have), timeline, required documents, edit appointment information
+- Assessment page: starting code for assessments (trail-making task)
+- Testing: For the Appointment and Contact page
 
 Catherine Zhang:
 - Onboarding Questionnaire: Create onboarding questionnaire that is optional during onboarding but must be completed on the dashboard before first appointment
 - Medication Information: Create page on the onboarding flow that allows users to upload a photo of the medication sheet received at the hospital
 - ReactionTime Assessment: Added the ReactionTime assessment to the assessment page using ResearchKit
+- Testing: For the Onboarding Flow
+
+Karan Soin
+- Questionnaires Page: UI set up and refinement for the questionnaires page. Questionnaires Scheduler to schedule the questionnaires at appropriate times, intervals, and recurrences
+- Assessment Tasks: Added the Stroop Test, UI Revamp and Refinement
+- Testing: For the Questionnaires page
+
+Yuren Sun:
+- Health Vitals Page: Health dashboard page set up and refinement. HealthKit samples collection and health data visualization for step count, heart rate, and oxygen saturation
+- Assessment Page: Basic UI and logic set-up of the page, assessment result parsing for Trail-making and Stroop, and visualization of results
+- Testing: For the Onboarding Flow, HealthKit visualizations, and Assessment page
+
 
 ## License
 
