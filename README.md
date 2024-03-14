@@ -28,7 +28,7 @@ Our application first allows users to create an account to help keep track of th
 
 1. Appointments: Users can view their appointment time and the required documents to bring for each of their appointments in the form of interactive checklists. Users can also edit the appointment times in this view, and corresponding notifications will be sent 1 month, 1 week, 3 days, 1 day, and 30 minutes earlier, as well as at the time of the appointment to remind users of their upcoming appointments. There is also a map with the address in the bottom of the view to visualize the location of the appointments to help users navigate.
 
-2. Questionnaires: Users can take the questionnaires required for each appointment directly through their phone. The questionnaires help users schedule when to take each questionnaire and show a check mark if the questionnaires are completed. Besides, if the users choose to skip the onboarding questionnaire during the onboarding process, the questionnaire will also show up in this tab.
+2. Questionnaires: Users can take the 3 main questionnaires required for each appointment directly through this app on their phone, when they navigate to the Questionnaires tab. This page helps user attempt the questionnaires in a structured manner at specific 5-minute intervals every two weeks. The UI of each task changes according to completion state: the questionnaire task shows an incomplete yellow exclamation symbol and supporting text suggestion if the questionnaires are incomplete, and a green check mark and appropriate text if the questionnaires are completed. Besides this, if the users choose to skip the onboarding questionnaire during the onboarding process, this onbarding questionnaire will also show up in this tab. Once each questionnaire is started, one question appears per screen, and selecting an option and pressing the bottom button allows you to navigate to the next question.
 
 3. Assessments: Users can take assessments to measure their cognitive abilities. Our application includes the trail-making test, Stroop test, and reaction time test to measure different aspects of the user's cognitive skills. Results will be displayed as a chart and users can click on a dot to see more details about the selected result. Otherwise, our app will show the user's last test result for each test.
 
@@ -62,9 +62,9 @@ Catherine Zhang:
 - Testing: For the Onboarding Flow
 
 Karan Soin
-- Questionnaires Page: UI set up and refinement for the questionnaires page. Questionnaires Scheduler to schedule the questionnaires at appropriate times, intervals, and recurrences
-- Assessment Tasks: Added the Stroop Test, UI Revamp and Refinement
-- Testing: For the Questionnaires page
+- Questionnaires Page: UI set up and refinement for the questionnaires page. Questionnaires Scheduler to schedule the questionnaires at appropriate times, intervals, and allowing patients to retake tests if any errors occurred. Also sets questionnaires to ensure they are recurring every 2 weeks
+- Assessment Tasks: Added the Stroop Test, UI Revamp for the page and all three Assessment Tests, and Refinement of code and overall UI
+- Testing: Both UI and Unit tests for code coverage of the the Questionnaires and Scheduler for tasks.
 
 Yuren Sun:
 - Health Vitals Page: Health dashboard page set up and refinement. HealthKit samples collection and health data visualization for step count, heart rate, and oxygen saturation
