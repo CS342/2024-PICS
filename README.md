@@ -2,7 +2,7 @@
 
 This source file is part of the PICS based on the Stanford Spezi Template Application project
 
-SPDX-FileCopyrightText: 2023 Stanford University
+SPDX-FileCopyrightText: 2024 Stanford University
 
 SPDX-License-Identifier: MIT
 
@@ -24,24 +24,24 @@ The CS342 2024 PICS application is using the [Spezi](https://github.com/Stanford
 The CS342 2024 PICS application allows patients recovering from intensive care therapy to better track their recovery and inform their doctors on their health. Patients fill out necessary hospital questionnaire through the application prior to their hospital visit and track their health vitals based on their Apple health data. 
 
 ## CS342 2024 PICS Features
-Our application first allows users to create an account to help keep track of their information which includes taking an onboarding questionnaire to collect their basic information as well as uploading a photo of their medication plan during the onboarding process. Once users have created an account, there are five main features. 
-1. Appointments
+Our application first allows users to create an account to help keep track of their information which includes taking an onboarding questionnaire to collect their basic information, uploading a photo of their medication plan, and entering their appointment information during the onboarding process. Once users have created an account, there are five main features. 
+
+1. Appointments: Users can view their appointment time and the required documents to bring for each of their appointments. Users can also edit the appointment times in this view, and corresponding notifications will be sent 1 day earlier, 30 minutes earlier, and at the time of the appointment to remind users of their upcoming appointments. There is also a map in the bottom of the view to visualize the location of the appointments to help users navigate.
 
 
-2. Questionnaires
+2. Questionnaires: Users can take the questionnaires required for each appointment directly through their phone. The questionnaires help users schedule when to take each questionnaire and show a check mark if the questionnaires are completed. Besides, if the users choose to skip the onboarding questionnaire during the onboarding process, the questionnaire will also show up in this tab.
 
+3. Assessments: Users can take assessments to measure their cognitive abilities. Our application includes the trail-making test, Stroop test, and reaction time test to measure different aspects of the user's cognitive skills. Results will be displayed as a chart and users can click on a dot to see more details about the selected result. Otherwise, our app will show the user's last test result for each test.
 
-3. Assessments
+4. Health Vitals: Users can view their health vitals (step counts, oxygen saturation, and heart rate) in the previous two weeks. Related details will be shown when users click on a specific bar or dot in the chart for users to learn more about their health condition. Besides, thresholds are set and shown as horizontal lines for step counts and 
 
-4. Health Vitals
+5. Contacts: This page shows the contact information for the medical team and address information. The PICS app will direct users to the Apple Map for easier direction and navigation when users click on the address.
 
-5. Contacts
-
-|<picture><source media="(prefers-color-scheme: dark)" srcset="Resources/MedicationView~dark.png"><img src="Resources/MedicationView.png" width="250" alt="Screenshot displaying the Medication View." /></picture>|<picture><source media="(prefers-color-scheme: dark)" srcset="Sources/SpeziLLMLocalDownload/SpeziLLMLocalDownload.docc/Resources/LLMLocalDownload~dark.png"><img src="Sources/SpeziLLMLocalDownload/SpeziLLMLocalDownload.docc/Resources/LLMLocalDownload.png" width="250" alt="Screenshot displaying the Appointments View." /></picture>|<picture><source media="(prefers-color-scheme: dark)" srcset="Resources/QuestionnaireView~dark.png"><img src="Resources/QuestionnaireView.png" width="250" alt="Screenshot displaying the Questionnaire View." /></picture>|
+|<picture><source media="(prefers-color-scheme: dark)" srcset="Resources/MedicationView~dark.png"><img src="Resources/MedicationView.png" width="250" alt="Screenshot displaying the Medication View." /></picture>|<picture><source media="(prefers-color-scheme: dark)" srcset="Resources/AppointmentView~dark.png"><img src="Resources/AppointmentView.png" width="250" alt="Screenshot displaying the Appointments View." /></picture>|<picture><source media="(prefers-color-scheme: dark)" srcset="Resources/QuestionnaireView~dark.png"><img src="Resources/QuestionnaireView.png" width="250" alt="Screenshot displaying the Questionnaire View." /></picture>|
 |:--:|:--:|:--:|
 |`Medication View`|`Appointments View`|`Questionniare View`|
 
-|<picture><source media="(prefers-color-scheme: dark)" srcset="Resources/AssessmentView~dark.png"><img src="Resources/AssessmentView.png" width="250" alt="Screenshot displaying the Assessment View." /></picture>|<picture><source media="(prefers-color-scheme: dark)" srcset="Sources/SpeziLLMLocalDownload/SpeziLLMLocalDownload.docc/Resources/LLMLocalDownload~dark.png"><img src="Sources/SpeziLLMLocalDownload/SpeziLLMLocalDownload.docc/Resources/LLMLocalDownload.png" width="250" alt="Screenshot displaying the Health Vitals View." /></picture>|<picture><source media="(prefers-color-scheme: dark)" srcset="Resources/ContactView~dark.png"><img src="Resources/ContactsView.png" width="250" alt="Screenshot displaying the Contacts View." /></picture>|
+|<picture><source media="(prefers-color-scheme: dark)" srcset="Resources/AssessmentView~dark.png"><img src="Resources/AssessmentView.png" width="250" alt="Screenshot displaying the Assessment View." /></picture>|<picture><source media="(prefers-color-scheme: dark)" srcset="Resources/HealthDashboardView~dark.png"><img src="Resources/HealthDashboardView.png" width="250" alt="Screenshot displaying the Health Vitals View." /></picture>|<picture><source media="(prefers-color-scheme: dark)" srcset="Resources/ContactView~dark.png"><img src="Resources/ContactsView.png" width="250" alt="Screenshot displaying the Contacts View." /></picture>|
 |:--:|:--:|:--:|
 |`Assessments View`|`Health Vitals View`|`Contacts View`|
  
