@@ -46,6 +46,7 @@ struct Assessments: View {
                     }
                 }
                     .background(Color(uiColor: .systemGroupedBackground)) // fix ResearchKit background color
+                    .interactiveDismissDisabled()
             }
             .environment(assessmentResults)
     }

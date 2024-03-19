@@ -11,6 +11,7 @@ import SwiftUI
 struct AppointmentView: View {
     @Environment(PatientInformation.self)
     private var patientInformation
+
     @State private var showingEdit = false
     
     @State private var appt0User = Date()
@@ -18,72 +19,78 @@ struct AppointmentView: View {
     @State private var appt2User = Date()
     
     var body: some View {
-        VStack(alignment: .center) {
-            VStack(alignment: .leading) {
+        List {
+            Section {
                 AppointmentBlock(date: patientInformation.appt1)
                 AppointmentBlock(date: patientInformation.appt2)
-                    .padding(.bottom)
-                HStack {
-                    Button("RESCHEDULE_BUTTON_LABEL") {
-                        showingEdit.toggle()
-                    }
-                    .buttonStyle(.bordered)
+                Button("RESCHEDULE_BUTTON_LABEL") {
+                    showingEdit.toggle()
                 }
-                .padding(.bottom)
-                Text("TIMELINE_TITLE")
-                    .foregroundColor(.primary)
-                    .italic()
-                TimelineView()
             }
-            .padding()
-            
-            Divider()
-                .overlay(Color.secondary)
-                .frame(width: 340)
-            
-            GettingThere()
-
-            Spacer()
-        }
-        .sheet(isPresented: $showingEdit) {
-            NavigationStack {
+            Section {
                 VStack {
-                    Text("APPTQ_0")
-                        .font(.headline)
-                        .padding(.top, 32)
-                    DateTimePickerView(selectedDateTime: $appt0User)
-                        .padding(.bottom, 32)
-                    Text("APPTQ_1")
-                        .font(.headline)
-                    DateTimePickerView(selectedDateTime: $appt1User)
-                        .padding(.bottom, 32)
-                    Text("APPTQ_2")
-                        .font(.headline)
-                    DateTimePickerView(selectedDateTime: $appt2User)
-                        .padding(.bottom, 32)
-                    Button("SAVE_BUTTON") {
-                        patientInformation.storeDates(appt0User, appt1User, appt2User)
-                        showingEdit.toggle()
+                    HStack {
+                        Text("TIMELINE_TITLE")
+                            .foregroundColor(.primary)
+                            .bold()
+                        Spacer()
                     }
-                    .buttonStyle(.bordered)
-                    Spacer()
+                    .padding(.bottom)
+                    TimelineView()
                 }
-                .padding(.horizontal, 20)
-                .navigationTitle("EDIT_APPT_HEADER")
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button("CLOSE") {
+                .padding(.horizontal, 6)
+            }
+
+            Section {
+                GettingThere()
+            }
+        }
+            .navigationTitle("APPOINTMENTS_NAVIGATION_TITLE")
+            .sheet(isPresented: $showingEdit) {
+                NavigationStack {
+                    List {
+                        Text("APPTQ_0")
+                            .font(.headline)
+                            .padding(.top, 32)
+                        DateTimePickerView(selectedDateTime: $appt0User)
+                            .padding(.bottom, 32)
+                        Text("APPTQ_1")
+                            .font(.headline)
+                        DateTimePickerView(selectedDateTime: $appt1User)
+                            .padding(.bottom, 32)
+                        Text("APPTQ_2")
+                            .font(.headline)
+                        DateTimePickerView(selectedDateTime: $appt2User)
+                            .padding(.bottom, 32)
+                        Button("SAVE_BUTTON") {
+                            patientInformation.storeDates(appt0User, appt1User, appt2User)
                             showingEdit.toggle()
+                        }
+                        .buttonStyle(.borderedProminent)
+                        Spacer()
+                    }
+                    .padding(.horizontal, 20)
+                    .navigationTitle("EDIT_APPT_HEADER")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button("CLOSE") {
+                                showingEdit.toggle()
+                            }
                         }
                     }
                 }
+                .interactiveDismissDisabled()
             }
-        }
-        .background(Color(UIColor.systemBackground))
     }
 }
 
+
+#if DEBUG
 #Preview {
-    AppointmentView()
-        .environment(PatientInformation())
+    NavigationStack {
+        AppointmentView()
+            .environment(PatientInformation())
+    }
 }
+#endif

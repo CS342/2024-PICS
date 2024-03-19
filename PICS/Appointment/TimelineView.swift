@@ -101,12 +101,13 @@ struct TimelineView: View {
         let components2 = calendar.dateComponents([.year, .month, .day], from: patientInformation.appt2)
         let components3 = calendar.dateComponents([.year, .month, .day], from: currentDate)
 
-        if let date1 = calendar.date(from: components1), let date2 = calendar.date(from: components2), let now = calendar.date(from: components3) {
+        if let date1 = calendar.date(from: components1),
+           let date2 = calendar.date(from: components2),
+           let now = calendar.date(from: components3) {
             VStack {
                 BidirectionalArrow()
                     .fill(Color.primary)
                     .stroke(Color.primary, lineWidth: 2)
-                    .frame(width: 361, height: 25)
                     .overlay(
                         CurrentLocation(date1: date1, date2: date2, now: now)
                             .fill(Color.accentColor)
@@ -122,7 +123,7 @@ struct TimelineView: View {
                         .foregroundColor(.primary)
                     Spacer()
                 }
-                .font(.system(size: 12))
+                .font(.footnote)
                 .foregroundColor(.primary)
             }
         } else {
@@ -131,3 +132,13 @@ struct TimelineView: View {
         }
     }
 }
+
+
+#if DEBUG
+#Preview {
+    List {
+        TimelineView()
+            .environment(PatientInformation())
+    }
+}
+#endif

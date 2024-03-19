@@ -11,21 +11,16 @@ import SwiftUI
 
 /// Displays the contacts for the PICS.
 struct Appointments: View {
-    @Environment(PatientInformation.self)
-    private var patientInformation
     @Binding var presentingAccount: Bool
     
     var body: some View {
         NavigationStack {
-            ScrollView {
-                AppointmentView()
-                    .navigationTitle("APPOINTMENTS_NAVIGATION_TITLE")
-                    .toolbar {
-                        if AccountButton.shouldDisplay {
-                            AccountButton(isPresented: $presentingAccount)
-                        }
+            AppointmentView()
+                .toolbar {
+                    if AccountButton.shouldDisplay {
+                        AccountButton(isPresented: $presentingAccount)
                     }
-            }
+                }
         }
     }
     

@@ -190,17 +190,6 @@
         }
       }
     },
-    "ASSESSMENT_STROOP_START_BTN" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Start Assessment"
-          }
-        }
-      }
-    },
     "ASSESSMENT_SUMMARY" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -485,17 +474,6 @@
     "Heart Rate Per Minute" : {
 
     },
-    "HEIGHT" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Height"
-          }
-        }
-      }
-    },
     "HKVIZ_AVERAGE_STRING" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -755,7 +733,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "PICS - Ambulanz:   Charité Virchow Clinic"
+            "value" : "Ambulanz:   Charité Virchow Clinic"
           }
         }
       }
@@ -806,18 +784,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Self-MNA: Mini Nutritional Assessment"
-          }
-        }
-      }
-    },
-    "MOCK_WEB_SERVICE_TAB_TITLE" : {
-      "comment" : "MARK: - Mock Upload Data Storage Provider",
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mock Web Service"
           }
         }
       }
@@ -1182,17 +1148,6 @@
     },
     "Stroop Test" : {
 
-    },
-    "STROOP_TEST_TITLE" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stroop Test"
-          }
-        }
-      }
     },
     "STROOP_VIZ_TITLE" : {
       "localizations" : {

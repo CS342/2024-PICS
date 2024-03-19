@@ -15,7 +15,9 @@ struct GettingThere: View {
         VStack(alignment: .leading) {
             Text("GETTING_HERE_HEADING")
                 .font(.title2)
+                .bold()
             MapView()
+                .clipShape(RoundedRectangle(cornerRadius: 8))
                 .frame(height: 200)
             Text("LOCATION_NAME")
                 .font(.title3)
@@ -25,15 +27,18 @@ struct GettingThere: View {
                 Text("ZIP_CITY")
             }
                 .font(.subheadline)
-                .foregroundStyle(.secondary)
         }
-            .padding()
     }
 }
 
 
 #if DEBUG
 #Preview {
-    GettingThere()
+    NavigationStack {
+        List {
+            GettingThere()
+        }
+        .navigationTitle("Test Title")
+    }
 }
 #endif

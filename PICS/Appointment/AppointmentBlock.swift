@@ -35,8 +35,7 @@ struct AppointmentBlock: View {
     @State private var showingSheet = false
 
     var body: some View {
-        VStack(alignment: .leading) {
-            Spacer()
+        VStack(alignment: .center) {
             VStack(alignment: .leading) {
                 HStack {
                     Text(formattedDate(date))
@@ -46,37 +45,34 @@ struct AppointmentBlock: View {
                     Text(formattedTime(date))
                         .foregroundColor(.primary)
                 }
-                Spacer()
                 HStack {
                     Spacer()
                     Button("REQUIRED_ITEMS_HEADING") {
                         showingSheet.toggle()
                     }
-                    .buttonStyle(.bordered)
+                        .foregroundColor(.accentColor)
+                        .buttonStyle(.plain)
                 }
-                Spacer()
+                    .padding(.top, 6)
             }
-            .padding()
         }
+            .padding(.horizontal, 8)
             .sheet(isPresented: $showingSheet) {
                 NavigationStack {
                     List(items, selection: $multiSelection) {
                         Text($0.name)
                     }
-                    .navigationTitle("REQUIRED_ITEMS_HEADING")
-                    .environment(\.editMode, .constant(.active))
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            Button("CLOSE") {
-                                showingSheet.toggle()
+                        .navigationTitle("REQUIRED_ITEMS_HEADING")
+                        .environment(\.editMode, .constant(.active))
+                        .toolbar {
+                            ToolbarItem(placement: .navigationBarTrailing) {
+                                Button("CLOSE") {
+                                    showingSheet.toggle()
+                                }
                             }
                         }
-                    }
                 }
             }
-            .background(Color(uiColor: .secondarySystemBackground))
-            .frame(height: 130)
-            .cornerRadius(15)
     }
 
     init(date: Date) {
@@ -100,6 +96,8 @@ struct AppointmentBlock: View {
 
 #if DEBUG
 #Preview {
-    AppointmentBlock(date: .now.addingTimeInterval(60 * 60))
+    List {
+        AppointmentBlock(date: .now.addingTimeInterval(60 * 60))
+    }
 }
 #endif
