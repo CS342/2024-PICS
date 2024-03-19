@@ -26,19 +26,22 @@ struct AppointmentView: View {
                 Button("RESCHEDULE_BUTTON_LABEL") {
                     showingEdit.toggle()
                 }
+            } header: {
+                Circle() // workaround for weird spacing issue
+                    .foregroundColor(Color.clear)
+                    .frame(height: 0)
             }
+
             Section {
-                VStack {
-                    HStack {
-                        Text("TIMELINE_TITLE")
-                            .foregroundColor(.primary)
-                            .bold()
-                        Spacer()
-                    }
-                    .padding(.bottom)
+                VStack(alignment: .leading) {
+                    Text("TIMELINE_TITLE")
+                        .foregroundColor(.primary)
+                        .bold()
+                        .padding(.bottom)
+                        .accessibilityAddTraits(.isHeader)
                     TimelineView()
                 }
-                .padding(.horizontal, 6)
+                .padding(.vertical, 8)
             }
 
             Section {

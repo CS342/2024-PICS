@@ -56,7 +56,7 @@ struct AppointmentBlock: View {
                     .padding(.top, 6)
             }
         }
-            .padding(.horizontal, 8)
+            .padding(.vertical, 8)
             .sheet(isPresented: $showingSheet) {
                 NavigationStack {
                     List(items, selection: $multiSelection) {
