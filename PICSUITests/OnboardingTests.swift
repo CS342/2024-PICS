@@ -153,9 +153,6 @@ extension XCUIApplication {
         try textFields["enter first name"].enter(value: "Leland")
         try textFields["enter last name"].enter(value: "Stanford")
         
-        try textFields["Height"].enter(value: "10")
-        try textFields["Weight"].enter(value: "20")
-        
         swipeUp()
         
         XCTAssertTrue(collectionViews.buttons["Signup"].waitForExistence(timeout: 2))

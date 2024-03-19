@@ -20,8 +20,8 @@ struct AppointmentView: View {
     var body: some View {
         VStack(alignment: .center) {
             VStack(alignment: .leading) {
-                AppointmentBlock(date: formattedDate(patientInformation.appt1), time: formattedTime(patientInformation.appt1))
-                AppointmentBlock(date: formattedDate(patientInformation.appt2), time: formattedTime(patientInformation.appt2))
+                AppointmentBlock(date: patientInformation.appt1)
+                AppointmentBlock(date: patientInformation.appt2)
                     .padding(.bottom)
                 HStack {
                     Button("RESCHEDULE_BUTTON_LABEL") {
@@ -46,7 +46,7 @@ struct AppointmentView: View {
             Spacer()
         }
         .sheet(isPresented: $showingEdit) {
-            NavigationView {
+            NavigationStack {
                 VStack {
                     Text("APPTQ_0")
                         .font(.headline)
@@ -75,25 +75,12 @@ struct AppointmentView: View {
                         Button("CLOSE") {
                             showingEdit.toggle()
                         }
-                        .buttonStyle(.bordered)
                     }
                 }
             }
         }
         .background(Color(UIColor.systemBackground))
     }
-
-        private func formattedDate(_ date: Date) -> String {
-            let formatter = DateFormatter()
-            formatter.dateFormat = "MMMM dd, yyyy"
-            return formatter.string(from: date)
-        }
-
-        private func formattedTime(_ date: Date) -> String {
-            let formatter = DateFormatter()
-            formatter.dateFormat = "h:mm a"
-            return formatter.string(from: date)
-        }
 }
 
 #Preview {

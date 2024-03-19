@@ -19,9 +19,9 @@ struct Item: Identifiable, Hashable {
 }
 
 struct AppointmentBlock: View {
-    var date: String
-    var time: String
-    var items = [
+    private let date: Date
+
+    private let items = [
         Item(name: "REQUIRED_ITEMS_1"),
         Item(name: "REQUIRED_ITEMS_2"),
         Item(name: "REQUIRED_ITEMS_3"),
@@ -33,55 +33,73 @@ struct AppointmentBlock: View {
     
     @State private var multiSelection = Set<UUID>()
     @State private var showingSheet = false
-    
-    @Environment(PatientInformation.self)
-    private var patientInformation
 
     var body: some View {
-        Color(UIColor.secondarySystemBackground)
-            .frame(height: 130)
-            .cornerRadius(15)
-            .overlay(
-                VStack(alignment: .leading) {
+        VStack(alignment: .leading) {
+            Spacer()
+            VStack(alignment: .leading) {
+                HStack {
+                    Text(formattedDate(date))
+                        .foregroundColor(.primary)
+                        .bold()
                     Spacer()
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Text(date)
-                                .foregroundColor(.primary)
-                                .bold()
-                            Spacer()
-                            Text(time)
-                                .foregroundColor(.primary)
-                        }
-                        Spacer()
-                        HStack {
-                            Spacer()
-                            Button("REQUIRED_ITEMS_HEADING") {
+                    Text(formattedTime(date))
+                        .foregroundColor(.primary)
+                }
+                Spacer()
+                HStack {
+                    Spacer()
+                    Button("REQUIRED_ITEMS_HEADING") {
+                        showingSheet.toggle()
+                    }
+                    .buttonStyle(.bordered)
+                }
+                Spacer()
+            }
+            .padding()
+        }
+            .sheet(isPresented: $showingSheet) {
+                NavigationStack {
+                    List(items, selection: $multiSelection) {
+                        Text($0.name)
+                    }
+                    .navigationTitle("REQUIRED_ITEMS_HEADING")
+                    .environment(\.editMode, .constant(.active))
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button("CLOSE") {
                                 showingSheet.toggle()
                             }
-                            .buttonStyle(.bordered)
-                        }
-                        Spacer()
-                    }
-                    .padding()
-                }
-                .sheet(isPresented: $showingSheet) {
-                    NavigationView {
-                        List(items, selection: $multiSelection) {
-                            Text($0.name)
-                        }
-                        .navigationTitle("REQUIRED_ITEMS_HEADING")
-                        .environment(\.editMode, .constant(.active))
-                        .toolbar {
-                            ToolbarItem(placement: .navigationBarTrailing) {
-                                Button("CLOSE") {
-                                    showingSheet.toggle()
-                                }
-                                .buttonStyle(.bordered)
-                            }
                         }
                     }
                 }
-            )
+            }
+            .background(Color(uiColor: .secondarySystemBackground))
+            .frame(height: 130)
+            .cornerRadius(15)
+    }
+
+    init(date: Date) {
+        self.date = date
+    }
+
+
+    private func formattedDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM dd, yyyy"
+        return formatter.string(from: date)
+    }
+
+    private func formattedTime(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "h:mm a"
+        return formatter.string(from: date)
     }
 }
+
+
+#if DEBUG
+#Preview {
+    AppointmentBlock(date: .now.addingTimeInterval(60 * 60))
+}
+#endif
