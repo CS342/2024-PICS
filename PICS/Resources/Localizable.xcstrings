@@ -7,6 +7,9 @@
     "%@: Not Completed" : {
 
     },
+    "%lld steps" : {
+
+    },
     "ACCOUNT_NEXT" : {
       "localizations" : {
         "en" : {
@@ -429,6 +432,9 @@
           }
         }
       }
+    },
+    "Health" : {
+
     },
     "HEALTHKIT_PERMISSIONS_BUTTON" : {
       "localizations" : {
@@ -975,6 +981,9 @@
           }
         }
       }
+    },
+    "Recommended Step Count" : {
+
     },
     "Repository Link" : {
       "localizations" : {

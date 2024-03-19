@@ -27,14 +27,11 @@ struct AccountSheet: View {
     
     
     var body: some View {
-        @Bindable var patientInformation = patientInformation
         NavigationStack {
             ZStack {
                 if account.signedIn && !isInSetup {
                     AccountOverview(isEditing: $overviewIsEditing) {
-                        Section("Health") {
-                            Stepper("Recommended Step Count", value: $patientInformation.minimumStepCount, in: 2000...15000, step: 250)
-                        }
+                        healthSection
 
                         NavigationLink("LICENSE_INFO_TITLE") {
                             ContributionsList()
@@ -62,6 +59,20 @@ struct AccountSheet: View {
                                 closeButton
                             }
                         }
+                }
+            }
+        }
+    }
+
+    @ViewBuilder
+    var healthSection: some View {
+        @Bindable var patientInformation = patientInformation
+        Section("Health") {
+            Stepper(value: $patientInformation.minimumStepCount, in: 2000...15000, step: 200) {
+                VStack(alignment: .leading) {
+                    Text("Recommended Step Count")
+                    Text("\(patientInformation.minimumStepCount) steps")
+                        .foregroundColor(.secondary)
                 }
             }
         }
