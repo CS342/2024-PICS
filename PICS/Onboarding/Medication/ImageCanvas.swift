@@ -21,7 +21,6 @@ struct ImageCanvas: View {
     var body: some View {
         ImageSource(image: $image)
             .clipShape(RoundedRectangle(cornerRadius: 8))
-            .accessibilityLabel(Text("Medication Plan"))
             .padding()
             .onChange(of: image) {
                 guard let image else {
