@@ -16,6 +16,9 @@ struct AccountSheet: View {
 
     @Environment(Account.self)
     private var account
+    @Environment(PatientInformation.self)
+    private var patientInformation
+
     @Environment(\.accountRequired)
     private var accountRequired
 
@@ -28,10 +31,10 @@ struct AccountSheet: View {
             ZStack {
                 if account.signedIn && !isInSetup {
                     AccountOverview(isEditing: $overviewIsEditing) {
-                        NavigationLink {
+                        healthSection
+
+                        NavigationLink("LICENSE_INFO_TITLE") {
                             ContributionsList()
-                        } label: {
-                            Text("LICENSE_INFO_TITLE")
                         }
                     }
                         .onDisappear {
@@ -61,6 +64,19 @@ struct AccountSheet: View {
         }
     }
 
+    @ViewBuilder var healthSection: some View {
+        @Bindable var patientInformation = patientInformation
+        Section("Health") {
+            Stepper(value: $patientInformation.minimumStepCount, in: 2000...15000, step: 200) {
+                VStack(alignment: .leading) {
+                    Text("Recommended Step Count")
+                    Text("\(patientInformation.minimumStepCount) steps")
+                        .foregroundColor(.secondary)
+                }
+            }
+        }
+    }
+
     var closeButton: some ToolbarContent {
         ToolbarItem(placement: .cancellationAction) {
             Button("CLOSE") {
@@ -85,6 +101,7 @@ struct AccountSheet: View {
 
 #Preview("AccountSheet SignIn") {
     AccountSheet()
+        .environment(PatientInformation())
         .previewWith {
             AccountConfiguration {
                 MockUserIdPasswordAccountService()

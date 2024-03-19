@@ -7,6 +7,9 @@
     "%@: Not Completed" : {
 
     },
+    "%lld steps" : {
+
+    },
     "ACCOUNT_NEXT" : {
       "localizations" : {
         "en" : {
@@ -430,6 +433,9 @@
         }
       }
     },
+    "Health" : {
+
+    },
     "HEALTHKIT_PERMISSIONS_BUTTON" : {
       "localizations" : {
         "en" : {
@@ -741,9 +747,6 @@
     "Measurement" : {
 
     },
-    "Medication Plan" : {
-
-    },
     "MEDICATION_SUBTITLE" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -978,6 +981,9 @@
           }
         }
       }
+    },
+    "Recommended Step Count" : {
+
     },
     "Repository Link" : {
       "localizations" : {

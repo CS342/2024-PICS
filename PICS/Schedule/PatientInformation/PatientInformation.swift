@@ -23,6 +23,9 @@ class PatientInformation {
     @AppStorage("isSurveyCompleted")
     @ObservationIgnored private var _isSurveyCompleted = false
 
+    @AppStorage("minimumStepCount")
+    @ObservationIgnored private var _minimumStepCount: Int = 5000
+
     var appt0: Date {
         get {
             self.access(keyPath: \.appt0)
@@ -67,6 +70,18 @@ class PatientInformation {
         set {
             self.withMutation(keyPath: \.isSurveyCompleted) {
                 self._isSurveyCompleted = newValue
+            }
+        }
+    }
+
+    var minimumStepCount: Int {
+        get {
+            self.access(keyPath: \.minimumStepCount)
+            return _minimumStepCount
+        }
+        set {
+            self.withMutation(keyPath: \.minimumStepCount) {
+                self._minimumStepCount = newValue
             }
         }
     }

@@ -25,7 +25,7 @@ struct MapView: View {
     private var region: MKCoordinateRegion {
         MKCoordinateRegion(
             center: coordinate,
-            span: MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002)
+            span: MKCoordinateSpan(latitudeDelta: 0.003, longitudeDelta: 0.003)
         )
     }
 
@@ -74,6 +74,9 @@ struct MapView: View {
     }
 }
 
+
+#if DEBUG
 #Preview {
     MapView()
 }
+#endif

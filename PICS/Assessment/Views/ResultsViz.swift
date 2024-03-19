@@ -113,7 +113,7 @@ struct ResultsViz: View {
     init(task: AssessmentTask, data: [AssessmentResult]) {
         self.task = task
         self.data = data
-        self.hasErrorCountMetrics = !data.contains { $0.errorCnt != nil }
+        self.hasErrorCountMetrics = data.contains { $0.errorCnt != nil }
     }
 
 

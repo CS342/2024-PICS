@@ -22,6 +22,9 @@ struct HKData: Identifiable {
 }
 
 struct HKVisualization: View {
+    @Environment(PatientInformation.self)
+    private var patientInformation
+
     @State var stepData: [HKData] = []
     @State var heartRateData: [HKData] = []
     @State var oxygenSaturationData: [HKData] = []
@@ -37,7 +40,7 @@ struct HKVisualization: View {
                     xName: "Time",
                     yName: "Step Count",
                     title: "HKVIZ_PLOT_STEP_TITLE",
-                    threshold: 5000.0,
+                    threshold: Double(patientInformation.minimumStepCount),
                     helperText: "HKVIZ_PLOT_STEP_RECOMD"
                 )
             }
@@ -327,8 +330,10 @@ func parseSampleQueryData(results: [HKSample], quantityTypeIDF: HKQuantityTypeId
     return collectedData
 }
 
+
 #if DEBUG
 #Preview {
     HKVisualization(presentingAccount: .constant(false))
+        .environment(PatientInformation())
 }
 #endif
