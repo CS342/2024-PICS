@@ -11,8 +11,9 @@ import SwiftUI
 
 
 struct InterestingModules: View {
-    @Environment(OnboardingNavigationPath.self) private var onboardingNavigationPath
-    
+    @Environment(OnboardingNavigationPath.self)
+    private var onboardingNavigationPath
+
     
     var body: some View {
         SequentialOnboardingView(

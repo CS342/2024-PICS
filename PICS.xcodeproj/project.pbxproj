@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22306A2A2B7C4E8E000A8EC1 /* OnboardingQuestionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22306A292B7C4E8E000A8EC1 /* OnboardingQuestionnaire.swift */; };
+		22306A2A2B7C4E8E000A8EC1 /* PersonalInformationQuestionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22306A292B7C4E8E000A8EC1 /* PersonalInformationQuestionnaire.swift */; };
 		22306A3E2B8F0097000A8EC1 /* OnboardingSurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22306A3D2B8F0097000A8EC1 /* OnboardingSurveyView.swift */; };
 		22306A412B8F20C4000A8EC1 /* AccountQuestionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22306A402B8F20C4000A8EC1 /* AccountQuestionnaire.swift */; };
-		22306A462B8FB173000A8EC1 /* OnboardingQuestionnaireDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22306A452B8FB173000A8EC1 /* OnboardingQuestionnaireDashboard.swift */; };
 		22333FFB2B9A577F008670AE /* DeviceMotionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22333FFA2B9A577F008670AE /* DeviceMotionModel.swift */; };
 		22365B782B902C9100C4528E /* Onboarding-Questionnaire.json in Resources */ = {isa = PBXBuildFile; fileRef = 22365B772B902C9100C4528E /* Onboarding-Questionnaire.json */; };
 		22C75CDA2B969B89008986AF /* ReactionTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C75CD92B969B89008986AF /* ReactionTime.swift */; };
 		22C75CE12B978E33008986AF /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C75CE02B978E33008986AF /* Medication.swift */; };
-		22C75CF02B979D02008986AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C75CEF2B979D02008986AF /* ContentView.swift */; };
+		22C75CF02B979D02008986AF /* ImageCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C75CEF2B979D02008986AF /* ImageCanvas.swift */; };
 		22C75CF72B979EA7008986AF /* ImageSource in Frameworks */ = {isa = PBXBuildFile; productRef = 22C75CF62B979EA7008986AF /* ImageSource */; };
 		27FA29902A388E9B009CAC45 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA298F2A388E9B009CAC45 /* ModalView.swift */; };
 		2F1AC9DF2B4E840E00C24973 /* PICS.docc in Sources */ = {isa = PBXBuildFile; fileRef = 2F1AC9DE2B4E840E00C24973 /* PICS.docc */; };
@@ -23,7 +22,6 @@
 		2F49B7762980407C00BCB272 /* Spezi in Frameworks */ = {isa = PBXBuildFile; productRef = 2F49B7752980407B00BCB272 /* Spezi */; };
 		2F4E237E2989A2FE0013F3D9 /* LaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E237D2989A2FE0013F3D9 /* LaunchTests.swift */; };
 		2F4E23832989D51F0013F3D9 /* PICSTestingSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E23822989D51F0013F3D9 /* PICSTestingSetup.swift */; };
-		2F4FC8D729EE69D300BFFE26 /* MockUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4FC8D629EE69D300BFFE26 /* MockUpload.swift */; };
 		2F5E32BD297E05EA003432F8 /* PICSDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E32BC297E05EA003432F8 /* PICSDelegate.swift */; };
 		2F6025CB29BBE70F0045459E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F6025CA29BBE70F0045459E /* GoogleService-Info.plist */; };
 		2FA0BFED2ACC977500E0EF83 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 2FA0BFEC2ACC977500E0EF83 /* Localizable.xcstrings */; };
@@ -63,7 +61,6 @@
 		2FE5DC8F29EDD980004B9AB4 /* SpeziViews in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE5DC8E29EDD980004B9AB4 /* SpeziViews */; };
 		2FE5DC9929EDD9D9004B9AB4 /* XCTestExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE5DC9829EDD9D9004B9AB4 /* XCTestExtensions */; };
 		2FE5DCB129EE6107004B9AB4 /* AccountOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE5DCAC29EE6107004B9AB4 /* AccountOnboarding.swift */; };
-		2FF53D8B2A8725DE00042B76 /* SpeziMockWebService in Frameworks */ = {isa = PBXBuildFile; productRef = 2FF53D8A2A8725DE00042B76 /* SpeziMockWebService */; };
 		2FF53D8D2A8729D600042B76 /* PICSStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF53D8C2A8729D600042B76 /* PICSStandard.swift */; };
 		5661551D2AB8384200209B80 /* SwiftPackageList in Frameworks */ = {isa = PBXBuildFile; productRef = 5661551C2AB8384200209B80 /* SwiftPackageList */; };
 		566155292AB8447C00209B80 /* Package+LicenseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566155282AB8447C00209B80 /* Package+LicenseType.swift */; };
@@ -80,7 +77,7 @@
 		74C593952B720781002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		74C593972B720B5E002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		74C5939A2B720F1B002D0274 /* (null) in Resources */ = {isa = PBXBuildFile; };
-		8607505A2BA1278200CABE92 /* ApptInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860750592BA1278200CABE92 /* ApptInfoTests.swift */; };
+		8607505A2BA1278200CABE92 /* PatientInformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860750592BA1278200CABE92 /* PatientInformationTests.swift */; };
 		862AB7F62B9AA6460048D158 /* ContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862AB7F52B9AA6460048D158 /* ContactsTests.swift */; };
 		86400D192B7C4B6D009FEC10 /* ApptInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86400D182B7C4B6D009FEC10 /* ApptInfo.swift */; };
 		8644E6712B6C7243001218D0 /* AppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644E6702B6C7243001218D0 /* AppointmentView.swift */; };
@@ -92,7 +89,7 @@
 		8649094A2B8AB65600054C9A /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864909492B8AB65600054C9A /* TimelineView.swift */; };
 		86EB7FF72B8FB7A000D52EE2 /* NotificationPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7FF62B8FB7A000D52EE2 /* NotificationPermissions.swift */; };
 		86EF04BE2B9B1661005596D8 /* AppointmentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EF04BD2B9B1661005596D8 /* AppointmentsTests.swift */; };
-		86F62AF62B916B670075F23C /* AppointmentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F62AF52B916B670075F23C /* AppointmentInformation.swift */; };
+		86F62AF62B916B670075F23C /* PatientInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F62AF52B916B670075F23C /* PatientInformation.swift */; };
 		9733CFC62A8066DE001B7ABC /* SpeziOnboarding in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE5DC8029EDD91D004B9AB4 /* SpeziOnboarding */; };
 		9739A0C62AD7B5730084BEA5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9739A0C52AD7B5730084BEA5 /* FirebaseStorage */; };
 		97D73D6A2AD860AD00B47FA0 /* SpeziFirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 97D73D692AD860AD00B47FA0 /* SpeziFirebaseStorage */; };
@@ -116,6 +113,7 @@
 		A9A48AB02BA916D2002CB862 /* AssessmentNotCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A48AAF2BA916D2002CB862 /* AssessmentNotCompletedView.swift */; };
 		A9D83F962B083794000D0C78 /* SpeziFirebaseAccountStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A9D83F952B083794000D0C78 /* SpeziFirebaseAccountStorage */; };
 		A9DFE8A92ABE551400428242 /* AccountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DFE8A82ABE551400428242 /* AccountButton.swift */; };
+		A9F1F5FC2BA953F600A8E6DB /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = A9F1F5FB2BA953F600A8E6DB /* OrderedCollections */; };
 		A9FE7AD02AA39BAB0077B045 /* AccountSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE7ACF2AA39BAB0077B045 /* AccountSheet.swift */; };
 /* End PBXBuildFile section */
 
@@ -137,20 +135,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		22306A292B7C4E8E000A8EC1 /* OnboardingQuestionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingQuestionnaire.swift; sourceTree = "<group>"; };
+		22306A292B7C4E8E000A8EC1 /* PersonalInformationQuestionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationQuestionnaire.swift; sourceTree = "<group>"; };
 		22306A3D2B8F0097000A8EC1 /* OnboardingSurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSurveyView.swift; sourceTree = "<group>"; };
 		22306A402B8F20C4000A8EC1 /* AccountQuestionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountQuestionnaire.swift; sourceTree = "<group>"; };
-		22306A452B8FB173000A8EC1 /* OnboardingQuestionnaireDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingQuestionnaireDashboard.swift; sourceTree = "<group>"; };
 		22333FFA2B9A577F008670AE /* DeviceMotionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMotionModel.swift; sourceTree = "<group>"; };
 		22365B772B902C9100C4528E /* Onboarding-Questionnaire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Onboarding-Questionnaire.json"; sourceTree = "<group>"; };
 		22C75CD92B969B89008986AF /* ReactionTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionTime.swift; sourceTree = "<group>"; };
 		22C75CE02B978E33008986AF /* Medication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
-		22C75CEF2B979D02008986AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		22C75CEF2B979D02008986AF /* ImageCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCanvas.swift; sourceTree = "<group>"; };
 		27FA298F2A388E9B009CAC45 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		2F1AC9DE2B4E840E00C24973 /* PICS.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PICS.docc; sourceTree = "<group>"; };
 		2F4E237D2989A2FE0013F3D9 /* LaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTests.swift; sourceTree = "<group>"; };
 		2F4E23822989D51F0013F3D9 /* PICSTestingSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PICSTestingSetup.swift; sourceTree = "<group>"; };
-		2F4FC8D629EE69D300BFFE26 /* MockUpload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUpload.swift; sourceTree = "<group>"; };
 		2F5E32BC297E05EA003432F8 /* PICSDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PICSDelegate.swift; sourceTree = "<group>"; };
 		2F6025CA29BBE70F0045459E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2FA0BFEC2ACC977500E0EF83 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -191,7 +187,7 @@
 		74AE05872B918DAF00AB5287 /* StroopTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StroopTest.swift; sourceTree = "<group>"; };
 		74AE05922B98620300AB5287 /* AssessmentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentsTests.swift; sourceTree = "<group>"; };
 		74AE05AC2BA1241D00AB5287 /* SchedulerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerTests.swift; sourceTree = "<group>"; };
-		860750592BA1278200CABE92 /* ApptInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptInfoTests.swift; sourceTree = "<group>"; };
+		860750592BA1278200CABE92 /* PatientInformationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientInformationTests.swift; sourceTree = "<group>"; };
 		862AB7F52B9AA6460048D158 /* ContactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTests.swift; sourceTree = "<group>"; };
 		86400D182B7C4B6D009FEC10 /* ApptInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptInfo.swift; sourceTree = "<group>"; };
 		8644E6702B6C7243001218D0 /* AppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentView.swift; sourceTree = "<group>"; };
@@ -203,7 +199,7 @@
 		864909492B8AB65600054C9A /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		86EB7FF62B8FB7A000D52EE2 /* NotificationPermissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPermissions.swift; sourceTree = "<group>"; };
 		86EF04BD2B9B1661005596D8 /* AppointmentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsTests.swift; sourceTree = "<group>"; };
-		86F62AF52B916B670075F23C /* AppointmentInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentInformation.swift; sourceTree = "<group>"; };
+		86F62AF52B916B670075F23C /* PatientInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientInformation.swift; sourceTree = "<group>"; };
 		A403A52D2B705A8C003CFA5C /* HealthVisualizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthVisualizationTests.swift; sourceTree = "<group>"; };
 		A40419F92B9F95EC0038D791 /* OnboardingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTests.swift; sourceTree = "<group>"; };
 		A40559A32B98204C00221783 /* HKVizUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKVizUnitTests.swift; sourceTree = "<group>"; };
@@ -240,6 +236,7 @@
 				74AE05A92B9BB47F00AB5287 /* XCTSpezi in Frameworks */,
 				22C75CF72B979EA7008986AF /* ImageSource in Frameworks */,
 				5661551D2AB8384200209B80 /* SwiftPackageList in Frameworks */,
+				A9F1F5FC2BA953F600A8E6DB /* OrderedCollections in Frameworks */,
 				2FB099B12A875DF100B20952 /* FirebaseFirestore in Frameworks */,
 				A9D83F962B083794000D0C78 /* SpeziFirebaseAccountStorage in Frameworks */,
 				2FB099B62A875E2B00B20952 /* HealthKitOnFHIR in Frameworks */,
@@ -247,7 +244,6 @@
 				2FE5DC8C29EDD972004B9AB4 /* SpeziSecureStorage in Frameworks */,
 				2FE5DC7529EDD8E6004B9AB4 /* SpeziFirebaseAccount in Frameworks */,
 				9739A0C62AD7B5730084BEA5 /* FirebaseStorage in Frameworks */,
-				2FF53D8B2A8725DE00042B76 /* SpeziMockWebService in Frameworks */,
 				2FE5DC7229EDD8D3004B9AB4 /* SpeziHealthKit in Frameworks */,
 				2F49B7762980407C00BCB272 /* Spezi in Frameworks */,
 				2FE5DC8F29EDD980004B9AB4 /* SpeziViews in Frameworks */,
@@ -277,14 +273,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2F4FC8D529EE69BE00BFFE26 /* MockUpload */ = {
-			isa = PBXGroup;
-			children = (
-				2F4FC8D629EE69D300BFFE26 /* MockUpload.swift */,
-			);
-			path = MockUpload;
-			sourceTree = "<group>";
-		};
 		2FC9759D2978E30800BA99FE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,18 +295,14 @@
 		2FE5DC2829EDD398004B9AB4 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				2FE5DCAC29EE6107004B9AB4 /* AccountOnboarding.swift */,
+				A9C355042BA9342900424179 /* Information */,
+				A9C355012BA9341A00424179 /* Medication */,
+				A9C355072BA9343900424179 /* Permissions */,
 				22306A402B8F20C4000A8EC1 /* AccountQuestionnaire.swift */,
+				2FE5DCAC29EE6107004B9AB4 /* AccountOnboarding.swift */,
 				86400D182B7C4B6D009FEC10 /* ApptInfo.swift */,
 				2FE5DC2F29EDD7CA004B9AB4 /* Consent.swift */,
-				22C75CEF2B979D02008986AF /* ContentView.swift */,
-				2FE5DC3029EDD7CA004B9AB4 /* HealthKitPermissions.swift */,
-				2FE5DC3229EDD7CA004B9AB4 /* InterestingModules.swift */,
-				22C75CE02B978E33008986AF /* Medication.swift */,
-				86EB7FF62B8FB7A000D52EE2 /* NotificationPermissions.swift */,
 				2FE5DC3129EDD7CA004B9AB4 /* OnboardingFlow.swift */,
-				22306A292B7C4E8E000A8EC1 /* OnboardingQuestionnaire.swift */,
-				2FE5DC3429EDD7CA004B9AB4 /* Welcome.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -340,15 +324,15 @@
 		2FE5DC3B29EDD7D0004B9AB4 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
+				A9C354FC2BA9330900424179 /* PatientInformation */,
 				2FE5DC4D29EDD7FA004B9AB4 /* Bundle+Questionnaire.swift */,
 				2FE5DC4929EDD7FA004B9AB4 /* EventContext.swift */,
 				2FE5DC4A29EDD7FA004B9AB4 /* EventContextView.swift */,
-				2FE5DC4829EDD7FA004B9AB4 /* ScheduleView.swift */,
-				2FE5DC4C29EDD7FA004B9AB4 /* PICSScheduler.swift */,
-				2FE5DC4B29EDD7FA004B9AB4 /* PICSTaskContext.swift */,
 				27FA298F2A388E9B009CAC45 /* ModalView.swift */,
 				22306A3D2B8F0097000A8EC1 /* OnboardingSurveyView.swift */,
-				22306A452B8FB173000A8EC1 /* OnboardingQuestionnaireDashboard.swift */,
+				2FE5DC4C29EDD7FA004B9AB4 /* PICSScheduler.swift */,
+				2FE5DC4B29EDD7FA004B9AB4 /* PICSTaskContext.swift */,
+				2FE5DC4829EDD7FA004B9AB4 /* ScheduleView.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -421,7 +405,6 @@
 				2FE5DC2729EDD38D004B9AB4 /* Contacts */,
 				56F6F29E2AB441640022FE5A /* Contributions */,
 				A480C7BE2B6D5A0B00B29A07 /* HealthVisulization */,
-				2F4FC8D529EE69BE00BFFE26 /* MockUpload */,
 				2FE5DC3C29EDD7DA004B9AB4 /* SharedContext */,
 				2FE5DC3D29EDD7E4004B9AB4 /* Helper */,
 				2FE5DC2D29EDD792004B9AB4 /* Resources */,
@@ -436,7 +419,7 @@
 				653A256128338800005D4D48 /* PICSTests.swift */,
 				A40559A32B98204C00221783 /* HKVizUnitTests.swift */,
 				A45546C12B9E56A1006DB4B4 /* AssessmentsUnitTests.swift */,
-				860750592BA1278200CABE92 /* ApptInfoTests.swift */,
+				860750592BA1278200CABE92 /* PatientInformationTests.swift */,
 			);
 			path = PICSTests;
 			sourceTree = "<group>";
@@ -466,7 +449,6 @@
 			isa = PBXGroup;
 			children = (
 				8644E6702B6C7243001218D0 /* AppointmentView.swift */,
-				86F62AF52B916B670075F23C /* AppointmentInformation.swift */,
 				8644E6862B7204A7001218D0 /* AppointmentBlock.swift */,
 				8644E6832B72046B001218D0 /* GettingThere.swift */,
 				8644E69A2B722708001218D0 /* Appointments.swift */,
@@ -483,7 +465,6 @@
 				A9A48A9E2BA911A1002CB862 /* Tests */,
 				A9A48AA62BA912A1002CB862 /* Views */,
 				A45993282B90544300A98C95 /* Assessments.swift */,
-				A459932B2B906C3B00A98C95 /* ResultsViz.swift */,
 			);
 			path = Assessment;
 			sourceTree = "<group>";
@@ -533,8 +514,45 @@
 			children = (
 				A9A48AA82BA912B4002CB862 /* AssessmentTaskSection.swift */,
 				A9A48AAF2BA916D2002CB862 /* AssessmentNotCompletedView.swift */,
+				A459932B2B906C3B00A98C95 /* ResultsViz.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A9C354FC2BA9330900424179 /* PatientInformation */ = {
+			isa = PBXGroup;
+			children = (
+				86F62AF52B916B670075F23C /* PatientInformation.swift */,
+				22306A292B7C4E8E000A8EC1 /* PersonalInformationQuestionnaire.swift */,
+			);
+			path = PatientInformation;
+			sourceTree = "<group>";
+		};
+		A9C355012BA9341A00424179 /* Medication */ = {
+			isa = PBXGroup;
+			children = (
+				22C75CE02B978E33008986AF /* Medication.swift */,
+				22C75CEF2B979D02008986AF /* ImageCanvas.swift */,
+			);
+			path = Medication;
+			sourceTree = "<group>";
+		};
+		A9C355042BA9342900424179 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				2FE5DC3429EDD7CA004B9AB4 /* Welcome.swift */,
+				2FE5DC3229EDD7CA004B9AB4 /* InterestingModules.swift */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		A9C355072BA9343900424179 /* Permissions */ = {
+			isa = PBXGroup;
+			children = (
+				2FE5DC3029EDD7CA004B9AB4 /* HealthKitPermissions.swift */,
+				86EB7FF62B8FB7A000D52EE2 /* NotificationPermissions.swift */,
+			);
+			path = Permissions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,7 +570,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				566155222AB83CF200209B80 /* PBXTargetDependency */,
+				A9F1F5F62BA94EAD00A8E6DB /* PBXTargetDependency */,
 			);
 			name = PICS;
 			packageProductDependencies = (
@@ -570,7 +588,6 @@
 				2FBD738B2A3BD150004228E7 /* SpeziScheduler */,
 				2F3D4ABB2A4E7C290068FB2F /* SpeziScheduler */,
 				2FE5DC8029EDD91D004B9AB4 /* SpeziOnboarding */,
-				2FF53D8A2A8725DE00042B76 /* SpeziMockWebService */,
 				2FB099AE2A875DF100B20952 /* FirebaseAuth */,
 				2FB099B02A875DF100B20952 /* FirebaseFirestore */,
 				2FB099B22A875DF100B20952 /* FirebaseFirestoreSwift */,
@@ -581,6 +598,7 @@
 				A9D83F952B083794000D0C78 /* SpeziFirebaseAccountStorage */,
 				22C75CF62B979EA7008986AF /* ImageSource */,
 				74AE05A82B9BB47F00AB5287 /* XCTSpezi */,
+				A9F1F5FB2BA953F600A8E6DB /* OrderedCollections */,
 			);
 			productName = PICS;
 			productReference = 653A254D283387FE005D4D48 /* PICS.app */;
@@ -674,10 +692,10 @@
 				2FE5DC9A29EDD9EF004B9AB4 /* XCRemoteSwiftPackageReference "XCTHealthKit" */,
 				2F3D4ABA2A4E7C290068FB2F /* XCRemoteSwiftPackageReference "SpeziScheduler" */,
 				97F466E62A76BBEE005DC9B4 /* XCRemoteSwiftPackageReference "SpeziOnboarding" */,
-				2FE750CA2A87240100723EAE /* XCRemoteSwiftPackageReference "SpeziMockWebService" */,
 				2FB099B42A875E2B00B20952 /* XCRemoteSwiftPackageReference "HealthKitOnFHIR" */,
 				5661551B2AB8384200209B80 /* XCRemoteSwiftPackageReference "swift-package-list" */,
 				22C75CF52B979EA7008986AF /* XCRemoteSwiftPackageReference "ImageSource" */,
+				A9F1F5FA2BA953F600A8E6DB /* XCRemoteSwiftPackageReference "swift-collections" */,
 			);
 			productRefGroup = 653A254E283387FE005D4D48 /* Products */;
 			projectDirPath = "";
@@ -754,14 +772,13 @@
 				2FE5DC4129EDD7EE004B9AB4 /* StorageKeys.swift in Sources */,
 				2FE5DCB129EE6107004B9AB4 /* AccountOnboarding.swift in Sources */,
 				86400D192B7C4B6D009FEC10 /* ApptInfo.swift in Sources */,
-				2F4FC8D729EE69D300BFFE26 /* MockUpload.swift in Sources */,
 				2FE5DC3A29EDD7CA004B9AB4 /* Welcome.swift in Sources */,
-				22306A2A2B7C4E8E000A8EC1 /* OnboardingQuestionnaire.swift in Sources */,
+				22306A2A2B7C4E8E000A8EC1 /* PersonalInformationQuestionnaire.swift in Sources */,
 				A9A48AB02BA916D2002CB862 /* AssessmentNotCompletedView.swift in Sources */,
 				2FE5DC3829EDD7CA004B9AB4 /* InterestingModules.swift in Sources */,
 				2FE5DC3529EDD7CA004B9AB4 /* Consent.swift in Sources */,
 				A9A48A9D2BA907E6002CB862 /* AssessmentResults.swift in Sources */,
-				22C75CF02B979D02008986AF /* ContentView.swift in Sources */,
+				22C75CF02B979D02008986AF /* ImageCanvas.swift in Sources */,
 				2FE5DC4529EDD7F2004B9AB4 /* Binding+Negate.swift in Sources */,
 				8644E67B2B6C75B1001218D0 /* MapView.swift in Sources */,
 				2FC975A82978F11A00BA99FE /* Home.swift in Sources */,
@@ -800,12 +817,11 @@
 				22C75CDA2B969B89008986AF /* ReactionTime.swift in Sources */,
 				2FE5DC5229EDD7FA004B9AB4 /* PICSScheduler.swift in Sources */,
 				A9FE7AD02AA39BAB0077B045 /* AccountSheet.swift in Sources */,
-				22306A462B8FB173000A8EC1 /* OnboardingQuestionnaireDashboard.swift in Sources */,
 				653A2551283387FE005D4D48 /* PICS.swift in Sources */,
 				2FE5DC3629EDD7CA004B9AB4 /* HealthKitPermissions.swift in Sources */,
 				22306A3E2B8F0097000A8EC1 /* OnboardingSurveyView.swift in Sources */,
 				8644E6872B7204A7001218D0 /* AppointmentBlock.swift in Sources */,
-				86F62AF62B916B670075F23C /* AppointmentInformation.swift in Sources */,
+				86F62AF62B916B670075F23C /* PatientInformation.swift in Sources */,
 				5661552E2AB854C000209B80 /* PackageHelper.swift in Sources */,
 				A9A48AA92BA912B4002CB862 /* AssessmentTaskSection.swift in Sources */,
 				27FA29902A388E9B009CAC45 /* ModalView.swift in Sources */,
@@ -821,7 +837,7 @@
 			files = (
 				A40559A42B98204C00221783 /* HKVizUnitTests.swift in Sources */,
 				A45546C22B9E56A1006DB4B4 /* AssessmentsUnitTests.swift in Sources */,
-				8607505A2BA1278200CABE92 /* ApptInfoTests.swift in Sources */,
+				8607505A2BA1278200CABE92 /* PatientInformationTests.swift in Sources */,
 				653A256228338800005D4D48 /* PICSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -843,10 +859,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		566155222AB83CF200209B80 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 566155212AB83CF200209B80 /* SwiftPackageListJSONPlugin */;
-		};
 		653A255F28338800005D4D48 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 653A254C283387FE005D4D48 /* PICS */;
@@ -856,6 +868,10 @@
 			isa = PBXTargetDependency;
 			target = 653A254C283387FE005D4D48 /* PICS */;
 			targetProxy = 653A256828338800005D4D48 /* PBXContainerItemProxy */;
+		};
+		A9F1F5F62BA94EAD00A8E6DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = A9F1F5F52BA94EAD00A8E6DB /* SwiftPackageListJSONPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -938,6 +954,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PICS/Supporting Files/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This message should never appear. Please adjust this when you start using camera information. We have to put this in here as ResearchKit has the possibility to use it and not putting it here returns an error on AppStore Connect.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "The PICS uses the step count to demonstrate Spezi's integration with HealthKit.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "The PICS uses the step count to demonstrate Spezi's integration with HealthKit.";
@@ -1144,6 +1161,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PICS/Supporting Files/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This message should never appear. Please adjust this when you start using camera information. We have to put this in here as ResearchKit has the possibility to use it and not putting it here returns an error on AppStore Connect.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "The PICS uses the step count to demonstrate Spezi's integration with HealthKit.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "The PICS uses the step count to demonstrate Spezi's integration with HealthKit.";
@@ -1193,6 +1211,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PICS/Supporting Files/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This message should never appear. Please adjust this when you start using camera information. We have to put this in here as ResearchKit has the possibility to use it and not putting it here returns an error on AppStore Connect.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "The PICS uses the step count to demonstrate Spezi's integration with HealthKit.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "The PICS uses the step count to demonstrate Spezi's integration with HealthKit.";
@@ -1462,14 +1481,6 @@
 				minimumVersion = 0.3.5;
 			};
 		};
-		2FE750CA2A87240100723EAE /* XCRemoteSwiftPackageReference "SpeziMockWebService" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/StanfordSpezi/SpeziMockWebService.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		5661551B2AB8384200209B80 /* XCRemoteSwiftPackageReference "swift-package-list" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FelixHerrmann/swift-package-list";
@@ -1484,6 +1495,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
+			};
+		};
+		A9F1F5FA2BA953F600A8E6DB /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1588,20 +1607,10 @@
 			package = 2FE5DC9729EDD9D9004B9AB4 /* XCRemoteSwiftPackageReference "XCTestExtensions" */;
 			productName = XCTestExtensions;
 		};
-		2FF53D8A2A8725DE00042B76 /* SpeziMockWebService */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2FE750CA2A87240100723EAE /* XCRemoteSwiftPackageReference "SpeziMockWebService" */;
-			productName = SpeziMockWebService;
-		};
 		5661551C2AB8384200209B80 /* SwiftPackageList */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5661551B2AB8384200209B80 /* XCRemoteSwiftPackageReference "swift-package-list" */;
 			productName = SwiftPackageList;
-		};
-		566155212AB83CF200209B80 /* SwiftPackageListJSONPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5661551B2AB8384200209B80 /* XCRemoteSwiftPackageReference "swift-package-list" */;
-			productName = "plugin:SwiftPackageListJSONPlugin";
 		};
 		74AE05A82B9BB47F00AB5287 /* XCTSpezi */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1627,6 +1636,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2FE5DC7329EDD8E6004B9AB4 /* XCRemoteSwiftPackageReference "SpeziFirebase" */;
 			productName = SpeziFirebaseAccountStorage;
+		};
+		A9F1F5F52BA94EAD00A8E6DB /* SwiftPackageListJSONPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5661551B2AB8384200209B80 /* XCRemoteSwiftPackageReference "swift-package-list" */;
+			productName = "plugin:SwiftPackageListJSONPlugin";
+		};
+		A9F1F5FB2BA953F600A8E6DB /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9F1F5FA2BA953F600A8E6DB /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

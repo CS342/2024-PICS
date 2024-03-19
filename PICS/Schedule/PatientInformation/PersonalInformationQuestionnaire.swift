@@ -5,35 +5,49 @@
 //
 // SPDX-License-Identifier: MIT
 //
-import SpeziOnboarding
+
 import SpeziQuestionnaire
 import SwiftUI
-struct OnboardingQuestionnaire: View {
-    @Environment(OnboardingNavigationPath.self) private var onboardingNavigationPath
-    @Environment(PICSStandard.self) private var standard
-    @AppStorage("isSurveyCompleted") var isSurveyCompleted = false
-    @Binding var isSheetPresented: Bool
+
+
+struct PersonalInformationQuestionnaire: View {
+    private let onCompletion: () -> Void
+
+    @Environment(\.dismiss)
+    private var dismiss
+
+    @Environment(PICSStandard.self)
+    private var standard
+    @Environment(PatientInformation.self)
+    private var patientInformation
 
     var body: some View {
         QuestionnaireView(
             questionnaire: Bundle.main.questionnaire(withName: "Onboarding-Questionnaire")
         ) { result in
+            dismiss()
+
             guard case let .completed(response) = result else {
-                isSheetPresented = false
-                onboardingNavigationPath.nextStep()
                 return // user cancelled
             }
-            isSurveyCompleted = true
-            isSheetPresented = false
+            patientInformation.isSurveyCompleted = true
+
             await standard.add(response: response)
-            onboardingNavigationPath.nextStep()
+            onCompletion()
         }
+    }
+
+
+    init(onCompletion: @escaping () -> Void = {}) {
+        self.onCompletion = onCompletion
     }
 }
 
+
+#if DEBUG
 #Preview {
-    OnboardingStack {
-        OnboardingQuestionnaire(isSheetPresented: .constant(true))
-    }
+    PersonalInformationQuestionnaire()
+        .environment(PatientInformation())
         .previewWith(standard: PICSStandard()) {}
 }
+#endif

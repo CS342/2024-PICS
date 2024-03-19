@@ -9,27 +9,33 @@ import Foundation
 import SwiftUI
 
 struct Item: Identifiable, Hashable {
-    let name: String
     let id = UUID()
+    let name: LocalizedStringResource
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+        hasher.combine(name.key)
+    }
 }
 
 struct AppointmentBlock: View {
     var date: String
     var time: String
     var items = [
-        Item(name: String(localized: "REQUIRED_ITEMS_1")),
-        Item(name: String(localized: "REQUIRED_ITEMS_2")),
-        Item(name: String(localized: "REQUIRED_ITEMS_3")),
-        Item(name: String(localized: "REQUIRED_ITEMS_4")),
-        Item(name: String(localized: "REQUIRED_ITEMS_5")),
-        Item(name: String(localized: "REQUIRED_ITEMS_6")),
-        Item(name: String(localized: "REQUIRED_ITEMS_7"))
+        Item(name: "REQUIRED_ITEMS_1"),
+        Item(name: "REQUIRED_ITEMS_2"),
+        Item(name: "REQUIRED_ITEMS_3"),
+        Item(name: "REQUIRED_ITEMS_4"),
+        Item(name: "REQUIRED_ITEMS_5"),
+        Item(name: "REQUIRED_ITEMS_6"),
+        Item(name: "REQUIRED_ITEMS_7")
     ]
     
     @State private var multiSelection = Set<UUID>()
     @State private var showingSheet = false
     
-    @Environment(AppointmentInformation.self) private var appointmentInfo
+    @Environment(PatientInformation.self)
+    private var patientInformation
 
     var body: some View {
         Color(UIColor.secondarySystemBackground)
@@ -50,7 +56,7 @@ struct AppointmentBlock: View {
                         Spacer()
                         HStack {
                             Spacer()
-                            Button(String(localized: "REQUIRED_ITEMS_HEADING")) {
+                            Button("REQUIRED_ITEMS_HEADING") {
                                 showingSheet.toggle()
                             }
                             .buttonStyle(.bordered)
@@ -64,11 +70,11 @@ struct AppointmentBlock: View {
                         List(items, selection: $multiSelection) {
                             Text($0.name)
                         }
-                        .navigationTitle(String(localized: "REQUIRED_ITEMS_HEADING"))
+                        .navigationTitle("REQUIRED_ITEMS_HEADING")
                         .environment(\.editMode, .constant(.active))
                         .toolbar {
                             ToolbarItem(placement: .navigationBarTrailing) {
-                                Button(String(localized: "CLOSE")) {
+                                Button("CLOSE") {
                                     showingSheet.toggle()
                                 }
                                 .buttonStyle(.bordered)

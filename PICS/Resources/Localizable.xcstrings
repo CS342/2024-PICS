@@ -421,6 +421,9 @@
         }
       }
     },
+    "Error Count" : {
+
+    },
     "Failed to get dates" : {
 
     },
@@ -478,6 +481,9 @@
           }
         }
       }
+    },
+    "Heart Rate Per Minute" : {
+
     },
     "HEIGHT" : {
       "extractionState" : "stale",
@@ -754,6 +760,9 @@
         }
       }
     },
+    "Measurement" : {
+
+    },
     "Medication Plan" : {
 
     },
@@ -803,6 +812,7 @@
     },
     "MOCK_WEB_SERVICE_TAB_TITLE" : {
       "comment" : "MARK: - Mock Upload Data Storage Provider",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -920,6 +930,9 @@
     "Open in Apple Maps" : {
 
     },
+    "Oxygen Saturation (precent)" : {
+
+    },
     "PERIOD" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -956,13 +969,13 @@
         }
       }
     },
-    "preview Title" : {
+    "Preview Title" : {
 
     },
-    "preview xName" : {
+    "Preview x axis" : {
 
     },
-    "preview yName" : {
+    "Preview y axis" : {
 
     },
     "PROJECT_LICENSE_DESCRIPTION" : {
@@ -1109,9 +1122,6 @@
         }
       }
     },
-    "Results" : {
-
-    },
     "Retake Assessment" : {
 
     },
@@ -1154,6 +1164,9 @@
 
     },
     "Start Questionnaire" : {
+
+    },
+    "Step Count" : {
 
     },
     "STREET_ADDRESS" : {
@@ -1301,9 +1314,6 @@
       }
     },
     "Upload Photo" : {
-
-    },
-    "Value" : {
 
     },
     "WEIGHT" : {

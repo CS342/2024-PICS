@@ -23,7 +23,7 @@ extension PICSScheduler {
         if FeatureFlags.testSchedule {
             dateComponents = DateComponents(
                 hour: Calendar.current.component(.hour, from: .now),
-                minute: Calendar.current.component(.minute, from: .now) // TODO: .addingReportingOverflow(1).partialValue
+                minute: Calendar.current.component(.minute, from: .now)
             )
         } else {
             // Schedule the task for every 2 weeks at 8:00 AM for normal app usage
@@ -53,7 +53,6 @@ extension PICSScheduler {
     
     static var EQ5D5LTask: SpeziScheduler.Task<PICSTaskContext> {
         var dateComponents = baseDateComponent
-        dateComponents.minute = 1
         dateComponents.second = 1
 
         return Task(
@@ -71,7 +70,6 @@ extension PICSScheduler {
     
     static var MiniNutritionalTask: SpeziScheduler.Task<PICSTaskContext> {
         var dateComponents = baseDateComponent
-        dateComponents.minute = 2
         dateComponents.second = 2
 
         return Task(

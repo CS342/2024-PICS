@@ -90,14 +90,15 @@ struct BidirectionalArrow: Shape {
 
 
 struct TimelineView: View {
-    @Environment(AppointmentInformation.self) private var appointmentInfo
-    
+    @Environment(PatientInformation.self)
+    private var patientInformation
+
     var body: some View {
         let calendar = Calendar.current
         let currentDate = Date()
         
-        let components1 = calendar.dateComponents([.year, .month, .day], from: appointmentInfo.appt1)
-        let components2 = calendar.dateComponents([.year, .month, .day], from: appointmentInfo.appt2)
+        let components1 = calendar.dateComponents([.year, .month, .day], from: patientInformation.appt1)
+        let components2 = calendar.dateComponents([.year, .month, .day], from: patientInformation.appt2)
         let components3 = calendar.dateComponents([.year, .month, .day], from: currentDate)
 
         if let date1 = calendar.date(from: components1), let date2 = calendar.date(from: components2), let now = calendar.date(from: components3) {
@@ -112,7 +113,7 @@ struct TimelineView: View {
                     )
                 HStack(spacing: 0) {
                     Spacer()
-                    Text(String(localized: "APPT1_TITLE"))
+                    Text("APPT1_TITLE")
                         .padding(.leading, 45)
                         .foregroundColor(.primary)
                     Spacer()

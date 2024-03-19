@@ -9,8 +9,6 @@
 import Foundation
 import SwiftUI
 
-// TODO: remove all String(localized: ?
-
 
 struct GettingThere: View {
     var body: some View {
@@ -29,7 +27,7 @@ struct GettingThere: View {
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
         }
-            .padding() // TODO: remove?
+            .padding()
     }
 }
 

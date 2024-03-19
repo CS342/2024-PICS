@@ -12,9 +12,11 @@ import SwiftUI
 
 
 struct HealthKitPermissions: View {
-    @Environment(HealthKit.self) private var healthKitDataSource
-    @Environment(OnboardingNavigationPath.self) private var onboardingNavigationPath
-    
+    @Environment(HealthKit.self)
+    private var healthKitDataSource
+    @Environment(OnboardingNavigationPath.self)
+    private var onboardingNavigationPath
+
     @State private var healthKitProcessing = false
     
     
@@ -59,8 +61,6 @@ struct HealthKitPermissions: View {
             }
         )
             .navigationBarBackButtonHidden(healthKitProcessing)
-            // Small fix as otherwise "Login" or "Sign up" is still shown in the nav bar
-            .navigationTitle(Text(verbatim: ""))
     }
 }
 

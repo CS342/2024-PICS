@@ -9,10 +9,10 @@
 @testable import PICS
 import XCTest
 
-class AppointmentInformationTests: XCTestCase {
+class PatientInformationTests: XCTestCase {
     // Test storing and retrieving dates
     func testStoreAndRetrieveDates() {
-        let appointmentInformation = AppointmentInformation()
+        let patientInformation = PatientInformation()
         let calendar = Calendar.current
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -27,11 +27,11 @@ class AppointmentInformationTests: XCTestCase {
             print("Error: Failed to calculate date six months ahead")
             return
         }
-        appointmentInformation.storeDates(testDate, threeMonthsAhead, sixMonthsAhead)
-        
-        let retrievedDate0 = appointmentInformation.appt0
-        let retrievedDate1 = appointmentInformation.appt1
-        let retrievedDate2 = appointmentInformation.appt2
+        patientInformation.storeDates(testDate, threeMonthsAhead, sixMonthsAhead)
+
+        let retrievedDate0 = patientInformation.appt0
+        let retrievedDate1 = patientInformation.appt1
+        let retrievedDate2 = patientInformation.appt2
     
         let testDateString = dateFormatter.string(from: testDate)
         let threeMonthsAheadString = dateFormatter.string(from: threeMonthsAhead)

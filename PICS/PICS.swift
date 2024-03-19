@@ -18,7 +18,7 @@ struct PICS: App {
     @AppStorage(StorageKeys.onboardingFlowComplete)
     private var completedOnboardingFlow = false
 
-    @State var apptInfo = AppointmentInformation()
+    @State var patientInformation = PatientInformation()
 
     
     var body: some Scene {
@@ -35,7 +35,7 @@ struct PICS: App {
                 }
                 .testingSetup()
                 .spezi(appDelegate)
-                .environment(apptInfo)
+                .environment(patientInformation)
         }
     }
 }

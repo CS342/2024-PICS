@@ -20,32 +20,30 @@ struct AssessmentTaskSection: View {
 
     var body: some View {
         Section {
-            if results[keyPath: task.resultsKey].isEmpty {
-                AssessmentNotCompletedView(task: task)
-            } else {
-                ResultsViz(
-                    data: results[keyPath: task.resultsKey],
-                    xName: "Time",
-                    yName: "Results",
-                    title: task.resultsTitle
-                )
-            }
-
-            Divider()
-                .padding(.bottom, 5)
-            
-            Button(action: {
-                presentingTask = task
-            }) {
+            VStack {
                 if results[keyPath: task.resultsKey].isEmpty {
-                    Text("Start Assessment")
+                    AssessmentNotCompletedView(task: task)
                 } else {
-                    Text("Retake Assessment")
+                    ResultsViz(task: task, data: results[keyPath: task.resultsKey])
                 }
-            }
+
+                Divider()
+                    .padding(.bottom, 5)
+
+                Button(action: {
+                    presentingTask = task
+                }) {
+                    if results[keyPath: task.resultsKey].isEmpty {
+                        Text("Start Assessment")
+                    } else {
+                        Text("Retake Assessment")
+                    }
+                }
+                .multilineTextAlignment(.center)
                 .foregroundStyle(.accent)
                 .accessibilityIdentifier(task.accessibilityIdentifier)
                 .buttonStyle(.plain) // Use style to restrict clickable area.
+            }
         }
     }
 

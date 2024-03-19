@@ -19,8 +19,10 @@ struct DateTimePickerView: View {
 
 
 struct ApptInfo: View {
-    @Environment(OnboardingNavigationPath.self) private var onboardingNavigationPath
-    @Environment(AppointmentInformation.self) private var appointmentInfo
+    @Environment(OnboardingNavigationPath.self)
+    private var onboardingNavigationPath
+    @Environment(PatientInformation.self)
+    private var patientInformation
 
     @State private var appt0 = Date()
     @State private var appt1 = Date()
@@ -33,22 +35,22 @@ struct ApptInfo: View {
             },
             contentView: {
                 VStack {
-                    Text(String(localized: "APPTQ_0"))
-                                           .font(.headline)
+                    Text("APPTQ_0")
+                       .font(.headline)
                     DateTimePickerView(selectedDateTime: $appt0)
                         .padding(.bottom, 32)
-                    Text(String(localized: "APPTQ_1"))
-                                           .font(.headline)
+                    Text("APPTQ_1")
+                       .font(.headline)
                     DateTimePickerView(selectedDateTime: $appt1)
                         .padding(.bottom, 32)
-                    Text(String(localized: "APPTQ_2"))
-                                           .font(.headline)
+                    Text("APPTQ_2")
+                       .font(.headline)
                     DateTimePickerView(selectedDateTime: $appt2)
                 }
             },
             actionView: {
                 OnboardingActionsView("INTERESTING_MODULES_BUTTON") {
-                    appointmentInfo.storeDates(appt0, appt1, appt2)
+                    patientInformation.storeDates(appt0, appt1, appt2)
                   
                     onboardingNavigationPath.nextStep()
                 }
@@ -64,6 +66,6 @@ struct ApptInfo: View {
     OnboardingStack {
         ApptInfo()
     }
-        .environment(AppointmentInformation())
+        .environment(PatientInformation())
 }
 #endif

@@ -18,7 +18,7 @@ struct AssessmentNotCompletedView: View {
             HStack {
                 // Displays a warning icon and a message stating the test has not been completed.
                 Image(systemName: "exclamationmark.circle.fill")
-                    .foregroundColor(.orange)
+                    .foregroundColor(.accentColor)
                     .accessibilityHidden(true)
                 Text("\(task.testName): Not Completed")
                     .foregroundColor(.primary)

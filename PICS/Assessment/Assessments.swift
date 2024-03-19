@@ -9,11 +9,10 @@
 import SwiftUI
 
 
-struct Assessments: View {    
+struct Assessments: View {
     @State private var assessmentResults = AssessmentResults()
     @State private var presentedTask: AssessmentTask?
 
-    // Binding to control the display of account-related UI.
     @Binding private var presentingAccount: Bool
 
     var body: some View {
@@ -23,7 +22,7 @@ struct Assessments: View {
                 AssessmentTaskSection(task: .stroopTest, presentingTask: $presentedTask)
                 AssessmentTaskSection(task: .reactionTime, presentingTask: $presentedTask)
             }
-                .navigationTitle(String(localized: "ASSESSMENTS_NAVIGATION_TITLE"))
+                .navigationTitle("ASSESSMENTS_NAVIGATION_TITLE")
                 .toolbar {
                     if AccountButton.shouldDisplay {
                         AccountButton(isPresented: $presentingAccount)
@@ -46,7 +45,7 @@ struct Assessments: View {
                         ReactionTimeView()
                     }
                 }
-                    .background(Color(uiColor: .systemGroupedBackground))
+                    .background(Color(uiColor: .systemGroupedBackground)) // fix ResearchKit background color
             }
             .environment(assessmentResults)
     }
@@ -61,6 +60,6 @@ struct Assessments: View {
 #if DEBUG
 #Preview("AssessmentView") {
     Assessments(presentingAccount: .constant(false))
-        .environment(AppointmentInformation())
+        .environment(PatientInformation())
 }
 #endif

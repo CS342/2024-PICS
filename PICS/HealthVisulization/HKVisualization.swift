@@ -36,10 +36,9 @@ struct HKVisualization: View {
                     data: self.stepData,
                     xName: "Time",
                     yName: "Step Count",
-                    title: String(localized: "HKVIZ_PLOT_STEP_TITLE"),
-                    chartType: "bars",
+                    title: "HKVIZ_PLOT_STEP_TITLE",
                     threshold: 5000.0,
-                    helperText: String(localized: "HKVIZ_PLOT_STEP_RECOMD")
+                    helperText: "HKVIZ_PLOT_STEP_RECOMD"
                 )
             }
             Section {
@@ -47,8 +46,7 @@ struct HKVisualization: View {
                     data: self.heartRateData,
                     xName: "Time",
                     yName: "Heart Rate Per Minute",
-                    title: String(localized: "HKVIZ_PLOT_HEART_TITLE"),
-                    chartType: "maxMin",
+                    title: "HKVIZ_PLOT_HEART_TITLE",
                     scatterData: self.heartRateScatterData
                 )
             }
@@ -57,10 +55,9 @@ struct HKVisualization: View {
                     data: self.oxygenSaturationData,
                     xName: "Time",
                     yName: "Oxygen Saturation (precent)",
-                    title: String(localized: "HKVIZ_PLOT_OXYGEN_TITLE"),
-                    chartType: "maxMin",
+                    title: "HKVIZ_PLOT_OXYGEN_TITLE",
                     threshold: 94.0,
-                    helperText: String(localized: "HKVIZ_PLOT_OXYGEN_RECOMD"),
+                    helperText: "HKVIZ_PLOT_OXYGEN_RECOMD",
                     scatterData: self.oxygenSaturationScatterData
                 )
             }
@@ -74,7 +71,7 @@ struct HKVisualization: View {
         
         return NavigationStack {
             visualizationList
-                .navigationTitle(String(localized: "HKVIZ_NAVIGATION_TITLE"))
+                .navigationTitle("HKVIZ_NAVIGATION_TITLE")
                 .toolbar {
                     if AccountButton.shouldDisplay {
                         AccountButton(isPresented: $presentingAccount)

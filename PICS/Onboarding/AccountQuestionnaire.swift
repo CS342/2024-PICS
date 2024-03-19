@@ -12,8 +12,9 @@ import SwiftUI
 
 
 struct AccountQuestionnaire: View {
-    @Environment(OnboardingNavigationPath.self) private var onboardingNavigationPath
-    @AppStorage("isSurveyCompleted") var isSurveyCompleted = false
+    @Environment(OnboardingNavigationPath.self)
+    private var onboardingNavigationPath
+
     @State var isSheetPresented = false
     @State private var showOnboardingQuestionnaire = false
     
@@ -38,27 +39,22 @@ struct AccountQuestionnaire: View {
             }, actionView: {
                 VStack {
                     OnboardingActionsView(
-                        "Take Questionnaire",
-                        action: {
+                        primaryText: "Take Questionnaire",
+                        primaryAction: {
                             isSheetPresented = true
-                        }
-                    )
-                    .padding(.vertical, 16)
-                    OnboardingActionsView( // TODO: nicer buttons style!
-                        "Skip",
-                        action: {
-                            onboardingNavigationPath.nextStep()
-                        }
-                    )
-                    .sheet(isPresented: $isSheetPresented) {
-                        OnboardingQuestionnaire(isSheetPresented: $isSheetPresented)
+                        },
+                        secondaryText: "Skip"
+                    ) {
+                        onboardingNavigationPath.nextStep()
                     }
                 }
             }
         )
-            // .navigationBarBackButtonHidden(healthKitProcessing)
-            // Small fix as otherwise "Login" or "Sign up" is still shown in the nav bar
-            .navigationTitle(Text(verbatim: ""))
+            .sheet(isPresented: $isSheetPresented) {
+                PersonalInformationQuestionnaire {
+                    onboardingNavigationPath.nextStep()
+                }
+            }
     }
 }
 
@@ -67,7 +63,9 @@ struct AccountQuestionnaire: View {
 #Preview {
     OnboardingStack {
         AccountQuestionnaire()
+        Text(verbatim: "Next Page")
     }
         .previewWith(standard: PICSStandard()) {}
+        .environment(PatientInformation())
 }
 #endif

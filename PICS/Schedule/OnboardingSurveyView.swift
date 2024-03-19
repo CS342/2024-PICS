@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct OnboardingSurveyView: View {
-    @Environment(PICSStandard.self) private var standard
-    @AppStorage("isSurveyCompleted") var isSurveyCompleted = false
+    @Environment(PICSStandard.self)
+    private var standard
+
     @State var isSheetPresented = false
 
     var body: some View {
         HStack {
             onboardingSurveyDetailsStack
         }
-        .contentShape(Rectangle())
+            .contentShape(Rectangle())
     }
     
     private var onboardingSurveyDetailsStack: some View {
@@ -59,9 +60,9 @@ struct OnboardingSurveyView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 8))
                 .padding(.top, 8)
         }
-        .sheet(isPresented: $isSheetPresented) {
-            OnboardingQuestionnaireDashboard(isSheetPresented: $isSheetPresented)
-        }
+            .sheet(isPresented: $isSheetPresented) {
+                PersonalInformationQuestionnaire()
+            }
     }
 }
 

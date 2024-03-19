@@ -51,7 +51,7 @@ struct TrailMakingTaskView: View {
     }
 }
 
-// TODO: move somewhere!
+
 func parseTMResult(taskResult: ORKTaskResult) -> AssessmentResult? {
     guard let taskResults = taskResult.results else {
         return nil

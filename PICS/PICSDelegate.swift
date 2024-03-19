@@ -12,7 +12,6 @@ import SpeziFirebaseAccount
 import SpeziFirebaseStorage
 import SpeziFirestore
 import SpeziHealthKit
-import SpeziMockWebService
 import SpeziOnboarding
 import SpeziScheduler
 import SwiftUI
@@ -41,8 +40,6 @@ class PICSDelegate: SpeziAppDelegate {
                 } else {
                     FirebaseStorageConfiguration()
                 }
-            } else {
-                MockWebService()
             }
 
             if HKHealthStore.isHealthDataAvailable() {

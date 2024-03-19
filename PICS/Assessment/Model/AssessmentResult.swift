@@ -10,11 +10,18 @@ import Foundation
 
 
 struct AssessmentResult: Codable, Identifiable {
-    var id = UUID()
+    let id: UUID
 
-    var testDateTime: Date
-    var timeSpent: Double
-    var errorCnt: Int = -1
-    // Score that might be collected for MiniCog.
-    var score: Int = -1 // TODO: used?
+    let testDateTime: Date
+    let timeSpent: Double
+    let errorCnt: Int?
+
+
+    init(id: UUID = UUID(), testDateTime: Date, timeSpent: Double, errorCnt: Int? = nil) {
+        // swiftlint:disable:previous function_default_parameter_at_end
+        self.id = id
+        self.testDateTime = testDateTime
+        self.timeSpent = timeSpent
+        self.errorCnt = errorCnt
+    }
 }

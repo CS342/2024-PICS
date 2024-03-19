@@ -7,7 +7,6 @@
 //
 
 import SpeziAccount
-import SpeziMockWebService
 import SwiftUI
 
 
@@ -25,8 +24,8 @@ struct HomeView: View {
         !FeatureFlags.disableFirebase && !FeatureFlags.skipOnboarding
     }
 
-    @Environment(AppointmentInformation.self)
-    private var appointmentInfo
+    @Environment(PatientInformation.self)
+    private var patientInformation
 
     @AppStorage(StorageKeys.homeTabSelection)
     private var selectedTab = Tabs.appointments
@@ -61,13 +60,6 @@ struct HomeView: View {
                 .tabItem {
                     Label("CONTACTS_TAB_TITLE", systemImage: "person.fill")
                 }
-            if FeatureFlags.disableFirebase {
-                MockUpload(presentingAccount: $presentingAccount)
-                    .tag(Tabs.mockUpload)
-                    .tabItem {
-                        Label("MOCK_WEB_SERVICE_TAB_TITLE", systemImage: "server.rack")
-                    }
-            }
         }
             .sheet(isPresented: $presentingAccount) {
                 AccountSheet()
@@ -89,21 +81,7 @@ struct HomeView: View {
     return HomeView()
         .previewWith(standard: PICSStandard()) {
             PICSScheduler()
-            MockWebService()
             AccountConfiguration(building: details, active: MockUserIdPasswordAccountService())
-        }
-}
-
-#Preview {
-    CommandLine.arguments.append("--disableFirebase") // make sure the MockWebService is displayed
-    return HomeView()
-        .environment(AppointmentInformation())
-        .previewWith(standard: PICSStandard()) {
-            PICSScheduler()
-            MockWebService()
-            AccountConfiguration {
-                MockUserIdPasswordAccountService()
-            }
         }
 }
 #endif
