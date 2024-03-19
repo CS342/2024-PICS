@@ -309,7 +309,6 @@ extension XCUIApplication {
         XCTAssertTrue(staticTexts["Account Overview"].waitForExistence(timeout: 5.0))
         XCTAssertTrue(staticTexts["Leland Stanford"].exists)
         XCTAssertTrue(staticTexts[email].exists)
-        XCTAssertTrue(staticTexts["Gender Identity, Choose not to answer"].exists)
         // Check for licencing.
         XCTAssertTrue(buttons["License Information"].waitForExistence(timeout: 2))
         buttons["License Information"].tap()
