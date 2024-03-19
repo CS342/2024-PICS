@@ -1,19 +1,10 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "" : {
-
-    },
     "%@" : {
 
     },
     "%@: Not Completed" : {
-
-    },
-    "%lld cm" : {
-
-    },
-    "%lld kg" : {
 
     },
     "ACCOUNT_NEXT" : {
@@ -200,6 +191,7 @@
       }
     },
     "ASSESSMENT_STROOP_START_BTN" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -296,6 +288,9 @@
           }
         }
       }
+    },
+    "Cancel" : {
+
     },
     "CLOSE" : {
       "comment" : "MARK: General",
@@ -429,6 +424,9 @@
     "Failed to get dates" : {
 
     },
+    "Get Directions" : {
+
+    },
     "GETTING_HERE_HEADING" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -481,10 +479,8 @@
         }
       }
     },
-    "Height" : {
-
-    },
     "HEIGHT" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -847,17 +843,6 @@
         }
       }
     },
-    "NOTIFICATION_PERMISSIONS_SUBTITLE" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Permission to send notifications"
-          }
-        }
-      }
-    },
     "NOTIFICATION_PERMISSIONS_TITLE" : {
       "localizations" : {
         "en" : {
@@ -880,9 +865,6 @@
           }
         }
       }
-    },
-    "Onboarding Task" : {
-
     },
     "ONBOARDING_CAPTION" : {
       "localizations" : {
@@ -935,6 +917,9 @@
         }
       }
     },
+    "Open in Apple Maps" : {
+
+    },
     "PERIOD" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -945,6 +930,9 @@
           }
         }
       }
+    },
+    "Personal Information" : {
+
     },
     "PHQ-4_DESCRIPTION" : {
       "extractionState" : "manual",
@@ -968,6 +956,15 @@
         }
       }
     },
+    "preview Title" : {
+
+    },
+    "preview xName" : {
+
+    },
+    "preview yName" : {
+
+    },
     "PROJECT_LICENSE_DESCRIPTION" : {
       "localizations" : {
         "en" : {
@@ -977,6 +974,9 @@
           }
         }
       }
+    },
+    "Reaction Time" : {
+
     },
     "REACTIONTIME_TEST" : {
       "extractionState" : "manual",
@@ -1109,6 +1109,12 @@
         }
       }
     },
+    "Results" : {
+
+    },
+    "Retake Assessment" : {
+
+    },
     "SAVE_BUTTON" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1144,6 +1150,9 @@
     "Skip" : {
 
     },
+    "Start Assessment" : {
+
+    },
     "Start Questionnaire" : {
 
     },
@@ -1158,7 +1167,11 @@
         }
       }
     },
+    "Stroop Test" : {
+
+    },
     "STROOP_TEST_TITLE" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1233,35 +1246,22 @@
         }
       }
     },
-    "TASK_SOCIAL_SUPPORT_QUESTIONNAIRE_DESCRIPTION" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Please fill out the Patient-Reported Outcome Measures Assessment (PROM) questionnaire every day."
-          }
-        }
-      }
-    },
-    "TASK_SOCIAL_SUPPORT_QUESTIONNAIRE_TITLE" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Patient-Reported Outcome Measures Assessment (PROM) Questionnaire"
-          }
-        }
-      }
-    },
     "This task has been completed!" : {
 
     },
-    "This test measures your %@." : {
+    "This test measures your cognitive flexibility and processing speed." : {
+
+    },
+    "This test measures your speed and accuracy of response." : {
+
+    },
+    "This test measures your visual attention and task switching." : {
 
     },
     "Threshold" : {
+
+    },
+    "Time" : {
 
     },
     "TIMELINE_TITLE" : {
@@ -1286,6 +1286,9 @@
         }
       }
     },
+    "Trail Making" : {
+
+    },
     "TRAIL_MAKING_TEST_TITLE" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1301,9 +1304,6 @@
 
     },
     "Value" : {
-
-    },
-    "Weight" : {
 
     },
     "WEIGHT" : {

@@ -15,21 +15,25 @@ import SwiftUI
 struct ScheduleView: View {
     @Environment(PICSStandard.self) private var standard
     @Environment(PICSScheduler.self) private var scheduler
+
+    @Environment(\.scenePhase)private var scenePhase
+
     @State private var eventContextsByDate: [Date: [EventContext]] = [:]
     @State private var presentedContext: EventContext?
 
 
     @Binding private var presentingAccount: Bool
-    @AppStorage("isSurveyCompleted") var isSurveyCompleted = false
-    
+    @AppStorage("isSurveyCompleted") var isSurveyCompleted = false // TODO: single app storage everywhere?
+
     private var startOfDays: [Date] {
         Array(eventContextsByDate.keys)
     }
+
     var body: some View {
-        NavigationStack {
+        NavigationStack { // swiftlint:disable:this closure_body_length
             List {
                 if !isSurveyCompleted {
-                    Section(header: Text("Onboarding Task")) {
+                    Section("Personal Information") {
                         OnboardingSurveyView()
                     }
                 }
@@ -49,7 +53,10 @@ struct ScheduleView: View {
             .onChange(of: scheduler) {
                 calculateEventContextsByDate()
             }
-            .task {
+            .onChange(of: scenePhase) {
+                guard case .active = scenePhase else {
+                    return
+                }
                 calculateEventContextsByDate()
             }
             .sheet(item: $presentedContext) { presentedContext in

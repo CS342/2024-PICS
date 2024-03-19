@@ -10,15 +10,16 @@ import Charts
 import SwiftUI
 
 struct ResultsViz: View {
-    var data: [AssessmentResult] = []
-    var xName: String
-    var yName: String
-    var title: String
-    
+    let data: [AssessmentResult]
+    let xName: LocalizedStringResource
+    let yName: LocalizedStringResource
+    let title: LocalizedStringResource
+
     // Vars for plotting.
-    var metricType: String
-    var metricEmpty: Bool // Whether we have result recorded for metric.
-    var timeSpentLable = String(localized: "ASSESSMENT_VIZ_TIME")
+    let metricType: LocalizedStringResource
+    let metricEmpty: Bool // Whether we have result recorded for metric.
+    let timeSpentLable: LocalizedStringResource = "ASSESSMENT_VIZ_TIME"
+
     let metricColor = Color.purple
     let timeColor = Color.teal
     let unSelectedColor = Color.gray
@@ -27,7 +28,7 @@ struct ResultsViz: View {
     @State private var selectedElement: AssessmentResult?
     
     var body: some View {
-        Text(self.title)
+        Text(title)
             .font(.title3.bold())
             .padding(5)
         
@@ -52,7 +53,7 @@ struct ResultsViz: View {
                 } else {
                     false
                 }
-                let yValue = if self.metricType == String(localized: "ASSESSMENT_VIZ_SCORE") {
+                let yValue = if self.metricType == "ASSESSMENT_VIZ_SCORE" {
                     dataPoint.score
                 } else {
                     dataPoint.errorCnt
@@ -66,7 +67,10 @@ struct ResultsViz: View {
             .lineStyle(StrokeStyle(lineWidth: 2.0))
         }
         .chartForegroundStyleScale(
-            self.metricEmpty ? [self.timeSpentLable: self.timeColor] : [self.timeSpentLable: self.timeColor, self.metricType: self.metricColor]
+            self.metricEmpty
+            // TODO: locale both lines
+                ? [String(localized: self.timeSpentLable): self.timeColor]
+                : [String(localized: self.timeSpentLable): self.timeColor, String(localized: self.metricType): self.metricColor]
         )
         .padding(10)
         .chartXAxis {
@@ -101,7 +105,7 @@ struct ResultsViz: View {
         }
     }
     
-    init(data: [AssessmentResult], xName: String, yName: String, title: String) {
+    init(data: [AssessmentResult], xName: LocalizedStringResource, yName: LocalizedStringResource, title: LocalizedStringResource) {
         self.data = data
         self.xName = xName
         self.yName = yName
@@ -109,7 +113,7 @@ struct ResultsViz: View {
         // We assume that we only need to plot one of error count or score.
         let errorCntMax = data.map(\.errorCnt).max() ?? -1
         let scoreMax = data.map(\.score).max() ?? -1
-        self.metricType = errorCntMax == -1 ? String(localized: "ASSESSMENT_VIZ_SCORE") : String(localized: "ASSESSMENT_VIZ_ERRORCNT")
+        self.metricType = errorCntMax == -1 ? "ASSESSMENT_VIZ_SCORE" : "ASSESSMENT_VIZ_ERRORCNT"
         self.metricEmpty = (max(scoreMax, errorCntMax) == -1)
     }
 
@@ -155,7 +159,7 @@ struct ResultsViz: View {
 
         // Round the time to 2 decimal points.
         let timeSpent = round(elm.timeSpent * 10) / 10
-        let metricNum = if self.metricType == String(localized: "ASSESSMENT_VIZ_SCORE") {
+        let metricNum = if self.metricType == "ASSESSMENT_VIZ_SCORE" {
             elm.score
         } else {
             elm.errorCnt
@@ -164,7 +168,7 @@ struct ResultsViz: View {
             ""
         } else {
             ", " +
-            self.metricType +
+            String(localized: self.metricType) + // TODO: locale!
             ": " +
             String(metricNum)
         }
@@ -172,7 +176,7 @@ struct ResultsViz: View {
             prefix +
             String(elm.testDateTime.formatted(.dateTime.year().month().day())) +
             ":\n" +
-            self.timeSpentLable +
+            String(localized: self.timeSpentLable) + // TODO: locale
             ": " +
             String(timeSpent) +
             metricText
@@ -180,25 +184,33 @@ struct ResultsViz: View {
     }
     
     // Build the line marker for time spent and metric.
-    private func getLineMarker(time: Date, selected: Bool, yMark: String, yMetric: Int = -1, yTime: Double = 0) -> some ChartContent {
+    private func getLineMarker(
+        time: Date,
+        selected: Bool,
+        yMark: LocalizedStringResource,
+        yMetric: Int = -1,
+        yTime: Double = 0
+    ) -> some ChartContent {
         let markColor = if yMark == self.metricType {
             (self.selectedElement == nil) ? self.metricColor : self.unSelectedColor
         } else {
             (self.selectedElement == nil) ? self.timeColor : self.unSelectedColor
         }
 
+        // TODO: are these actually drawn???
         let mark = if yMark == self.metricType {
             LineMark(
-                x: .value(self.xName, time, unit: .second),
-                y: .value(self.metricType, yMetric),
-                series: .value("Value", self.metricType)
+                // TODO: init of localiuzed string key??
+                x: .value(.init(self.xName), time, unit: .second),
+                y: .value(.init(self.metricType), yMetric),
+                series: .value("Value", String(localized: self.metricType)) // TODO: locale
             )
             .foregroundStyle(markColor)
         } else {
             LineMark(
-                x: .value(self.xName, time, unit: .second),
-                y: .value(self.timeSpentLable, yTime),
-                series: .value("Value", self.timeSpentLable)
+                x: .value(.init(self.xName), time, unit: .second),
+                y: .value(.init(self.timeSpentLable), yTime),
+                series: .value("Value", String(localized: self.timeSpentLable)) // TODO: locale
             )
             .foregroundStyle(markColor)
         }
@@ -208,7 +220,7 @@ struct ResultsViz: View {
             self.timeColor
         }
        
-        // Highlight the seletion.
+        // Highlight the selection.
         return mark.symbol {
             if selected {
                 Circle()
@@ -224,6 +236,9 @@ struct ResultsViz: View {
     }
 }
 
+
+#if DEBUG
 #Preview {
     ResultsViz(data: [], xName: "preview xName", yName: "preview yName", title: "preview Title")
 }
+#endif

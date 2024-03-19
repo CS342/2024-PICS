@@ -9,26 +9,33 @@
 import Foundation
 import SwiftUI
 
+// TODO: remove all String(localized: ?
+
+
 struct GettingThere: View {
     var body: some View {
         VStack(alignment: .leading) {
-            Text(String(localized: "GETTING_HERE_HEADING"))
+            Text("GETTING_HERE_HEADING")
                 .font(.title2)
             MapView()
                 .frame(height: 200)
-            Text(String(localized: "LOCATION_NAME"))
+            Text("LOCATION_NAME")
                 .font(.title3)
             HStack {
-                Text(String(localized: "STREET_ADDRESS"))
+                Text("STREET_ADDRESS")
                 Spacer()
-                Text(String(localized: "ZIP_CITY"))
+                Text("ZIP_CITY")
             }
-            .font(.subheadline)
-            .foregroundStyle(.secondary)
-            Text("")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
         }
-        .padding()
+            .padding() // TODO: remove?
     }
 }
+
+
+#if DEBUG
+#Preview {
+    GettingThere()
+}
+#endif

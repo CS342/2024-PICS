@@ -12,10 +12,13 @@ import UserNotifications
 
 @Observable
 class AppointmentInformation {
-    @AppStorage("appt0") @ObservationIgnored private var _appt0Data: Data?
-    @AppStorage("appt1") @ObservationIgnored private var _appt1Data: Data?
-    @AppStorage("appt2") @ObservationIgnored private var _appt2Data: Data?
-    
+    @AppStorage("appt0") @ObservationIgnored
+    private var _appt0Data: Data?
+    @AppStorage("appt1") @ObservationIgnored
+    private var _appt1Data: Data?
+    @AppStorage("appt2") @ObservationIgnored
+    private var _appt2Data: Data?
+
     var appt0Data: Data? {
         get {
             self.access(keyPath: \.appt0Data)

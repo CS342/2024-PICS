@@ -13,8 +13,11 @@ import SwiftUI
 
 @main
 struct PICS: App {
-    @UIApplicationDelegateAdaptor(PICSDelegate.self) var appDelegate
-    @AppStorage(StorageKeys.onboardingFlowComplete) var completedOnboardingFlow = false
+    @UIApplicationDelegateAdaptor(PICSDelegate.self)
+    private var appDelegate
+    @AppStorage(StorageKeys.onboardingFlowComplete)
+    private var completedOnboardingFlow = false
+
     @State var apptInfo = AppointmentInformation()
 
     

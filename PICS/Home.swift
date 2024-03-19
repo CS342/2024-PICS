@@ -25,10 +25,13 @@ struct HomeView: View {
         !FeatureFlags.disableFirebase && !FeatureFlags.skipOnboarding
     }
 
+    @Environment(AppointmentInformation.self)
+    private var appointmentInfo
 
-    @AppStorage(StorageKeys.homeTabSelection) private var selectedTab = Tabs.appointments
+    @AppStorage(StorageKeys.homeTabSelection)
+    private var selectedTab = Tabs.appointments
+
     @State private var presentingAccount = false
-    @Environment(AppointmentInformation.self) private var appointmentInfo
 
     
     var body: some View {

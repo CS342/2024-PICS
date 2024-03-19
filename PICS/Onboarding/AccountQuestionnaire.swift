@@ -44,7 +44,7 @@ struct AccountQuestionnaire: View {
                         }
                     )
                     .padding(.vertical, 16)
-                    OnboardingActionsView(
+                    OnboardingActionsView( // TODO: nicer buttons style!
                         "Skip",
                         action: {
                             onboardingNavigationPath.nextStep()
