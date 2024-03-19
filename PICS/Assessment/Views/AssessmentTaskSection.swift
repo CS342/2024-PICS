@@ -28,7 +28,6 @@ struct AssessmentTaskSection: View {
                 }
 
                 Divider()
-                    .padding(.bottom, 5)
 
                 Button(action: {
                     presentingTask = task
@@ -39,10 +38,11 @@ struct AssessmentTaskSection: View {
                         Text("Retake Assessment")
                     }
                 }
-                .multilineTextAlignment(.center)
-                .foregroundStyle(.accent)
-                .accessibilityIdentifier(task.accessibilityIdentifier)
-                .buttonStyle(.plain) // Use style to restrict clickable area.
+                    .padding(.vertical, 4)
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(.accent)
+                    .accessibilityIdentifier(task.accessibilityIdentifier)
+                    .buttonStyle(.plain) // Use style to restrict clickable area.
             }
         }
     }

@@ -741,9 +741,6 @@
     "Measurement" : {
 
     },
-    "Medication Plan" : {
-
-    },
     "MEDICATION_SUBTITLE" : {
       "extractionState" : "manual",
       "localizations" : {

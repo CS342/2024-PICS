@@ -50,29 +50,33 @@ struct AppointmentView: View {
         }
             .navigationTitle("APPOINTMENTS_NAVIGATION_TITLE")
             .sheet(isPresented: $showingEdit) {
+                // swiftlint:disable:previous closure_body_length
                 NavigationStack {
                     List {
-                        Text("APPTQ_0")
-                            .font(.headline)
-                            .padding(.top, 32)
-                        DateTimePickerView(selectedDateTime: $appt0User)
-                            .padding(.bottom, 32)
-                        Text("APPTQ_1")
-                            .font(.headline)
-                        DateTimePickerView(selectedDateTime: $appt1User)
-                            .padding(.bottom, 32)
-                        Text("APPTQ_2")
-                            .font(.headline)
-                        DateTimePickerView(selectedDateTime: $appt2User)
-                            .padding(.bottom, 32)
-                        Button("SAVE_BUTTON") {
+                        Section {
+                            Text("APPTQ_0")
+                                .font(.headline)
+                            DateTimePickerView(selectedDateTime: $appt0User)
+                        }
+                        Section {
+                            Text("APPTQ_1")
+                                .font(.headline)
+                            DateTimePickerView(selectedDateTime: $appt1User)
+                        }
+                        Section {
+                            Text("APPTQ_2")
+                                .font(.headline)
+                            DateTimePickerView(selectedDateTime: $appt2User)
+                        }
+
+                        Button(action: {
                             patientInformation.storeDates(appt0User, appt1User, appt2User)
                             showingEdit.toggle()
+                        }) {
+                            Text("SAVE_BUTTON")
+                                .frame(maxWidth: .infinity)
                         }
-                        .buttonStyle(.borderedProminent)
-                        Spacer()
                     }
-                    .padding(.horizontal, 20)
                     .navigationTitle("EDIT_APPT_HEADER")
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
