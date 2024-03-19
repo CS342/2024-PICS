@@ -1,19 +1,10 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "" : {
-
-    },
     "%@" : {
 
     },
     "%@: Not Completed" : {
-
-    },
-    "%lld cm" : {
-
-    },
-    "%lld kg" : {
 
     },
     "ACCOUNT_NEXT" : {
@@ -199,16 +190,6 @@
         }
       }
     },
-    "ASSESSMENT_STROOP_START_BTN" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Start Assessment"
-          }
-        }
-      }
-    },
     "ASSESSMENT_SUMMARY" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -296,6 +277,9 @@
           }
         }
       }
+    },
+    "Cancel" : {
+
     },
     "CLOSE" : {
       "comment" : "MARK: General",
@@ -426,7 +410,13 @@
         }
       }
     },
+    "Error Count" : {
+
+    },
     "Failed to get dates" : {
+
+    },
+    "Get Directions" : {
 
     },
     "GETTING_HERE_HEADING" : {
@@ -481,18 +471,8 @@
         }
       }
     },
-    "Height" : {
+    "Heart Rate Per Minute" : {
 
-    },
-    "HEIGHT" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Height"
-          }
-        }
-      }
     },
     "HKVIZ_AVERAGE_STRING" : {
       "extractionState" : "manual",
@@ -753,10 +733,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "PICS - Ambulanz:   Charité Virchow Clinic"
+            "value" : "Ambulanz:   Charité Virchow Clinic"
           }
         }
       }
+    },
+    "Measurement" : {
+
     },
     "Medication Plan" : {
 
@@ -805,17 +788,6 @@
         }
       }
     },
-    "MOCK_WEB_SERVICE_TAB_TITLE" : {
-      "comment" : "MARK: - Mock Upload Data Storage Provider",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mock Web Service"
-          }
-        }
-      }
-    },
     "NOTIF_CONTENT" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -847,17 +819,6 @@
         }
       }
     },
-    "NOTIFICATION_PERMISSIONS_SUBTITLE" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Permission to send notifications"
-          }
-        }
-      }
-    },
     "NOTIFICATION_PERMISSIONS_TITLE" : {
       "localizations" : {
         "en" : {
@@ -880,9 +841,6 @@
           }
         }
       }
-    },
-    "Onboarding Task" : {
-
     },
     "ONBOARDING_CAPTION" : {
       "localizations" : {
@@ -935,6 +893,12 @@
         }
       }
     },
+    "Open in Apple Maps" : {
+
+    },
+    "Oxygen Saturation (precent)" : {
+
+    },
     "PERIOD" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -945,6 +909,9 @@
           }
         }
       }
+    },
+    "Personal Information" : {
+
     },
     "PHQ-4_DESCRIPTION" : {
       "extractionState" : "manual",
@@ -968,6 +935,15 @@
         }
       }
     },
+    "Preview Title" : {
+
+    },
+    "Preview x axis" : {
+
+    },
+    "Preview y axis" : {
+
+    },
     "PROJECT_LICENSE_DESCRIPTION" : {
       "localizations" : {
         "en" : {
@@ -977,6 +953,9 @@
           }
         }
       }
+    },
+    "Reaction Time" : {
+
     },
     "REACTIONTIME_TEST" : {
       "extractionState" : "manual",
@@ -1109,6 +1088,9 @@
         }
       }
     },
+    "Retake Assessment" : {
+
+    },
     "SAVE_BUTTON" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1144,7 +1126,13 @@
     "Skip" : {
 
     },
+    "Start Assessment" : {
+
+    },
     "Start Questionnaire" : {
+
+    },
+    "Step Count" : {
 
     },
     "STREET_ADDRESS" : {
@@ -1158,15 +1146,8 @@
         }
       }
     },
-    "STROOP_TEST_TITLE" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stroop Test"
-          }
-        }
-      }
+    "Stroop Test" : {
+
     },
     "STROOP_VIZ_TITLE" : {
       "localizations" : {
@@ -1233,35 +1214,25 @@
         }
       }
     },
-    "TASK_SOCIAL_SUPPORT_QUESTIONNAIRE_DESCRIPTION" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Please fill out the Patient-Reported Outcome Measures Assessment (PROM) questionnaire every day."
-          }
-        }
-      }
-    },
-    "TASK_SOCIAL_SUPPORT_QUESTIONNAIRE_TITLE" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Patient-Reported Outcome Measures Assessment (PROM) Questionnaire"
-          }
-        }
-      }
+    "Test Title" : {
+
     },
     "This task has been completed!" : {
 
     },
-    "This test measures your %@." : {
+    "This test measures your cognitive flexibility and processing speed." : {
+
+    },
+    "This test measures your speed and accuracy of response." : {
+
+    },
+    "This test measures your visual attention and task switching." : {
 
     },
     "Threshold" : {
+
+    },
+    "Time" : {
 
     },
     "TIMELINE_TITLE" : {
@@ -1286,6 +1257,9 @@
         }
       }
     },
+    "Trail Making" : {
+
+    },
     "TRAIL_MAKING_TEST_TITLE" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1298,12 +1272,6 @@
       }
     },
     "Upload Photo" : {
-
-    },
-    "Value" : {
-
-    },
-    "Weight" : {
 
     },
     "WEIGHT" : {

@@ -15,11 +15,14 @@ import SwiftUI
 
 /// Displays an multi-step onboarding flow for the PICS.
 struct OnboardingFlow: View {
-    @Environment(HealthKit.self) private var healthKitDataSource
-    @Environment(PICSScheduler.self) private var scheduler
+    @Environment(HealthKit.self)
+    private var healthKitDataSource
+    @Environment(PICSScheduler.self)
+    private var scheduler
 
-    @AppStorage(StorageKeys.onboardingFlowComplete) private var completedOnboardingFlow = false
-    
+    @AppStorage(StorageKeys.onboardingFlowComplete)
+    private var completedOnboardingFlow = false
+
     @State private var localNotificationAuthorization = false
         
     private var healthKitAuthorization: Bool {

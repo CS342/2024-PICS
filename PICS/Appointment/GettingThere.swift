@@ -9,26 +9,36 @@
 import Foundation
 import SwiftUI
 
+
 struct GettingThere: View {
     var body: some View {
         VStack(alignment: .leading) {
-            Text(String(localized: "GETTING_HERE_HEADING"))
+            Text("GETTING_HERE_HEADING")
                 .font(.title2)
+                .bold()
             MapView()
+                .clipShape(RoundedRectangle(cornerRadius: 8))
                 .frame(height: 200)
-            Text(String(localized: "LOCATION_NAME"))
+            Text("LOCATION_NAME")
                 .font(.title3)
             HStack {
-                Text(String(localized: "STREET_ADDRESS"))
+                Text("STREET_ADDRESS")
                 Spacer()
-                Text(String(localized: "ZIP_CITY"))
+                Text("ZIP_CITY")
             }
-            .font(.subheadline)
-            .foregroundStyle(.secondary)
-            Text("")
                 .font(.subheadline)
-                .foregroundStyle(.secondary)
         }
-        .padding()
     }
 }
+
+
+#if DEBUG
+#Preview {
+    NavigationStack {
+        List {
+            GettingThere()
+        }
+        .navigationTitle("Test Title")
+    }
+}
+#endif

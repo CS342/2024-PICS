@@ -153,9 +153,6 @@ extension XCUIApplication {
         try textFields["enter first name"].enter(value: "Leland")
         try textFields["enter last name"].enter(value: "Stanford")
         
-        try textFields["Height"].enter(value: "10")
-        try textFields["Weight"].enter(value: "20")
-        
         swipeUp()
         
         XCTAssertTrue(collectionViews.buttons["Signup"].waitForExistence(timeout: 2))
@@ -312,7 +309,6 @@ extension XCUIApplication {
         XCTAssertTrue(staticTexts["Account Overview"].waitForExistence(timeout: 5.0))
         XCTAssertTrue(staticTexts["Leland Stanford"].exists)
         XCTAssertTrue(staticTexts[email].exists)
-        XCTAssertTrue(staticTexts["Gender Identity, Choose not to answer"].exists)
         // Check for licencing.
         XCTAssertTrue(buttons["License Information"].waitForExistence(timeout: 2))
         buttons["License Information"].tap()
@@ -366,7 +362,7 @@ extension XCUIApplication {
         XCTAssertTrue(buttons["Questionnaires"].waitForExistence(timeout: 2))
         buttons["Questionnaires"].tap()
         
-        XCTAssertTrue(staticTexts["ONBOARDING TASK"].waitForExistence(timeout: 2))
+        XCTAssertTrue(staticTexts["PERSONAL INFORMATION"].waitForExistence(timeout: 2))
         XCTAssertTrue(staticTexts["Onboarding Questionnaire"].waitForExistence(timeout: 2))
     }
  }

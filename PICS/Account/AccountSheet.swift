@@ -11,11 +11,14 @@ import SwiftUI
 
 
 struct AccountSheet: View {
-    @Environment(\.dismiss) var dismiss
-    
-    @Environment(Account.self) private var account
-    @Environment(\.accountRequired) var accountRequired
-    
+    @Environment(\.dismiss)
+    private var dismiss
+
+    @Environment(Account.self)
+    private var account
+    @Environment(\.accountRequired)
+    private var accountRequired
+
     @State var isInSetup = false
     @State var overviewIsEditing = false
     

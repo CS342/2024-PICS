@@ -12,8 +12,11 @@ import SwiftUI
 
 
 struct Medication: View {
-    @Environment(OnboardingNavigationPath.self) private var onboardingNavigationPath
+    @Environment(OnboardingNavigationPath.self)
+    private var onboardingNavigationPath
     @State var image: UIImage?
+
+    
     var body: some View {
         OnboardingView(
             contentView: {
@@ -23,7 +26,7 @@ struct Medication: View {
                         subtitle: "MEDICATION_SUBTITLE"
                     )
                     Spacer()
-                    ContentView(image: $image)
+                    ImageCanvas(image: $image)
                 }
             }, actionView: {
                 OnboardingActionsView(
@@ -32,12 +35,9 @@ struct Medication: View {
                         onboardingNavigationPath.nextStep()
                     }
                 )
-                .disabled(image == nil)
+                    .disabled(image == nil)
             }
         )
-            
-            // Small fix as otherwise "Login" or "Sign up" is still shown in the nav bar
-            .navigationTitle(Text(verbatim: ""))
     }
 }
 
@@ -47,7 +47,6 @@ struct Medication: View {
     OnboardingStack {
         Medication()
     }
-        .previewWith(standard: PICSStandard()) {
-        }
+        .previewWith(standard: PICSStandard()) {}
 }
 #endif

@@ -13,24 +13,23 @@ import SwiftUI
 
 
 struct HKVisualizationItem: View {
-    // Environment recording light or dark mode to decide color.
-    @Environment(\.colorScheme) var colorScheme
-    
     let id = UUID()
-    var data: [HKData]
-    var xName: String
-    var yName: String
-    var title: String
-    var chartType: String
-    var ymin: Double
-    var ymax: Double
-    var threshold: Double = -1.0
-    var helperText = ""
-    var plotAvg = false
-    var scatterData: [HKData] = []
-    
+    let data: [HKData]
+    let xName: LocalizedStringResource
+    let yName: LocalizedStringResource
+    let title: LocalizedStringResource
+    let ymin: Double
+    let ymax: Double
+    let threshold: Double?
+    let helperText: LocalizedStringResource?
+    let plotAvg: Bool
+    let scatterData: [HKData]
+
     // Variables for lollipops.
     let lollipopColor: Color = .indigo
+
+    @Environment(\.locale)
+    private var locale
 
     @State private var selectedElement: HKData?
     
@@ -39,24 +38,24 @@ struct HKVisualizationItem: View {
             .font(.title3.bold())
         // Remove line below text.
             .listRowSeparator(.hidden)
-        if !self.helperText.isEmpty {
-            Text(self.helperText)
+        if let helperText {
+            Text(helperText)
                 .font(.caption)
                 .listRowSeparator(.hidden)
         }
         // Helper text to show data when clicked.
         if let elm = selectedElement, elm.sumValue == 0 {
             let details = (
-                String(localized: "HKVIZ_SUMMARY") +
+                String(localized: "HKVIZ_SUMMARY", locale: locale) +
                 String(elm.date.formatted(.dateTime.year().month().day())) +
                 ":\n" +
-                String(localized: "HKVIZ_AVERAGE_STRING") +
+                String(localized: "HKVIZ_AVERAGE_STRING", locale: locale) +
                 String(round(elm.avgValue * 10) / 10) +
                 ", " +
-                String(localized: "HKVIZ_MAX_STRING") +
+                String(localized: "HKVIZ_MAX_STRING", locale: locale) +
                 String(Int(round(elm.maxValue))) +
                 ", " +
-                String(localized: "HKVIZ_MIN_STRING") +
+                String(localized: "HKVIZ_MIN_STRING", locale: locale) +
                 String(Int(round(elm.minValue)))
             )
             Text(details)
@@ -70,32 +69,32 @@ struct HKVisualizationItem: View {
         Chart {
             ForEach(scatterData) { dataPoint in
                 PointMark(
-                    x: .value(self.xName, dataPoint.date, unit: .day),
-                    y: .value(self.yName, dataPoint.sumValue)
+                    x: .value(.init(self.xName), dataPoint.date, unit: .day),
+                    y: .value(.init(self.yName), dataPoint.sumValue)
                 )
                 .foregroundStyle(getBarColor(value: dataPoint.sumValue, date: dataPoint.date).opacity(0.2))
             }
             ForEach(data) { dataPoint in
                 BarMark(
-                    x: .value(self.xName, dataPoint.date, unit: .day),
-                    y: .value(self.yName, dataPoint.sumValue),
+                    x: .value(.init(self.xName), dataPoint.date, unit: .day),
+                    y: .value(.init(self.yName), dataPoint.sumValue),
                     width: .fixed(10)
                 )
-                .foregroundStyle(getBarColor(value: dataPoint.sumValue, date: dataPoint.date))
+                    .foregroundStyle(getBarColor(value: dataPoint.sumValue, date: dataPoint.date))
                 if self.plotAvg {
                     LineMark(
-                        x: .value(self.xName, dataPoint.date, unit: .day),
-                        y: .value(self.yName, dataPoint.avgValue)
+                        x: .value(.init(self.xName), dataPoint.date, unit: .day),
+                        y: .value(.init(self.yName), dataPoint.avgValue)
                     )
                     .foregroundStyle(selectedElement != nil ? Color.gray : Color.purple)
                     .lineStyle(StrokeStyle(lineWidth: 2))
                 }
             }
-            if self.threshold > 0 {
+            if let threshold {
                 RuleMark(
-                    y: .value("Threshold", self.threshold)
+                    y: .value("Threshold", threshold)
                 )
-                .foregroundStyle(colorScheme == .dark ? .white : .black)
+                .foregroundStyle(.primary)
                 .lineStyle(StrokeStyle(lineWidth: 1, dash: [5]))
             }
         }
@@ -148,25 +147,24 @@ struct HKVisualizationItem: View {
     
     init(
         data: [HKData],
-        xName: String,
-        yName: String,
-        title: String,
-        chartType: String,
+        xName: LocalizedStringResource,
+        yName: LocalizedStringResource,
+        title: LocalizedStringResource,
         threshold: Double = -1.0,
-        helperText: String = "",
+        helperText: LocalizedStringResource? = nil,
         scatterData: [HKData] = []
     ) {
         self.data = data
         self.xName = xName
         self.yName = yName
         self.title = title
-        self.chartType = chartType
         self.threshold = threshold
         self.helperText = helperText
+        
         // Find max and min for y range.
-        self.ymax = data.map(\.maxValue).max() ?? 0
+        let ymax = data.map(\.maxValue).max() ?? 0
         // For step data, we only have sum values.
-        self.ymax = max(self.ymax, data.map(\.sumValue).max() ?? 0)
+        self.ymax = max(ymax, data.map(\.sumValue).max() ?? 0)
         self.ymin = data.map(\.minValue).min() ?? 0
         // Plot average data if we have such data.
         self.plotAvg = data.map(\.avgValue).max() ?? 0 > 0
@@ -182,7 +180,7 @@ struct HKVisualizationItem: View {
             } else {
                 .gray
             }
-        } else if self.threshold > 0 && value > self.threshold {
+        } else if let threshold, value > threshold {
             .blue
         } else {
             .accentColor
@@ -244,7 +242,6 @@ struct HKVisualizationItem: View {
         data: [],
         xName: "Preview x axis",
         yName: "Preview y axis",
-        title: "Preview Title",
-        chartType: "PointMark"
+        title: "Preview Title"
     )
 }

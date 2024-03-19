@@ -13,9 +13,12 @@ import SwiftUI
 
 @main
 struct PICS: App {
-    @UIApplicationDelegateAdaptor(PICSDelegate.self) var appDelegate
-    @AppStorage(StorageKeys.onboardingFlowComplete) var completedOnboardingFlow = false
-    @State var apptInfo = AppointmentInformation()
+    @UIApplicationDelegateAdaptor(PICSDelegate.self)
+    private var appDelegate
+    @AppStorage(StorageKeys.onboardingFlowComplete)
+    private var completedOnboardingFlow = false
+
+    @State var patientInformation = PatientInformation()
 
     
     var body: some Scene {
@@ -32,7 +35,7 @@ struct PICS: App {
                 }
                 .testingSetup()
                 .spezi(appDelegate)
-                .environment(apptInfo)
+                .environment(patientInformation)
         }
     }
 }

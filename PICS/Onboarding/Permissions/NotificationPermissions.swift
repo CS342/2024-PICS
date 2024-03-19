@@ -12,9 +12,11 @@ import SwiftUI
 
 
 struct NotificationPermissions: View {
-    @Environment(PICSScheduler.self) private var scheduler
-    @Environment(OnboardingNavigationPath.self) private var onboardingNavigationPath
-    
+    @Environment(PICSScheduler.self)
+    private var scheduler
+    @Environment(OnboardingNavigationPath.self)
+    private var onboardingNavigationPath
+
     @State private var notificationProcessing = false
     
     
@@ -58,8 +60,6 @@ struct NotificationPermissions: View {
             }
         )
             .navigationBarBackButtonHidden(notificationProcessing)
-            // Small fix as otherwise "Login" or "Sign up" is still shown in the nav bar
-            .navigationTitle(Text(verbatim: ""))
     }
 }
 

@@ -12,32 +12,18 @@ import SpeziFirebaseAccount
 import SpeziFirebaseStorage
 import SpeziFirestore
 import SpeziHealthKit
-import SpeziMockWebService
 import SpeziOnboarding
 import SpeziScheduler
 import SwiftUI
 
 
 class PICSDelegate: SpeziAppDelegate {
-    // The newer Swift versions does not have a default property of window,
-    // which will cause the NSInvalidArgumentException error for Stroop
-    // assessment test. Such errors should be fixed in newer version of
-    // ResearchKit but it might not be updated in the StanfordBDHG forked
-    // version that we use. Therefore, we manually add window here to walk
-    // around the error currently.
-    var window: UIWindow?
-    
     override var configuration: Configuration {
         Configuration(standard: PICSStandard()) {
             if !FeatureFlags.disableFirebase {
                 AccountConfiguration(configuration: [
                     .requires(\.userId),
-                    .requires(\.name),
-                    // additional values stored using the `FirestoreAccountStorage` within our Standard implementation
-                    .collects(\.dateOfBirth),
-                    .collects(\.genderIdentity),
-                    .collects(\.height),
-                    .collects(\.weight)
+                    .requires(\.name)
                 ])
 
                 if FeatureFlags.useFirebaseEmulator {
@@ -54,8 +40,6 @@ class PICSDelegate: SpeziAppDelegate {
                 } else {
                     FirebaseStorageConfiguration()
                 }
-            } else {
-                MockWebService()
             }
 
             if HKHealthStore.isHealthDataAvailable() {
@@ -106,17 +90,17 @@ class PICSDelegate: SpeziAppDelegate {
             CollectSample(
                 HKQuantityType(.stepCount),
                 predicate: predicateThreeMonth,
-                deliverySetting: .background(.afterAuthorizationAndApplicationWillLaunch)
+                deliverySetting: .background(.automatic)
             )
             CollectSample(
                 HKQuantityType(.heartRate),
                 predicate: predicateThreeMonth,
-                deliverySetting: .background(.afterAuthorizationAndApplicationWillLaunch)
+                deliverySetting: .background(.automatic)
             )
             CollectSample(
                 HKQuantityType(.oxygenSaturation),
                 predicate: predicateThreeMonth,
-                deliverySetting: .background(.afterAuthorizationAndApplicationWillLaunch)
+                deliverySetting: .background(.automatic)
             )
         }
     }

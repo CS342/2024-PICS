@@ -12,9 +12,11 @@ import SwiftUI
 
 
 struct AccountOnboarding: View {
-    @Environment(Account.self) private var account
-    @Environment(OnboardingNavigationPath.self) private var onboardingNavigationPath
-    
+    @Environment(Account.self)
+    private var account
+    @Environment(OnboardingNavigationPath.self)
+    private var onboardingNavigationPath
+
     
     var body: some View {
         AccountSetup { _ in

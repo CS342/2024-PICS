@@ -11,8 +11,9 @@ import SwiftUI
 
 
 struct ModalView: View {
-    @Environment(\.dismiss) private var dismiss
-    
+    @Environment(\.dismiss)
+    private var dismiss
+
     let text: String
     let buttonText: String
     let onClose: () async -> Void

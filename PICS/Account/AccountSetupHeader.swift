@@ -11,9 +11,11 @@ import SwiftUI
 
 
 struct AccountSetupHeader: View {
-    @Environment(Account.self) private var account
-    @Environment(\._accountSetupState) private var setupState
-    
+    @Environment(Account.self)
+    private var account
+    @Environment(\._accountSetupState)
+    private var setupState
+
     
     var body: some View {
         VStack {

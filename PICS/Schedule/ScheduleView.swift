@@ -6,6 +6,7 @@
 // SPDX-License-Identifier: MIT
 //
 
+import OrderedCollections
 import SpeziAccount
 import SpeziQuestionnaire
 import SpeziScheduler
@@ -13,27 +14,50 @@ import SwiftUI
 
 
 struct ScheduleView: View {
-    @Environment(PICSStandard.self) private var standard
-    @Environment(PICSScheduler.self) private var scheduler
-    @State private var eventContextsByDate: [Date: [EventContext]] = [:]
+    @Environment(PICSStandard.self)
+    private var standard
+    @Environment(PICSScheduler.self)
+    private var scheduler
+    @Environment(PatientInformation.self)
+    private var patientInformation
+
+    @Environment(\.scenePhase)
+    private var scenePhase
+
     @State private var presentedContext: EventContext?
-
-
     @Binding private var presentingAccount: Bool
-    @AppStorage("isSurveyCompleted") var isSurveyCompleted = false
-    
-    private var startOfDays: [Date] {
-        Array(eventContextsByDate.keys)
+
+
+    private var eventContextsByDate: OrderedDictionary<Date, [EventContext]> {
+        let eventContexts = scheduler.tasks.flatMap { task in
+            task
+                .events(
+                    from: Calendar.current.startOfDay(for: .now),
+                    to: .numberOfEventsOrEndDate(100, .now)
+                )
+                .map { event in
+                    EventContext(event: event, task: task)
+                }
+        }
+            .sorted()
+
+        return OrderedDictionary(grouping: eventContexts) { eventContext in
+            Calendar.current.startOfDay(for: eventContext.event.scheduledAt)
+        }
     }
+
     var body: some View {
         NavigationStack {
             List {
-                if !isSurveyCompleted {
-                    Section(header: Text("Onboarding Task")) {
+                if !patientInformation.isSurveyCompleted {
+                    Section("Personal Information") {
                         OnboardingSurveyView()
                     }
                 }
-                ForEach(startOfDays, id: \.timeIntervalSinceNow) { startOfDay in
+
+                let eventContextsByDate = eventContextsByDate
+
+                ForEach(eventContextsByDate.keys, id: \.timeIntervalSinceNow) { startOfDay in
                     Section(format(startOfDay: startOfDay)) {
                         ForEach(eventContextsByDate[startOfDay] ?? [], id: \.event) { eventContext in
                             EventContextView(eventContext: eventContext)
@@ -45,12 +69,6 @@ struct ScheduleView: View {
                         }
                     }
                 }
-            }
-            .onChange(of: scheduler) {
-                calculateEventContextsByDate()
-            }
-            .task {
-                calculateEventContextsByDate()
             }
             .sheet(item: $presentedContext) { presentedContext in
                 destination(withContext: presentedContext)
@@ -99,32 +117,13 @@ struct ScheduleView: View {
         dateFormatter.timeStyle = .none
         return dateFormatter.string(from: startOfDay)
     }
-    
-    private func calculateEventContextsByDate() {
-        let eventContexts = scheduler.tasks.flatMap { task in
-            task
-                .events(
-                    from: Calendar.current.startOfDay(for: .now),
-                    to: .numberOfEventsOrEndDate(100, .now)
-                )
-                .map { event in
-                    EventContext(event: event, task: task)
-                }
-        }
-            .sorted()
-        
-        let newEventContextsByDate = Dictionary(grouping: eventContexts) { eventContext in
-            Calendar.current.startOfDay(for: eventContext.event.scheduledAt)
-        }
-        
-        eventContextsByDate = newEventContextsByDate
-    }
 }
 
 
 #if DEBUG
 #Preview("ScheduleView") {
     ScheduleView(presentingAccount: .constant(false))
+        .environment(PatientInformation())
         .previewWith(standard: PICSStandard()) {
             PICSScheduler()
             AccountConfiguration {
