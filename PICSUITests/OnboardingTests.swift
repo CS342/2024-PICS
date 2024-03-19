@@ -362,7 +362,7 @@ extension XCUIApplication {
         XCTAssertTrue(buttons["Questionnaires"].waitForExistence(timeout: 2))
         buttons["Questionnaires"].tap()
         
-        XCTAssertTrue(staticTexts["ONBOARDING TASK"].waitForExistence(timeout: 2))
+        XCTAssertTrue(staticTexts["PERSONAL INFORMATION"].waitForExistence(timeout: 2))
         XCTAssertTrue(staticTexts["Onboarding Questionnaire"].waitForExistence(timeout: 2))
     }
  }
