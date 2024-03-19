@@ -64,8 +64,7 @@ struct AccountSheet: View {
         }
     }
 
-    @ViewBuilder
-    var healthSection: some View {
+    @ViewBuilder var healthSection: some View {
         @Bindable var patientInformation = patientInformation
         Section("Health") {
             Stepper(value: $patientInformation.minimumStepCount, in: 2000...15000, step: 200) {
